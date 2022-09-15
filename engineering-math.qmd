@@ -205,6 +205,10 @@ With this definition, the inverse sine satisfies the following properties:
 - $\sin^{-1}(\sin \theta) = \theta$ for all $\theta \in [-\pi/2, \pi/2]$.
 - $\sin(\sin^{-1}(y)) = y$ for all $y \in [-1, 1]$.
 
+We can also draw the graph of the inverse sine. To do so, it is sufficient to take the graph of the sine, limited to the domain $[-\pi/2, \pi/2]$, and reflect it across the first bisector. This gives us the graph in the figure below.
+
+![The graph of the inverse sine function. The domain is $[-1, 1]$ and the range is $[-\pi/2, \pi/2]$.](./images/01-trigonometry/inverse-sine-flipped.png)
+
 ### The inverse cosine
 
 Just like the sine function, the cosine function is $2\pi$-periodic and there are many angles $\theta$ such that $\cos \theta = y$. To define $\cos^{-1}(y)$ we therefore have to limit the domain of cosine so that $\theta$ is uniquely defined. In this case, we limit the domain to $[0, \pi]$. With that choice of domain, we again have that for each $y \in [-1, 1]$ there is a unique $\theta \in [0, \pi]$ such that $\cos \theta = y$, and we let $\cos^{-1}(y) = \theta$.
@@ -215,6 +219,10 @@ The inverse cosine satisfies the following properties:
 
 - $\cos^{-1}(\cos \theta) = \theta$ for all $\theta \in [0, \pi]$.
 - $\cos(\cos^{-1}(y)) = y$ for all $y \in [-1, 1]$.
+
+Graphing the inverse cosine can be done by taking the graph of the cosine function, restricted to the interval $[0, \pi]$, and flipping it across the first bisector. The result is shown in the figure below.
+
+![The graph of the inverse cosine function. The domain is $[-1, 1]$ and the range is $[0, \pi]$.](./images/01-trigonometry/inverse-cosine-flipped.png)
 
 The inverse cosine and sine are very closely related. To see this, take $\theta = \cos^{-1} y$ for some $y$. Then $y = \cos \theta$, which we can also write as $y = \sin(\pi/2 - \theta)$. By taking the inverse sine of both sides we end up with $\pi/2 - \theta = \sin^{-1} y$. If we combine this with the previous expression for $\theta$, this tells us that
 $$
@@ -233,3 +241,7 @@ The inverse tangent satisfies the following properties:
 
 - $\tan^{-1}(\tan \theta) = \theta$ for all $\theta \in [-\pi/2, \pi/2]$.
 - $\tan(\tan^{-1}(y)) = y$ for all $y \in \mathbb{R}$.
+
+As before, the inverse tangent function can be graphed by taking out the part of the tangent function with domain $[-\pi/2, \pi/2]$, and flipping it across the first bisector, as in the figure below.
+
+![The graph of the inverse tangent function. The domain is the entire $x$-axis and the range is $[-\pi/2, \pi/2]$.](./images/01-trigonometry/inverse-tangent-flipped.png)
