@@ -1,0 +1,276 @@
+---
+title: Coordinate Geometry
+subtitle: Introduction to Engineering Mathematics
+author: Prof. Joris Vankerschaver
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    css: style.css
+---
+
+
+## Contents
+
+1. Coordinate geometry
+1. Locus of points
+1. Equations of circles
+1. Equations of lines
+1. Exercise
+
+## What is coordinate geometry?
+
+Studying geometry through coordinate calculations.
+
+:::: {.columns .v-center-container}
+
+::: {.column width="50%"}
+
+
+![](./images/02-coordinate-geometry/coordinate-system.svg){fig-align="center"}
+
+:::
+
+::: {.column width="50%"}
+
+
+![](./images/02-coordinate-geometry/descartes.png){fig-align="center"}
+
+:::
+
+::::
+
+
+## Example: distance between two points
+
+:::: {.columns .v-center-container}
+
+::: {.column width="50%"}
+Distance between $P$ and $Q$:
+$$
+    d(P, Q) = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+$$
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="45%"}
+![](./images/02-coordinate-geometry/distance.svg){fig-align="center"}
+:::
+
+::::
+
+
+## Example: midpoint between two points
+
+:::: {.columns .v-center-container}
+
+::: {.column width="50%"}
+Coordinates of midpoint between $P$ and $Q$:
+$$
+  M = \left( \frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2} \right).
+$$
+:::
+
+::: {.column width="45%"}
+![](./images/02-coordinate-geometry/midpoint.svg){fig-align="center"}
+:::
+
+::::
+
+## Locus of points
+
+"Locus" = Set of points satisfying some condition.
+
+- **Circle**: All points at given distance from a fixed center.
+- **Ellipse**: All points for which the sum of distances to two fixed points (focal points) is constant
+- **Parabola**: All points that are at equal distance from a fixed point and a given line (directrix)
+
+:::: {.columns}
+::: {.column width="50%"}
+![](./images/02-coordinate-geometry/compass.png){fig-align="right" height="200"}
+:::
+::: {.column width="50%"}
+![](./images/02-coordinate-geometry/gardener.png){fig-align="left" height="200"}
+:::
+::::
+
+## Example
+
+Find the locus of points for which the distance to the $x$-axis is equal to the distance to the point $(0, 1)$.
+
+## Circles
+
+Locus of points $P(x, y)$ at distance $R$ from center $C(h, k)$.
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+We have $d(P, C) = R$ so that
+$$
+  \sqrt{(x - h)^2 + (y - k)^2} = R,
+$$
+and by squaring
+$$
+  \boxed{(x - h)^2 + (y - k)^2 = R^2}
+$$
+:::
+
+::: {.column width="40%"}
+
+![](./images/02-coordinate-geometry/circle.svg){fig-align="center" height="300" style="padding-top: 50px;"}
+:::
+
+::::
+
+## Example
+
+Find the equation of the circle that has the points $(1, 1)$ and $(7, 9)$ as end points of a diameter.
+
+## Example
+
+Find the center and radius of the circle given by $x^2 + y^2 - 6x + 2y + 8 = 0$.
+
+## Lines
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+Line not parallel to the $y$-axis:
+$$
+  \boxed{y = mx + q}
+$$
+with 
+
+- $m$: the **slope**
+- $q$: the **intercept**
+
+:::
+
+::: {.column width="40%"}
+
+![](./images/02-coordinate-geometry/line-slope-intercept.svg){fig-align="center" height="300" style="padding-top: 50px;"}
+
+:::
+::::
+
+## Lines
+
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+Line parallel to the $y$-axis:
+$$
+  \boxed{x = a}
+$$
+with
+
+- $a$: where the line intersects the $x$-axis
+
+:::
+
+::: {.column width="40%"}
+![](./images/02-coordinate-geometry/line-parallel.svg){fig-align="center" height="300" style="padding-top: 50px;"}
+:::
+::::
+
+## Finding the slope of a line
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+Take
+
+- $\Delta x = x_2 - x_1$
+- $\Delta y = y_2 - y_1$
+
+Then
+$$
+  \boxed{m = \frac{\Delta y}{\Delta x} = \frac{y_2 - y_1}{x_2 - x_1}}
+$$
+
+"$\Delta x$ steps to the right, $\Delta y$ steps up/down."
+
+:::
+
+::: {.column width="40%"}
+![](./images/02-coordinate-geometry/find-slope.svg){fig-align="center" height="300" style="padding-top: 50px;"}
+:::
+::::
+
+## Example
+
+Find the equation for the line through $(1, 5)$ and $(2, 7)$.
+
+## Properties
+
+Equation for the line through $(x_0, y_0)$ with slope $m$:
+$$
+  y - y_0 = m(x - x_0)
+$$
+
+Equation for the line through the points $(x_1, y_1)$ and $(x_2, y_2)$:
+$$
+  y - y_1 = \frac{y_2 - y_1}{x_2 - x_1}(x - x_1).
+$$
+
+## Parallel/perpendicular lines
+
+- Two lines are **parallel** if their slopes are the same: $\boxed{m_1 = m_2}$
+- Two lines are **perpendicular** if their slopes satisfy: $\boxed{m_1 m_2 = -1}$
+
+![](./images/02-coordinate-geometry/par-perp.svg){fig-align="center" height="300"}
+
+## Example
+
+Given two lines $L_1: x + 2y - 3 = 0$ and $L_2: kx + y - 5 = 0$, for which value of $k$ are $L_1$ and $L_2$ ...
+
+1. Parallel?
+2. Perpendicular?
+
+## Distance of a point to a line
+
+:::: {.columns .v-center-container}
+
+::: {.column width="60%"}
+
+Distance between point $P(x_0, y_0)$ and line $L: ax + by + c = 0$:
+$$
+  D = \frac{|ax_0 + by_0 + c|}{\sqrt{a^2 + b^2}}.
+$$
+
+:::
+
+::: {.column width="40%"}
+
+![](./images/02-coordinate-geometry/distance-point-line.svg){fig-align="center"}
+
+:::
+
+::::
+
+## Different representations of lines
+
+1. Slope/intercept:
+   - $y = mx + q$ (not parallel to $y$-axis)
+   - $x = a$ (parallel)
+2. Linear representation: $ax + by + c = 0$
+3. Polar representation:
+$$
+   r = \frac{q}{\sin \theta - m \cos \theta}
+$$
+
+## Exercise
+
+Find the equation of the common tangent line between two touching circles given by 
+\begin{align*}
+  C_1: & \  x^2 + y^2 - 6x - 12y + 37 = 0 \\
+  C_2: & \  x^2 + y^2 - 6y + 7 - 0.
+\end{align*}
+
