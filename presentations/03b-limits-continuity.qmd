@@ -58,7 +58,7 @@ What happens to $f(x)$ when $x$ becomes very large (positive/negative)?
 
 Examples:
 
-- $\displaystyle f(x) = \frac{x^2 - 1}{x^2 + 1}$
+- $\displaystyle \lim_{x \to \pm \infty} \frac{x^2 - 1}{x^2 + 1}$
 - $\displaystyle \lim_{x \to +\infty}e^{-x}$
 
 ## Limits at infinity (definition)
@@ -107,7 +107,7 @@ $$
     \lim_{x \to +\infty}f(x) = L \quad \text{or} \lim_{x \to -\infty}f(x) = L.
 $$
 
-Examples:
+Examples: Find the horizontal asymptotes of
 
 - $\displaystyle y = \frac{x^2 - 1}{x^2 + 1}$
 - $\displaystyle y = e^{-x}$
@@ -169,8 +169,7 @@ Examples:
    - Highest powers
    - Conjugate
    - ...
-   
-Special cases (to memorize):
+3. Special cases (to memorize):
 $$
     \lim_{h \to 0}\frac{\sin h}{h}  = 1 \quad \text{and} \quad
     \lim_{h \to 0}\frac{\cos h - 1}{h}  = 0.
@@ -188,9 +187,7 @@ Example: $\displaystyle f(x) = \frac{x^2 - x - 3}{x - 2}$ is not continuous at $
 
 ## Examples
 
-Define $f(x) = \frac{x^2 - x - 2}{x - 2}$ when $x \ne 2$ and $f(x) = 1$ otherwise (i.e. $f(2) = 1$). 
-
-Is $f(x)$ continuous at $x = 2$?
+Define $f(x) = \frac{x^2 - x - 2}{x - 2}$ when $x \ne 2$ and $f(x) = 1$ otherwise (i.e. $f(2) = 1$). Is $f(x)$ continuous at $x = 2$?
 
 ## Left/right continuity
 
