@@ -170,9 +170,87 @@ Examples:
    - Conjugate
    - ...
    
-Special cases (to know by heart):
+Special cases (to memorize):
 $$
     \lim_{h \to 0}\frac{\sin h}{h}  = 1 \quad \text{and} \quad
     \lim_{h \to 0}\frac{\cos h - 1}{h}  = 0.
 $$
    
+## Continuity
+
+- Intuitively, continuity $=$ "no jumps"
+- Mathematically, $f(x)$ is **continuous** at an interior point $x = a$ of its domain if
+$$
+  \lim_{x \to a} f(x) = f(a).
+$$  
+
+Example: $\displaystyle f(x) = \frac{x^2 - x - 3}{x - 2}$ is not continuous at $x = 2$.
+
+## Examples
+
+Define $f(x) = \frac{x^2 - x - 2}{x - 2}$ when $x \ne 2$ and $f(x) = 1$ otherwise (i.e. $f(2) = 1$). 
+
+Is $f(x)$ continuous at $x = 2$?
+
+## Left/right continuity
+
+At $x = a$, $f(x)$ is ...
+
+- **Right continuous** if $\displaystyle \lim_{x\to a+} f(x) = f(a)$
+- **Left continuous** if $\displaystyle \lim_{x\to a-} f(x) = f(a)$.
+
+Example: the Heaviside function is defined by $H(x) = 0$ when $x < 0$ and $H(x) = 1$ when $x \ge 0$. Is $H(x)$ right or left continuous at $x = 0$?
+
+## Continuity on an interval
+
+The function $f(x)$ is continuous on an interval $[a, b]$ if ...
+
+- $f(x)$ is continuous at every $x \in (a, b)$
+- $f(x)$ is right-continuous in $a$
+- $f(x)$ is left-continuous in $b$.
+
+Example: Show that $f(x) = 1 - \sqrt{1 - x^2}$ is continuous on $[-1, 1]$.
+
+## Making new continuous functions out of old ones
+
+If $f(x), g(x)$ are continuous at $x = a$, and $c$ is a constant, then the following are also continuous at $x = a$:
+
+- $f + g$
+- $f - g$
+- $cf$
+- $fg$ 
+- $f/g$  (if $g(a) \ne 0$)
+
+
+## Which functions are continuous?
+
+Continuous **on their domain**:
+
+- Polynomials
+- Rational functions
+- Trigonometric functions + inverse trigonometric functions
+- Square roots, $n$th roots
+- $\log$, $\exp$
+
+In particular:
+
+- Polynomials are continuous for all $x \in \mathbb{R}$
+- Rational functions $P(x)/Q(x)$ are continuous for all $x$ so that $Q(x) \ne 0$.
+
+## Composition of functions
+
+If $f(x)$ is continuous and $\lim_{x \to a} g(x) = b$, then
+$$
+    \lim_{x \to a} f(g(x)) = f(b) = f\left( \lim_{x \to b} g(x) \right).
+$$
+
+Example: $\displaystyle \lim_{x \to 2} \sin\left( \frac{2-x}{4-x^2}\pi\right)$
+
+## Corollary
+
+If $g$ is continuous at $x = a$ and $f$ is continuous at $y = g(a)$, then $f \circ g$ is continuous at $x = a$.
+
+Examples: Where are the following functions continuous?
+
+- $\displaystyle h(x) = \sin x^2$
+- $\displaystyle h(x) = \ln(1 + \cos x)$
