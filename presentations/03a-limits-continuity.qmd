@@ -100,7 +100,7 @@ $$
 ## Definition
 
 :::: {.columns}
-::: {.column width="48%"}
+::: {.column width="46%"}
 **Left** Limit: 
 $$
     \lim_{x \to a-}f(x) = L
@@ -112,7 +112,7 @@ $$
 ![](./images/03-limits-continuity/left-limit.svg){fig-align="center" height=200}
 
 :::
-::: {.column width="4%"}
+::: {.column width="6%"}
 :::
 ::: {.column width="48%"}
 **Right** Limit: 
@@ -160,7 +160,7 @@ $$
 4. $\lim_{x \to a} (c(f(x))) = c \lim_{x \to a} f(x)$
 5. $\lim_{x \to a}(f(x)g(x)) = \lim_{x \to a}f(x) \lim_{x \to a}g(x)$
 6. $\lim_{x \to a} \frac{f(x)}{g(x)} = \frac{\lim_{x \to a}f(x)}{\lim_{x \to a}g(x)}$ if $\lim_{x \to a} g(x) \ne 0$
-7. $\lim_{x \to a}\left(f(x)^{m/n}\right) = \left( \lim_{x \to a}f(x) \right)^{m/n}$, 
+7. $\lim_{x \to a}\left(f(x)^{m/n}\right) = \left( \lim_{x \to a}f(x) \right)^{m/n} = L^{m/n}$, 
    - If $n$ even: $L$ must be positive
    - If $m < 0$: $L$ must be different from 0.
    
