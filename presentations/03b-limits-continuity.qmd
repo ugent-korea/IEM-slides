@@ -1,0 +1,178 @@
+---
+title: Limits and Continuity (2/2)
+subtitle: Introduction to Engineering Mathematics
+author: Prof. Joris Vankerschaver
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    css: style.css
+---
+
+## Contents
+
+1. Infinite limits
+2. Vertical and horizontal asymptotes
+3. Limit laws
+4. Continuity
+
+## Infinite limits
+
+We say that $f(x)$ has an **infinite limit** for $x \to a$ if the values of $f(x)$ become **arbitrarily large** when $x \to a$.
+
+We note
+$$
+  \lim_{x \to a} f(x) = \infty \quad \text{or} \quad \lim_{x \to a}f(x) = -\infty,
+$$
+depending on the sign of $f(x)$ near $x = a$.
+
+Examples:
+
+- $\displaystyle \lim_{x\to 0}\frac{1}{x^2}$
+- $\displaystyle \lim_{x\to 0+} \ln x$
+
+## Vertical asymptotes
+
+The line $x = a$ is a **vertical asymptote** of $f(x)$ if *at least one* of the following is true:
+$$
+  \lim_{x \to a+} f(x) = \pm\infty \quad \text{or} \quad \lim_{x \to a-}f(x) = \pm\infty.
+$$
+
+Example: find the vertical asymptotes of
+
+- $\displaystyle y = \ln x$
+- $\displaystyle y = \tan x$
+
+## Example
+
+Find all vertical asymptotes of the function 
+$$
+  f(x) = \frac{|x-1|}{x^2-3x+2}.
+$$
+
+Hint: *Look for zeros of the denominator that are not zeros of the numerator.*
+
+## Limits at infinity (intuition)
+
+What happens to $f(x)$ when $x$ becomes very large (positive/negative)?
+
+Examples:
+
+- $\displaystyle f(x) = \frac{x^2 - 1}{x^2 + 1}$
+- $\displaystyle \lim_{x \to +\infty}e^{-x}$
+
+## Limits at infinity (definition)
+
+We write:
+
+:::: {.columns}
+::: {.column width="48%"}
+$$
+    \lim_{x \to +\infty} f(x) = L
+$$
+
+:::
+::: {.column width="4%"}
+:::
+::: {.column width="48%"}
+$$
+     \lim_{x \to -\infty}f(x) = M
+$$
+:::
+::::
+
+We mean:
+
+
+:::: {.columns}
+::: {.column width="48%"}
+- $f(x)$ is defined on an interval $(a, +\infty)$
+- $f(x)$ gets as close as we want to $L$ by taking $x$ large enough.
+
+:::
+::: {.column width="4%"}
+:::
+::: {.column width="48%"}
+
+- $f(x)$ is defined on an interval $(-\infty, b)$
+- $f(x)$ gets as close as we want to $M$ by taking $x$ large enough (in the negative direction).
+
+:::
+::::
+
+## Horizontal asymptotes
+
+The line $y = L$ is a **horizontal asymptote** of $f(x)$ if *at least one* of the following is true:
+$$
+    \lim_{x \to +\infty}f(x) = L \quad \text{or} \lim_{x \to -\infty}f(x) = L.
+$$
+
+Examples:
+
+- $\displaystyle y = \frac{x^2 - 1}{x^2 + 1}$
+- $\displaystyle y = e^{-x}$
+- $\displaystyle y = \frac{e^x - e^{-x}}{e^x + e^{-x}}$
+
+## Limit laws
+
+1. $\lim_{x \to \infty} x = \infty$
+2. $\lim_{x \to \infty} c = c$ (for $c$ a constant)
+3. $\lim_{x \to \infty}(f(x) + g(x)) = \lim_{x \to \infty} f(x) + \lim_{x \to \infty} g(x)$
+4. $\lim_{x \to \infty} (cf(x)) = c\lim_{x \to \infty} f(x)$
+5. $\lim_{x \to \infty}(f(x)g(x)) = \lim_{x \to \infty} f(x) \lim_{x \to \infty} g(x)$
+6. $\lim_{x \to \infty} \frac{f(x)}{g(x)} = \frac{\lim_{x \to \infty} f(x)}{\lim_{x \to \infty} g(x)}$, if the denominator is not zero
+7. $\lim_{x \to \infty} f(x)^{m/n} = \left(\lim_{x \to \infty} f(x) \right)^{m/n} = L^{m/n}$, if
+   - $L \ge 0$ for $n$ even
+   - $L \ne 0$ for $m$ negative
+
+## Limit laws (continued)
+
+8. If $f(x) \le g(x)$, then $\lim_{x \to \infty} f(x) \le \lim_{x \to \infty} g(x)$
+9. $\lim_{x \to \infty} 1/x^n = 0$, if $n > 0$
+10. $\lim_{x \to \infty} g(f(x)) = \lim_{y \to x} g(y)$, where $c = \lim_{x\to \infty}f(x)$, if
+    - $c$ is constant (not equal to $\pm \infty$)
+    - $f$ is continuous (see later)
+    
+## Examples    
+
+$\displaystyle \lim_{x \to +\infty} \frac{2x^5 + 1}{x^5 + x^3 + 1}$  
+
+## Examples    
+
+$\displaystyle \lim_{x\to -\infty} \frac{x^7}{\sqrt{x^{14} + 1}}$
+
+## Examples    
+
+$\displaystyle \lim_{x \to +\infty}\left( \sqrt{x^2 + 1} - x \right)$
+
+## Examples    
+
+$\displaystyle \lim_{x\to 0-} e^{1/x}$
+
+## Examples    
+
+$\displaystyle \lim_{x\to +\infty} \sin x$
+
+## Examples
+
+$\displaystyle \lim_{x \to \pi/2-} e^{\tan x}$
+
+## Infinite limits at infinity
+
+Examples:
+
+## Summary of limit techniques
+
+1. Try "just substituting" $\pm\infty$
+2. Use common manipulations:
+   - Simplify
+   - Highest powers
+   - Conjugate
+   - ...
+   
+Special cases (to know by heart):
+$$
+    \lim_{h \to 0}\frac{\sin h}{h}  = 1 \quad \text{and} \quad
+    \lim_{h \to 0}\frac{\cos h - 1}{h}  = 0.
+$$
+   
