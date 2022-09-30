@@ -121,15 +121,14 @@ Examples: Find the horizontal asymptotes of
 4. $\lim_{x \to \infty} (cf(x)) = c\lim_{x \to \infty} f(x)$
 5. $\lim_{x \to \infty}(f(x)g(x)) = \lim_{x \to \infty} f(x) \lim_{x \to \infty} g(x)$
 6. $\lim_{x \to \infty} \frac{f(x)}{g(x)} = \frac{\lim_{x \to \infty} f(x)}{\lim_{x \to \infty} g(x)}$, if the denominator is not zero
+
+## Limit laws (continued)
 7. $\lim_{x \to \infty} f(x)^{m/n} = \left(\lim_{x \to \infty} f(x) \right)^{m/n} = L^{m/n}$, if
    - $L \ge 0$ for $n$ even
    - $L \ne 0$ for $m$ negative
-
-## Limit laws (continued)
-
 8. If $f(x) \le g(x)$, then $\lim_{x \to \infty} f(x) \le \lim_{x \to \infty} g(x)$
 9. $\lim_{x \to \infty} 1/x^n = 0$, if $n > 0$
-10. $\lim_{x \to \infty} g(f(x)) = \lim_{y \to x} g(y)$, where $c = \lim_{x\to \infty}f(x)$, if
+10. $\lim_{x \to \infty} g(f(x)) = \lim_{y \to c} g(y)$, where $c = \lim_{x\to \infty}f(x)$, if
     - $c$ is constant (not equal to $\pm \infty$)
     - $f$ is continuous (see later)
     
@@ -169,7 +168,8 @@ Examples:
    - Highest powers
    - Conjugate
    - ...
-3. Special cases (to memorize):
+
+## Special cases (to memorize):
 $$
     \lim_{h \to 0}\frac{\sin h}{h}  = 1 \quad \text{and} \quad
     \lim_{h \to 0}\frac{\cos h - 1}{h}  = 0.
