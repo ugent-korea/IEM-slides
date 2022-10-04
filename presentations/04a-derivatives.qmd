@@ -11,6 +11,15 @@ format:
 
 ## Contents
 
+- Motivation: tangent lines
+- Definition of the derivative
+- Relation with continuity
+- Derivatives of
+  - Polynomials
+  - Exponential/logarithmic function
+  - Trigonometric functions
+- Sum/product rule
+- Chain rule
 
 ## Motivation: tangent lines
 
@@ -21,9 +30,7 @@ $$
 
 How would we do this for an **arbitrary curve** $y = f(x)$? 
 
-
-
-Picture here 
+![](./images/04-derivatives/tangents.svg){fig-align="center"}
 
 ## Derivative of a function
 
@@ -157,12 +164,10 @@ $$
 
 ## Derivatives of inverse trigonometric functions 
 
-\DeclareMathOperator{\arccot}{arccot}
 \begin{align*}
     \frac{d}{dx} \arcsin x & = \frac{1}{\sqrt{1 - x^2}} \\
     \frac{d}{dx} \arccos x & = \frac{-1}{\sqrt{1 - x^2}} \\    
     \frac{d}{dx} \arctan x & = \frac{1}{1 + x^2} \\
-    \frac{d}{dx} \arccot x & = \frac{-1}{1 + x^2} \\    
 \end{align*}
 
 These rules can be derived by means of *implicit differentation*, which we will cover later.
