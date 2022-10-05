@@ -77,8 +77,8 @@ Show that $\displaystyle \frac{d}{dx} \sqrt{x} = \frac{1}{2\sqrt{x}}$.
 We say that $y = f(x)$ is **differentiable on an interval $[a, b]$** if 
 
 - $f'(x)$ exists for each $x \in (a, b)$
-- At $x = a$, the right derivative exists: $$f'(a) = \lim_{h \to 0+}\frac{f(a + h) - f(a)}{h}.$$
-- At $x = b$, the right derivative exists: $$f'(b) = \lim_{h \to 0-}\frac{f(b + h) - f(b)}{h}.$$
+- At $x = a$, the *right derivative* exists: $$f'(a) = \lim_{h \to 0+}\frac{f(a + h) - f(a)}{h}.$$
+- At $x = b$, the *left derivative* exists: $$f'(b) = \lim_{h \to 0-}\frac{f(b + h) - f(b)}{h}.$$
 
 ## Link between differentiability and continuity
 
@@ -101,7 +101,7 @@ Now that we can take the derivative of a function, we can take the derivative of
 ## Derivative of a polynomial: basic rules
 
 1. $\displaystyle \frac{d}{dx} c = 0$
-2. $\displaystyle \frac{d x^n}{dx^n} = nx^{n-1}$ for $n \ne 0$.
+2. $\displaystyle \frac{d x^n}{dx} = nx^{n-1}$ for $n \ne 0$.
 
 ## Derivative of a polynomial: basic rules
 
