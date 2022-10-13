@@ -123,5 +123,7 @@ $$
 
 Step-by-step walkthroughs of both algorithms (from the 2021-22 version of this course):
 
-- [Polynomial long division](https://youtu.be/RyRqUg5oycE?t=499)
-- [Synthetic division](https://youtu.be/NqQeMfGEzk4)
+- Polynomial long division: https://youtu.be/RyRqUg5oycE?t=499
+- Synthetic division: https://youtu.be/NqQeMfGEzk4
+
+These videos can be found on Ufora as well.
