@@ -1,0 +1,127 @@
+---
+title: "Theory of equations (1/2): Working with polynomials"
+subtitle: Introduction to Engineering Mathematics
+author: Prof. Joris Vankerschaver
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    css: style.css
+---
+
+## Overview
+
+- Polynomial long division
+- Synthetic division of polynomials
+
+## Reminder: what is a polynomial?
+
+Polynomial of degree $n$:
+$$
+    P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
+$$
+with
+
+- $x$: the unknown
+- $a_0, \ldots, a_n$: the coefficients (in $\mathbb{C}$ or $\mathbb{R}$)
+
+## Reminder: Euclidian division of numbers
+
+For every two integers $p$ and $d$, we can write the fraction $p/d$ as
+$$
+    \frac{p}{d} = q + \frac{r}{d},
+$$
+with $q$ the **quotient** and $r$ the **remainder**. In other words
+$$
+    p = q d + r.
+$$
+The numbers $q$ and $r$ can be found by *long division*. 
+
+Properties:
+
+- The remainder $r$ is always smaller than $d$.
+- The quotient $q$ and remainder $r$ are unique.
+
+## Example
+
+If we divide 20 by 7, we get
+$$
+    \frac{20}{7} = 2 + \frac{6}{7},
+$$
+or $20 = 2 \times 7 + 6$.
+
+Therefore:
+
+- Quotient: $q = 20$
+- Remainder: $r = 6$.
+
+## Euclidian division of polynomials
+
+For every two polynomials $P(x)$ and $D(x)$, we can write the rational function $P(x)/D(x)$ as
+$$
+    \frac{P(x)}{D(x)} = Q(x) + \frac{R(x)}{D(x)},
+$$
+with $P(x)$ the **quotient** and $R(x)$ the **remainder**. In other words
+$$
+    P(x) = Q(x) D(x) + R(x).
+$$
+The polynomials $Q(x)$ and $R(x)$ can be found by *long division*. 
+
+Properties:
+
+- The degree of $R(x)$ is always smaller than the degree of $D(x)$. 
+- The quotient $Q(x)$ and remainder $R(x)$ are unique.
+
+## Example
+
+If we divide $x^2 + 1$ by $x - 1$, we get:
+
+\begin{align*}
+    \frac{x^2 + 1}{x - 1} 
+        & = \frac{x^2 -1 + 2}{x - 1} \\
+        & = \frac{x^2 - 1}{x - 1} + \frac{2}{x - 1} \\
+        & = x + 1 + \frac{2}{x - 1}
+\end{align*}
+
+Therefore, the quotient is $Q(x) = x + 1$ and the remainder is $R(x) = 2$.
+
+## Polynomial long division
+
+If $P(x) = 3x^4 - x^3 + 2x^2 - 2x - 1$ and $D(x) = x+2$, find the quotient and the remainder after dividing $P(x)$ by $D(x)$.
+
+Algorithm:
+
+1. Divide leading term by leading term and write down result
+2. Multiply result by divisor and transfer the result to the left
+3. Subtract
+4. Drop next term
+5. Repeat steps 1-4.
+
+## Synthetic division
+
+Algorithm:
+
+1. Write down coefficients of $P(x)$ on top
+2. Write down coefficients of $-D(x)$ (except the first) on left
+3. Lower first coefficient
+4. Multiply and put result back in the table
+5. Add coefficients in next column
+6. Repeat step 4-5 until done
+7. Determine quotient and remainder
+
+## Example
+
+If $P(x) = x^3 - 12x^2 - 42$ and $D(x) = x-3$, find the quotient and the remainder after dividing $P(x)$ by $D(x)$.
+
+## Special case
+
+$$
+    \frac{x^n - 1}{x - 1} = x^{n-1} + x^{n-2} + \cdots + x + 1.
+$$
+
+## Resources
+
+Step-by-step walkthroughs of both algorithms (from the 2021-22 version of this course):
+
+- [Polynomial long division](https://youtu.be/RyRqUg5oycE?t=499)
+- [Synthetic division](https://youtu.be/NqQeMfGEzk4)
