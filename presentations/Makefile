@@ -1,5 +1,5 @@
-.PHONY: all
-all:
+.PHONY: html
+html:
 	rm -rf html/
 	quarto render
 	cp -Rav html/* ../../jvkersch.github.io/course/math-0
