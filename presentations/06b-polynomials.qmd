@@ -1,0 +1,136 @@
+---
+title: "Theory of equations (2/2): Polynomial equations"
+subtitle: Introduction to Engineering Mathematics
+author: Prof. Joris Vankerschaver
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    css: style.css
+---
+
+## Contents
+
+- Remainder theorems
+- Restrictions on the number of roots
+- Fundamental theorem of algebra
+- Complete factorization theorem
+- Conjugate zeros theorem
+
+## Overview
+
+- Every polynomial of degree $N$ has $N$ roots
+  - Some of these roots may be *complex* (e.g. $x^2 + 1$)
+  - Some of these roots may be *the same* (e.g. $x^2 + 2x + 1$)
+- Roots correspond to factors of the polynomial
+- There is no algorithm for finding all roots of a polynomial
+- If a real polynomial has a complex root $z$, then the complex conjugate $\bar{z}$ is also a root (e.g. $x^3 - x^2 + x - 1$)
+
+## Recall
+
+Polynomial of degree $n$:
+$$
+    P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
+$$
+
+- The number $n$ is called the **degree** of $P(x)$.
+- A **root** or **zero** is a number $\alpha$ such that $P(\alpha) = 0$.
+- Roots can be real ($\alpha \in \mathbb{R}$) or complex ($\alpha \in \mathbb{C}$).
+- A **factor** is a linear polynomial $x - \alpha$ such that $P(x) = (x - \alpha) Q(x)$ for some other polynomial $Q(x)$.
+
+## Remainder theorem (special case)
+
+If $P(x)$ is a polynomial, then $P(h)$ is the remainder of $P(x)$ divided by $x - h$.
+
+## Corollary
+
+Note: "Corollary" means "consequence".
+
+If $P(x)$ is a polynomial with zero $\alpha \in \mathbb{C}$ (in other words, $P(\alpha) = 0$), then $x - \alpha$ is a factor of $P(x)$:
+$$
+    P(x) = (x - \alpha) Q(x).
+$$
+
+## Example
+
+Find all the factors of $P(x) = 2x^3 + 3x^2 - 1$.
+
+## Remainder theorem (general version)
+
+If $P(x)$ is a polynomial with *distinct* zeros $\alpha_1, \alpha_2, \ldots, \alpha_k \in \mathbb{C}$, then $(x - \alpha_1)(x - \alpha_2) \cdots (x - \alpha_k)$ is a factor of $P(x)$:
+$$
+    P(x) = (x - \alpha_1)(x - \alpha_2) \cdots (x - \alpha_k) Q(x).
+$$
+
+Notes: 
+
+- There are at most $n$ distinct zeros, where $n$ is the degree of $P(x)$ (see later).
+
+## Examples
+
+Find a polynomial of degree $4$ with roots $\pm i$, $\pm 2$, and such that $P(3) = 25$.
+
+## Examples
+
+Find a polynomial of degree $4$ with roots $0$ and $-2$, and where the root $-2$ has multiplicity $3$.
+
+## How many roots can a polynomial have?
+
+**Theorem:** A polynomial $P(x) \ne 0$ cannot have more than $n$ distinct roots, where $n = \deg P(x)$.
+
+**Proof:** Assume that there are $m$ distinct roots $\alpha_1, \ldots, \alpha_m$ , with $m > \deg P(x)$. Then by the remainder theorem,
+$$
+    P(x) = (x - \alpha_1) \cdots (x - \alpha_m) Q(x).
+$$
+
+The left-hand side has degree $n$, whereas the right-hand side has degree at least $m > n$. This is a contradiction.
+
+
+## Relation between roots and coefficients
+
+Define the **symmetric polynomials**:
+
+- $S_1 = a_1 + \cdots + a_n$
+- $S_2 = a_1 a_2 + a_1 a_3 + \cdots + a_1 a_n + a_2 a_3 + \cdots + a_{n-1}a_n$
+- $S_3 = a_1 a_2 a_3 + \cdots + a_{n-2}a_{n-1}a_n$
+- ...
+- $S_n = a_1 a_2 \cdots a_n$
+
+Then:
+\begin{multline}
+    (x - a_1)(x - a_2) \cdots (x - a_n) = \\
+    x^n - S_1 x^{n-1} + S_2 x^{n-2} - S_3 x^{n-3} + \cdots + (-1)^n S_n.
+\end{multline}
+
+## Example
+
+Given $P(x) = x^3 + 2x^2 - 3x - 1$ with roots $\alpha$, $\beta$, and $\gamma$, find the value of $\alpha^2 + \beta^2 + \gamma^2$.
+
+## The fundamental theorem of algebra
+
+**Theorem:** Each polynomial has *at least one* root (which may be complex).
+
+**Proof:** Difficult.
+
+**Consequence:** Each polynomial of degree $n$ has exactly $n$ roots (which may be same).
+
+
+## How to find roots?
+
+- Degree 2: formula for quadratic equation
+- Degree 3, 4: formulas exist, but they are very complicated
+- Degree 5 and up: **no general formula exists**
+
+In general, proceed via trial and error, or numerically.
+
+## Example
+
+Factorize $P(x) = x^4 + 2x^3 + 2x^2 + 2x + 1$.
+
+## Complex conjugates theorem
+
+**Theorem:** If $P(x)$ is a polynomial with real coefficients, then complex roots appear in *conjugates*.
+
+In other words, if $z = \alpha +i \beta$ is a root with multiplicity $p$, then $\bar{z} = \alpha - i \beta$ is also a root with multiplicity $p$.
+
+
