@@ -67,7 +67,7 @@ De Morgan's laws:
 - not ($p$ and $q$) = (not $p$) or (not $q$)
 - not ($p$ or $q$) = (not $p$) and (not $q$)
 
-Example: Show that if $x^2 \ne 1$, then $x \ne 1$.
+Example: Show that if $x^2 \ne 1$, then $x \ne \pm 1$.
 
 ## Technique 3: Proof by contradiction
 
