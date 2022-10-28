@@ -103,9 +103,9 @@ Example: Show that for all $x, y \in \mathbb{R}$, $|xy| = |x||y|$.
   - Prove a *base case*, usually $P(1)$.
   - Prove the *induction step*: if $P(k)$ holds, then $P(k+1)$ holds too.
 
-Example: Show that the sum of the first $n$ numbers is equal to $n^2$:
+Example: Show that the sum of the first $n$ numbers is equal to $\frac{n(n+1)}{2}$:
 $$
-	1 + 2 + 3 + \cdots + n = n^2.
+	1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2}.
 $$
 
 ## Example
