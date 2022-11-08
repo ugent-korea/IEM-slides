@@ -1,0 +1,153 @@
+---
+title: "Integration: Partial Fractions"
+subtitle: Introduction to Engineering Mathematics
+author: Prof. Joris Vankerschaver
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    css: style.css
+---
+
+## What are partial fractions?
+
+Every rational function can be written as a sum of "simple" partial fractions. For example
+$$
+    \frac{x+2}{x^3-x} = \frac{-2}{x} + \frac{3}{2(x-1)} + \frac{1}{2(x + 1)}.
+$$
+In this lecture, we will find a recipe for the coefficients and terms in the partial fraction expansion.
+
+## Why are partial fractions useful? 
+
+The advantage is that the partial fractions are *much* easier to integrate:
+\begin{align*}
+    \int \frac{x+2}{x^3-x} dx & = - 2\int \frac{dx}{x} + \frac{3}{2} \int \frac{dx}{x-1} dx + \frac{1}{2} \int \frac{dx}{x + 1} dx \\
+        & = -2 \ln |x| + \frac{3}{2} \ln |x-1| + \frac{1}{2} \ln |x+1| + C.
+\end{align*}
+
+# How to find the partial fraction expansion
+
+## Goal
+
+To integrate **any rational function**: determine
+$$
+    \int \frac{P(x)}{Q(x)} dx = ???
+$$
+where $P(x)$ and $Q(x)$ are polynomials.
+
+## Step 1: Divide if necessary
+
+If the degree of $P(x)$ is greater than or equal to the degree of $Q(x)$, do a polynomial division:
+$$
+    \int \frac{P(x)}{Q(x)} dx = \int S(x) dx + \int \frac{R(x)}{Q(x)} dx,
+$$
+with $S(x)$ the quotient and $R(x)$ the remainder.
+
+- Recall: $\deg R(x) < \deg Q(x)$.
+- From now on, we will suppose that this division has already been done, so that $\deg P(x) < \deg Q(x)$.
+
+## Special case 1: Linear denominator
+
+If $Q(x)$ is a linear polynomial, i.e. $Q(x) = Ax + B$, then our integral takes the form
+\begin{align*}
+    \int \frac{P(x)}{Q(x)} dx & = \int \frac{K}{Ax + B} dx \\
+        & = \cdots
+\end{align*}
+
+## Special case 2: Quadratic denominator
+
+If $Q(x)$ is a quadratic polynomial, then several cases are possible. After completing the square, we can have one of the following forms:
+
+If $\deg P(x) = 0$:
+
+- $\displaystyle \int \frac{dx}{x^2 - a^2}$
+- $\displaystyle \int \frac{dx}{x^2 + a^2}$
+
+##
+
+If $\deg P(x) = 1$:
+
+- $\displaystyle \int \frac{x \, dx}{x^2 - a^2}$
+- $\displaystyle \int \frac{x \, dx}{x^2 + a^2}$
+
+
+## Step 2: Find the roots of the denominator
+
+Do a factorization of the denominator $Q(x)$ into factors with **real** coefficients.
+
+You will find:
+
+- Some linear factors $(x - \alpha)$, with $\alpha$ roots of $Q(x)$
+- Some quadratic factors $(Ax^2 + Bx + C)$ that cannot be further reduced.
+
+. . .
+
+**Important:** Do not split into complex factors. For example:
+$$
+    x^3 + x = x(x^2 + 1).
+$$
+Stop here, don't factor into $x(x+i)(x-i)$.
+
+## Case 2.1: Distinct roots
+
+Assume that $Q(x) = (x - \alpha_1) \cdots (x - \alpha_k)$, with all $\alpha_i$ **distinct** and **real**.
+
+Then the partial fraction expansion becomes
+$$
+    \frac{P(x)}{Q(x)} = \frac{A_1}{x - \alpha_1} + \frac{A_2}{x - \alpha_2} + \cdots + \frac{A_k}{x - \alpha_k},
+$$
+where the coefficients $A_1, \ldots, A_k$  can be determined by adding the terms together and comparing with the left-hand side.
+
+## Example
+
+Find $\displaystyle \int \frac{x+2}{x^3-x} dx$
+
+## Case 2.2: Irreducible quadratic factors
+
+- For each quadratic factor, put a *linear term* in the denominator of the partial fraction.
+- Deal with the linear factors as before.
+
+## Example
+
+\begin{align*}
+    \frac{x+2}{x^3+x} & = \frac{x + 2}{x(x^2 + 1)} \\
+        & = \frac{A}{x} + \frac{Bx + C}{x^2 + 1} \\
+        & = \cdots
+\end{align*}
+
+Therefore $\displaystyle \int \frac{x+2}{x^3+x} dx = \cdots$
+
+## Case 2.3: Repeated linear factors
+
+- If $Q(x)$ has a repeated factor $(x - \alpha)^p$, then add $p$ terms to the partial fraction expansion:
+$$
+    \frac{P(x)}{Q(x)} = \frac{A_1}{x - \alpha} + \frac{A_2}{(x-\alpha)^2} + \cdots + \frac{A_p}{(x - \alpha)^p} + \text{[other PFE]}
+$$
+- Deal with other linear and quadratic factors as before.
+
+## Example
+
+Determine the partial fraction expansion of $\displaystyle \frac{1}{x^2(x-1)^3}$.
+
+## Example
+
+Find $\displaystyle \int \frac{dx}{x^3 - 5x^2 + 8x - 4}$.
+
+## Summary {.smaller}
+
+1. If $\deg P(x) \ge \deg Q(x)$, do polynomial division.
+2. Factor the denominator $Q(x)$:
+   - All distinct roots:
+     $$
+        \frac{P(x)}{Q(x)} = \cdots + \frac{A_1}{x - \alpha_1} + \cdots + \frac{A_k}{x - \alpha_k}.
+     $$
+   - Irreducible quadratic factors:
+     $$
+        \frac{P(x)}{Q(x)} = \cdots + \frac{Ax+B}{x^2 + \cdots}
+     $$
+   - Repeated linear factors:
+     $$
+        \frac{P(x)}{Q(x)} = \cdots + \frac{A_1}{x - \alpha} + \cdots + \frac{A_p}{(x - \alpha)^p}
+     $$
+     
+These three cases can happen at the same time!!
