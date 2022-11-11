@@ -21,7 +21,7 @@ In this lecture, we will find a recipe for the coefficients and terms in the par
 
 The advantage is that the partial fractions are *much* easier to integrate:
 \begin{align*}
-    \int \frac{x+2}{x^3-x} dx & = - 2\int \frac{dx}{x} + \frac{3}{2} \int \frac{dx}{x-1} dx + \frac{1}{2} \int \frac{dx}{x + 1} dx \\
+    \int \frac{x+2}{x^3-x} dx & = - 2\int \frac{dx}{x} + \frac{3}{2} \int \frac{dx}{x-1} + \frac{1}{2} \int \frac{dx}{x + 1} \\
         & = -2 \ln |x| + \frac{3}{2} \ln |x-1| + \frac{1}{2} \ln |x+1| + C.
 \end{align*}
 
