@@ -1,5 +1,5 @@
 ---
-title: Introduction to Engineering Mathematics
+title: Trigonometry
 format:
   html:
     code-fold: true
