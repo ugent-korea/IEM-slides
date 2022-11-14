@@ -245,3 +245,28 @@ The inverse tangent satisfies the following properties:
 As before, the inverse tangent function can be graphed by taking out the part of the tangent function with domain $[-\pi/2, \pi/2]$, and flipping it across the first bisector, as in the figure below.
 
 ![The graph of the inverse tangent function. The domain is the entire $x$-axis and the range is $[-\pi/2, \pi/2]$.](./images/01-trigonometry/inverse-tangent-flipped.png)
+
+### Working with inverse trigonometric functions
+
+The definitions of the inverse trigonometric functions above give us a way of thinking about these functions, but they don't give us a concrete way of computing their value specifically. In most cases, you can infer the value of the inverse trigonometric function using what you already know about the trigonometric function itself: for example, $\sin^{-1}(\sqrt{2}/{2}) = \pi/4$, since $\sin (\pi/4) = \sqrt{2}/{2}$. Here, it is important to keep the domain and range of the inverse trigonometric function in mind. For example, $\sin^{-1}(\sin (7\pi/3))$ is $\pi/3$, not $7\pi/3$, since $\sin^{-1}$ always returns an angle in the interval $[0, \pi]$.
+
+Apart from direct calculations with the inverse trigonometric functions, it is also possible to simplify expressions that involve trigonometric and inverse trigonometric functions. For example, suppose we want to simplify $y = \cos(\tan^{-1}(x))$ as much as possible. To "clean up" this expression, we'll introduce the angle $\alpha = \tan^{-1}(x)$. The expression to simplify then becomes $y = \cos \alpha$, and we have (by definition) that $\tan \alpha = x$. Now, we know that $\cos$ and $\tan$ are related by
+$$
+    \cos^2 \alpha = \frac{1}{1 + \tan^2 \alpha},
+$$
+so that
+$$
+    y = \cos \alpha = \frac{\pm 1}{\sqrt{1 + \tan^2 \alpha}} = \frac{\pm 1}{\sqrt{1 + x^2}}.
+$$
+The only thing that remains is to decide whether we should use the solution with the plus or the minus sign (or both). For that, we have to go back to the definitions of the inverse trigonometric functions. By definition, $\tan^{-1}(x) = \alpha$ will give us an angle in the interval $(-\pi/2, \pi/2)$, and taking the cosine of such an angle always gives us a positive number. So we must take the plus in the solution above:
+$$
+    y = \frac{1}{\sqrt{1 + x^2}}.
+$$
+
+In general, each composition of a trigonometric function and an inverse trigonometric function (or vice versa) can be simplified to something that looks like the root of a rational function. If the trigonometric function is applied to some multiple of the inverse trigonometric function, then you may have to use some trigonometric identities before you can apply the above. For example,
+\begin{align*}
+    \cos(2 \sin^{-1} y) & = \cos^2(\sin^{-1} y) - \sin^2(\sin^{-1} y) \\
+                        & = \cos^2(\sin^{-1} y) - y^2 \\
+                        & = \sqrt{1 - y^2} - y^2.
+\end{align*}
+
