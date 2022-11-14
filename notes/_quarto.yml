@@ -6,5 +6,5 @@ book:
   author: "Joris Vankerschaver"
   chapters:
     - index.qmd
-    - engineering-math.qmd
+    - 01-trigonometry.qmd
     

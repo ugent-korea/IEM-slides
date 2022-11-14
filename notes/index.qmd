@@ -1,6 +1,5 @@
 ---
-title: Introduction to Engineering Mathematics
-format:
-  html:
-    code-fold: true
+title: Introduction
 ---
+
+The introduction goes here
