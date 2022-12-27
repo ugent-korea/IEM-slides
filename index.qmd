@@ -1,0 +1,25 @@
+---
+title: Introduction to Engineering Mathematics
+author: Prof. Joris Vankerschaver
+---
+
+## Presentations
+
+- 1 - Trigonometry
+- [2 - Coordinate Geometry](presentations/02-coordinate-geometry.qmd)
+- [3 - Limits and Continuity (1/2)](presentations/03a-limits-continuity.qmd)
+- [3 - Limits and Continuity (2/2)](presentations/03b-limits-continuity.qmd)
+- [4 - Derivatives (1/2)](presentations/04a-derivatives.qmd)
+- [4 - Derivatives (2/2)](presentations/04b-derivatives.qmd)
+- [5 - Complex Numbers](presentations/05-complex-numbers.qmd)
+- [6 - Polynomials (1/2)](presentations/06a-polynomials.qmd)
+- [6 - Polynomials (2/2)](presentations/06b-polynomials.qmd)
+- [7 - The Binomial Theorem](presentations/07-binomial-theorem.qmd)
+- [8 - Proof Techniques](presentations/08-proof-techniques.qmd)
+- [9 - Integration: Definitions](presentations/09a-integration-definitions.qmd)
+- [9 - Integration: Techniques](presentations/09b-integration-techniques.qmd)
+- [9 - Integration: Partial Fractions](presentations/09c-integration-partial-fractions.qmd)
+- [9 - Integration: Inverse Trigonometric Substitutions](presentations/09d-integration-inverse-trig.qmd)
+- [9 - Integration: Applications](presentations/09e-integration-applications.qmd)
+- [10 - Epilogue](presentations/10-epilogue.qmd)
+

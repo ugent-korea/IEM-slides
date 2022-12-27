@@ -3,3 +3,6 @@
 # Build artifacts
 engineering-math_files/
 engineering-math.html
+
+/.quarto/
+html

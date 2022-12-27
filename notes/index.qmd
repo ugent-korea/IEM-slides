@@ -1,5 +1,0 @@
----
-title: Introduction
----
-
-The introduction goes here
