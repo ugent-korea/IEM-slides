@@ -1,0 +1,176 @@
+---
+title: "Trigonometry: Basic Formulas"
+subtitle: Introduction to Engineering Mathematics
+author: Prof. Joris Vankerschaver
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    css: style.css
+---
+
+## Contents
+
+1. Angles and points on the unit circle
+2. 
+
+## The unit circle
+
+:::: {.columns }
+::: {.column width="60%"}
+
+- The circle of radius 1 in the $xy$-plane, centered on the origin.
+- Equation: $x^2 + y^2 = 1$
+- Four quadrants: $I$, $II$, $III$, $IV$
+
+:::
+::: {.column width="40%"}
+![](./images/01-trigonometry/unit-circle.svg)
+:::
+::::
+
+
+## Example
+
+If $P(\sqrt{3}/2, y)$ is a point on the unit circle, find the value of $y$.
+
+
+## Angles and points on the unit circle
+
+:::: {.columns }
+::: {.column width="60%"}
+
+- Each point $P(x, y)$ defines an angle $\theta$ measured from the positive $x$-axis in counterclockwise direction.
+
+- Angles measured in degrees or radians.
+  - Value of $\theta$ in radians: length of arc subtended by $\theta$ (length of the red segment)
+
+:::
+
+::: {.column width="40%"}
+
+![](./images/01-trigonometry/unit-circle-angle.svg)
+
+:::
+::::
+
+## Converting between angles and radians
+
+:::: {.columns }
+::: {.column width="60%"}
+
+General formula to convert between degrees and radians:
+
+![](./images/01-trigonometry/degrees-to-radians.svg){fig-align="center" width="80%"}
+
+|                | Degrees     | Radians |
+|----------------|:-----------:|:-------:|
+| Full circle    | $360^\circ$ | $2\pi$  |
+| Half circle    | $180^\circ$ | $\pi$   |
+| Quarter circle |  $90^\circ$ | $\pi/2$ |
+
+:::
+::: {.column width="40%"}
+
+![](./images/01-trigonometry/unit-circle-radians.png)
+
+:::
+::::
+
+## Negative angles
+
+Measured from the positive $x$-axis, in clockwise direction.
+
+![](./images/01-trigonometry/unit-circle-negative-angles.png){fig-align="center"}
+
+
+## Adding $2\pi$ to an angle
+
+:::: {.columns }
+::: {.column width="60%"}
+
+- Point $P$ is determined by the angle $\theta$.
+- $P$ stays same when adding $\pm 2 \pi$ to $\theta$.
+
+$\Rightarrow$ All angles $\theta + 2k \pi$ with $k \in \mathbb{Z}$ give the same point $P$.
+
+**Principal angle**: $\theta$ such that $-\pi < \theta \le \pi$.
+
+:::
+::: {.column width="40%"}
+![](./images/01-trigonometry/unit-circle-angle-2pi.svg){fig-align="center"}
+:::
+::::
+
+
+## Finding the coordinates of a point
+
+:::: {.columns }
+::: {.column width="60%"}
+Given an angle $\theta$, find the coordinates of $P(x, y)$.
+
+Easy cases:
+
+1. $\theta = \pi/2$
+2. $\theta = 3\pi$
+3. $\theta = -\pi/2$
+:::
+
+::: {.column width="40%"}
+![](./images/01-trigonometry/unit-circle-point-coordinates.svg)
+:::
+::::
+
+## Finding the coordinates of a point
+
+:::: {.columns }
+::: {.column width="60%"}
+
+Complex case:
+
+4. $\theta = \pi/4$
+
+:::
+
+::: {.column width="40%"}
+![](./images/01-trigonometry/unit-circle-point-coordinates-pi4.svg)
+:::
+::::
+
+## Important angles
+
+
+
+## Trigonometric functions as coordinates
+
+Let $\theta$ be an angle with point $P(x, y)$.
+
+:::: {.columns }
+::: {.column width="60%"}
+
+| Name      | Notation      | Definition |
+|-----------|---------------|------------|
+| Cosine    | $\cos \theta$ | $x$        |
+| Sine      | $\sin \theta$ | $y$        |
+| Tangent   | $\tan \theta$ | $\frac{\sin\theta}{\cos\theta}$ |
+| Cotangent | $\cot \theta$ | $\frac{\cos\theta}{\sin\theta}$ |
+| Cosecant  | $\csc \theta$ | $\frac{1}{\sin \theta}$ |
+| Secant    | $\sec \theta$ | $\frac{1}{\cos \theta}$ |
+
+:::
+::: {.column width="40%"}
+![](./images/01-trigonometry/unit-circle-trig-functions.svg)
+:::
+::::
+
+## Example
+
+Given that $\displaystyle \theta = \frac{\pi}{6}$, find the values of all 6 trigonometric functions.
+
+## Fundamental identities
+
+
+
+## Even/odd identities
+
+![](./images/01-trigonometry/even-odd.svg)
