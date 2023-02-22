@@ -45,6 +45,11 @@ If $P(\sqrt{3}/2, y)$ is a point on the unit circle, find the value of $y$.
 - Angles measured in degrees or radians.
   - Value of $\theta$ in radians: length of arc subtended by $\theta$ (length of the red segment)
 
+- Notation: Greek letters
+  - $\alpha$, $\beta$, $\gamma$, ... (alpha, beta, gamma, ...)
+  - $\varphi$, $\phi$ (phi)
+  - $\theta$, $\xi$, ... (theta, xi, ...)
+
 :::
 
 ::: {.column width="40%"}
@@ -177,7 +182,9 @@ Given that $\displaystyle \theta = \frac{\pi}{6}$, find the values of all 6 trig
 $$
     \Rightarrow \fbox{$\cos^2 \theta + \sin^2 \theta = 1$}
 $$    
-    
+
+- Notation: $\sin^k \theta = (\sin \theta)^k$, and similar for other trig functions.
+
 :::
 ::: {.column width="40%"}
 
