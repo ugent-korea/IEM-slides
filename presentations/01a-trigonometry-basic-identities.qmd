@@ -1,5 +1,5 @@
 ---
-title: "Trigonometry: Basic Formulas"
+title: "Trigonometry: Introduction and Overview"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:
@@ -12,7 +12,8 @@ format:
 ## Contents
 
 1. Angles and points on the unit circle
-2. 
+2. Trigonometric functions as coordinates
+3. Basic trigonometric identities
 
 ## The unit circle
 
