@@ -26,14 +26,14 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.75"
-     inkscape:cx="287.14286"
-     inkscape:cy="306.57143"
+     inkscape:cx="238.57143"
+     inkscape:cy="307.14286"
      inkscape:window-width="1390"
-     inkscape:window-height="1205"
-     inkscape:window-x="647"
-     inkscape:window-y="41"
+     inkscape:window-height="847"
+     inkscape:window-x="50"
+     inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g9381" />
+     inkscape:current-layer="layer1" />
   <defs
      id="defs2578">
     <rect
@@ -226,21 +226,6 @@
        inkscape:path-effect="#path-effect7677"
        inkscape:original-d="m 105.07738,89.958332 c 0.20185,-2.62037 -0.0501,-2.31799 0.15119,-4.989284 0.20133,-2.671297 -2.36839,-6.450532 -3.77976,-8.164288"
        sodipodi:nodetypes="csc" />
-    <text
-       xml:space="preserve"
-       transform="scale(0.26458333)"
-       id="text8019"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect8021);fill:#000000;stroke:none;stroke-width:1.88976;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0" />
-    <text
-       xml:space="preserve"
-       transform="scale(0.26458333)"
-       id="text8049"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect8051);fill:#000000;stroke:none;stroke-width:1.88976;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"><tspan
-         x="503.42773"
-         y="257.0302"
-         id="tspan951"><tspan
-           dx="0 11.867208 11.256531 8.4765778 11.046896 6.7903748 11.812523 8.4765739"
-           id="tspan949">$P(x,u)$</tspan></tspan></text>
     <g
        transform="matrix(1.05833,0,0,1.05833,125.608,48.7669)"
        ns6:version="1.8.1"

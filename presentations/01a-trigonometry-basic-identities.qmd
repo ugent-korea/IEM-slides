@@ -167,10 +167,66 @@ Let $\theta$ be an angle with point $P(x, y)$.
 
 Given that $\displaystyle \theta = \frac{\pi}{6}$, find the values of all 6 trigonometric functions.
 
-## Fundamental identities
+## Fundamental identity
+
+:::: {.columns }
+::: {.column width="60%"}
+- $P(x, y)$ is on the unit circle: $x^2 + y^2 = 1$
+- $x = \cos \theta$ and $y = \sin \theta$
+
+$$
+    \Rightarrow \fbox{$\cos^2 \theta + \sin^2 \theta = 1$}
+$$    
+    
+:::
+::: {.column width="40%"}
+
+![](./images/01-trigonometry/unit-circle-trig-sin-cos.svg)
+
+:::
+::::
+
+## Fundamental identity: consequences
+
+Proof: blackboard
+
+:::: {.columns }
+::: {.column width="50%"}
+$$
+    1 + \tan^2 \theta = \sec^2 \theta
+$$
+:::
+::: {.column width="50%"}
+$$
+    1 + \cot^2 \theta = \csc^2 \theta
+$$
+:::
+::::
+
+## Example
+
+Suppose $\displaystyle \cos \theta = -\frac{4}{5}$ and $\theta$ is in quadrant III. Find $\sin \theta$ and $\tan \theta$.
+
+## Basic identities
+
+:::: {.columns }
+::: {.column width="60%"}
+
+1. $\sin(\theta \pm 2 \pi) = \sin \theta$ and $\cos(\theta \pm 2 \pi) = \cos \theta$.
+1. Even-odd identities:
+   - $\cos(-\theta) = \cos \theta$
+   - $\sin(-\theta) = - \sin \theta$
+
+Examples: Compute
+
+- $\sin(-\pi/4)$
+- $\displaystyle \tan\left(\frac{8093 \pi}{4}\right)$
 
 
+:::
 
-## Even/odd identities
-
+::: {.column width="40%"}
 ![](./images/01-trigonometry/even-odd.svg)
+:::
+::::
+
