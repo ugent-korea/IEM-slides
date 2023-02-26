@@ -36,3 +36,20 @@ $$
 :::
 ::::
 
+## Shift formulas
+
+:::: {.columns }
+::: {.column width="60%"}
+$$
+    \boxed{
+        \begin{align*}
+            \cos(\pi + \theta) & = - \cos \theta \\
+            \sin(\pi + \theta) & = - \sin \theta \\
+            \tan(\pi + \theta) & = \phantom{-} \tan\theta
+        \end{align*}}
+$$
+:::
+::: {.column width="40%"}
+![](./images/01-trigonometry/shift-formulas.svg)
+:::
+::::
