@@ -11,13 +11,13 @@ format:
 
 ## Overview
 
-1. Basic identities
-2. Reflection
-3. Shift formulas
-4. Addition/subtraction
-5. Double/half angle
-6. Sum-to-product
-7. Product-to-sum
+1. Reflection identities
+1. Shift formulas
+1. Addition/subtraction
+1. Double/half angle
+1. Sum-to-product
+1. Product-to-sum
+1. Graphs of trigonometric functions
 
 ## Reflection across $x$-axis
 
