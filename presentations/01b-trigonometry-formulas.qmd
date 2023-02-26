@@ -124,3 +124,21 @@ $$
 ## Example
 
 Prove that $\displaystyle \tan\left(\frac{\pi}{4} + x\right) = \frac{1 + \tan x}{1 - \tan x}$.
+
+## Half-angle formulas ($\theta \to 2\theta$)
+
+$$
+    \boxed{
+        \begin{align*}
+            \cos^2 \theta & = \frac{1 + \cos(2\theta)}{2} \\
+            \sin^2 \theta & = \frac{1 - \cos(2\theta)}{2} \\            
+            \tan^2 \theta & = \frac{1 - \cos(2\theta)}{1 + \cos(2\theta)}
+        \end{align*}}
+$$
+
+- These formulas are useful to compute integrals of powers of $\sin$ and $\cos$.
+
+## Example
+
+Express $\cos^2 x \sin^2 x$ as a combination of sines and cosines, without any powers.
+
