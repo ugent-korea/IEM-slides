@@ -19,6 +19,12 @@ format:
 1. Product-to-sum
 1. Graphs of trigonometric functions
 
+## Notes for this chapter
+
+- You should learn all of these formulas by heart.
+- Often, knowing the derivation of a formula will help you remember it.
+- Follow along with the blackboard lectures to fill in missing steps.
+
 ## Reflection across $x$-axis
 
 :::: {.columns }
