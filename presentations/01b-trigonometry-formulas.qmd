@@ -1,0 +1,227 @@
+---
+title: "Trigonometry: Formulas"
+subtitle: Introduction to Engineering Mathematics
+author: Prof. Joris Vankerschaver
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    css: style.css
+---
+
+## Overview
+
+1. Reflection identities
+1. Shift formulas
+1. Addition/subtraction
+1. Double/half angle
+1. Sum-to-product
+1. Product-to-sum
+1. Graphs of trigonometric functions
+
+## Notes for this chapter
+
+- You should learn all of these formulas by heart.
+- The best way to learn these formulas is by doing lots of practice problems.
+- Often, knowing the derivation of a formula will also help you remember it.
+- Follow along with the blackboard lectures to fill in missing steps.
+
+
+## Reflection across the $x$-axis (even/odd identities)
+
+:::: {.columns }
+::: {.column width="60%"}
+$$
+    \boxed{
+        \begin{align*}
+            \cos(-\theta) & = \phantom{-} \cos \theta \\
+            \sin(-\theta) & = - \sin \theta \\
+        \end{align*}}
+$$
+
+Example: Compute $\sin(-\pi/4)$
+
+:::
+
+::: {.column width="40%"}
+![](./images/01-trigonometry/even-odd.svg)
+:::
+::::
+
+## Reflection across the $y$-axis (complementary angles)
+
+:::: {.columns }
+::: {.column width="60%"}
+$$
+    \boxed{
+        \begin{align*}
+            \cos(\pi - \theta) & = - \cos\theta \\
+            \sin(\pi - \theta) & = \phantom{-} \sin \theta
+        \end{align*}}
+$$
+:::
+::: {.column width="40%"}
+![](./images/01-trigonometry/reflection-y.svg)
+:::
+::::
+
+## Shift formulas (by $\pi$)
+
+:::: {.columns }
+::: {.column width="60%"}
+$$
+    \boxed{
+        \begin{align*}
+            \cos(\pi + \theta) & = - \cos \theta \\
+            \sin(\pi + \theta) & = - \sin \theta \\
+            \tan(\pi + \theta) & = \phantom{-} \tan\theta
+        \end{align*}}
+$$
+:::
+::: {.column width="40%"}
+![](./images/01-trigonometry/shift-formulas.svg)
+:::
+::::
+
+## Shift formulas (by $\pi/2$)
+
+$$
+    \boxed{
+        \begin{align*}
+            \sin \left( \frac{\pi}{2} - \theta\right) & = \cos \theta \\
+            \cos \left( \frac{\pi}{2} - \theta\right) & = \sin \theta \\
+            \tan \left( \frac{\pi}{2} - \theta\right) & = \cot \theta
+        \end{align*}}
+$$    
+
+- Proof skipped.
+- **Very important formulas** to turn $\sin$ into $\cos$ and vice versa.
+
+## Addition/subtraction formulas (for $\sin$ and $\cos$)
+
+$$
+    \boxed{
+        \begin{align*}
+            \sin(\alpha + \beta) & = \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
+            \sin(\alpha - \beta) & = \sin \alpha \cos \beta - \cos \alpha \sin \beta \\
+            \cos(\alpha + \beta) & = \cos \alpha \cos \beta - \sin \alpha \sin \beta \\
+            \cos(\alpha - \beta) & = \cos \alpha \cos \beta + \sin \alpha \sin \beta \\
+        \end{align*}}
+$$
+
+- Proof skipped.
+- Note the signs for $\cos$!
+- Every formula on the previous slides can be derived from these formulas.
+
+## Example
+
+Compute $\displaystyle \sin\left( \frac{7 \pi}{12} \right)$.
+
+## Addition/subtraction formulas (for $\tan$)
+
+$$ 
+    \boxed{
+        \begin{align*}
+            \tan(\alpha + \beta) & = \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \\
+            \tan(\alpha - \beta) & = \frac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta}
+        \end{align*}}
+$$
+
+## Double-angle formulas ($2\theta \to \theta$)
+
+$$
+    \boxed{
+        \begin{align*}
+            \sin(2 \theta) & = 2 \sin \theta \cos \theta \\
+            \cos(2 \theta) & = \cos^2 \theta - \sin^2 \theta \\
+            \tan(2 \theta) & = \frac{2 \tan \theta}{1 - \tan^2 \theta}
+        \end{align*}}
+$$
+
+- Follows from the addition/subtraction formulas.
+- The double-angle formula for $\cos$ can also be written as
+
+$$
+    \boxed{
+        \begin{align*}
+            \cos(2 \theta) & = \cos^2 \theta - \sin^2 \theta \\
+                           & = 2 \cos^2 \theta - 1 \\
+                           & = 1 - 2 \sin^2 \theta
+        \end{align*}}
+$$
+
+## Example
+
+Prove that $\displaystyle \tan\left(\frac{\pi}{4} + x\right) = \frac{1 + \tan x}{1 - \tan x}$.
+
+## Half-angle formulas ($\theta \to 2\theta$)
+
+$$
+    \boxed{
+        \begin{align*}
+            \cos^2 \theta & = \frac{1 + \cos(2\theta)}{2} \\
+            \sin^2 \theta & = \frac{1 - \cos(2\theta)}{2} \\            
+            \tan^2 \theta & = \frac{1 - \cos(2\theta)}{1 + \cos(2\theta)}
+        \end{align*}}
+$$
+
+- These formulas are useful to compute integrals of powers of $\sin$ and $\cos$.
+
+## Example
+
+Express $\cos^2 x \sin^2 x$ as a combination of sines and cosines, without any powers.
+
+## Product-to-sum formulas
+
+$$
+    \boxed{
+        \begin{align*}
+            \sin \alpha \cos \beta & = \frac{1}{2}(\sin(\alpha + \beta) + \sin(\alpha - \beta)) \\
+            \cos \alpha \sin \beta & = \frac{1}{2}(\sin(\alpha + \beta) - \sin(\alpha - \beta)) \\
+            \cos \alpha \cos \beta & = \frac{1}{2}(\cos(\alpha + \beta) + \cos(\alpha - \beta) \\
+            \sin \alpha \sin \beta & = \frac{1}{2}(\cos(\alpha - \beta) - \cos(\alpha + \beta)
+    \end{align*}}
+$$
+
+## Sum-to-product formulas
+
+$$
+    \boxed{
+        \begin{align*}
+            \sin \alpha + \sin \beta & = \phantom{-} 2\sin\left(\frac{\alpha+\beta}{2}\right) \cos\left(\frac{\alpha-\beta}{2}\right) \\
+            \sin \alpha - \sin \beta & = \phantom{-} 2\cos\left(\frac{\alpha+\beta}{2}\right) \sin\left(\frac{\alpha-\beta}{2}\right) \\            
+            \cos \alpha + \cos \beta & = \phantom{-} 2\cos\left(\frac{\alpha+\beta}{2}\right) \cos\left(\frac{\alpha-\beta}{2}\right) \\
+            \cos \alpha - \cos \beta & = - 2\sin\left(\frac{\alpha+\beta}{2}\right) \sin\left(\frac{\alpha-\beta}{2}\right)
+        \end{align*}}
+$$        
+
+## Graphs of sine/cosine
+
+:::: {.columns }
+::: {.column width="50%"}
+![](./images/01-trigonometry/graph-sine.svg)
+:::
+::: {.column width="50%"}
+![](./images/01-trigonometry/graph-cosine.svg)
+:::
+::::
+
+The sine and cosine: 
+
+- Are defined for every real number.
+- Oscillate between -1 and +1.
+- Repeat themselves every $2 \pi$ radians (**fundamental period**).
+
+## Graph of the tangent function
+
+![](./images/01-trigonometry/graph-tangent.svg){width="75%"}
+
+The tangent function:
+
+- Is defined for every real number, **except multiples of $\pi/2$**.
+- Can take on arbitrary values.
+- Repeats itself every $\pi$ radians (fundamental period).
+
+## Example
+
+Find the fundamental period of $\sin(2 x)$.

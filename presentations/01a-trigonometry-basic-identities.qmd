@@ -215,26 +215,35 @@ $$
 
 Suppose $\displaystyle \cos \theta = -\frac{4}{5}$ and $\theta$ is in quadrant III. Find $\sin \theta$ and $\tan \theta$.
 
-## Basic identities
+## Periodicity of sine and cosine
 
 :::: {.columns }
 ::: {.column width="60%"}
+- Sine and cosine are $2\pi$-periodic:
+$$
+    \boxed{
+        \begin{align*}
+            \sin(\theta \pm 2 \pi) & = \sin \theta \\
+            \cos(\theta \pm 2 \pi) & = \cos \theta
+        \end{align*}}
+$$
+- The tangent is $\pi$-periodic:
+$$
+    \boxed{
+        \begin{align*}
+            \tan(\theta \pm \pi) & = \tan \theta
+        \end{align*}}
+$$
 
-1. $\sin(\theta \pm 2 \pi) = \sin \theta$ and $\cos(\theta \pm 2 \pi) = \cos \theta$.
-1. Even-odd identities:
-   - $\cos(-\theta) = \cos \theta$
-   - $\sin(-\theta) = - \sin \theta$
-
-Examples: Compute
-
-- $\sin(-\pi/4)$
-- $\displaystyle \tan\left(\frac{8093 \pi}{4}\right)$
-
-
+Example: Compute $\displaystyle \tan\left(\frac{8093 \pi}{4}\right)$
 :::
-
 ::: {.column width="40%"}
-![](./images/01-trigonometry/even-odd.svg)
+![](./images/01-trigonometry/unit-circle-trig-functions-variant.svg)
 :::
 ::::
+
+
+
+
+
 
