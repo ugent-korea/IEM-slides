@@ -22,10 +22,33 @@ format:
 ## Notes for this chapter
 
 - You should learn all of these formulas by heart.
-- Often, knowing the derivation of a formula will help you remember it.
+- The best way to learn these formulas is by doing lots of practice problems.
+- Often, knowing the derivation of a formula will also help you remember it.
 - Follow along with the blackboard lectures to fill in missing steps.
 
-## Reflection across $x$-axis
+
+## Reflection across the $x$-axis (even/odd identities)
+
+:::: {.columns }
+::: {.column width="60%"}
+$$
+    \boxed{
+        \begin{align*}
+            \cos(-\theta) & = \phantom{-} \cos \theta \\
+            \sin(-\theta) & = - \sin \theta \\
+        \end{align*}}
+$$
+
+Example: Compute $\sin(-\pi/4)$
+
+:::
+
+::: {.column width="40%"}
+![](./images/01-trigonometry/even-odd.svg)
+:::
+::::
+
+## Reflection across the $y$-axis (complementary angles)
 
 :::: {.columns }
 ::: {.column width="60%"}
@@ -42,7 +65,7 @@ $$
 :::
 ::::
 
-## Shift formulas
+## Shift formulas (by $\pi$)
 
 :::: {.columns }
 ::: {.column width="60%"}
@@ -60,7 +83,7 @@ $$
 :::
 ::::
 
-## Complementary angles
+## Shift formulas (by $\pi/2$)
 
 $$
     \boxed{
