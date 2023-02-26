@@ -98,4 +98,29 @@ $$
         \end{align*}}
 $$
 
+## Double-angle formulas ($2\theta \to \theta$)
 
+$$
+    \boxed{
+        \begin{align*}
+            \sin(2 \theta) & = 2 \sin \theta \cos \theta \\
+            \cos(2 \theta) & = \cos^2 \theta - \sin^2 \theta \\
+            \tan(2 \theta) & = \frac{2 \tan \theta}{1 - \tan^2 \theta}
+        \end{align*}}
+$$
+
+- Follows from the addition/subtraction formulas.
+- The double-angle formula for $\cos$ can also be written as
+
+$$
+    \boxed{
+        \begin{align*}
+            \cos(2 \theta) & = \cos^2 \theta - \sin^2 \theta \\
+                           & = 2 \cos^2 \theta - 1 \\
+                           & = 1 - 2 \sin^2 \theta
+        \end{align*}}
+$$
+
+## Example
+
+Prove that $\displaystyle \tan\left(\frac{\pi}{4} + x\right) = \frac{1 + \tan x}{1 - \tan x}$.
