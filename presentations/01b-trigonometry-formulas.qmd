@@ -53,3 +53,49 @@ $$
 ![](./images/01-trigonometry/shift-formulas.svg)
 :::
 ::::
+
+## Complementary angles
+
+$$
+    \boxed{
+        \begin{align*}
+            \sin \left( \frac{\pi}{2} - \theta\right) & = \cos \theta \\
+            \cos \left( \frac{\pi}{2} - \theta\right) & = \sin \theta \\
+            \tan \left( \frac{\pi}{2} - \theta\right) & = \cot \theta
+        \end{align*}}
+$$    
+
+- Proof skipped.
+- **Very important formulas** to turn $\sin$ into $\cos$ and vice versa.
+
+## Addition/subtraction formulas (for $\sin$ and $\cos$)
+
+$$
+    \boxed{
+        \begin{align*}
+            \sin(\alpha + \beta) & = \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
+            \sin(\alpha - \beta) & = \sin \alpha \cos \beta - \cos \alpha \sin \beta \\
+            \cos(\alpha + \beta) & = \cos \alpha \cos \beta - \sin \alpha \sin \beta \\
+            \cos(\alpha - \beta) & = \cos \alpha \cos \beta + \sin \alpha \sin \beta \\
+        \end{align*}}
+$$
+
+- Proof skipped.
+- Note the signs for $\cos$!
+- Every formula on the previous slides can be derived from these formulas.
+
+## Example
+
+Compute $\displaystyle \sin\left( \frac{7 \pi}{12} \right)$.
+
+## Addition/subtraction formulas (for $\tan$)
+
+$$ 
+    \boxed{
+        \begin{align*}
+            \tan(\alpha + \beta) & = \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \\
+            \tan(\alpha - \beta) & = \frac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta}
+        \end{align*}}
+$$
+
+
