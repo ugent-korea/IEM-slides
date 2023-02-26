@@ -165,3 +165,34 @@ $$
             \cos \alpha - \cos \beta & = - 2\sin\left(\frac{\alpha+\beta}{2}\right) \sin\left(\frac{\alpha-\beta}{2}\right)
         \end{align*}}
 $$        
+
+## Graphs of sine/cosine
+
+:::: {.columns }
+::: {.column width="50%"}
+![](./images/01-trigonometry/graph-sine.svg)
+:::
+::: {.column width="50%"}
+![](./images/01-trigonometry/graph-cosine.svg)
+:::
+::::
+
+The sine and cosine: 
+
+- Are defined for every real number.
+- Oscillate between -1 and +1.
+- Repeat themselves every $2 \pi$ radians (**fundamental period**).
+
+## Graph of the tangent function
+
+![](./images/01-trigonometry/graph-tangent.svg){width="75%"}
+
+The tangent function:
+
+- Is defined for every real number, **except multiples of $\pi/2$**.
+- Can take on arbitrary values.
+- Repeats itself every $\pi$ radians (fundamental period).
+
+## Example
+
+Find the fundamental period of $\sin(2 x)$.
