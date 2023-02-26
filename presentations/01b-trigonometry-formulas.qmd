@@ -1,0 +1,38 @@
+---
+title: "Trigonometry: Formulas"
+subtitle: Introduction to Engineering Mathematics
+author: Prof. Joris Vankerschaver
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    css: style.css
+---
+
+## Overview
+
+1. Basic identities
+2. Reflection
+3. Shift formulas
+4. Addition/subtraction
+5. Double/half angle
+6. Sum-to-product
+7. Product-to-sum
+
+## Reflection across $x$-axis
+
+:::: {.columns }
+::: {.column width="60%"}
+$$
+    \boxed{
+        \begin{align*}
+            \cos(\pi - \theta) & = - \cos\theta \\
+            \sin(\pi - \theta) & = \phantom{-} \sin \theta
+        \end{align*}}
+$$
+:::
+::: {.column width="40%"}
+![](./images/01-trigonometry/reflection-y.svg)
+:::
+::::
+
