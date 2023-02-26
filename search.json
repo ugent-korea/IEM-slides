@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Introduction to Engineering Mathematics",
     "section": "",
-    "text": "1 - Trigonometry\n2 - Coordinate Geometry\n3 - Limits and Continuity (1/2)\n3 - Limits and Continuity (2/2)\n4 - Derivatives (1/2)\n4 - Derivatives (2/2)\n5 - Complex Numbers\n6 - Polynomials (1/2)\n6 - Polynomials (2/2)\n7 - The Binomial Theorem\n8 - Proof Techniques\n9 - Integration: Definitions\n9 - Integration: Techniques\n9 - Integration: Partial Fractions\n9 - Integration: Inverse Trigonometric Substitutions\n9 - Integration: Applications\n10 - Epilogue"
+    "text": "1 - Trigonometry (1/4): Introduction\n1 - Trigonometry (2/4): Formulas\n1 - Trigonometry (3/4): Geometry of triangles\n1 - Trigonometry (4/4): Applications\n2 - Coordinate Geometry\n3 - Limits and Continuity (1/2)\n3 - Limits and Continuity (2/2)\n4 - Derivatives (1/2)\n4 - Derivatives (2/2)\n5 - Complex Numbers\n6 - Polynomials (1/2)\n6 - Polynomials (2/2)\n7 - The Binomial Theorem\n8 - Proof Techniques\n9 - Integration: Definitions\n9 - Integration: Techniques\n9 - Integration: Partial Fractions\n9 - Integration: Inverse Trigonometric Substitutions\n9 - Integration: Applications\n10 - Epilogue"
   },
   {
     "objectID": "presentations/09e-integration-applications.html#reminder-area-under-the-curve",
@@ -446,6 +446,118 @@
     "title": "Derivatives (2/2): Applications",
     "section": "Example (continued)",
     "text": "Example (continued)"
+  },
+  {
+    "objectID": "presentations/01a-trigonometry-basic-identities.html#contents",
+    "href": "presentations/01a-trigonometry-basic-identities.html#contents",
+    "title": "Trigonometry: Introduction and Overview",
+    "section": "Contents",
+    "text": "Contents\n\nAngles and points on the unit circle\nTrigonometric functions as coordinates\nBasic trigonometric identities"
+  },
+  {
+    "objectID": "presentations/01a-trigonometry-basic-identities.html#the-unit-circle",
+    "href": "presentations/01a-trigonometry-basic-identities.html#the-unit-circle",
+    "title": "Trigonometry: Introduction and Overview",
+    "section": "The unit circle",
+    "text": "The unit circle\n\n\n\nThe circle of radius 1 in the \\(xy\\)-plane, centered on the origin.\nEquation: \\(x^2 + y^2 = 1\\)\nFour quadrants: \\(I\\), \\(II\\), \\(III\\), \\(IV\\)"
+  },
+  {
+    "objectID": "presentations/01a-trigonometry-basic-identities.html#example",
+    "href": "presentations/01a-trigonometry-basic-identities.html#example",
+    "title": "Trigonometry: Introduction and Overview",
+    "section": "Example",
+    "text": "Example\nIf \\(P(\\sqrt{3}/2, y)\\) is a point on the unit circle, find the value of \\(y\\)."
+  },
+  {
+    "objectID": "presentations/01a-trigonometry-basic-identities.html#angles-and-points-on-the-unit-circle",
+    "href": "presentations/01a-trigonometry-basic-identities.html#angles-and-points-on-the-unit-circle",
+    "title": "Trigonometry: Introduction and Overview",
+    "section": "Angles and points on the unit circle",
+    "text": "Angles and points on the unit circle\n\n\n\nEach point \\(P(x, y)\\) defines an angle \\(\\theta\\) measured from the positive \\(x\\)-axis in counterclockwise direction.\nAngles measured in degrees or radians.\n\nValue of \\(\\theta\\) in radians: length of arc subtended by \\(\\theta\\) (length of the red segment)\n\nNotation: Greek letters\n\n\\(\\alpha\\), \\(\\beta\\), \\(\\gamma\\), … (alpha, beta, gamma, …)\n\\(\\varphi\\), \\(\\phi\\) (phi)\n\\(\\theta\\), \\(\\xi\\), … (theta, xi, …)"
+  },
+  {
+    "objectID": "presentations/01a-trigonometry-basic-identities.html#converting-between-angles-and-radians",
+    "href": "presentations/01a-trigonometry-basic-identities.html#converting-between-angles-and-radians",
+    "title": "Trigonometry: Introduction and Overview",
+    "section": "Converting between angles and radians",
+    "text": "Converting between angles and radians\n\n\nGeneral formula to convert between degrees and radians:\n\n\n\n\n\n\n\n\n\nDegrees\nRadians\n\n\n\n\nFull circle\n\\(360^\\circ\\)\n\\(2\\pi\\)\n\n\nHalf circle\n\\(180^\\circ\\)\n\\(\\pi\\)\n\n\nQuarter circle\n\\(90^\\circ\\)\n\\(\\pi/2\\)"
+  },
+  {
+    "objectID": "presentations/01a-trigonometry-basic-identities.html#negative-angles",
+    "href": "presentations/01a-trigonometry-basic-identities.html#negative-angles",
+    "title": "Trigonometry: Introduction and Overview",
+    "section": "Negative angles",
+    "text": "Negative angles\nMeasured from the positive \\(x\\)-axis, in clockwise direction."
+  },
+  {
+    "objectID": "presentations/01a-trigonometry-basic-identities.html#adding-2pi-to-an-angle",
+    "href": "presentations/01a-trigonometry-basic-identities.html#adding-2pi-to-an-angle",
+    "title": "Trigonometry: Introduction and Overview",
+    "section": "Adding \\(2\\pi\\) to an angle",
+    "text": "Adding \\(2\\pi\\) to an angle\n\n\n\nPoint \\(P\\) is determined by the angle \\(\\theta\\).\n\\(P\\) stays same when adding \\(\\pm 2 \\pi\\) to \\(\\theta\\).\n\n\\(\\Rightarrow\\) All angles \\(\\theta + 2k \\pi\\) with \\(k \\in \\mathbb{Z}\\) give the same point \\(P\\).\nPrincipal angle: \\(\\theta\\) such that \\(-\\pi < \\theta \\le \\pi\\)."
+  },
+  {
+    "objectID": "presentations/01a-trigonometry-basic-identities.html#finding-the-coordinates-of-a-point",
+    "href": "presentations/01a-trigonometry-basic-identities.html#finding-the-coordinates-of-a-point",
+    "title": "Trigonometry: Introduction and Overview",
+    "section": "Finding the coordinates of a point",
+    "text": "Finding the coordinates of a point\n\n\nGiven an angle \\(\\theta\\), find the coordinates of \\(P(x, y)\\).\nEasy cases:\n\n\\(\\theta = \\pi/2\\)\n\\(\\theta = 3\\pi\\)\n\\(\\theta = -\\pi/2\\)"
+  },
+  {
+    "objectID": "presentations/01a-trigonometry-basic-identities.html#finding-the-coordinates-of-a-point-1",
+    "href": "presentations/01a-trigonometry-basic-identities.html#finding-the-coordinates-of-a-point-1",
+    "title": "Trigonometry: Introduction and Overview",
+    "section": "Finding the coordinates of a point",
+    "text": "Finding the coordinates of a point\n\n\nComplex case:\n\n\\(\\theta = \\pi/4\\)"
+  },
+  {
+    "objectID": "presentations/01a-trigonometry-basic-identities.html#important-angles",
+    "href": "presentations/01a-trigonometry-basic-identities.html#important-angles",
+    "title": "Trigonometry: Introduction and Overview",
+    "section": "Important angles",
+    "text": "Important angles"
+  },
+  {
+    "objectID": "presentations/01a-trigonometry-basic-identities.html#trigonometric-functions-as-coordinates",
+    "href": "presentations/01a-trigonometry-basic-identities.html#trigonometric-functions-as-coordinates",
+    "title": "Trigonometry: Introduction and Overview",
+    "section": "Trigonometric functions as coordinates",
+    "text": "Trigonometric functions as coordinates\nLet \\(\\theta\\) be an angle with point \\(P(x, y)\\).\n\n\n\n\n\nName\nNotation\nDefinition\n\n\n\n\nCosine\n\\(\\cos \\theta\\)\n\\(x\\)\n\n\nSine\n\\(\\sin \\theta\\)\n\\(y\\)\n\n\nTangent\n\\(\\tan \\theta\\)\n\\(\\frac{\\sin\\theta}{\\cos\\theta}\\)\n\n\nCotangent\n\\(\\cot \\theta\\)\n\\(\\frac{\\cos\\theta}{\\sin\\theta}\\)\n\n\nCosecant\n\\(\\csc \\theta\\)\n\\(\\frac{1}{\\sin \\theta}\\)\n\n\nSecant\n\\(\\sec \\theta\\)\n\\(\\frac{1}{\\cos \\theta}\\)"
+  },
+  {
+    "objectID": "presentations/01a-trigonometry-basic-identities.html#example-1",
+    "href": "presentations/01a-trigonometry-basic-identities.html#example-1",
+    "title": "Trigonometry: Introduction and Overview",
+    "section": "Example",
+    "text": "Example\nGiven that \\(\\displaystyle \\theta = \\frac{\\pi}{6}\\), find the values of all 6 trigonometric functions."
+  },
+  {
+    "objectID": "presentations/01a-trigonometry-basic-identities.html#fundamental-identity",
+    "href": "presentations/01a-trigonometry-basic-identities.html#fundamental-identity",
+    "title": "Trigonometry: Introduction and Overview",
+    "section": "Fundamental identity",
+    "text": "Fundamental identity\n\n\n\n\\(P(x, y)\\) is on the unit circle: \\(x^2 + y^2 = 1\\)\n\\(x = \\cos \\theta\\) and \\(y = \\sin \\theta\\)\n\n\\[\n    \\Rightarrow \\fbox{$\\cos^2 \\theta + \\sin^2 \\theta = 1$}\n\\]\n\nNotation: \\(\\sin^k \\theta = (\\sin \\theta)^k\\), and similar for other trig functions."
+  },
+  {
+    "objectID": "presentations/01a-trigonometry-basic-identities.html#fundamental-identity-consequences",
+    "href": "presentations/01a-trigonometry-basic-identities.html#fundamental-identity-consequences",
+    "title": "Trigonometry: Introduction and Overview",
+    "section": "Fundamental identity: consequences",
+    "text": "Fundamental identity: consequences\nProof: blackboard\n\n\n\\[\n    1 + \\tan^2 \\theta = \\sec^2 \\theta\n\\]\n\n\\[\n    1 + \\cot^2 \\theta = \\csc^2 \\theta\n\\]"
+  },
+  {
+    "objectID": "presentations/01a-trigonometry-basic-identities.html#example-2",
+    "href": "presentations/01a-trigonometry-basic-identities.html#example-2",
+    "title": "Trigonometry: Introduction and Overview",
+    "section": "Example",
+    "text": "Example\nSuppose \\(\\displaystyle \\cos \\theta = -\\frac{4}{5}\\) and \\(\\theta\\) is in quadrant III. Find \\(\\sin \\theta\\) and \\(\\tan \\theta\\)."
+  },
+  {
+    "objectID": "presentations/01a-trigonometry-basic-identities.html#basic-identities",
+    "href": "presentations/01a-trigonometry-basic-identities.html#basic-identities",
+    "title": "Trigonometry: Introduction and Overview",
+    "section": "Basic identities",
+    "text": "Basic identities\n\n\n\n\\(\\sin(\\theta \\pm 2 \\pi) = \\sin \\theta\\) and \\(\\cos(\\theta \\pm 2 \\pi) = \\cos \\theta\\).\nEven-odd identities:\n\n\\(\\cos(-\\theta) = \\cos \\theta\\)\n\\(\\sin(-\\theta) = - \\sin \\theta\\)\n\n\nExamples: Compute\n\n\\(\\sin(-\\pi/4)\\)\n\\(\\displaystyle \\tan\\left(\\frac{8093 \\pi}{4}\\right)\\)"
   },
   {
     "objectID": "presentations/06b-polynomials.html#contents",
@@ -1279,6 +1391,125 @@
     "title": "The binomial theorem",
     "section": "Visual proof of the binomial expansion (optional)",
     "text": "Visual proof of the binomial expansion (optional)"
+  },
+  {
+    "objectID": "presentations/01b-trigonometry-formulas.html#overview",
+    "href": "presentations/01b-trigonometry-formulas.html#overview",
+    "title": "Trigonometry: Formulas",
+    "section": "Overview",
+    "text": "Overview\n\nReflection identities\nShift formulas\nAddition/subtraction\nDouble/half angle\nSum-to-product\nProduct-to-sum\nGraphs of trigonometric functions"
+  },
+  {
+    "objectID": "presentations/01b-trigonometry-formulas.html#notes-for-this-chapter",
+    "href": "presentations/01b-trigonometry-formulas.html#notes-for-this-chapter",
+    "title": "Trigonometry: Formulas",
+    "section": "Notes for this chapter",
+    "text": "Notes for this chapter\n\nYou should learn all of these formulas by heart.\nOften, knowing the derivation of a formula will help you remember it.\nFollow along with the blackboard lectures to fill in missing steps."
+  },
+  {
+    "objectID": "presentations/01b-trigonometry-formulas.html#reflection-across-x-axis",
+    "href": "presentations/01b-trigonometry-formulas.html#reflection-across-x-axis",
+    "title": "Trigonometry: Formulas",
+    "section": "Reflection across \\(x\\)-axis",
+    "text": "Reflection across \\(x\\)-axis\n\n\n\\[\n    \\boxed{\n        \\begin{align*}\n            \\cos(\\pi - \\theta) & = - \\cos\\theta \\\\\n            \\sin(\\pi - \\theta) & = \\phantom{-} \\sin \\theta\n        \\end{align*}}\n\\]"
+  },
+  {
+    "objectID": "presentations/01b-trigonometry-formulas.html#shift-formulas",
+    "href": "presentations/01b-trigonometry-formulas.html#shift-formulas",
+    "title": "Trigonometry: Formulas",
+    "section": "Shift formulas",
+    "text": "Shift formulas\n\n\n\\[\n    \\boxed{\n        \\begin{align*}\n            \\cos(\\pi + \\theta) & = - \\cos \\theta \\\\\n            \\sin(\\pi + \\theta) & = - \\sin \\theta \\\\\n            \\tan(\\pi + \\theta) & = \\phantom{-} \\tan\\theta\n        \\end{align*}}\n\\]"
+  },
+  {
+    "objectID": "presentations/01b-trigonometry-formulas.html#complementary-angles",
+    "href": "presentations/01b-trigonometry-formulas.html#complementary-angles",
+    "title": "Trigonometry: Formulas",
+    "section": "Complementary angles",
+    "text": "Complementary angles\n\\[\n    \\boxed{\n        \\begin{align*}\n            \\sin \\left( \\frac{\\pi}{2} - \\theta\\right) & = \\cos \\theta \\\\\n            \\cos \\left( \\frac{\\pi}{2} - \\theta\\right) & = \\sin \\theta \\\\\n            \\tan \\left( \\frac{\\pi}{2} - \\theta\\right) & = \\cot \\theta\n        \\end{align*}}\n\\]\n\nProof skipped.\nVery important formulas to turn \\(\\sin\\) into \\(\\cos\\) and vice versa."
+  },
+  {
+    "objectID": "presentations/01b-trigonometry-formulas.html#additionsubtraction-formulas-for-sin-and-cos",
+    "href": "presentations/01b-trigonometry-formulas.html#additionsubtraction-formulas-for-sin-and-cos",
+    "title": "Trigonometry: Formulas",
+    "section": "Addition/subtraction formulas (for \\(\\sin\\) and \\(\\cos\\))",
+    "text": "Addition/subtraction formulas (for \\(\\sin\\) and \\(\\cos\\))\n\\[\n    \\boxed{\n        \\begin{align*}\n            \\sin(\\alpha + \\beta) & = \\sin \\alpha \\cos \\beta + \\cos \\alpha \\sin \\beta \\\\\n            \\sin(\\alpha - \\beta) & = \\sin \\alpha \\cos \\beta - \\cos \\alpha \\sin \\beta \\\\\n            \\cos(\\alpha + \\beta) & = \\cos \\alpha \\cos \\beta - \\sin \\alpha \\sin \\beta \\\\\n            \\cos(\\alpha - \\beta) & = \\cos \\alpha \\cos \\beta + \\sin \\alpha \\sin \\beta \\\\\n        \\end{align*}}\n\\]\n\nProof skipped.\nNote the signs for \\(\\cos\\)!\nEvery formula on the previous slides can be derived from these formulas."
+  },
+  {
+    "objectID": "presentations/01b-trigonometry-formulas.html#example",
+    "href": "presentations/01b-trigonometry-formulas.html#example",
+    "title": "Trigonometry: Formulas",
+    "section": "Example",
+    "text": "Example\nCompute \\(\\displaystyle \\sin\\left( \\frac{7 \\pi}{12} \\right)\\)."
+  },
+  {
+    "objectID": "presentations/01b-trigonometry-formulas.html#additionsubtraction-formulas-for-tan",
+    "href": "presentations/01b-trigonometry-formulas.html#additionsubtraction-formulas-for-tan",
+    "title": "Trigonometry: Formulas",
+    "section": "Addition/subtraction formulas (for \\(\\tan\\))",
+    "text": "Addition/subtraction formulas (for \\(\\tan\\))\n\\[\n    \\boxed{\n        \\begin{align*}\n            \\tan(\\alpha + \\beta) & = \\frac{\\tan \\alpha + \\tan \\beta}{1 - \\tan \\alpha \\tan \\beta} \\\\\n            \\tan(\\alpha - \\beta) & = \\frac{\\tan \\alpha - \\tan \\beta}{1 + \\tan \\alpha \\tan \\beta}\n        \\end{align*}}\n\\]"
+  },
+  {
+    "objectID": "presentations/01b-trigonometry-formulas.html#double-angle-formulas-2theta-to-theta",
+    "href": "presentations/01b-trigonometry-formulas.html#double-angle-formulas-2theta-to-theta",
+    "title": "Trigonometry: Formulas",
+    "section": "Double-angle formulas (\\(2\\theta \\to \\theta\\))",
+    "text": "Double-angle formulas (\\(2\\theta \\to \\theta\\))\n\\[\n    \\boxed{\n        \\begin{align*}\n            \\sin(2 \\theta) & = 2 \\sin \\theta \\cos \\theta \\\\\n            \\cos(2 \\theta) & = \\cos^2 \\theta - \\sin^2 \\theta \\\\\n            \\tan(2 \\theta) & = \\frac{2 \\tan \\theta}{1 - \\tan^2 \\theta}\n        \\end{align*}}\n\\]\n\nFollows from the addition/subtraction formulas.\nThe double-angle formula for \\(\\cos\\) can also be written as\n\n\\[\n    \\boxed{\n        \\begin{align*}\n            \\cos(2 \\theta) & = \\cos^2 \\theta - \\sin^2 \\theta \\\\\n                           & = 2 \\cos^2 \\theta - 1 \\\\\n                           & = 1 - 2 \\sin^2 \\theta\n        \\end{align*}}\n\\]"
+  },
+  {
+    "objectID": "presentations/01b-trigonometry-formulas.html#example-1",
+    "href": "presentations/01b-trigonometry-formulas.html#example-1",
+    "title": "Trigonometry: Formulas",
+    "section": "Example",
+    "text": "Example\nProve that \\(\\displaystyle \\tan\\left(\\frac{\\pi}{4} + x\\right) = \\frac{1 + \\tan x}{1 - \\tan x}\\)."
+  },
+  {
+    "objectID": "presentations/01b-trigonometry-formulas.html#half-angle-formulas-theta-to-2theta",
+    "href": "presentations/01b-trigonometry-formulas.html#half-angle-formulas-theta-to-2theta",
+    "title": "Trigonometry: Formulas",
+    "section": "Half-angle formulas (\\(\\theta \\to 2\\theta\\))",
+    "text": "Half-angle formulas (\\(\\theta \\to 2\\theta\\))\n\\[\n    \\boxed{\n        \\begin{align*}\n            \\cos^2 \\theta & = \\frac{1 + \\cos(2\\theta)}{2} \\\\\n            \\sin^2 \\theta & = \\frac{1 - \\cos(2\\theta)}{2} \\\\            \n            \\tan^2 \\theta & = \\frac{1 - \\cos(2\\theta)}{1 + \\cos(2\\theta)}\n        \\end{align*}}\n\\]\n\nThese formulas are useful to compute integrals of powers of \\(\\sin\\) and \\(\\cos\\)."
+  },
+  {
+    "objectID": "presentations/01b-trigonometry-formulas.html#example-2",
+    "href": "presentations/01b-trigonometry-formulas.html#example-2",
+    "title": "Trigonometry: Formulas",
+    "section": "Example",
+    "text": "Example\nExpress \\(\\cos^2 x \\sin^2 x\\) as a combination of sines and cosines, without any powers."
+  },
+  {
+    "objectID": "presentations/01b-trigonometry-formulas.html#product-to-sum-formulas",
+    "href": "presentations/01b-trigonometry-formulas.html#product-to-sum-formulas",
+    "title": "Trigonometry: Formulas",
+    "section": "Product-to-sum formulas",
+    "text": "Product-to-sum formulas\n\\[\n    \\boxed{\n        \\begin{align*}\n            \\sin \\alpha \\cos \\beta & = \\frac{1}{2}(\\sin(\\alpha + \\beta) + \\sin(\\alpha - \\beta)) \\\\\n            \\cos \\alpha \\sin \\beta & = \\frac{1}{2}(\\sin(\\alpha + \\beta) - \\sin(\\alpha - \\beta)) \\\\\n            \\cos \\alpha \\cos \\beta & = \\frac{1}{2}(\\cos(\\alpha + \\beta) + \\cos(\\alpha - \\beta) \\\\\n            \\sin \\alpha \\sin \\beta & = \\frac{1}{2}(\\cos(\\alpha - \\beta) - \\cos(\\alpha + \\beta)\n    \\end{align*}}\n\\]"
+  },
+  {
+    "objectID": "presentations/01b-trigonometry-formulas.html#sum-to-product-formulas",
+    "href": "presentations/01b-trigonometry-formulas.html#sum-to-product-formulas",
+    "title": "Trigonometry: Formulas",
+    "section": "Sum-to-product formulas",
+    "text": "Sum-to-product formulas\n\\[\n    \\boxed{\n        \\begin{align*}\n            \\sin \\alpha + \\sin \\beta & = \\phantom{-} 2\\sin\\left(\\frac{\\alpha+\\beta}{2}\\right) \\cos\\left(\\frac{\\alpha-\\beta}{2}\\right) \\\\\n            \\sin \\alpha - \\sin \\beta & = \\phantom{-} 2\\cos\\left(\\frac{\\alpha+\\beta}{2}\\right) \\sin\\left(\\frac{\\alpha-\\beta}{2}\\right) \\\\            \n            \\cos \\alpha + \\cos \\beta & = \\phantom{-} 2\\cos\\left(\\frac{\\alpha+\\beta}{2}\\right) \\cos\\left(\\frac{\\alpha-\\beta}{2}\\right) \\\\\n            \\cos \\alpha - \\cos \\beta & = - 2\\sin\\left(\\frac{\\alpha+\\beta}{2}\\right) \\sin\\left(\\frac{\\alpha-\\beta}{2}\\right)\n        \\end{align*}}\n\\]"
+  },
+  {
+    "objectID": "presentations/01b-trigonometry-formulas.html#graphs-of-sinecosine",
+    "href": "presentations/01b-trigonometry-formulas.html#graphs-of-sinecosine",
+    "title": "Trigonometry: Formulas",
+    "section": "Graphs of sine/cosine",
+    "text": "Graphs of sine/cosine\n\n\n\n\n\n\n\nThe sine and cosine:\n\nAre defined for every real number.\nOscillate between -1 and +1.\nRepeat themselves every \\(2 \\pi\\) radians (fundamental period)."
+  },
+  {
+    "objectID": "presentations/01b-trigonometry-formulas.html#graph-of-the-tangent-function",
+    "href": "presentations/01b-trigonometry-formulas.html#graph-of-the-tangent-function",
+    "title": "Trigonometry: Formulas",
+    "section": "Graph of the tangent function",
+    "text": "Graph of the tangent function\n\nThe tangent function:\n\nIs defined for every real number, except multiples of \\(\\pi/2\\).\nCan take on arbitrary values.\nRepeats itself every \\(\\pi\\) radians (fundamental period)."
+  },
+  {
+    "objectID": "presentations/01b-trigonometry-formulas.html#example-3",
+    "href": "presentations/01b-trigonometry-formulas.html#example-3",
+    "title": "Trigonometry: Formulas",
+    "section": "Example",
+    "text": "Example\nFind the fundamental period of \\(\\sin(2 x)\\)."
   },
   {
     "objectID": "presentations/04a-derivatives.html#contents",
