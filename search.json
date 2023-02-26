@@ -553,11 +553,11 @@
     "text": "Example\nSuppose \\(\\displaystyle \\cos \\theta = -\\frac{4}{5}\\) and \\(\\theta\\) is in quadrant III. Find \\(\\sin \\theta\\) and \\(\\tan \\theta\\)."
   },
   {
-    "objectID": "presentations/01a-trigonometry-basic-identities.html#basic-identities",
-    "href": "presentations/01a-trigonometry-basic-identities.html#basic-identities",
+    "objectID": "presentations/01a-trigonometry-basic-identities.html#periodicity-of-sine-and-cosine",
+    "href": "presentations/01a-trigonometry-basic-identities.html#periodicity-of-sine-and-cosine",
     "title": "Trigonometry: Introduction and Overview",
-    "section": "Basic identities",
-    "text": "Basic identities\n\n\n\n\\(\\sin(\\theta \\pm 2 \\pi) = \\sin \\theta\\) and \\(\\cos(\\theta \\pm 2 \\pi) = \\cos \\theta\\).\nEven-odd identities:\n\n\\(\\cos(-\\theta) = \\cos \\theta\\)\n\\(\\sin(-\\theta) = - \\sin \\theta\\)\n\n\nExamples: Compute\n\n\\(\\sin(-\\pi/4)\\)\n\\(\\displaystyle \\tan\\left(\\frac{8093 \\pi}{4}\\right)\\)"
+    "section": "Periodicity of sine and cosine",
+    "text": "Periodicity of sine and cosine\n\n\n\nSine and cosine are \\(2\\pi\\)-periodic: \\[\n  \\boxed{\n      \\begin{align*}\n          \\sin(\\theta \\pm 2 \\pi) & = \\sin \\theta \\\\\n          \\cos(\\theta \\pm 2 \\pi) & = \\cos \\theta\n      \\end{align*}}\n\\]\nThe tangent is \\(\\pi\\)-periodic: \\[\n  \\boxed{\n      \\begin{align*}\n          \\tan(\\theta \\pm \\pi) & = \\tan \\theta\n      \\end{align*}}\n\\]\n\nExample: Compute \\(\\displaystyle \\tan\\left(\\frac{8093 \\pi}{4}\\right)\\)"
   },
   {
     "objectID": "presentations/06b-polynomials.html#contents",
@@ -1404,28 +1404,35 @@
     "href": "presentations/01b-trigonometry-formulas.html#notes-for-this-chapter",
     "title": "Trigonometry: Formulas",
     "section": "Notes for this chapter",
-    "text": "Notes for this chapter\n\nYou should learn all of these formulas by heart.\nOften, knowing the derivation of a formula will help you remember it.\nFollow along with the blackboard lectures to fill in missing steps."
+    "text": "Notes for this chapter\n\nYou should learn all of these formulas by heart.\nThe best way to learn these formulas is by doing lots of practice problems.\nOften, knowing the derivation of a formula will also help you remember it.\nFollow along with the blackboard lectures to fill in missing steps."
   },
   {
-    "objectID": "presentations/01b-trigonometry-formulas.html#reflection-across-x-axis",
-    "href": "presentations/01b-trigonometry-formulas.html#reflection-across-x-axis",
+    "objectID": "presentations/01b-trigonometry-formulas.html#reflection-across-the-x-axis-evenodd-identities",
+    "href": "presentations/01b-trigonometry-formulas.html#reflection-across-the-x-axis-evenodd-identities",
     "title": "Trigonometry: Formulas",
-    "section": "Reflection across \\(x\\)-axis",
-    "text": "Reflection across \\(x\\)-axis\n\n\n\\[\n    \\boxed{\n        \\begin{align*}\n            \\cos(\\pi - \\theta) & = - \\cos\\theta \\\\\n            \\sin(\\pi - \\theta) & = \\phantom{-} \\sin \\theta\n        \\end{align*}}\n\\]"
+    "section": "Reflection across the \\(x\\)-axis (even/odd identities)",
+    "text": "Reflection across the \\(x\\)-axis (even/odd identities)\n\n\n\\[\n    \\boxed{\n        \\begin{align*}\n            \\cos(-\\theta) & = \\phantom{-} \\cos \\theta \\\\\n            \\sin(-\\theta) & = - \\sin \\theta \\\\\n        \\end{align*}}\n\\]\nExample: Compute \\(\\sin(-\\pi/4)\\)"
   },
   {
-    "objectID": "presentations/01b-trigonometry-formulas.html#shift-formulas",
-    "href": "presentations/01b-trigonometry-formulas.html#shift-formulas",
+    "objectID": "presentations/01b-trigonometry-formulas.html#reflection-across-the-y-axis-complementary-angles",
+    "href": "presentations/01b-trigonometry-formulas.html#reflection-across-the-y-axis-complementary-angles",
     "title": "Trigonometry: Formulas",
-    "section": "Shift formulas",
-    "text": "Shift formulas\n\n\n\\[\n    \\boxed{\n        \\begin{align*}\n            \\cos(\\pi + \\theta) & = - \\cos \\theta \\\\\n            \\sin(\\pi + \\theta) & = - \\sin \\theta \\\\\n            \\tan(\\pi + \\theta) & = \\phantom{-} \\tan\\theta\n        \\end{align*}}\n\\]"
+    "section": "Reflection across the \\(y\\)-axis (complementary angles)",
+    "text": "Reflection across the \\(y\\)-axis (complementary angles)\n\n\n\\[\n    \\boxed{\n        \\begin{align*}\n            \\cos(\\pi - \\theta) & = - \\cos\\theta \\\\\n            \\sin(\\pi - \\theta) & = \\phantom{-} \\sin \\theta\n        \\end{align*}}\n\\]"
   },
   {
-    "objectID": "presentations/01b-trigonometry-formulas.html#complementary-angles",
-    "href": "presentations/01b-trigonometry-formulas.html#complementary-angles",
+    "objectID": "presentations/01b-trigonometry-formulas.html#shift-formulas-by-pi",
+    "href": "presentations/01b-trigonometry-formulas.html#shift-formulas-by-pi",
     "title": "Trigonometry: Formulas",
-    "section": "Complementary angles",
-    "text": "Complementary angles\n\\[\n    \\boxed{\n        \\begin{align*}\n            \\sin \\left( \\frac{\\pi}{2} - \\theta\\right) & = \\cos \\theta \\\\\n            \\cos \\left( \\frac{\\pi}{2} - \\theta\\right) & = \\sin \\theta \\\\\n            \\tan \\left( \\frac{\\pi}{2} - \\theta\\right) & = \\cot \\theta\n        \\end{align*}}\n\\]\n\nProof skipped.\nVery important formulas to turn \\(\\sin\\) into \\(\\cos\\) and vice versa."
+    "section": "Shift formulas (by \\(\\pi\\))",
+    "text": "Shift formulas (by \\(\\pi\\))\n\n\n\\[\n    \\boxed{\n        \\begin{align*}\n            \\cos(\\pi + \\theta) & = - \\cos \\theta \\\\\n            \\sin(\\pi + \\theta) & = - \\sin \\theta \\\\\n            \\tan(\\pi + \\theta) & = \\phantom{-} \\tan\\theta\n        \\end{align*}}\n\\]"
+  },
+  {
+    "objectID": "presentations/01b-trigonometry-formulas.html#shift-formulas-by-pi2",
+    "href": "presentations/01b-trigonometry-formulas.html#shift-formulas-by-pi2",
+    "title": "Trigonometry: Formulas",
+    "section": "Shift formulas (by \\(\\pi/2\\))",
+    "text": "Shift formulas (by \\(\\pi/2\\))\n\\[\n    \\boxed{\n        \\begin{align*}\n            \\sin \\left( \\frac{\\pi}{2} - \\theta\\right) & = \\cos \\theta \\\\\n            \\cos \\left( \\frac{\\pi}{2} - \\theta\\right) & = \\sin \\theta \\\\\n            \\tan \\left( \\frac{\\pi}{2} - \\theta\\right) & = \\cot \\theta\n        \\end{align*}}\n\\]\n\nProof skipped.\nVery important formulas to turn \\(\\sin\\) into \\(\\cos\\) and vice versa."
   },
   {
     "objectID": "presentations/01b-trigonometry-formulas.html#additionsubtraction-formulas-for-sin-and-cos",
