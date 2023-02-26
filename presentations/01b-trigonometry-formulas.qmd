@@ -142,3 +142,14 @@ $$
 
 Express $\cos^2 x \sin^2 x$ as a combination of sines and cosines, without any powers.
 
+## Product-to-sum formulas
+
+$$
+    \boxed{
+        \begin{align*}
+            \sin \alpha \cos \beta & = \frac{1}{2}(\sin(\alpha + \beta) + \sin(\alpha - \beta)) \\
+            \cos \alpha \sin \beta & = \frac{1}{2}(\sin(\alpha + \beta) - \sin(\alpha - \beta)) \\
+            \cos \alpha \cos \beta & = \frac{1}{2}(\cos(\alpha + \beta) + \cos(\alpha - \beta) \\
+            \sin \alpha \sin \beta & = \frac{1}{2}(\cos(\alpha - \beta) - \cos(\alpha + \beta)
+    \end{align*}}
+$$
