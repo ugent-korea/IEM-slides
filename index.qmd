@@ -5,7 +5,10 @@ author: Prof. Joris Vankerschaver
 
 ## Presentations
 
-- 1 - Trigonometry
+- [1 - Trigonometry (1/4): Introduction](presentations/01a-trigonometry-basic-identities.qmd)
+- [1 - Trigonometry (2/4): Formulas](presentations/01b-trigonometry-formulas.qmd)
+- 1 - Trigonometry (3/4): Geometry of triangles
+- 1 - Trigonometry (4/4): Applications
 - [2 - Coordinate Geometry](presentations/02-coordinate-geometry.qmd)
 - [3 - Limits and Continuity (1/2)](presentations/03a-limits-continuity.qmd)
 - [3 - Limits and Continuity (2/2)](presentations/03b-limits-continuity.qmd)
