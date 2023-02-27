@@ -105,3 +105,49 @@ $$
 ## Examples
 
 (This part to be expanded upon during the 2023 prep semester)
+
+## Semi-perimeter formulas
+
+- Express sin/cos as a function of the sides + semi-perimeter.
+- Semi-perimeter: half ("semi") of the circumference ("perimeter")
+
+:::: {.columns }
+::: {.column width="50%"}
+\begin{align*}
+    \sin \frac{\alpha}{2} & = \sqrt{\frac{(s-b)(s-c)}{bc}} \\
+    \sin \frac{\beta}{2}  & = \sqrt{\frac{(s-a)(s-c)}{ac}} \\
+    \sin \frac{\gamma}{2} & = \sqrt{\frac{(s-a)(s-b)}{ab}}
+\end{align*}
+:::
+::: {.column width="50%"}
+\begin{align*}
+    \cos \frac{\alpha}{2} & = \sqrt{\frac{s(s-a)}{bc}} \\
+    \cos \frac{\beta}{2}  & = \sqrt{\frac{s(s-b)}{ac}} \\
+    \cos \frac{\gamma}{2} & = \sqrt{\frac{s(s-c)}{ab}}
+\end{align*}
+:::
+::::
+
+- **You don't have to memorize these formulas, but you should know they exist.**
+
+## Formula for the area: Heron's formula
+
+- Expresses area as a function of the lengths of the sides
+- Expresses sine of angles as function of area
+
+:::: {.columns }
+::: {.column width="50%"}
+$$
+    \boxed{\text{Area} = \sqrt{s(s-a)(s-b)(s-c)}}
+$$
+:::
+::: {.column width="50%"}
+$$
+    \begin{align*}
+        \sin \alpha & = 2 \frac{\text{Area}}{bc} \\
+        \sin \beta  & = 2 \frac{\text{Area}}{ac} \\
+        \sin \gamma & = 2 \frac{\text{Area}}{ab} \\
+    \end{align*}
+$$
+:::
+::::
