@@ -37,12 +37,14 @@ Different kinds of triangles:
 :::
 ::::
 
-
-
 ## Trigonometry in **right-angled** triangles
 
 ![](./images/01-trigonometry/right-angle-triangle.svg)
 
 Proof: blackboard
 
+## Example
 
+A student sees the top of the Posco tower in central Songdo under an angle of $30^\circ$. Knowing that the Posco tower is approximately 300m tall, how far away is the student from the base of the tower?
+
+![](./images/01-trigonometry/songdo.png){fig-align="center" height="50%"}
