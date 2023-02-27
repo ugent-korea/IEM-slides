@@ -101,3 +101,7 @@ $$
 
 :::
 ::::
+
+## Examples
+
+(This part to be expanded upon during the 2023 prep semester)
