@@ -48,3 +48,29 @@ Proof: blackboard
 A student sees the top of the Posco tower in central Songdo under an angle of $30^\circ$. Knowing that the Posco tower is approximately 300m tall, how far away is the student from the base of the tower?
 
 ![](./images/01-trigonometry/songdo.png){fig-align="center" height="50%"}
+
+## Trigonometry in general triangles: law of sines
+
+:::: {.columns }
+::: {.column width="60%"}
+Useful when you know
+
+- 2 angles + 1 side, or
+- 1 angle + 2 sides
+
+and want to know the others.
+
+Derivation: blackboard (optional)
+:::
+::: {.column width="40%"}
+![](./images/01-trigonometry/triangle-sine-formula.svg){fig-align="center"}
+
+$$
+    \boxed{
+        \frac{\sin \alpha}{a} = \frac{\sin \beta}{b} = \frac{\sin \gamma}{c}
+    }
+$$
+
+:::
+::::
+
