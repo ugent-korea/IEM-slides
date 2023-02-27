@@ -151,3 +151,21 @@ $$
 $$
 :::
 ::::
+
+## Problems involving height/distance: terminology
+
+:::: {.columns }
+::: {.column width="50%"}
+
+![](./images/01-trigonometry/angle-of-elevation.svg){fig-align="center"}
+
+Angle of **elevation**: you look **up** at something
+
+:::
+::: {.column width="50%"}
+
+![](./images/01-trigonometry/angle-of-depression.svg){fig-align="center"}
+
+Angle of **depression**: you look **down** at something
+:::
+::::
