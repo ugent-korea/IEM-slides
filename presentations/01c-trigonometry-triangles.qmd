@@ -1,0 +1,24 @@
+---
+title: "Trigonometry: Geometry of Triangles"
+subtitle: Introduction to Engineering Mathematics
+author: Prof. Joris Vankerschaver
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    css: style.css
+---
+
+## Overview
+
+1. Trigonometry in **right-angled** triangles
+1. Trigonometry in **arbitrary** triangles
+   - Law of sines
+   - Law of cosines
+   - Law of tangents
+1. Formulas for area and perimeter
+1. Height and distance problems
+
+## Trigonometry in **right-angled** triangles
+
+![](./images/01-trigonometry/right-angle-triangle.svg)
