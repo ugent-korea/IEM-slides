@@ -74,3 +74,30 @@ $$
 :::
 ::::
 
+## Trigonometry in general triangles: law of cosines
+
+:::: {.columns }
+::: {.column width="60%"}
+Useful when you know
+
+- 2 sides + 1 angle in between, or
+- 3 sides
+
+and want to know the other side/angles.
+
+Derivation: blackboard (optional)
+:::
+::: {.column width="40%"}
+![](./images/01-trigonometry/triangle-sine-formula.svg){fig-align="center"}
+
+$$
+    \boxed{
+        \begin{align*}
+            a^2 & = b^2 + c^2 - 2bc \cos \alpha \\
+            b^2 & = a^2 + c^2 - 2ac \cos \beta \\
+            c^2 & = a^2 + b^2 - 2ab \cos \gamma
+        \end{align*}}
+$$
+
+:::
+::::
