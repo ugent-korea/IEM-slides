@@ -19,6 +19,30 @@ format:
 1. Formulas for area and perimeter
 1. Height and distance problems
 
+## Terminology
+
+![](./images/01-trigonometry/triangles-all.svg)
+
+:::: {.columns }
+::: {.column width="60%"}
+Different kinds of triangles:
+
+- **Right-angled**: one angle exactly $90^\circ$
+- **Obtuse**: one angle greater than $90^\circ$
+- **Acute**: all angles less than $90^\circ$
+
+:::
+::: {.column width="40%"}
+![](./images/01-trigonometry/triangle-right-hypotenuse.svg)
+:::
+::::
+
+
+
 ## Trigonometry in **right-angled** triangles
 
 ![](./images/01-trigonometry/right-angle-triangle.svg)
+
+Proof: blackboard
+
+
