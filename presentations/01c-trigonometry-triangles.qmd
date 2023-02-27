@@ -169,3 +169,15 @@ Angle of **elevation**: you look **up** at something
 Angle of **depression**: you look **down** at something
 :::
 ::::
+
+## Example
+
+From a plane flying vertically over a straight road, the angles of depression of 2 consecutive milestones are 45$^\circ$ and 60$^\circ$. Find the height at which the plane is flying. 
+
+## Problems for you to try (solution next lecture) {.smaller}
+
+- You see a town on a hillside at an angle of elevation of 30°. You walk 80 meters (horizontally, along the ground) and see the town at an angle of elevation of 60°. Find the height of the town above ground level.
+
+- A man lies on the ground and observes that a temple and a flagpole on that temple subtend equal angles at his eyes. If the height of the temple is 10m and that of the flagpole is 20m, find the subtended angles and the distance between the temple and the man.
+
+- Crown Prince Lee Chang stands on the fortress walls and overlooks an approaching zombie army. He observes a zombie under an angle of depression of 45° and shoots an arrow. One second later, he shoots an arrow at the same zombie under an angle of depression of 60°. How soon will the zombie reach the base of the wall?
