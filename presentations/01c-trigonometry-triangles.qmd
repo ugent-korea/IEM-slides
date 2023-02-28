@@ -86,6 +86,19 @@ $$
 :::
 ::::
 
+## Example
+
+:::: {.columns }
+::: {.column width="60%"}
+Find $a$ and $b$.
+:::
+::: {.column width="40%"}
+![](./images/01-trigonometry/triangle-example-sines.svg)
+:::
+::::
+
+
+
 ## Trigonometry in general triangles: law of cosines
 
 :::: {.columns }
