@@ -155,9 +155,31 @@ $$
 :::
 ::::
 
-## Examples
+## Example
 
-(This part to be expanded upon during the 2023 prep semester)
+:::: {.columns }
+::: {.column width="60%"}
+Find the angles $\alpha$, $\beta$, and $\gamma$.
+:::
+::: {.column width="40%"}
+![](./images/01-trigonometry/triangle-example-cosines.svg){fig-align="center"}
+:::
+::::
+
+## Example
+
+:::: {.columns }
+::: {.column width="60%"}
+Find the angle $\alpha$.
+:::
+::: {.column width="40%"}
+![](./images/01-trigonometry/triangle-example-cosines-2.svg){fig-align="center"}
+:::
+::::
+
+## Example
+
+If the ratio of the sides of a triangle is $a : b : c = 4 : 5 : 6$, prove that the greatest angle is twice the smallest angle.
 
 ## Semi-perimeter formulas
 
