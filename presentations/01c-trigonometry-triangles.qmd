@@ -97,6 +97,34 @@ Find $a$ and $b$.
 :::
 ::::
 
+## Ambiguous cases (1/3)
+
+:::: {.columns }
+::: {.column width="60%"}
+Find the angle $\gamma$.
+:::
+::: {.column width="40%"}
+![](./images/01-trigonometry/triangle-ambiguous-1.svg)
+:::
+::::
+
+
+## Ambiguous cases (2/3)
+
+:::: {.columns }
+::: {.column width="60%"}
+Find the angle $\alpha$.
+:::
+::: {.column width="40%"}
+![](./images/01-trigonometry/triangle-ambiguous-2.svg)
+:::
+::::
+
+
+## Ambiguous cases (3/3)
+
+Given a triangle with angle $\alpha = 42^\circ$ and sides $a = 70$ and $b = 112$. Find the angle $\beta$.
+
 
 
 ## Trigonometry in general triangles: law of cosines
