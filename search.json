@@ -448,6 +448,139 @@
     "text": "Example (continued)"
   },
   {
+    "objectID": "presentations/01c-trigonometry-triangles.html#overview",
+    "href": "presentations/01c-trigonometry-triangles.html#overview",
+    "title": "Trigonometry: Geometry of Triangles",
+    "section": "Overview",
+    "text": "Overview\n\nTrigonometry in right-angled triangles\nTrigonometry in arbitrary triangles\n\nLaw of sines\nLaw of cosines\nLaw of tangents\n\nFormulas for area and perimeter\nHeight and distance problems"
+  },
+  {
+    "objectID": "presentations/01c-trigonometry-triangles.html#terminology",
+    "href": "presentations/01c-trigonometry-triangles.html#terminology",
+    "title": "Trigonometry: Geometry of Triangles",
+    "section": "Terminology",
+    "text": "Terminology\n\n\n\nDifferent kinds of triangles:\n\nRight-angled: one angle exactly \\(90^\\circ\\)\nObtuse: one angle greater than \\(90^\\circ\\)\nAcute: all angles less than \\(90^\\circ\\)"
+  },
+  {
+    "objectID": "presentations/01c-trigonometry-triangles.html#trigonometry-in-right-angled-triangles",
+    "href": "presentations/01c-trigonometry-triangles.html#trigonometry-in-right-angled-triangles",
+    "title": "Trigonometry: Geometry of Triangles",
+    "section": "Trigonometry in right-angled triangles",
+    "text": "Trigonometry in right-angled triangles\n\nProof: blackboard"
+  },
+  {
+    "objectID": "presentations/01c-trigonometry-triangles.html#example",
+    "href": "presentations/01c-trigonometry-triangles.html#example",
+    "title": "Trigonometry: Geometry of Triangles",
+    "section": "Example",
+    "text": "Example\n\n\nFind \\(\\sin \\alpha\\), \\(\\cos \\alpha\\), \\(\\tan \\alpha\\)."
+  },
+  {
+    "objectID": "presentations/01c-trigonometry-triangles.html#example-1",
+    "href": "presentations/01c-trigonometry-triangles.html#example-1",
+    "title": "Trigonometry: Geometry of Triangles",
+    "section": "Example",
+    "text": "Example\nA student sees the top of the Posco tower in central Songdo under an angle of \\(30^\\circ\\). Knowing that the Posco tower is approximately 300m tall, how far away is the student from the base of the tower?"
+  },
+  {
+    "objectID": "presentations/01c-trigonometry-triangles.html#trigonometry-in-general-triangles-law-of-sines",
+    "href": "presentations/01c-trigonometry-triangles.html#trigonometry-in-general-triangles-law-of-sines",
+    "title": "Trigonometry: Geometry of Triangles",
+    "section": "Trigonometry in general triangles: law of sines",
+    "text": "Trigonometry in general triangles: law of sines\n\n\nUseful when you know\n\n2 angles + 1 side, or\n1 angle + 2 sides\n\nand want to know the others.\nDerivation: blackboard (optional)\n\n\n\n\n\n\n\\[\n    \\boxed{\n        \\frac{\\sin \\alpha}{a} = \\frac{\\sin \\beta}{b} = \\frac{\\sin \\gamma}{c}\n    }\n\\]"
+  },
+  {
+    "objectID": "presentations/01c-trigonometry-triangles.html#example-2",
+    "href": "presentations/01c-trigonometry-triangles.html#example-2",
+    "title": "Trigonometry: Geometry of Triangles",
+    "section": "Example",
+    "text": "Example\n\n\nFind \\(a\\) and \\(b\\)."
+  },
+  {
+    "objectID": "presentations/01c-trigonometry-triangles.html#ambiguous-cases-13",
+    "href": "presentations/01c-trigonometry-triangles.html#ambiguous-cases-13",
+    "title": "Trigonometry: Geometry of Triangles",
+    "section": "Ambiguous cases (1/3)",
+    "text": "Ambiguous cases (1/3)\n\n\nFind the angle \\(\\gamma\\)."
+  },
+  {
+    "objectID": "presentations/01c-trigonometry-triangles.html#ambiguous-cases-23",
+    "href": "presentations/01c-trigonometry-triangles.html#ambiguous-cases-23",
+    "title": "Trigonometry: Geometry of Triangles",
+    "section": "Ambiguous cases (2/3)",
+    "text": "Ambiguous cases (2/3)\n\n\nFind the angle \\(\\alpha\\)."
+  },
+  {
+    "objectID": "presentations/01c-trigonometry-triangles.html#ambiguous-cases-33",
+    "href": "presentations/01c-trigonometry-triangles.html#ambiguous-cases-33",
+    "title": "Trigonometry: Geometry of Triangles",
+    "section": "Ambiguous cases (3/3)",
+    "text": "Ambiguous cases (3/3)\nGiven a triangle with angle \\(\\alpha = 42^\\circ\\) and sides \\(a = 70\\) and \\(b = 112\\). Find the angle \\(\\beta\\)."
+  },
+  {
+    "objectID": "presentations/01c-trigonometry-triangles.html#trigonometry-in-general-triangles-law-of-cosines",
+    "href": "presentations/01c-trigonometry-triangles.html#trigonometry-in-general-triangles-law-of-cosines",
+    "title": "Trigonometry: Geometry of Triangles",
+    "section": "Trigonometry in general triangles: law of cosines",
+    "text": "Trigonometry in general triangles: law of cosines\n\n\nUseful when you know\n\n2 sides + 1 angle in between, or\n3 sides\n\nand want to know the other side/angles.\nDerivation: blackboard (optional)\n\n\n\n\n\n\n\\[\n    \\boxed{\n        \\begin{align*}\n            a^2 & = b^2 + c^2 - 2bc \\cos \\alpha \\\\\n            b^2 & = a^2 + c^2 - 2ac \\cos \\beta \\\\\n            c^2 & = a^2 + b^2 - 2ab \\cos \\gamma\n        \\end{align*}}\n\\]"
+  },
+  {
+    "objectID": "presentations/01c-trigonometry-triangles.html#example-3",
+    "href": "presentations/01c-trigonometry-triangles.html#example-3",
+    "title": "Trigonometry: Geometry of Triangles",
+    "section": "Example",
+    "text": "Example\n\n\nFind the angles \\(\\alpha\\), \\(\\beta\\), and \\(\\gamma\\)."
+  },
+  {
+    "objectID": "presentations/01c-trigonometry-triangles.html#example-4",
+    "href": "presentations/01c-trigonometry-triangles.html#example-4",
+    "title": "Trigonometry: Geometry of Triangles",
+    "section": "Example",
+    "text": "Example\n\n\nFind the angle \\(\\alpha\\)."
+  },
+  {
+    "objectID": "presentations/01c-trigonometry-triangles.html#example-5",
+    "href": "presentations/01c-trigonometry-triangles.html#example-5",
+    "title": "Trigonometry: Geometry of Triangles",
+    "section": "Example",
+    "text": "Example\nIf the ratio of the sides of a triangle is \\(a : b : c = 4 : 5 : 6\\), prove that the greatest angle is twice the smallest angle."
+  },
+  {
+    "objectID": "presentations/01c-trigonometry-triangles.html#semi-perimeter-formulas",
+    "href": "presentations/01c-trigonometry-triangles.html#semi-perimeter-formulas",
+    "title": "Trigonometry: Geometry of Triangles",
+    "section": "Semi-perimeter formulas",
+    "text": "Semi-perimeter formulas\n\nExpress sin/cos as a function of the sides + semi-perimeter.\nSemi-perimeter: half (“semi”) of the circumference (“perimeter”)\n\n\n\n\\[\\begin{align*}\n    \\sin \\frac{\\alpha}{2} & = \\sqrt{\\frac{(s-b)(s-c)}{bc}} \\\\\n    \\sin \\frac{\\beta}{2}  & = \\sqrt{\\frac{(s-a)(s-c)}{ac}} \\\\\n    \\sin \\frac{\\gamma}{2} & = \\sqrt{\\frac{(s-a)(s-b)}{ab}}\n\\end{align*}\\]\n\n\\[\\begin{align*}\n    \\cos \\frac{\\alpha}{2} & = \\sqrt{\\frac{s(s-a)}{bc}} \\\\\n    \\cos \\frac{\\beta}{2}  & = \\sqrt{\\frac{s(s-b)}{ac}} \\\\\n    \\cos \\frac{\\gamma}{2} & = \\sqrt{\\frac{s(s-c)}{ab}}\n\\end{align*}\\]\n\n\n\nYou don’t have to memorize these formulas, but you should know they exist."
+  },
+  {
+    "objectID": "presentations/01c-trigonometry-triangles.html#formula-for-the-area-herons-formula",
+    "href": "presentations/01c-trigonometry-triangles.html#formula-for-the-area-herons-formula",
+    "title": "Trigonometry: Geometry of Triangles",
+    "section": "Formula for the area: Heron’s formula",
+    "text": "Formula for the area: Heron’s formula\n\nExpresses area as a function of the lengths of the sides\nExpresses sine of angles as function of area\n\n\n\n\\[\n    \\boxed{\\text{Area} = \\sqrt{s(s-a)(s-b)(s-c)}}\n\\]\n\n\\[\n    \\begin{align*}\n        \\sin \\alpha & = 2 \\frac{\\text{Area}}{bc} \\\\\n        \\sin \\beta  & = 2 \\frac{\\text{Area}}{ac} \\\\\n        \\sin \\gamma & = 2 \\frac{\\text{Area}}{ab} \\\\\n    \\end{align*}\n\\]"
+  },
+  {
+    "objectID": "presentations/01c-trigonometry-triangles.html#problems-involving-heightdistance-terminology",
+    "href": "presentations/01c-trigonometry-triangles.html#problems-involving-heightdistance-terminology",
+    "title": "Trigonometry: Geometry of Triangles",
+    "section": "Problems involving height/distance: terminology",
+    "text": "Problems involving height/distance: terminology\n\n\n\n\n\n\n\nAngle of elevation: you look up at something\n\n\n\n\n\n\nAngle of depression: you look down at something"
+  },
+  {
+    "objectID": "presentations/01c-trigonometry-triangles.html#example-6",
+    "href": "presentations/01c-trigonometry-triangles.html#example-6",
+    "title": "Trigonometry: Geometry of Triangles",
+    "section": "Example",
+    "text": "Example\nFrom a plane flying vertically over a straight road, the angles of depression of 2 consecutive milestones are 45\\(^\\circ\\) and 60\\(^\\circ\\). Find the height at which the plane is flying."
+  },
+  {
+    "objectID": "presentations/01c-trigonometry-triangles.html#problems-for-you-to-try-solution-next-lecture",
+    "href": "presentations/01c-trigonometry-triangles.html#problems-for-you-to-try-solution-next-lecture",
+    "title": "Trigonometry: Geometry of Triangles",
+    "section": "Problems for you to try (solution next lecture)",
+    "text": "Problems for you to try (solution next lecture)\n\nYou see a town on a hillside at an angle of elevation of 30°. You walk 80 meters (horizontally, along the ground) and see the town at an angle of elevation of 60°. Find the height of the town above ground level.\nA man lies on the ground and observes that a temple and a flagpole on that temple subtend equal angles at his eyes. If the height of the temple is 10m and that of the flagpole is 20m, find the subtended angles and the distance between the temple and the man.\nCrown Prince Lee Chang stands on the fortress walls and overlooks an approaching zombie army. He observes a zombie under an angle of depression of 45° and shoots an arrow. One second later, he shoots an arrow at the same zombie under an angle of depression of 60°. How soon will the zombie reach the base of the wall?"
+  },
+  {
     "objectID": "presentations/01a-trigonometry-basic-identities.html#contents",
     "href": "presentations/01a-trigonometry-basic-identities.html#contents",
     "title": "Trigonometry: Introduction and Overview",
