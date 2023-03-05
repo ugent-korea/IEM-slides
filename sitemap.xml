@@ -2,82 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/jvkersch/engineering-math/index.html</loc>
-    <lastmod>2023-02-28T01:37:23.504Z</lastmod>
+    <lastmod>2023-03-05T01:41:24.484Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/jvkersch/engineering-math/presentations/09e-integration-applications.html</loc>
-    <lastmod>2023-02-28T01:37:23.813Z</lastmod>
+    <lastmod>2023-03-05T01:41:24.826Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/jvkersch/engineering-math/presentations/05-complex-numbers.html</loc>
-    <lastmod>2023-02-28T01:37:24.162Z</lastmod>
+    <lastmod>2023-03-05T01:41:25.137Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/jvkersch/engineering-math/presentations/10-epilogue.html</loc>
-    <lastmod>2023-02-28T01:37:24.448Z</lastmod>
+    <lastmod>2023-03-05T01:41:25.393Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/jvkersch/engineering-math/presentations/03b-limits-continuity.html</loc>
-    <lastmod>2023-02-28T01:37:24.782Z</lastmod>
+    <lastmod>2023-03-05T01:41:25.785Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/jvkersch/engineering-math/presentations/04b-derivatives.html</loc>
-    <lastmod>2023-02-28T01:37:27.656Z</lastmod>
+    <lastmod>2023-03-05T01:41:28.469Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/jvkersch/engineering-math/presentations/01d-trigonometry-trigonometric-eqns.html</loc>
+    <lastmod>2023-03-05T01:41:28.708Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/jvkersch/engineering-math/presentations/01c-trigonometry-triangles.html</loc>
-    <lastmod>2023-02-28T01:37:27.954Z</lastmod>
+    <lastmod>2023-03-05T01:41:28.986Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/jvkersch/engineering-math/presentations/01a-trigonometry-basic-identities.html</loc>
-    <lastmod>2023-02-28T01:37:28.223Z</lastmod>
+    <lastmod>2023-03-05T01:41:29.260Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/jvkersch/engineering-math/presentations/06b-polynomials.html</loc>
-    <lastmod>2023-02-28T01:37:28.485Z</lastmod>
+    <lastmod>2023-03-05T01:41:29.538Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/jvkersch/engineering-math/presentations/09a-integration-definitions.html</loc>
-    <lastmod>2023-02-28T01:37:28.760Z</lastmod>
+    <lastmod>2023-03-05T01:41:29.817Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/jvkersch/engineering-math/presentations/08-proof-techniques.html</loc>
-    <lastmod>2023-02-28T01:37:29.018Z</lastmod>
+    <lastmod>2023-03-05T01:41:30.067Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/jvkersch/engineering-math/presentations/02-coordinate-geometry.html</loc>
-    <lastmod>2023-02-28T01:37:29.292Z</lastmod>
+    <lastmod>2023-03-05T01:41:30.329Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/jvkersch/engineering-math/presentations/09b-integration-techniques.html</loc>
-    <lastmod>2023-02-28T01:37:29.546Z</lastmod>
+    <lastmod>2023-03-05T01:41:30.589Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/jvkersch/engineering-math/presentations/09d-integration-inverse-trig.html</loc>
-    <lastmod>2023-02-28T01:37:29.788Z</lastmod>
+    <lastmod>2023-03-05T01:41:30.831Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/jvkersch/engineering-math/presentations/06a-polynomials.html</loc>
-    <lastmod>2023-02-28T01:37:30.036Z</lastmod>
+    <lastmod>2023-03-05T01:41:31.100Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/jvkersch/engineering-math/presentations/07-binomial-theorem.html</loc>
-    <lastmod>2023-02-28T01:37:30.273Z</lastmod>
+    <lastmod>2023-03-05T01:41:31.354Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/jvkersch/engineering-math/presentations/01b-trigonometry-formulas.html</loc>
-    <lastmod>2023-02-28T01:37:30.518Z</lastmod>
+    <lastmod>2023-03-05T01:41:31.703Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/jvkersch/engineering-math/presentations/04a-derivatives.html</loc>
-    <lastmod>2023-02-28T01:37:30.766Z</lastmod>
+    <lastmod>2023-03-05T01:41:31.997Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/jvkersch/engineering-math/presentations/09c-integration-partial-fractions.html</loc>
-    <lastmod>2023-02-28T01:37:31.020Z</lastmod>
+    <lastmod>2023-03-05T01:41:32.261Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/jvkersch/engineering-math/presentations/01e-trigonometry-inverse-functions.html</loc>
+    <lastmod>2023-03-05T01:41:32.499Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/jvkersch/engineering-math/presentations/03a-limits-continuity.html</loc>
-    <lastmod>2023-02-28T01:37:31.287Z</lastmod>
+    <lastmod>2023-03-05T01:41:32.763Z</lastmod>
   </url>
 </urlset>

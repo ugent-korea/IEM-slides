@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Introduction to Engineering Mathematics",
     "section": "",
-    "text": "1 - Trigonometry (1/4): Introduction\n1 - Trigonometry (2/4): Formulas\n1 - Trigonometry (3/4): Geometry of triangles\n1 - Trigonometry (4/4): Applications\n2 - Coordinate Geometry\n3 - Limits and Continuity (1/2)\n3 - Limits and Continuity (2/2)\n4 - Derivatives (1/2)\n4 - Derivatives (2/2)\n5 - Complex Numbers\n6 - Polynomials (1/2)\n6 - Polynomials (2/2)\n7 - The Binomial Theorem\n8 - Proof Techniques\n9 - Integration: Definitions\n9 - Integration: Techniques\n9 - Integration: Partial Fractions\n9 - Integration: Inverse Trigonometric Substitutions\n9 - Integration: Applications\n10 - Epilogue"
+    "text": "1 - Trigonometry (1/5): Introduction\n1 - Trigonometry (2/5): Formulas\n1 - Trigonometry (3/5): Geometry of triangles\n1 - Trigonometry (4/5): Trigonometric equations\n1 - Trigonometry (5/5): Inverse trigonometric functions\n2 - Coordinate Geometry\n3 - Limits and Continuity (1/2)\n3 - Limits and Continuity (2/2)\n4 - Derivatives (1/2)\n4 - Derivatives (2/2)\n5 - Complex Numbers\n6 - Polynomials (1/2)\n6 - Polynomials (2/2)\n7 - The Binomial Theorem\n8 - Proof Techniques\n9 - Integration: Definitions\n9 - Integration: Techniques\n9 - Integration: Partial Fractions\n9 - Integration: Inverse Trigonometric Substitutions\n9 - Integration: Applications\n10 - Epilogue"
   },
   {
     "objectID": "presentations/09e-integration-applications.html#reminder-area-under-the-curve",
@@ -446,6 +446,139 @@
     "title": "Derivatives (2/2): Applications",
     "section": "Example (continued)",
     "text": "Example (continued)"
+  },
+  {
+    "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#overview",
+    "href": "presentations/01d-trigonometry-trigonometric-eqns.html#overview",
+    "title": "Trigonometry: Trigonometric Equations",
+    "section": "Overview",
+    "text": "Overview\n\nWord problems: solutions\nTrigonometric equations"
+  },
+  {
+    "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#word-problem-1",
+    "href": "presentations/01d-trigonometry-trigonometric-eqns.html#word-problem-1",
+    "title": "Trigonometry: Trigonometric Equations",
+    "section": "Word problem 1",
+    "text": "Word problem 1\nYou see a town on a hillside at an angle of elevation of 30°. You walk 80 meters (horizontally, along the ground) and see the town at an angle of elevation of 60°. Find the height of the town above ground level."
+  },
+  {
+    "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#word-problem-2",
+    "href": "presentations/01d-trigonometry-trigonometric-eqns.html#word-problem-2",
+    "title": "Trigonometry: Trigonometric Equations",
+    "section": "Word problem 2",
+    "text": "Word problem 2\nA man lies on the ground and observes that a temple and a flagpole on that temple subtend equal angles at his eyes. If the height of the temple is 10m and that of the flagpole is 20m, find the subtended angles and the distance between the temple and the man."
+  },
+  {
+    "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#word-problem-3",
+    "href": "presentations/01d-trigonometry-trigonometric-eqns.html#word-problem-3",
+    "title": "Trigonometry: Trigonometric Equations",
+    "section": "Word problem 3",
+    "text": "Word problem 3\n\n\n\nCrown Prince Lee Chang stands on the fortress walls and overlooks an approaching zombie army. He observes a zombie under an angle of depression of 45° and shoots an arrow. One second later, he shoots an arrow at the same zombie under an angle of depression of 60°. How soon will the zombie reach the base of the wall?"
+  },
+  {
+    "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#overview-1",
+    "href": "presentations/01d-trigonometry-trigonometric-eqns.html#overview-1",
+    "title": "Trigonometry: Trigonometric Equations",
+    "section": "Overview",
+    "text": "Overview\n\nTrigonometric equation: involves \\(\\sin\\), \\(\\cos\\), \\(\\tan\\), …\nNo general solution method (but 4 typical cases)\nOften requires reformulating before solution can be found."
+  },
+  {
+    "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#example-1",
+    "href": "presentations/01d-trigonometry-trigonometric-eqns.html#example-1",
+    "title": "Trigonometry: Trigonometric Equations",
+    "section": "Example 1",
+    "text": "Example 1\nFind all solutions of \\(\\displaystyle \\sin \\theta = \\frac{1}{2}\\)."
+  },
+  {
+    "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#example-2",
+    "href": "presentations/01d-trigonometry-trigonometric-eqns.html#example-2",
+    "title": "Trigonometry: Trigonometric Equations",
+    "section": "Example 2",
+    "text": "Example 2\nFind all solutions of \\(\\displaystyle \\tan^2 \\theta = 3\\)."
+  },
+  {
+    "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#example-3",
+    "href": "presentations/01d-trigonometry-trigonometric-eqns.html#example-3",
+    "title": "Trigonometry: Trigonometric Equations",
+    "section": "Example 3",
+    "text": "Example 3\nFind all solutions of \\(2 \\cos^2\\theta - 7 \\cos \\theta + 3 = 0\\)."
+  },
+  {
+    "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#case-1-sin-theta-sin-alpha-with-alpha-in-left-fracpi2-fracpi2right",
+    "href": "presentations/01d-trigonometry-trigonometric-eqns.html#case-1-sin-theta-sin-alpha-with-alpha-in-left-fracpi2-fracpi2right",
+    "title": "Trigonometry: Trigonometric Equations",
+    "section": "Case 1: \\(\\sin \\theta = \\sin \\alpha\\), with \\(\\alpha \\in \\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]\\)",
+    "text": "Case 1: \\(\\sin \\theta = \\sin \\alpha\\), with \\(\\alpha \\in \\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]\\)"
+  },
+  {
+    "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#case-2-cos-theta-cos-alpha-with-alpha-in-0-pi",
+    "href": "presentations/01d-trigonometry-trigonometric-eqns.html#case-2-cos-theta-cos-alpha-with-alpha-in-0-pi",
+    "title": "Trigonometry: Trigonometric Equations",
+    "section": "Case 2: \\(\\cos \\theta = \\cos \\alpha\\), with \\(\\alpha \\in [0, \\pi]\\)",
+    "text": "Case 2: \\(\\cos \\theta = \\cos \\alpha\\), with \\(\\alpha \\in [0, \\pi]\\)"
+  },
+  {
+    "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#case-3-tan-theta-tan-alpha-with-alpha-in-left-fracpi2-fracpi2right",
+    "href": "presentations/01d-trigonometry-trigonometric-eqns.html#case-3-tan-theta-tan-alpha-with-alpha-in-left-fracpi2-fracpi2right",
+    "title": "Trigonometry: Trigonometric Equations",
+    "section": "Case 3: \\(\\tan \\theta = \\tan \\alpha\\), with \\(\\alpha \\in \\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]\\)",
+    "text": "Case 3: \\(\\tan \\theta = \\tan \\alpha\\), with \\(\\alpha \\in \\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]\\)"
+  },
+  {
+    "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#case-4-a-cos-theta-b-sin-theta-c",
+    "href": "presentations/01d-trigonometry-trigonometric-eqns.html#case-4-a-cos-theta-b-sin-theta-c",
+    "title": "Trigonometry: Trigonometric Equations",
+    "section": "Case 4: \\(a \\cos \\theta + b \\sin \\theta = c\\)",
+    "text": "Case 4: \\(a \\cos \\theta + b \\sin \\theta = c\\)\nNecessary condition for solution to exist: \\(|c| \\le \\sqrt{a^2 + b^2}\\)."
+  },
+  {
+    "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#example-1-1",
+    "href": "presentations/01d-trigonometry-trigonometric-eqns.html#example-1-1",
+    "title": "Trigonometry: Trigonometric Equations",
+    "section": "Example 1",
+    "text": "Example 1\nFind all solutions of \\(\\tan x \\tan 4x = 1\\)."
+  },
+  {
+    "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#example-2-1",
+    "href": "presentations/01d-trigonometry-trigonometric-eqns.html#example-2-1",
+    "title": "Trigonometry: Trigonometric Equations",
+    "section": "Example 2",
+    "text": "Example 2\nFind all solutions of \\(1 + \\sin \\theta = 2 \\cos^2 \\theta\\)."
+  },
+  {
+    "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#example-3-1",
+    "href": "presentations/01d-trigonometry-trigonometric-eqns.html#example-3-1",
+    "title": "Trigonometry: Trigonometric Equations",
+    "section": "Example 3",
+    "text": "Example 3\nFind all solutions of \\(\\sin 2\\theta = \\cos \\theta\\)."
+  },
+  {
+    "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#example-4",
+    "href": "presentations/01d-trigonometry-trigonometric-eqns.html#example-4",
+    "title": "Trigonometry: Trigonometric Equations",
+    "section": "Example 4",
+    "text": "Example 4\nFind all solutions of \\(\\tan x - \\cot x = \\csc x\\)."
+  },
+  {
+    "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#example-5",
+    "href": "presentations/01d-trigonometry-trigonometric-eqns.html#example-5",
+    "title": "Trigonometry: Trigonometric Equations",
+    "section": "Example 5",
+    "text": "Example 5\nFind all solutions of \\(\\sin x + 2 \\cos x = 1\\)."
+  },
+  {
+    "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#example-6",
+    "href": "presentations/01d-trigonometry-trigonometric-eqns.html#example-6",
+    "title": "Trigonometry: Trigonometric Equations",
+    "section": "Example 6",
+    "text": "Example 6\nFind all solutions in \\([0, 2\\pi]\\) of \\(\\cos \\theta + 1 = \\sin \\theta\\)."
+  },
+  {
+    "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#example-7",
+    "href": "presentations/01d-trigonometry-trigonometric-eqns.html#example-7",
+    "title": "Trigonometry: Trigonometric Equations",
+    "section": "Example 7",
+    "text": "Example 7\nFind all solutions of \\(\\cos \\theta + \\cos 2 \\theta + \\cos 3 \\theta = 0\\)."
   },
   {
     "objectID": "presentations/01c-trigonometry-triangles.html#overview",
@@ -1909,6 +2042,69 @@
     "title": "Integration: Partial Fractions",
     "section": "Summary",
     "text": "Summary\n\nIf \\(\\deg P(x) \\ge \\deg Q(x)\\), do polynomial division.\nFactor the denominator \\(Q(x)\\):\n\nAll distinct roots: \\[\n   \\frac{P(x)}{Q(x)} = \\cdots + \\frac{A_1}{x - \\alpha_1} + \\cdots + \\frac{A_k}{x - \\alpha_k}.\n\\]\nIrreducible quadratic factors: \\[\n   \\frac{P(x)}{Q(x)} = \\cdots + \\frac{Ax+B}{x^2 + \\cdots}\n\\]\nRepeated linear factors: \\[\n   \\frac{P(x)}{Q(x)} = \\cdots + \\frac{A_1}{x - \\alpha} + \\cdots + \\frac{A_p}{(x - \\alpha)^p}\n\\]\n\n\nThese three cases can happen at the same time!!"
+  },
+  {
+    "objectID": "presentations/01e-trigonometry-inverse-functions.html#overview",
+    "href": "presentations/01e-trigonometry-inverse-functions.html#overview",
+    "title": "Trigonometry: Inverse Trigonometric Functions",
+    "section": "Overview",
+    "text": "Overview\n\nDefinition of the inverse trigonometric functions\nExamples"
+  },
+  {
+    "objectID": "presentations/01e-trigonometry-inverse-functions.html#the-inverse-sine-function",
+    "href": "presentations/01e-trigonometry-inverse-functions.html#the-inverse-sine-function",
+    "title": "Trigonometry: Inverse Trigonometric Functions",
+    "section": "The inverse sine function",
+    "text": "The inverse sine function\n\nThe sine function turns angles into sine values.\nThe inverse sine turns sine values back into angles.\nNotation: \\(\\sin^{-1}(x)\\), \\(\\arcsin x\\)\n\nProblem: Many values in the range correspond to the same angle!"
+  },
+  {
+    "objectID": "presentations/01e-trigonometry-inverse-functions.html#section",
+    "href": "presentations/01e-trigonometry-inverse-functions.html#section",
+    "title": "Trigonometry: Inverse Trigonometric Functions",
+    "section": "",
+    "text": "Solution: restrict the domain of the sine function so that there is exactly one angle corresponding to each value.\nThe inverse sine function takes a value \\(y \\in [-1, 1]\\) and turns it into an angle \\(\\theta \\in [-\\pi/2, \\pi/2]\\)."
+  },
+  {
+    "objectID": "presentations/01e-trigonometry-inverse-functions.html#section-1",
+    "href": "presentations/01e-trigonometry-inverse-functions.html#section-1",
+    "title": "Trigonometry: Inverse Trigonometric Functions",
+    "section": "",
+    "text": "We are not used to functions whose domain is the \\(y\\)-axis and whose range is the \\(x\\)-axis. So we switch \\(x\\) and \\(y\\) to get a function that “looks normal”.\n\nThe domain of \\(\\arcsin\\) is \\([-1, 1]\\) and the range is \\([-\\pi/2, \\pi/2]\\)."
+  },
+  {
+    "objectID": "presentations/01e-trigonometry-inverse-functions.html#the-inverse-cosine-function",
+    "href": "presentations/01e-trigonometry-inverse-functions.html#the-inverse-cosine-function",
+    "title": "Trigonometry: Inverse Trigonometric Functions",
+    "section": "The inverse cosine function",
+    "text": "The inverse cosine function\n\nFor the inverse cosine, we restrict \\(\\cos \\theta\\) to \\([0, \\pi]\\).\nThe domain of \\(\\arccos\\) is \\([-1, 1]\\) and the range is \\([0, \\pi]\\)."
+  },
+  {
+    "objectID": "presentations/01e-trigonometry-inverse-functions.html#the-inverse-tangent-function",
+    "href": "presentations/01e-trigonometry-inverse-functions.html#the-inverse-tangent-function",
+    "title": "Trigonometry: Inverse Trigonometric Functions",
+    "section": "The inverse tangent function",
+    "text": "The inverse tangent function\n\nFor the inverse tangent, we restrict \\(\\tan\\) to \\([-\\pi/2, \\pi/2]\\).\nThe domain of \\(\\arctan\\) is all of \\(\\mathbb{R}\\), and the range is \\([-\\pi/2, \\pi/2]\\)."
+  },
+  {
+    "objectID": "presentations/01e-trigonometry-inverse-functions.html#notation-warning",
+    "href": "presentations/01e-trigonometry-inverse-functions.html#notation-warning",
+    "title": "Trigonometry: Inverse Trigonometric Functions",
+    "section": "Notation (warning)",
+    "text": "Notation (warning)\nDon’t confuse \\[\n    \\sin^k \\theta = (\\sin \\theta)^k, \\quad \\text{for $k \\ge 0$}\n\\] with \\[\n    \\sin^{-1} x = \\arcsin x.\n\\]"
+  },
+  {
+    "objectID": "presentations/01e-trigonometry-inverse-functions.html#example",
+    "href": "presentations/01e-trigonometry-inverse-functions.html#example",
+    "title": "Trigonometry: Inverse Trigonometric Functions",
+    "section": "Example",
+    "text": "Example\nSimplify the following expression: \\(\\displaystyle \\tan\\left(\\sin^{-1} \\frac{2}{3} \\right)\\)."
+  },
+  {
+    "objectID": "presentations/01e-trigonometry-inverse-functions.html#example-1",
+    "href": "presentations/01e-trigonometry-inverse-functions.html#example-1",
+    "title": "Trigonometry: Inverse Trigonometric Functions",
+    "section": "Example",
+    "text": "Example\nShow that \\(\\displaystyle \\arccos x = \\frac{\\pi}{2} - \\arcsin x\\)."
   },
   {
     "objectID": "presentations/03a-limits-continuity.html#contents",
