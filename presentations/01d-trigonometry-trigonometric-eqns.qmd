@@ -1,0 +1,94 @@
+---
+title: "Trigonometry: Trigonometric Equations"
+subtitle: Introduction to Engineering Mathematics
+author: Prof. Joris Vankerschaver
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    css: style.css
+---
+
+## Overview
+
+1. Word problems: solutions
+2. Trigonometric equations
+
+## Word problem 1 {.smaller}
+
+You see a town on a hillside at an angle of elevation of 30°. You walk 80 meters (horizontally, along the ground) and see the town at an angle of elevation of 60°. Find the height of the town above ground level.
+
+## Word problem 2 {.smaller}
+
+A man lies on the ground and observes that a temple and a flagpole on that temple subtend equal angles at his eyes. If the height of the temple is 10m and that of the flagpole is 20m, find the subtended angles and the distance between the temple and the man.
+
+## Word problem 3 {.smaller}
+
+![](./images/01-trigonometry/crown-prince.png){.absolute top=25 right=0 width="25%"}
+
+:::: {.columns }
+::: {.column width="75%"}
+Crown Prince Lee Chang stands on the fortress walls and overlooks an approaching zombie army. He observes a zombie under an angle of depression of 45° and shoots an arrow. One second later, he shoots an arrow at the same zombie under an angle of depression of 60°. How soon will the zombie reach the base of the wall?
+:::
+::: {.column width="25%"}
+:::
+::::
+
+# Trigonometric equations
+
+## Overview
+
+- Trigonometric equation: involves $\sin$, $\cos$, $\tan$, ...
+- No general solution method (but 4 typical cases)
+- Often requires reformulating before solution can be found.
+
+## Example 1
+
+Find all solutions of $\displaystyle \sin \theta = \frac{1}{2}$.
+
+## Example 2
+
+Find all solutions of $\displaystyle \tan^2 \theta = 3$.
+
+## Example 3
+
+Find all solutions of $2 \cos^2\theta - 7 \cos \theta + 3 = 0$.
+
+## Case 1: $\sin \theta = \sin \alpha$, with $\alpha \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$
+
+## Case 2: $\cos \theta = \cos \alpha$, with $\alpha \in [0, \pi]$
+
+## Case 3: $\tan \theta = \tan \alpha$, with $\alpha \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$
+
+## Case 4: $a \cos \theta + b \sin \theta = c$
+
+Necessary condition for solution to exist: $|c| \le \sqrt{a^2 + b^2}$.
+
+## Example 1
+
+Find all solutions of $\tan x \tan 4x = 1$.
+
+## Example 2
+
+Find all solutions of $1 + \sin \theta = 2 \cos^2 \theta$.
+
+## Example 3
+
+Find all solutions of $\sin 2\theta = \cos \theta$.
+
+## Example 4
+
+Find all solutions of $\tan x - \cot x = \csc x$.
+
+## Example 5
+
+Find all solutions of $\sin x + 2 \cos x = 1$.
+
+## Example 6
+
+Find all solutions in $[0, 2\pi]$ of $\cos \theta + 1 = \sin \theta$.
+
+## Example 7
+
+Find all solutions of $\cos \theta + \cos 2 \theta + \cos 3 \theta = 0$.
+

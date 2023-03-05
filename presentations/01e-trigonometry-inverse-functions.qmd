@@ -1,0 +1,75 @@
+---
+title: "Trigonometry: Inverse Trigonometric Functions"
+subtitle: Introduction to Engineering Mathematics
+author: Prof. Joris Vankerschaver
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    css: style.css
+---
+
+## Overview
+
+1. Definition of the inverse trigonometric functions
+1. Examples
+
+## The inverse sine function
+
+- The sine function turns angles into sine values.
+- The **inverse sine** turns sine values back into angles.
+- Notation: $\sin^{-1}(x)$, $\arcsin x$
+
+**Problem:** Many values in the range correspond to the same angle!
+
+![](./images/01-trigonometry/inverse-sine-1.svg){fig-align="center"}
+
+##
+
+Solution: restrict the domain of the sine function so that there is exactly one angle corresponding to each value.
+
+The **inverse sine function** takes a value $y \in [-1, 1]$  and turns it into an angle $\theta \in [-\pi/2, \pi/2]$.
+
+![](./images/01-trigonometry/inverse-sine-limited.svg)
+
+##
+
+We are not used to functions whose domain is the $y$-axis and whose range is the $x$-axis. So we switch $x$ and $y$ to get a function that "looks normal".
+
+- The domain of $\arcsin$ is $[-1, 1]$ and the range is $[-\pi/2, \pi/2]$.
+
+![](./images/01-trigonometry/inverse-sine-flipped.svg)
+
+## The inverse cosine function
+
+- For the inverse cosine, we restrict $\cos \theta$ to $[0, \pi]$.
+- The domain of $\arccos$ is $[-1, 1]$ and the range is $[0, \pi]$.
+
+![](./images/01-trigonometry/inverse-cosine-flipped.svg)
+
+## The inverse tangent function
+
+- For the inverse tangent, we restrict $\tan$ to $[-\pi/2, \pi/2]$.
+- The domain of $\arctan$ is all of $\mathbb{R}$, and the range is $[-\pi/2, \pi/2]$.
+
+
+![](./images/01-trigonometry/inverse-tangent-flipped.svg)
+
+## Notation (warning)
+
+Don't confuse
+$$
+    \sin^k \theta = (\sin \theta)^k, \quad \text{for $k \ge 0$}
+$$
+with
+$$
+    \sin^{-1} x = \arcsin x.
+$$
+
+## Example
+
+Simplify the following expression: $\displaystyle \tan\left(\sin^{-1} \frac{2}{3} \right)$.
+
+## Example
+
+Show that $\displaystyle \arccos x = \frac{\pi}{2} - \arcsin x$.
