@@ -11,6 +11,9 @@ format:
 
 ## Overview
 
+1. Definition of the inverse trigonometric functions
+1. Examples
+
 ## The inverse sine function
 
 - The sine function turns angles into sine values.
@@ -62,3 +65,11 @@ with
 $$
     \sin^{-1} x = \arcsin x.
 $$
+
+## Example
+
+Simplify the following expression: $\displaystyle \tan\left(\sin^{-1} \frac{2}{3} \right)$.
+
+## Example
+
+Show that $\displaystyle \arccos x = \frac{\pi}{2} - \arcsin x$.
