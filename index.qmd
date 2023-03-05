@@ -25,5 +25,4 @@ author: Prof. Joris Vankerschaver
 - [9 - Integration: Partial Fractions](presentations/09c-integration-partial-fractions.qmd)
 - [9 - Integration: Inverse Trigonometric Substitutions](presentations/09d-integration-inverse-trig.qmd)
 - [9 - Integration: Applications](presentations/09e-integration-applications.qmd)
-- [10 - Epilogue](presentations/10-epilogue.qmd)
 
