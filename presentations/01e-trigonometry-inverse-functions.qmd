@@ -52,4 +52,13 @@ We are not used to functions whose domain is the $y$-axis and whose range is the
 
 ![](./images/01-trigonometry/inverse-tangent-flipped.svg)
 
+## Notation (warning)
 
+Don't confuse
+$$
+    \sin^k \theta = (\sin \theta)^k, \quad \text{for $k \ge 0$}
+$$
+with
+$$
+    \sin^{-1} x = \arcsin x.
+$$
