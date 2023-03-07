@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Introduction to Engineering Mathematics",
     "section": "",
-    "text": "1 - Trigonometry (1/5): Introduction\n1 - Trigonometry (2/5): Formulas\n1 - Trigonometry (3/5): Geometry of triangles\n1 - Trigonometry (4/5): Trigonometric equations\n1 - Trigonometry (5/5): Inverse trigonometric functions\n2 - Coordinate Geometry\n3 - Limits and Continuity (1/2)\n3 - Limits and Continuity (2/2)\n4 - Derivatives (1/2)\n4 - Derivatives (2/2)\n5 - Complex Numbers\n6 - Polynomials (1/2)\n6 - Polynomials (2/2)\n7 - The Binomial Theorem\n8 - Proof Techniques\n9 - Integration: Definitions\n9 - Integration: Techniques\n9 - Integration: Partial Fractions\n9 - Integration: Inverse Trigonometric Substitutions\n9 - Integration: Applications\n10 - Epilogue"
+    "text": "1 - Trigonometry (1/5): Introduction\n1 - Trigonometry (2/5): Formulas\n1 - Trigonometry (3/5): Geometry of triangles\n1 - Trigonometry (4/5): Trigonometric equations\n1 - Trigonometry (5/5): Inverse trigonometric functions\n2 - Coordinate Geometry\n3 - Limits and Continuity (1/2)\n3 - Limits and Continuity (2/2)\n4 - Derivatives (1/2)\n4 - Derivatives (2/2)\n5 - Complex Numbers\n6 - Polynomials (1/2)\n6 - Polynomials (2/2)\n7 - The Binomial Theorem\n8 - Proof Techniques\n9 - Integration: Definitions\n9 - Integration: Techniques\n9 - Integration: Partial Fractions\n9 - Integration: Inverse Trigonometric Substitutions\n9 - Integration: Applications"
   },
   {
     "objectID": "presentations/09e-integration-applications.html#reminder-area-under-the-curve",
@@ -173,20 +173,6 @@
     "title": "Complex Numbers",
     "section": "Caveat",
     "text": "Caveat\nKeep in mind that, for complex numbers, \\[\n  \\sqrt{ab} \\ne \\sqrt{a}\\sqrt{b}.\n\\]"
-  },
-  {
-    "objectID": "presentations/10-epilogue.html#exam",
-    "href": "presentations/10-epilogue.html#exam",
-    "title": "Practical recommendations",
-    "section": "Exam",
-    "text": "Exam\n\nExam on 6 December 2022\nApproximately 10 problems, from different parts of the course.\nDifficulty level comparable to exercises, extra problems\nShow your work!"
-  },
-  {
-    "objectID": "presentations/10-epilogue.html#to-prepare",
-    "href": "presentations/10-epilogue.html#to-prepare",
-    "title": "Practical recommendations",
-    "section": "To prepare",
-    "text": "To prepare\n\nTry the sample exams\n3 Q&A sessions (see Ufora for dates)\nPlease reach out to myself and to TAs with questions, but:\n\nEarlier is better than later!\nShow us what you’ve already tried, so we can help you better."
   },
   {
     "objectID": "presentations/03b-limits-continuity.html#contents",
@@ -508,28 +494,28 @@
     "href": "presentations/01d-trigonometry-trigonometric-eqns.html#case-1-sin-theta-sin-alpha-with-alpha-in-left-fracpi2-fracpi2right",
     "title": "Trigonometry: Trigonometric Equations",
     "section": "Case 1: \\(\\sin \\theta = \\sin \\alpha\\), with \\(\\alpha \\in \\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]\\)",
-    "text": "Case 1: \\(\\sin \\theta = \\sin \\alpha\\), with \\(\\alpha \\in \\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]\\)"
+    "text": "Case 1: \\(\\sin \\theta = \\sin \\alpha\\), with \\(\\alpha \\in \\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]\\)\n\\[\n    \\boxed{\\theta = (-1)^k \\alpha + k\\pi, \\quad k \\in \\mathbb{Z}}\n\\]"
   },
   {
     "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#case-2-cos-theta-cos-alpha-with-alpha-in-0-pi",
     "href": "presentations/01d-trigonometry-trigonometric-eqns.html#case-2-cos-theta-cos-alpha-with-alpha-in-0-pi",
     "title": "Trigonometry: Trigonometric Equations",
     "section": "Case 2: \\(\\cos \\theta = \\cos \\alpha\\), with \\(\\alpha \\in [0, \\pi]\\)",
-    "text": "Case 2: \\(\\cos \\theta = \\cos \\alpha\\), with \\(\\alpha \\in [0, \\pi]\\)"
+    "text": "Case 2: \\(\\cos \\theta = \\cos \\alpha\\), with \\(\\alpha \\in [0, \\pi]\\)\n\\[\n    \\boxed{\\theta = \\pm \\alpha + 2k\\pi, \\quad k \\in \\mathbb{Z}}\n\\]"
   },
   {
     "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#case-3-tan-theta-tan-alpha-with-alpha-in-left-fracpi2-fracpi2right",
     "href": "presentations/01d-trigonometry-trigonometric-eqns.html#case-3-tan-theta-tan-alpha-with-alpha-in-left-fracpi2-fracpi2right",
     "title": "Trigonometry: Trigonometric Equations",
     "section": "Case 3: \\(\\tan \\theta = \\tan \\alpha\\), with \\(\\alpha \\in \\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]\\)",
-    "text": "Case 3: \\(\\tan \\theta = \\tan \\alpha\\), with \\(\\alpha \\in \\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]\\)"
+    "text": "Case 3: \\(\\tan \\theta = \\tan \\alpha\\), with \\(\\alpha \\in \\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]\\)\n\\[\n    \\boxed{\\theta = \\alpha + k\\pi, \\quad k \\in \\mathbb{Z}}\n\\]"
   },
   {
     "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#case-4-a-cos-theta-b-sin-theta-c",
     "href": "presentations/01d-trigonometry-trigonometric-eqns.html#case-4-a-cos-theta-b-sin-theta-c",
     "title": "Trigonometry: Trigonometric Equations",
     "section": "Case 4: \\(a \\cos \\theta + b \\sin \\theta = c\\)",
-    "text": "Case 4: \\(a \\cos \\theta + b \\sin \\theta = c\\)\nNecessary condition for solution to exist: \\(|c| \\le \\sqrt{a^2 + b^2}\\)."
+    "text": "Case 4: \\(a \\cos \\theta + b \\sin \\theta = c\\)\nNecessary condition for solution to exist: \\(|c| \\le \\sqrt{a^2 + b^2}\\).\n\\[\n    \\boxed{\\theta = \\alpha \\pm \\beta + 2k\\pi, \\quad k \\in \\mathbb{Z}}\n\\]"
   },
   {
     "objectID": "presentations/01d-trigonometry-trigonometric-eqns.html#example-1-1",
