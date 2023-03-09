@@ -274,3 +274,8 @@ Find the equation of the common tangent line between two touching circles given 
   C_2: & \  x^2 + y^2 - 6y + 7 = 0.
 \end{align*}
 
+##
+
+![](./images/02-coordinate-geometry/coordinate_plane_closure.png){fig-align='center'}
+
+Source: [xkcd 2735](https://xkcd.com/2735/)
