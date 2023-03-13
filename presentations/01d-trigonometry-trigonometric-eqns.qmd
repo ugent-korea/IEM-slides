@@ -24,11 +24,13 @@ A man lies on the ground and observes that a temple and a flagpole on that templ
 
 ## Word problem 3 {.smaller}
 
-![](./images/01-trigonometry/crown-prince.png){.absolute top=25 right=0 width="25%"}
+![](./images/01-trigonometry/crown-prince.png){.absolute top=25 right=0 width=250}
+
+![](./images/01-trigonometry/ashin-cropped.png){.absolute top=300 right=0 width=250}
 
 :::: {.columns }
 ::: {.column width="75%"}
-Crown Prince Lee Chang stands on the fortress walls and overlooks an approaching zombie army. He observes a zombie under an angle of depression of 45° and shoots an arrow. One second later, he shoots an arrow at the same zombie under an angle of depression of 60°. How soon will the zombie reach the base of the wall?
+Crown Prince Lee Chang/Ashin of the North stands on the fortress walls and overlooks an approaching zombie army. (S)He observes a zombie under an angle of depression of 45° and shoots an arrow. One second later, (s)he shoots an arrow at the same zombie under an angle of depression of 60°. How soon will the zombie reach the base of the wall?
 :::
 ::: {.column width="25%"}
 :::
