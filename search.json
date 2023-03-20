@@ -2189,5 +2189,19 @@
     "title": "Limits and Continuity (1/2)",
     "section": "The squeeze theorem",
     "text": "The squeeze theorem\nLets you compute the limit of a difficult function \\(g(x)\\) “squeezed” between two simple functions \\(f(x)\\) and \\(h(x)\\).\nSuppose\n\n\\(f(x) \\le g(x) \\le h(x)\\) for some \\(x\\) near \\(a\\)\n\\(\\lim_{x \\to a}f(x) = \\lim_{x \\to a} h(x) = L\\).\n\nThen \\[\n\\lim_{x \\to a} h(x) = L.\n\\]"
+  },
+  {
+    "objectID": "presentations/03a-limits-continuity.html#example",
+    "href": "presentations/03a-limits-continuity.html#example",
+    "title": "Limits and Continuity (1/2)",
+    "section": "Example",
+    "text": "Example\nCompute \\(\\displaystyle \\lim_{t \\to 0} t^2 \\sin\\left(\\frac{1}{t}\\right)\\)."
+  },
+  {
+    "objectID": "presentations/03a-limits-continuity.html#section",
+    "href": "presentations/03a-limits-continuity.html#section",
+    "title": "Limits and Continuity (1/2)",
+    "section": "",
+    "text": "Source: Wolfram Alpha"
   }
 ]
