@@ -199,5 +199,13 @@ $$
 \lim_{x \to a} h(x) = L.
 $$
 
+## Example
 
+Compute $\displaystyle \lim_{t \to 0} t^2 \sin\left(\frac{1}{t}\right)$.
+
+##
+
+![](./images/03-limits-continuity/squeeze-theorem.png)
+
+Source: [Wolfram Alpha](https://www.wolframalpha.com/input?i=plot+t%5E2*sin%281%2Ft%29)
 
