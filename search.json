@@ -2188,7 +2188,7 @@
     "href": "presentations/03a-limits-continuity.html#the-squeeze-theorem",
     "title": "Limits and Continuity (1/2)",
     "section": "The squeeze theorem",
-    "text": "The squeeze theorem\nLets you compute the limit of a difficult function \\(g(x)\\) “squeezed” between two simple functions \\(f(x)\\) and \\(h(x)\\).\nSuppose\n\n\\(f(x) \\le g(x) \\le h(x)\\) for some \\(x\\) near \\(a\\)\n\\(\\lim_{x \\to a}f(x) = \\lim_{x \\to a} h(x) = L\\).\n\nThen \\[\n\\lim_{x \\to a} h(x) = L.\n\\]"
+    "text": "The squeeze theorem\nLets you compute the limit of a difficult function \\(g(x)\\) “squeezed” between two simple functions \\(f(x)\\) and \\(h(x)\\).\nSuppose\n\n\\(f(x) \\le g(x) \\le h(x)\\) for some \\(x\\) near \\(a\\)\n\\(\\lim_{x \\to a}f(x) = \\lim_{x \\to a} h(x) = L\\).\n\nThen \\[\n\\lim_{x \\to a} g(x) = L.\n\\]"
   },
   {
     "objectID": "presentations/03a-limits-continuity.html#example",
