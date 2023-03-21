@@ -196,7 +196,7 @@ Suppose
 
 Then
 $$
-\lim_{x \to a} h(x) = L.
+\lim_{x \to a} g(x) = L.
 $$
 
 ## Example
