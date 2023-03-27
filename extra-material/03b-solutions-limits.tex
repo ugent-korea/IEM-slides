@@ -1,0 +1,73 @@
+\documentclass{amsart}
+
+\usepackage[a4paper]{geometry}
+\usepackage{parskip}
+
+\title{Solutions for limit problems, slide deck 03b}
+
+\begin{document}
+\maketitle
+
+\section*{Problem 1}
+
+\begin{itemize}
+\item Solution:
+  \[
+    \lim_{x \to +\infty} \frac{2x^5 + 1}{x^5 + x^3 + 1} = 2.
+  \]
+\item Hint: Look at the behavior of the leading-order terms ($x^5$ in the numerator and denominator). To solve rigorously, factor out $x^5$ from both numerator and denominator, and use limit rules.
+\end{itemize}
+
+
+\section*{Problem 2}
+
+\begin{itemize}
+\item Solution:
+  \[
+    \lim_{x \to -\infty} \frac{x^7}{\sqrt{x^{14} + 1}} = - 1.
+  \]
+\item Hint: Look at the behavior of the leading-order terms ($x^7$ in the numerator, $\sqrt{x^{14}} = - x^7$ in the denominator) and compare. To solve rigorously, factor out $x^7$ from the denominator (covered in class).
+\end{itemize}
+
+
+\section*{Problem 3}
+
+\begin{itemize}
+\item Solution:
+  \[
+    \lim_{x \to +\infty} \left(\sqrt{x^2 + 1} - x \right) = 0.
+  \]
+\item Hint: Multiply by the conjugate expression.
+\end{itemize}
+
+
+\section*{Problem 4}
+
+\begin{itemize}
+\item Solution:
+  \[
+    \lim_{x \to 0-} e^{1/x} = 0.
+  \]
+\item Hint: Introduce $y = 1/x$. As $x \to 0-$, $y \to -\infty$, so that $\displaystyle \lim_{x \to 0-} e^{1/x} = \lim_{y \to -\infty} e^y$.
+\end{itemize}
+
+
+\section*{Problem 5}
+
+\begin{itemize}
+\item Solution: This limit does not exist.
+\item Hint: From the graph. The function $y = \sin x$ continues to oscillate between -1 and +1 as $x \to +\infty$.
+\end{itemize}
+
+
+\section*{Problem 6}
+
+\begin{itemize}
+\item Solution:
+  \[
+    \lim_{x \to \pi/2-} e^{\tan x} = 0.
+  \]
+\item Hint: Introduce $y = \tan x$. As $x \to \pi/2-$, $y \to -\infty$, so that $\displaystyle \lim_{x \to \pi/2-} e^{\tan x} = \lim_{y \to -\infty} e^y$.
+\end{itemize}
+
+\end{document}
