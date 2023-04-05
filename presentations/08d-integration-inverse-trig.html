@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.1.251">
 
   <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
-  <title>The binomial theorem</title>
+  <title>Integration: Inverse trigonometric substitution</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -325,7 +325,7 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">The binomial theorem</h1>
+  <h1 class="title">Integration: Inverse trigonometric substitution</h1>
   <p class="subtitle">Introduction to Engineering Mathematics</p>
   <p class="author">Prof.&nbsp;Joris Vankerschaver</p>
 </section>
@@ -333,93 +333,117 @@
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
 <ul>
-<li>Pascal’s triangle</li>
-<li>Binomial coefficients</li>
-<li>Binomial theorem</li>
-</ul>
-</section>
-<section id="pascals-triangle" class="slide level2">
-<h2>Pascal’s triangle</h2>
-<p>Expand the following expressions and look at the coefficients.</p>
+<li>Inverse trigonometric substitution</li>
+<li>Other substitutions
 <ul>
-<li><span class="math inline">\((a + b)^0 = 1\)</span></li>
-<li><span class="math inline">\((a + b)^1 = a + b\)</span></li>
-<li><span class="math inline">\((a + b)^2 = a^2 + 2ab + b^2\)</span></li>
-<li><span class="math inline">\((a + b)^3 = a^3 + 3a^2 b + 3ab^2 + b^3\)</span></li>
-<li><span class="math inline">\((a + b)^4 = a^4 + 4a^3 b + 6a^2 b^2 + 4ab^3 + b^4\)</span></li>
-<li><span class="math inline">\((a + b)^5 = a^5 + 5a^4b + 10a^3b^2 + 10a^2 b^3 + 5ab^4 + b^5\)</span></li>
+<li>Higher order roots</li>
+<li><span class="math inline">\(\tan\frac{\theta}{2}\)</span>-substitution</li>
+</ul></li>
 </ul>
-<p>What do you notice?</p>
-<p>Based on this pattern, what is <span class="math inline">\((a + b)^7\)</span>?</p>
-<p>Would you be able to write down <span class="math inline">\((a + b)^{27}\)</span>?</p>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="./images/07-binomial/Yanghui_triangle.png" height="500"></p>
-</figure>
-</div>
-<p><a href="https://en.wikipedia.org/wiki/Jia_Xian">Jian Xian (贾宪), 11th century CE</a></p>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="./images/07-binomial/TrianguloPascal.jpeg" height="500"></p>
-</figure>
-</div>
-<p><a href="https://en.wikipedia.org/wiki/Pascal%27s_triangle">Blaise Pascal, 1665 CE</a></p>
-</div>
-</div>
-<p>Figures: Wikipedia.</p>
+<section>
+<section id="inverse-trigonometric-substitution" class="title-slide slide level1 center">
+<h1>Inverse trigonometric substitution</h1>
+
+</section>
+<section id="what-is-inverse-trigonometric-substitution" class="slide level2">
+<h2>What is inverse trigonometric substitution?</h2>
+<ul>
+<li>Direct substitution: replace part of the integrand by a new variable</li>
+<li>Inverse substitution: <strong>replace variable by new function</strong>.</li>
+</ul>
+<p>Example: <span class="math inline">\(\displaystyle \int \sqrt{1 - x^2} dx\)</span> with the substitution <span class="math inline">\(x = \cos \theta\)</span></p>
+</section>
+<section id="why-is-this-useful" class="slide level2">
+<h2>Why is this useful?</h2>
+<p>Inverse trigonometric substitution can solve integrals that have a power of <span class="math inline">\(x^2 \pm a^2\)</span> somewhere in the integrand.</p>
+<p>Example:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \int \frac{dx}{(x^2 - 25)^3}\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \sqrt{1 + x^2} dx\)</span></li>
+</ul>
+</section>
+<section id="types-of-substitutions" class="slide level2">
+<h2>Types of substitutions</h2>
+<p>The exact substitution depends on the integrand. We will distinguish the following three cases, depending on factors that occur in the integrand.</p>
+<ol type="1">
+<li>Factor <span class="math inline">\(\sqrt{a^2 - x^2}\)</span>: use <span class="math inline">\(x = a \sin \theta\)</span></li>
+<li>Factor <span class="math inline">\(\sqrt{a^2 + x^2}\)</span>: use <span class="math inline">\(x = a \tan \theta\)</span></li>
+<li>Factor <span class="math inline">\(\sqrt{x^2 - a^2}\)</span>: use <span class="math inline">\(x = a \sec \theta\)</span></li>
+</ol>
+<p>Don’t memorize these substitutions: use your insight into trigonometry to think what substitution would simplify the integrand.</p>
+</section>
+<section id="remark-completing-the-square" class="slide level2">
+<h2>Remark: completing the square</h2>
+<p>Often the integrand will not exactly be in one of the three previous forms. In that case, <strong>completing the square</strong> may help: <span class="math display">\[
+    \int \frac{dx}{x^2 + 4x + 5} = \int \frac{dx}{(x + 2)^2 + 1} = \int \frac{dt}{t^2 + 1} = \ldots
+\]</span></p>
+</section>
+<section id="case-1-sqrta2---x2" class="slide level2">
+<h2>Case 1: <span class="math inline">\(\sqrt{a^2 - x^2}\)</span></h2>
+<ul>
+<li>Substitution: <span class="math inline">\(x = a \sin \theta\)</span></li>
+<li>Differential: <span class="math inline">\(dx = a \cos \theta \, d \theta\)</span></li>
+</ul>
+<p>Example: <span class="math inline">\(\displaystyle \int \frac{dx}{(5 - x^2)^{3/2}}\)</span></p>
+</section>
+<section id="case-2-sqrta2-x2" class="slide level2">
+<h2>Case 2: <span class="math inline">\(\sqrt{a^2 + x^2}\)</span></h2>
+<ul>
+<li>Substitution: <span class="math inline">\(x = a \tan \theta\)</span></li>
+<li>Differential: <span class="math inline">\(dx = a \sec^2 \theta \, d \theta\)</span></li>
+</ul>
+<p>Example: <span class="math inline">\(\displaystyle \int \frac{dx}{\sqrt{1 + 4x^2}}\)</span></p>
+</section>
+<section id="case-3-sqrtx2---a2" class="slide level2">
+<h2>Case 3: <span class="math inline">\(\sqrt{x^2 - a^2}\)</span></h2>
+<ul>
+<li>Substitution: <span class="math inline">\(x = a \sec \theta\)</span></li>
+<li>Differential: <span class="math inline">\(dx = a \tan \theta \sec \theta \, d \theta\)</span></li>
+</ul>
+<p>Example: <span class="math inline">\(\displaystyle \int \frac{dx}{\sqrt{x^2 - a^2}}\)</span></p>
+</section></section>
+<section>
+<section id="other-substitutions" class="title-slide slide level1 center">
+<h1>Other substitutions</h1>
+
+</section>
+<section id="higher-roots" class="slide level2">
+<h2>Higher roots</h2>
+<p>Useful when the integrand has a factor <span class="math inline">\(\sqrt[n]{ax + b}\)</span>.</p>
+<ul>
+<li>Substitution: <span class="math inline">\(ax + b = u^n\)</span></li>
+<li>Differential: <span class="math inline">\(a \, dx = n u^{n-1} \, du\)</span></li>
+</ul>
+<p>Example: <span class="math inline">\(\displaystyle \int_{-1/3}^2 \frac{x\, dx}{\sqrt[3]{3x+2}}\)</span></p>
 </section>
 <section id="example" class="slide level2">
 <h2>Example</h2>
-<p>Use Pascal’s triangle to expand <span class="math inline">\(\displaystyle \left(2x + \frac{1}{x}\right)^5\)</span>.</p>
+<p>Sometimes this rule can be applied to integrands that are somewhat more general than what’s shown on the previous slide.</p>
+<p>Example: <span class="math inline">\(\displaystyle \int \frac{dx}{x^{1/2}(1 + x^{1/3})} = \ldots\)</span></p>
+<p>(Substitute <span class="math inline">\(x^{1/6} = u\)</span>)</p>
 </section>
-<section id="binomial-coefficients" class="slide level2">
-<h2>Binomial coefficients</h2>
+<section id="tan-fractheta2-substitution" class="slide level2">
+<h2><span class="math inline">\(\tan \frac{\theta}{2}\)</span>-substitution</h2>
+<p>Useful when the integrand is a rational function of <span class="math inline">\(\sin \theta\)</span> and <span class="math inline">\(\cos \theta\)</span>.</p>
 <ul>
-<li>Factorial: <span class="math inline">\(n! = n(n-1)(n-2) \cdots 2 \cdot 1\)</span>.</li>
-<li>Binomial coefficient (also called “n-choose-k”): <span class="math display">\[
-  {n \choose k} = C^k_n = \frac{n!}{k!(n-k)!}.
+<li>Substitution: <span class="math inline">\(t = \tan \frac{\theta}{2}\)</span>, so that <span class="math inline">\(\theta = \tan^{-1}(2t)\)</span></li>
+<li>Differential: <span class="math display">\[
+d \theta = \frac{2 dt}{1 + t^2}
 \]</span></li>
-<li>Measures the number of ways of choosing <span class="math inline">\(k\)</span> objects from among <span class="math inline">\(n\)</span> choices.</li>
+<li><span class="math inline">\(t\)</span>-formulas: <span class="math display">\[
+  \sin \theta = \frac{2t}{1+t^2} \quad \text{and} \quad \cos \theta = \frac{1 - t^2}{1 + t^2}.
+\]</span></li>
 </ul>
-</section>
-<section id="properties" class="slide level2">
-<h2>Properties</h2>
-<p>For all <span class="math inline">\(n\)</span> and <span class="math inline">\(k \le n\)</span>:</p>
-<ol type="1">
-<li><span class="math inline">\(\displaystyle {n \choose 0} = {n \choose n} = 1\)</span>.</li>
-<li><span class="math inline">\(\displaystyle {n \choose 1} = {n \choose n - 1} = n\)</span>.</li>
-<li><span class="math inline">\(\displaystyle {n \choose k} = {n \choose n - k}\)</span>.</li>
-</ol>
-</section>
-<section id="rewriting-pascals-triangle-using-binomial-coefficients" class="slide level2">
-<h2>Rewriting Pascal’s triangle using binomial coefficients</h2>
-</section>
-<section id="the-binomial-expansion" class="slide level2">
-<h2>The binomial expansion</h2>
-<p>Putting everything we’ve learned together, we get <span class="math display">\[
-    (a + b)^n = {n \choose 0} a^n b^0 + {n \choose 1} a^{n-1}b^1 + \cdots + {n \choose n-1} a^1 b^{n-1} + {n \choose n} a^0 b^n.
-\]</span> This can be written more compactly as <span class="math display">\[
-    (a + b)^n = \sum_{k = 0}^n {n \choose k} a^{n - k} b^k.
-\]</span></p>
 </section>
 <section id="example-1" class="slide level2">
 <h2>Example</h2>
-<p>Use the binomial expansion to expand <span class="math inline">\(\displaystyle (\sqrt{x} - 1)^7\)</span>.</p>
-</section>
-<section id="visual-proof-of-the-binomial-expansion-optional" class="slide level2">
-<h2>Visual proof of the binomial expansion (optional)</h2>
+<p><span class="math inline">\(\displaystyle \int \frac{d \theta}{2 + \cos \theta} = \ldots\)</span></p>
 
-
-<img data-src="./images/07-binomial/binomial-proof.png" class="r-stretch quarto-figure-center"><div class="footer footer-default">
+<div class="footer footer-default">
 
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

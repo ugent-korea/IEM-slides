@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.1.251">
 
   <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
-  <title>The binomial theorem</title>
+  <title>Integration: Applications</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -325,98 +325,122 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">The binomial theorem</h1>
+  <h1 class="title">Integration: Applications</h1>
   <p class="subtitle">Introduction to Engineering Mathematics</p>
   <p class="author">Prof.&nbsp;Joris Vankerschaver</p>
 </section>
 
-<section id="overview" class="slide level2">
-<h2>Overview</h2>
-<ul>
-<li>Pascal’s triangle</li>
-<li>Binomial coefficients</li>
-<li>Binomial theorem</li>
-</ul>
+<section id="reminder-area-under-the-curve" class="slide level2">
+<h2>Reminder: area under the curve</h2>
+<p>&nbsp;</p>
+
+<img data-src="./images/09-integration/area-mixed.svg" class="r-stretch quarto-figure-center"><p><span class="math display">\[
+    \text{Area} = \int_a^{c_1} f(x) dx - \int_{c_1}^{c_2} f(x) dx + \int_{c_2}^d f(x) dx.
+\]</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 </section>
-<section id="pascals-triangle" class="slide level2">
-<h2>Pascal’s triangle</h2>
-<p>Expand the following expressions and look at the coefficients.</p>
-<ul>
-<li><span class="math inline">\((a + b)^0 = 1\)</span></li>
-<li><span class="math inline">\((a + b)^1 = a + b\)</span></li>
-<li><span class="math inline">\((a + b)^2 = a^2 + 2ab + b^2\)</span></li>
-<li><span class="math inline">\((a + b)^3 = a^3 + 3a^2 b + 3ab^2 + b^3\)</span></li>
-<li><span class="math inline">\((a + b)^4 = a^4 + 4a^3 b + 6a^2 b^2 + 4ab^3 + b^4\)</span></li>
-<li><span class="math inline">\((a + b)^5 = a^5 + 5a^4b + 10a^3b^2 + 10a^2 b^3 + 5ab^4 + b^5\)</span></li>
-</ul>
-<p>What do you notice?</p>
-<p>Based on this pattern, what is <span class="math inline">\((a + b)^7\)</span>?</p>
-<p>Would you be able to write down <span class="math inline">\((a + b)^{27}\)</span>?</p>
+<section id="area-between-two-curves" class="slide level2">
+<h2>Area between two curves</h2>
+<p>&nbsp;</p>
+
+<img data-src="./images/09-integration/area-two-curves.svg" class="r-stretch quarto-figure-center"><p>&nbsp;</p>
+<div class="fragment">
+<div class="absolute" style="top: 42%; left: 4%; width: 150px; ">
+<p><span class="math display">\[
+\phantom{\int}\text{Area}
+\]</span></p>
+</div>
+<div class="absolute" style="top: 42%; left: 22%; width: 150px; ">
+<p><span class="math display">\[
+\phantom{\int}=
+\]</span></p>
+</div>
+</div>
+<div class="fragment">
+<div class="absolute" style="top: 42%; left: 42%; width: 150px; ">
+<p><span class="math display">\[
+    \int_a^b f(x) dx
+\]</span></p>
+</div>
+</div>
+<div class="fragment">
+<div class="absolute" style="top: 42%; left: 59%; width: 150px; ">
+<p><span class="math display">\[
+\phantom{\int}-
+\]</span></p>
+</div>
+</div>
+<div class="fragment">
+<div class="absolute" style="top: 42%; left: 77%; width: 150px; ">
+<p><span class="math display">\[
+    \int_a^b g(x) dx
+\]</span></p>
+</div>
+</div>
+<div class="fragment">
+<div class="absolute" style="top: 62%; left: 22%; width: 150px; ">
+<p><span class="math display">\[
+\phantom{\int}=
+\]</span></p>
+</div>
+<div class="absolute" style="top: 62%; left: 42%; width: 150px; ">
+<p><span class="math display">\[
+    \int_a^b (f(x) - g(x)) dx
+\]</span></p>
+</div>
+</div>
+<div class="fragment">
+<div class="absolute" style="top: 77%; left: 50%; width: 250px; ">
+<div style="color: red">
+<p>Upper - Lower</p>
+</div>
+</div>
+<div class="absolute" style="top: 14%; left: 10%; width: 250px; ">
+<div style="color: red">
+<p>Upper</p>
+</div>
+</div>
+<div class="absolute" style="top: 31%; left: 8%; width: 250px; ">
+<div style="color: red">
+<p>Lower</p>
+</div>
+</div>
+<div class="absolute" style="top: 14%; left: 43%; width: 250px; ">
+<div style="color: red">
+<p>Upper</p>
+</div>
+</div>
+<div class="absolute" style="top: 31%; left: 80%; width: 250px; ">
+<div style="color: red">
+<p>Lower</p>
+</div>
+</div>
+</div>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="./images/07-binomial/Yanghui_triangle.png" height="500"></p>
-</figure>
-</div>
-<p><a href="https://en.wikipedia.org/wiki/Jia_Xian">Jian Xian (贾宪), 11th century CE</a></p>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="./images/07-binomial/TrianguloPascal.jpeg" height="500"></p>
-</figure>
-</div>
-<p><a href="https://en.wikipedia.org/wiki/Pascal%27s_triangle">Blaise Pascal, 1665 CE</a></p>
-</div>
-</div>
-<p>Figures: Wikipedia.</p>
+<section id="recipe-for-finding-the-area" class="slide level2">
+<h2>Recipe for finding the area</h2>
+<ol type="1">
+<li>Make a figure</li>
+<li>Determine intersection points</li>
+<li>Figure out which curve is upper/lower</li>
+<li>Integrate</li>
+</ol>
 </section>
 <section id="example" class="slide level2">
 <h2>Example</h2>
-<p>Use Pascal’s triangle to expand <span class="math inline">\(\displaystyle \left(2x + \frac{1}{x}\right)^5\)</span>.</p>
-</section>
-<section id="binomial-coefficients" class="slide level2">
-<h2>Binomial coefficients</h2>
-<ul>
-<li>Factorial: <span class="math inline">\(n! = n(n-1)(n-2) \cdots 2 \cdot 1\)</span>.</li>
-<li>Binomial coefficient (also called “n-choose-k”): <span class="math display">\[
-  {n \choose k} = C^k_n = \frac{n!}{k!(n-k)!}.
-\]</span></li>
-<li>Measures the number of ways of choosing <span class="math inline">\(k\)</span> objects from among <span class="math inline">\(n\)</span> choices.</li>
-</ul>
-</section>
-<section id="properties" class="slide level2">
-<h2>Properties</h2>
-<p>For all <span class="math inline">\(n\)</span> and <span class="math inline">\(k \le n\)</span>:</p>
-<ol type="1">
-<li><span class="math inline">\(\displaystyle {n \choose 0} = {n \choose n} = 1\)</span>.</li>
-<li><span class="math inline">\(\displaystyle {n \choose 1} = {n \choose n - 1} = n\)</span>.</li>
-<li><span class="math inline">\(\displaystyle {n \choose k} = {n \choose n - k}\)</span>.</li>
-</ol>
-</section>
-<section id="rewriting-pascals-triangle-using-binomial-coefficients" class="slide level2">
-<h2>Rewriting Pascal’s triangle using binomial coefficients</h2>
-</section>
-<section id="the-binomial-expansion" class="slide level2">
-<h2>The binomial expansion</h2>
-<p>Putting everything we’ve learned together, we get <span class="math display">\[
-    (a + b)^n = {n \choose 0} a^n b^0 + {n \choose 1} a^{n-1}b^1 + \cdots + {n \choose n-1} a^1 b^{n-1} + {n \choose n} a^0 b^n.
-\]</span> This can be written more compactly as <span class="math display">\[
-    (a + b)^n = \sum_{k = 0}^n {n \choose k} a^{n - k} b^k.
-\]</span></p>
+<p>Find the area bounded by <span class="math inline">\(y = \sin x\)</span>, <span class="math inline">\(y = 0\)</span>, and <span class="math inline">\(\displaystyle x = \frac{3\pi}{2}\)</span>.</p>
 </section>
 <section id="example-1" class="slide level2">
 <h2>Example</h2>
-<p>Use the binomial expansion to expand <span class="math inline">\(\displaystyle (\sqrt{x} - 1)^7\)</span>.</p>
+<p>Find the area of the region between the curves <span class="math inline">\(y = x^2 - 2x\)</span> and <span class="math inline">\(y = 4 - x^2\)</span>.</p>
 </section>
-<section id="visual-proof-of-the-binomial-expansion-optional" class="slide level2">
-<h2>Visual proof of the binomial expansion (optional)</h2>
+<section id="example-2" class="slide level2">
+<h2>Example</h2>
+<p>Find the area of the region between <span class="math inline">\(x = 12 - y^2\)</span> and <span class="math inline">\(y = -x\)</span>.</p>
 
-
-<img data-src="./images/07-binomial/binomial-proof.png" class="r-stretch quarto-figure-center"><div class="footer footer-default">
+<div class="footer footer-default">
 
 </div>
 </section>

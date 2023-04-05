@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.1.251">
 
   <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
-  <title>The binomial theorem</title>
+  <title>Integration: Definitions and basic concepts</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -325,98 +325,189 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">The binomial theorem</h1>
+  <h1 class="title">Integration: Definitions and basic concepts</h1>
   <p class="subtitle">Introduction to Engineering Mathematics</p>
   <p class="author">Prof.&nbsp;Joris Vankerschaver</p>
 </section>
 
-<section id="overview" class="slide level2">
-<h2>Overview</h2>
+<section id="contents" class="slide level2">
+<h2>Contents</h2>
 <ul>
-<li>Pascal’s triangle</li>
-<li>Binomial coefficients</li>
-<li>Binomial theorem</li>
+<li>Definite/indefinite integral</li>
+<li>Relation with area</li>
+<li>Properties</li>
+<li>Examples</li>
 </ul>
 </section>
-<section id="pascals-triangle" class="slide level2">
-<h2>Pascal’s triangle</h2>
-<p>Expand the following expressions and look at the coefficients.</p>
+<section id="indefinite-integrals-as-antiderivatives" class="slide level2">
+<h2>Indefinite integrals as antiderivatives</h2>
 <ul>
-<li><span class="math inline">\((a + b)^0 = 1\)</span></li>
-<li><span class="math inline">\((a + b)^1 = a + b\)</span></li>
-<li><span class="math inline">\((a + b)^2 = a^2 + 2ab + b^2\)</span></li>
-<li><span class="math inline">\((a + b)^3 = a^3 + 3a^2 b + 3ab^2 + b^3\)</span></li>
-<li><span class="math inline">\((a + b)^4 = a^4 + 4a^3 b + 6a^2 b^2 + 4ab^3 + b^4\)</span></li>
-<li><span class="math inline">\((a + b)^5 = a^5 + 5a^4b + 10a^3b^2 + 10a^2 b^3 + 5ab^4 + b^5\)</span></li>
+<li><strong>Antiderivative</strong>: the opposite (inverse operation) of a derivative.</li>
+<li>The <strong>indefinite integral</strong> is an antiderivative.</li>
 </ul>
-<p>What do you notice?</p>
-<p>Based on this pattern, what is <span class="math inline">\((a + b)^7\)</span>?</p>
-<p>Would you be able to write down <span class="math inline">\((a + b)^{27}\)</span>?</p>
+<p>Examples:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \frac{d}{dx} \frac{x^3}{3} = x^2\)</span>, so <span class="math inline">\(\displaystyle \int x^2 dx = \frac{x^3}{3} + C\)</span></li>
+</ul>
+<div class="fragment">
+<ul>
+<li><span class="math inline">\(\displaystyle \frac{d}{dx} \arcsin(x) = \frac{1}{\sqrt{1 - x^2}}\)</span>, so <span class="math inline">\(\displaystyle \int \frac{dx}{\sqrt{1-x^2}} = \arcsin(x) + C\)</span>.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>In these examples, <span class="math inline">\(C\)</span> is an <strong>arbitrary constant</strong>.</p>
+</div>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="anatomy-of-an-indefinite-integral" class="slide level2">
+<h2>Anatomy of an indefinite integral</h2>
+
+<img data-src="./images/09-integration/integral.svg" class="r-stretch quarto-figure-center"></section>
+<section id="examples" class="slide level2">
+<h2>Examples</h2>
+<p>Polynomials:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \int x^n \, dx = \frac{x^{n+1}}{n+1} + C\)</span> for <span class="math inline">\(n \ne -1\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{dx}{x} = \ln |x| + C\)</span></li>
+</ul>
+<p>Trigonometric functions:</p>
 <div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="./images/07-binomial/Yanghui_triangle.png" height="500"></p>
-</figure>
-</div>
-<p><a href="https://en.wikipedia.org/wiki/Jia_Xian">Jian Xian (贾宪), 11th century CE</a></p>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="./images/07-binomial/TrianguloPascal.jpeg" height="500"></p>
-</figure>
-</div>
-<p><a href="https://en.wikipedia.org/wiki/Pascal%27s_triangle">Blaise Pascal, 1665 CE</a></p>
-</div>
-</div>
-<p>Figures: Wikipedia.</p>
-</section>
-<section id="example" class="slide level2">
-<h2>Example</h2>
-<p>Use Pascal’s triangle to expand <span class="math inline">\(\displaystyle \left(2x + \frac{1}{x}\right)^5\)</span>.</p>
-</section>
-<section id="binomial-coefficients" class="slide level2">
-<h2>Binomial coefficients</h2>
+<div class="column" style="width:45%;">
 <ul>
-<li>Factorial: <span class="math inline">\(n! = n(n-1)(n-2) \cdots 2 \cdot 1\)</span>.</li>
-<li>Binomial coefficient (also called “n-choose-k”): <span class="math display">\[
-  {n \choose k} = C^k_n = \frac{n!}{k!(n-k)!}.
-\]</span></li>
-<li>Measures the number of ways of choosing <span class="math inline">\(k\)</span> objects from among <span class="math inline">\(n\)</span> choices.</li>
+<li><span class="math inline">\(\displaystyle \int \sin x \, dx = - \cos x + C\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \cos x \, dx = \sin x + C\)</span></li>
+</ul>
+</div><div class="column" style="width:55%;">
+<div class="fragment fade-in">
+<p><span class="math inline">\(\displaystyle \int \tan x \, dx = - \ln |\cos x| + C\)</span> &nbsp; &nbsp; 😱</p>
+<p><em>Not an obvious antiderivative; we will see how to derive this integral later.</em></p>
+</div>
+</div>
+</div>
+</section>
+<section id="examples-1" class="slide level2">
+<h2>Examples</h2>
+<p>Exponential/logarithmic functions:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \int e^x = e^x + C\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{dx}{x} = \ln |x| + C\)</span></li>
+</ul>
+<p>Inverse trigonometric functions:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \int \frac{dx}{\sqrt{1 - x^2}} = \arcsin(x) + C\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{dx}{1 + x^2} = \arctan(x) + C\)</span></li>
 </ul>
 </section>
-<section id="properties" class="slide level2">
-<h2>Properties</h2>
-<p>For all <span class="math inline">\(n\)</span> and <span class="math inline">\(k \le n\)</span>:</p>
+<section id="examples-2" class="slide level2">
+<h2>Examples</h2>
+<p>Special cases:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \int \sec^2 x \, dx = \tan x + C\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \csc^2 x \, dx = - \cot x + C\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \sec x \tan x \, dx = \sec x + C\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \csc x \cot x \, dx = - \csc x + C\)</span></li>
+</ul>
+</section>
+<section id="the-definite-integral" class="slide level2">
+<h2>The definite integral</h2>
+<p>Definite integral: integral with “bounds”</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./images/09-integration/definite-integral.svg" height="200"></p>
+</figure>
+</div>
+<p>How to compute:</p>
 <ol type="1">
-<li><span class="math inline">\(\displaystyle {n \choose 0} = {n \choose n} = 1\)</span>.</li>
-<li><span class="math inline">\(\displaystyle {n \choose 1} = {n \choose n - 1} = n\)</span>.</li>
-<li><span class="math inline">\(\displaystyle {n \choose k} = {n \choose n - k}\)</span>.</li>
+<li>Find primitive function <span class="math inline">\(F(x)\)</span>: <span class="math inline">\(\displaystyle \int f(x) \, dx = F(x) + C\)</span></li>
+<li>Substitute bounds into <span class="math inline">\(F(x)\)</span>: <span class="math inline">\(\displaystyle \int_a^b f(x) dx = F(b) - F(a) = F(x) \Big|_a^b\)</span>.</li>
 </ol>
 </section>
-<section id="rewriting-pascals-triangle-using-binomial-coefficients" class="slide level2">
-<h2>Rewriting Pascal’s triangle using binomial coefficients</h2>
+<section id="examples-3" class="slide level2">
+<h2>Examples</h2>
+<p>Compute:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \int_0^{\pi/2} \sin x \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int_{-1}^2 (x^2 + 2x -1) \, dx\)</span></li>
+</ul>
 </section>
-<section id="the-binomial-expansion" class="slide level2">
-<h2>The binomial expansion</h2>
-<p>Putting everything we’ve learned together, we get <span class="math display">\[
-    (a + b)^n = {n \choose 0} a^n b^0 + {n \choose 1} a^{n-1}b^1 + \cdots + {n \choose n-1} a^1 b^{n-1} + {n \choose n} a^0 b^n.
-\]</span> This can be written more compactly as <span class="math display">\[
-    (a + b)^n = \sum_{k = 0}^n {n \choose k} a^{n - k} b^k.
-\]</span></p>
+<section id="properties-of-the-definite-integral" class="slide level2">
+<h2>Properties of the definite integral</h2>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(\displaystyle \int_a^a f(x) dx = F(a) - F(a) = 0\)</span></li>
+<li class="fragment"><span class="math inline">\(\displaystyle \int_a^b f(x) dx = - \displaystyle \int_b^a f(x) dx\)</span></li>
+<li class="fragment">Linearity: <span class="math inline">\(\displaystyle \int_a^b (Af(x) + Bg(x) ) dx = A\int_a^b f(x)dx + B\int_a^b g(x)dx\)</span></li>
+<li class="fragment"><span class="math inline">\(\displaystyle \int_a^b f(x) dx + \int_b^c f(x)dx = \int_a^c f(x)dx\)</span></li>
+</ul>
+</div>
 </section>
-<section id="example-1" class="slide level2">
-<h2>Example</h2>
-<p>Use the binomial expansion to expand <span class="math inline">\(\displaystyle (\sqrt{x} - 1)^7\)</span>.</p>
+<section id="definite-integrals-correspond-to-signed-areas" class="slide level2">
+<h2>Definite integrals correspond to signed areas</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>If <span class="math inline">\(f(x) \ge 0\)</span>: <span class="math inline">\(A = \int_a^b f(x) \, dx\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./images/09-integration/area-pos.svg"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<p>If <span class="math inline">\(f(x) \le 0\)</span>: <span class="math inline">\(A = - \int_a^b f(x) \, dx\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./images/09-integration/area-neg.svg"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>If <span class="math inline">\(f(x)\)</span> changes sign: break up into parts above/below <span class="math inline">\(x\)</span>-axis.</p>
 </section>
-<section id="visual-proof-of-the-binomial-expansion-optional" class="slide level2">
-<h2>Visual proof of the binomial expansion (optional)</h2>
+<section id="examples-4" class="slide level2">
+<h2>Examples</h2>
+<p>Find the area…</p>
+<ul>
+<li>Between the graph of <span class="math inline">\(y = \sin x\)</span> and the <span class="math inline">\(x\)</span>-axis, from <span class="math inline">\(0\)</span> to <span class="math inline">\(2\pi\)</span>.</li>
+<li>Below the graph of <span class="math inline">\(y = 3x - x^2\)</span> and above the <span class="math inline">\(x\)</span>-axis.</li>
+</ul>
+</section>
+<section id="properties-continued" class="slide level2">
+<h2>Properties (continued)</h2>
+<div>
+<ul>
+<li class="fragment">For an even function, <span class="math inline">\(\displaystyle \int_{-a}^a f(x) dx = 2 \int_0^a f(x) dx\)</span></li>
+<li class="fragment">For an odd function, <span class="math inline">\(\displaystyle \int_{-a}^a f(x) = 0\)</span>.</li>
+<li class="fragment">“King’s rule”: <span class="math inline">\(\displaystyle \int_0^a f(x) dx = \int_0^a f(a - x)dx\)</span>.</li>
+</ul>
+</div>
+</section>
+<section id="continuity-and-integration" class="slide level2">
+<h2>Continuity and integration</h2>
+<ul>
+<li><p>So far, we have silently assumed <span class="math inline">\(f(x)\)</span> is continuous on <span class="math inline">\([a, b]\)</span> to define the integral <span class="math inline">\(\int_a^b f(x) dx\)</span>.</p></li>
+<li><p>The integral can also be defined if <span class="math inline">\(f(x)\)</span> is <strong>piecewise continuous</strong>.</p></li>
+</ul>
+</section>
+<section id="examples-5" class="slide level2">
+<h2>Examples</h2>
+<p>Compute the following integrals:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \int \left( 10x^4 - \frac{2}{\sqrt{1 - x^2}} \right) \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int_0^1 x^{5/2}(1 - x) \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{x^2}{1 + x^2} \, dx\)</span></li>
+</ul>
+</section>
+<section id="examples-6" class="slide level2">
+<h2>Examples</h2>
+<p>Show that <span class="math inline">\(\displaystyle \int_0^{\pi/2} \frac{\sin x}{\sin x + \cos x} dx = \frac{\pi}{4}\)</span>.</p>
+<p><em>Difficult, uses King’s rule.</em></p>
+</section>
+<section id="integrals-and-derivatives-are-each-others-inverse" class="slide level2">
+<h2>Integrals and derivatives are each other’s inverse</h2>
+<ul>
+<li>If <span class="math inline">\(\displaystyle G(x) = \int_1^x \ln y \, dy\)</span>, find <span class="math inline">\(G'(x)\)</span>.</li>
+<li>If <span class="math inline">\(\displaystyle H(x) = \int_1^{x^2} \ln y \, dy\)</span>, find <span class="math inline">\(H'(x)\)</span>.</li>
+</ul>
 
-
-<img data-src="./images/07-binomial/binomial-proof.png" class="r-stretch quarto-figure-center"><div class="footer footer-default">
+<div class="footer footer-default">
 
 </div>
 </section>

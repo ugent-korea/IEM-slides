@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.1.251">
 
   <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
-  <title>The binomial theorem</title>
+  <title>Proof Techniques</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -325,7 +325,7 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">The binomial theorem</h1>
+  <h1 class="title">Proof Techniques</h1>
   <p class="subtitle">Introduction to Engineering Mathematics</p>
   <p class="author">Prof.&nbsp;Joris Vankerschaver</p>
 </section>
@@ -333,91 +333,131 @@
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
 <ul>
-<li>Pascal’s triangle</li>
-<li>Binomial coefficients</li>
-<li>Binomial theorem</li>
-</ul>
-</section>
-<section id="pascals-triangle" class="slide level2">
-<h2>Pascal’s triangle</h2>
-<p>Expand the following expressions and look at the coefficients.</p>
+<li>Logical statements
 <ul>
-<li><span class="math inline">\((a + b)^0 = 1\)</span></li>
-<li><span class="math inline">\((a + b)^1 = a + b\)</span></li>
-<li><span class="math inline">\((a + b)^2 = a^2 + 2ab + b^2\)</span></li>
-<li><span class="math inline">\((a + b)^3 = a^3 + 3a^2 b + 3ab^2 + b^3\)</span></li>
-<li><span class="math inline">\((a + b)^4 = a^4 + 4a^3 b + 6a^2 b^2 + 4ab^3 + b^4\)</span></li>
-<li><span class="math inline">\((a + b)^5 = a^5 + 5a^4b + 10a^3b^2 + 10a^2 b^3 + 5ab^4 + b^5\)</span></li>
+<li>Implication</li>
+<li>Equivalence</li>
+<li>Single statement</li>
+</ul></li>
+<li>Proof techniques
+<ol type="1">
+<li>Direct proof</li>
+<li>Proof by contraposition</li>
+<li>Proof by contradiction</li>
+<li>Case enumeration</li>
+<li>Induction</li>
+</ol></li>
 </ul>
-<p>What do you notice?</p>
-<p>Based on this pattern, what is <span class="math inline">\((a + b)^7\)</span>?</p>
-<p>Would you be able to write down <span class="math inline">\((a + b)^{27}\)</span>?</p>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="./images/07-binomial/Yanghui_triangle.png" height="500"></p>
-</figure>
-</div>
-<p><a href="https://en.wikipedia.org/wiki/Jia_Xian">Jian Xian (贾宪), 11th century CE</a></p>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="./images/07-binomial/TrianguloPascal.jpeg" height="500"></p>
-</figure>
-</div>
-<p><a href="https://en.wikipedia.org/wiki/Pascal%27s_triangle">Blaise Pascal, 1665 CE</a></p>
-</div>
-</div>
-<p>Figures: Wikipedia.</p>
+<section id="proving-an-implication" class="slide level2">
+<h2>Proving an implication</h2>
+<ul>
+<li>“If <span class="math inline">\(p\)</span> is true, then <span class="math inline">\(q\)</span> is also true.”</li>
+<li>Notation: <span class="math inline">\(p \Rightarrow q\)</span></li>
+</ul>
+<p>For example:</p>
+<ul>
+<li>If <span class="math inline">\(n\)</span> is an odd number, then <span class="math inline">\(2n\)</span> is an even number.</li>
+<li>If it rains, then the ground gets wet.</li>
+</ul>
+</section>
+<section id="caveat" class="slide level2">
+<h2>Caveat</h2>
+<p><em><span class="math inline">\(p \Rightarrow q\)</span> does not mean that <span class="math inline">\(q \Rightarrow p\)</span>!</em></p>
+<p>For example:</p>
+<ul>
+<li>If the ground is wet, it doesn’t necessarily mean that it’s raining.</li>
+<li>For <span class="math inline">\(n = 10\)</span>, <span class="math inline">\(2n = 20\)</span> is even, but <span class="math inline">\(10\)</span> is not odd.</li>
+</ul>
+</section>
+<section id="technique-1-direct-proof" class="slide level2">
+<h2>Technique 1: direct proof</h2>
+<ul>
+<li>Start from <span class="math inline">\(p\)</span>, then work your way to <span class="math inline">\(q\)</span>.</li>
+<li>This is how we’ve constructed most proofs so far.</li>
+</ul>
+<p>Example:</p>
+<ul>
+<li>In words: <em>For each positive real number <span class="math inline">\(x\)</span>, there exists a real number <span class="math inline">\(y\)</span> such that <span class="math inline">\(y(y+1) = x\)</span>.</em></li>
+<li>Mathematically: <span class="math inline">\(\forall x &gt; 0 \in \mathbb{R} \Rightarrow \exists y \in \mathbb{R}: y(y+1) = x\)</span>.</li>
+</ul>
+</section>
+<section id="technique-2-proof-by-contraposition" class="slide level2">
+<h2>Technique 2: Proof by contraposition</h2>
+<ul>
+<li>“If <span class="math inline">\(p\)</span> then <span class="math inline">\(q\)</span>” is logically equivalent to “if not <span class="math inline">\(q\)</span> then not <span class="math inline">\(p\)</span>”.</li>
+<li>Start from “not <span class="math inline">\(q\)</span>”, work towards “not <span class="math inline">\(p\)</span>”.</li>
+<li>Mind the direction of the implication!</li>
+</ul>
+<p>Example: Show that if <span class="math inline">\(n^2\)</span> is even (for <span class="math inline">\(n\)</span> a natural number), then <span class="math inline">\(n\)</span> is also even.</p>
+</section>
+<section id="caveat-negating-a-logical-statement" class="slide level2">
+<h2>Caveat: negating a logical statement</h2>
+<p>De Morgan’s laws:</p>
+<ul>
+<li>not (<span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span>) = (not <span class="math inline">\(p\)</span>) or (not <span class="math inline">\(q\)</span>)</li>
+<li>not (<span class="math inline">\(p\)</span> or <span class="math inline">\(q\)</span>) = (not <span class="math inline">\(p\)</span>) and (not <span class="math inline">\(q\)</span>)</li>
+</ul>
+<p>Example: Show that if <span class="math inline">\(x^2 \ne 1\)</span>, then <span class="math inline">\(x \ne \pm 1\)</span>.</p>
+</section>
+<section id="technique-3-proof-by-contradiction" class="slide level2">
+<h2>Technique 3: Proof by contradiction</h2>
+<ul>
+<li>Assume that <span class="math inline">\(q\)</span> is not true, start from <span class="math inline">\(p\)</span>, and work towards a contradiction.</li>
+<li>If a contradiction is found, our starting assumption must have been false, and therefore <span class="math inline">\(q\)</span> is true.</li>
+</ul>
+<p>Example: Prove that if <span class="math inline">\(x^2 = 2x\)</span> and <span class="math inline">\(x \ne 0\)</span>, then <span class="math inline">\(x = 2\)</span>.</p>
+</section>
+<section id="proving-an-equivalence" class="slide level2">
+<h2>Proving an equivalence</h2>
+<ul>
+<li>“<span class="math inline">\(p\)</span> holds if and only if (iff) <span class="math inline">\(q\)</span> holds.”</li>
+<li>Notation: <span class="math inline">\(p \Leftrightarrow q\)</span></li>
+</ul>
+<p>Proving an equivalence means proving two implications: <span class="math inline">\(p \Rightarrow q\)</span> and <span class="math inline">\(q \Rightarrow p\)</span>.</p>
+<p>Example: Prove that <span class="math inline">\(n^2\)</span> is even if and only if <span class="math inline">\(n\)</span> is even.</p>
+</section>
+<section id="proving-a-single-statement" class="slide level2">
+<h2>Proving a single statement</h2>
+<p>Example: Prove that <span class="math inline">\(\sqrt{2}\)</span> is irrational.</p>
+</section>
+<section id="technique-4-proof-by-case-enumeration" class="slide level2">
+<h2>Technique 4: Proof by case enumeration</h2>
+<ul>
+<li>Split statement into subcases, prove each case separately.</li>
+<li>Don’t forget any subcases!</li>
+</ul>
+<p>Example: Show that for all <span class="math inline">\(x, y \in \mathbb{R}\)</span>, <span class="math inline">\(|xy| = |x||y|\)</span>.</p>
+</section>
+<section id="technique-5-proof-by-induction" class="slide level2">
+<h2>Technique 5: Proof by induction</h2>
+<ul>
+<li>Prove that a statement <span class="math inline">\(P(n)\)</span> holds for every natural number <span class="math inline">\(n\)</span>.</li>
+<li>Proceeds in two steps:
+<ul>
+<li>Prove a <em>base case</em>, usually <span class="math inline">\(P(1)\)</span>.</li>
+<li>Prove the <em>induction step</em>: if <span class="math inline">\(P(k)\)</span> holds, then <span class="math inline">\(P(k+1)\)</span> holds too.</li>
+</ul></li>
+</ul>
+<p>Example: Show that the sum of the first <span class="math inline">\(n\)</span> numbers is equal to <span class="math inline">\(\frac{n(n+1)}{2}\)</span>: <span class="math display">\[
+    1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2}.
+\]</span></p>
 </section>
 <section id="example" class="slide level2">
 <h2>Example</h2>
-<p>Use Pascal’s triangle to expand <span class="math inline">\(\displaystyle \left(2x + \frac{1}{x}\right)^5\)</span>.</p>
-</section>
-<section id="binomial-coefficients" class="slide level2">
-<h2>Binomial coefficients</h2>
-<ul>
-<li>Factorial: <span class="math inline">\(n! = n(n-1)(n-2) \cdots 2 \cdot 1\)</span>.</li>
-<li>Binomial coefficient (also called “n-choose-k”): <span class="math display">\[
-  {n \choose k} = C^k_n = \frac{n!}{k!(n-k)!}.
-\]</span></li>
-<li>Measures the number of ways of choosing <span class="math inline">\(k\)</span> objects from among <span class="math inline">\(n\)</span> choices.</li>
-</ul>
-</section>
-<section id="properties" class="slide level2">
-<h2>Properties</h2>
-<p>For all <span class="math inline">\(n\)</span> and <span class="math inline">\(k \le n\)</span>:</p>
-<ol type="1">
-<li><span class="math inline">\(\displaystyle {n \choose 0} = {n \choose n} = 1\)</span>.</li>
-<li><span class="math inline">\(\displaystyle {n \choose 1} = {n \choose n - 1} = n\)</span>.</li>
-<li><span class="math inline">\(\displaystyle {n \choose k} = {n \choose n - k}\)</span>.</li>
-</ol>
-</section>
-<section id="rewriting-pascals-triangle-using-binomial-coefficients" class="slide level2">
-<h2>Rewriting Pascal’s triangle using binomial coefficients</h2>
-</section>
-<section id="the-binomial-expansion" class="slide level2">
-<h2>The binomial expansion</h2>
-<p>Putting everything we’ve learned together, we get <span class="math display">\[
-    (a + b)^n = {n \choose 0} a^n b^0 + {n \choose 1} a^{n-1}b^1 + \cdots + {n \choose n-1} a^1 b^{n-1} + {n \choose n} a^0 b^n.
-\]</span> This can be written more compactly as <span class="math display">\[
-    (a + b)^n = \sum_{k = 0}^n {n \choose k} a^{n - k} b^k.
+<p>Show that the sum of the first <span class="math inline">\(n\)</span> odd numbers is equal to <span class="math inline">\(n^2\)</span>: <span class="math display">\[
+    1 + 3 + 5 + \cdots + (2n - 1) = n^2.
 \]</span></p>
 </section>
-<section id="example-1" class="slide level2">
-<h2>Example</h2>
-<p>Use the binomial expansion to expand <span class="math inline">\(\displaystyle (\sqrt{x} - 1)^7\)</span>.</p>
-</section>
-<section id="visual-proof-of-the-binomial-expansion-optional" class="slide level2">
-<h2>Visual proof of the binomial expansion (optional)</h2>
+<section id="technique-x-if-all-else-fails" class="slide level2">
+<h2>Technique X: if all else fails</h2>
 
+<img data-src="./images/08-proof-techniques/intimidation.jpeg" class="r-stretch quarto-figure-center"><div class="fragment">
+<p>Proof by <strong>intimidation</strong> – don’t use this on the exam!</p>
 
-<img data-src="./images/07-binomial/binomial-proof.png" class="r-stretch quarto-figure-center"><div class="footer footer-default">
+<div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
