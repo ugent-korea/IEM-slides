@@ -34,9 +34,22 @@ Would you be able to write down $(a + b)^{27}$?
 
 ##
 
-![](./images/07-binomial/Yanghui_triangle.png){fig-align="center"}
+:::: {.columns }
+::: {.column width="50%"}
+![](./images/07-binomial/Yanghui_triangle.png){fig-align="center" height="500"}
 
-Figure credit: https://en.wikipedia.org/wiki/Jia_Xian
+[Jian Xian (贾宪), 11th century CE](https://en.wikipedia.org/wiki/Jia_Xian)
+
+:::
+::: {.column width="50%"}
+
+![](./images/07-binomial/TrianguloPascal.jpeg){fig-align="center" height="500"}
+
+[Blaise Pascal, 1665 CE](https://en.wikipedia.org/wiki/Pascal%27s_triangle)
+:::
+::::
+
+Figures: Wikipedia.
 
 ## Example
 
