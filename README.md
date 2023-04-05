@@ -20,8 +20,7 @@ execute this code and insert the output into the document. This requires that a
 number of Python packages are present. A working (Conda) environment named
 `engineering-math` can be created as follows:
 ```bash
-conda create --yes -n engineering-math python=3.10
-conda install -n engineering-math jupyter matplotlib numpy
+conda create --yes -n engineering-math python=3.10 jupyter matplotlib numpy
 ```
 
 After activating the environment (`conda activate engineering-math`) all quarto commands can then be run.
