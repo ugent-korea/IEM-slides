@@ -18,12 +18,13 @@ author: Prof. Joris Vankerschaver
 - [5 - Complex Numbers](presentations/05-complex-numbers.qmd)
 - [6 - Polynomials (1/2)](presentations/06a-polynomials.qmd)
 - [6 - Polynomials (2/2)](presentations/06b-polynomials.qmd)
-- [7 - Integration: Definitions](presentations/07a-integration-definitions.qmd)
-- [7 - Integration: Techniques](presentations/07b-integration-techniques.qmd)
-- [7 - Integration: Partial Fractions](presentations/07c-integration-partial-fractions.qmd)
-- [7 - Integration: Inverse Trigonometric Substitutions](presentations/07d-integration-inverse-trig.qmd)
-- [7 - Integration: Applications](presentations/07e-integration-applications.qmd)
-- [8 - Proof Techniques](presentations/08-proof-techniques.qmd)
-- [9 - The Binomial Theorem](presentations/09-binomial-theorem.qmd)
+- [7 - The Binomial Theorem](presentations/07-binomial-theorem.qmd)
+- [8 - Integration: Definitions](presentations/08a-integration-definitions.qmd)
+- [8 - Integration: Techniques](presentations/08b-integration-techniques.qmd)
+- [8 - Integration: Partial Fractions](presentations/08c-integration-partial-fractions.qmd)
+- [8 - Integration: Inverse Trigonometric Substitutions](presentations/08d-integration-inverse-trig.qmd)
+- [8 - Integration: Applications](presentations/08e-integration-applications.qmd)
+- [9 - Proof Techniques](presentations/09-proof-techniques.qmd)
+
 
 
