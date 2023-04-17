@@ -36,7 +36,9 @@ $$
 - The number $n$ is called the **degree** of $P(x)$.
 - A **root** or **zero** is a number $\alpha$ such that $P(\alpha) = 0$.
 - Roots can be real ($\alpha \in \mathbb{R}$) or complex ($\alpha \in \mathbb{C}$).
-- A **factor** is a linear polynomial $x - \alpha$ such that $P(x) = (x - \alpha) Q(x)$ for some other polynomial $Q(x)$.
+- A **factor** is a polynomial $F(x)$ such that $P(x) = F(x) Q(x)$ for some other polynomial $Q(x)$.
+  - Linear factor: $F(x) = x - \alpha$
+  - Quadratic factor: $F(x) = Ax^2 + Bx + C$
 
 ## Remainder theorem (special case)
 
