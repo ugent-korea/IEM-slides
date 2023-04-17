@@ -125,3 +125,14 @@ ax2.plot(t, a)
 fig.tight_layout()
 plt.show()
 ```
+
+## Historical aside
+
+In the fall of 1972, President Nixon announced that "the rate of increase of inflation was decreasing". 
+
+- Probably the first time a sitting president used the 3rd derivative.
+- The 3rd derivative is also know as "jerk".
+
+![](./images/04-derivatives/nixon.jpeg){fig-align="center"}
+
+Source: [Fermat's library](https://twitter.com/fermatslibrary/status/1644385429498494999)
