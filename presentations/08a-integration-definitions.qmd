@@ -155,6 +155,11 @@ Find the area...
 - "King's rule": $\displaystyle \int_0^a f(x) dx =  \int_0^a f(a - x)dx$.
 :::
 
+##
+
+![](./images/09-integration/free-wifi.png){fig-align="center"}
+
+
 ## Continuity and integration
 
 - So far, we have silently assumed $f(x)$ is continuous on $[a, b]$ to define the integral $\int_a^b f(x) dx$.
