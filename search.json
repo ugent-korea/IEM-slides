@@ -963,7 +963,7 @@
     "href": "presentations/08a-integration-definitions.html#examples-1",
     "title": "Integration: Definitions and basic concepts",
     "section": "Examples",
-    "text": "Examples\nExponential/logarithmic functions:\n\n\\(\\displaystyle \\int e^x = e^x + C\\)\n\\(\\displaystyle \\int \\frac{dx}{x} = \\ln |x| + C\\)\n\nInverse trigonometric functions:\n\n\\(\\displaystyle \\int \\frac{dx}{\\sqrt{1 - x^2}} = \\arcsin(x) + C\\)\n\\(\\displaystyle \\int \\frac{dx}{1 + x^2} = \\arctan(x) + C\\)"
+    "text": "Examples\nExponential/logarithmic functions:\n\n\\(\\displaystyle \\int e^x dx = e^x + C\\)\n\\(\\displaystyle \\int \\frac{dx}{x} = \\ln |x| + C\\)\n\nInverse trigonometric functions:\n\n\\(\\displaystyle \\int \\frac{dx}{\\sqrt{1 - x^2}} = \\arcsin(x) + C\\)\n\\(\\displaystyle \\int \\frac{dx}{1 + x^2} = \\arctan(x) + C\\)"
   },
   {
     "objectID": "presentations/08a-integration-definitions.html#examples-2",
@@ -1610,11 +1610,25 @@
     "text": "Example\nShow that the sum of the first \\(n\\) odd numbers is equal to \\(n^2\\): \\[\n    1 + 3 + 5 + \\cdots + (2n - 1) = n^2.\n\\]"
   },
   {
-    "objectID": "presentations/09-proof-techniques.html#technique-x-if-all-else-fails",
-    "href": "presentations/09-proof-techniques.html#technique-x-if-all-else-fails",
+    "objectID": "presentations/09-proof-techniques.html#exam-problem",
+    "href": "presentations/09-proof-techniques.html#exam-problem",
     "title": "Proof Techniques",
-    "section": "Technique X: if all else fails",
-    "text": "Technique X: if all else fails\n\n\nProof by intimidation – don’t use this on the exam!"
+    "section": "Exam problem",
+    "text": "Exam problem"
+  },
+  {
+    "objectID": "presentations/09-proof-techniques.html#proof-technique-x-proof-by-intimidation",
+    "href": "presentations/09-proof-techniques.html#proof-technique-x-proof-by-intimidation",
+    "title": "Proof Techniques",
+    "section": "Proof technique X: proof by intimidation",
+    "text": "Proof technique X: proof by intimidation"
+  },
+  {
+    "objectID": "presentations/09-proof-techniques.html#proof-technique-y-proof-by-bluffing",
+    "href": "presentations/09-proof-techniques.html#proof-technique-y-proof-by-bluffing",
+    "title": "Proof Techniques",
+    "section": "Proof technique Y: proof by bluffing",
+    "text": "Proof technique Y: proof by bluffing"
   },
   {
     "objectID": "presentations/01b-trigonometry-formulas.html#overview",
