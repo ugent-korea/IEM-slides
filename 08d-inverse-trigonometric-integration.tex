@@ -1,0 +1,153 @@
+\documentclass{article}
+
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{parskip}
+
+\title{Inverse Trigonometric Integration}
+\author{Introduction to Engineering Mathematics}
+\date{May 2023}
+
+\begin{document}
+\maketitle
+\section*{Case 1: Integrand contains $\sqrt{a^2 - x^2}$}
+
+\begin{itemize}
+\item Substitution: $x = a \sin \theta$.
+\item Inverse substitution: $\theta = \sin^{-1}(x/a)$, with $\theta \in [-\pi/2, \pi/2]$.
+\item Differential: $dx = a \cos \theta d\theta$.
+\end{itemize}
+
+Example: Compute
+\[
+  I = \int\frac{dx}{(a^2 - x^2)^{3/2}}.
+\]
+
+Note that for the integral to exist, $x$ must satisfy $-a \le x \le a$, otherwise $a^2 - x^2$ is negative, and we would be taking the square root of a negative number. Furthermore, in the substitution, we can assume that $\theta \in [-\pi/2, \pi/2]$: as $\theta$ ranges from $-\pi/2$ to $\pi/2$, $x$ covers all the values from $-a$ to $a$. This means in particular that $\cos \theta \ge 0$.
+
+With this in mind, the integrand becomes
+\[
+  \frac{1}{(a^2 - x^2)^{3/2}} = \frac{1}{a^3 \cos^3 \theta},
+\]
+so that the integral simplifies to
+\[
+  I = \int \frac{a \cos \theta d \theta}{a^3 \cos^3 \theta} = \frac{1}{a^2} \int \sec^2 \theta d \theta = \frac{1}{a^2} \tan \theta + C.
+\]
+
+It remains for us to determine $\tan \theta$ as a function of $x$. We can do so algebraically (i.e., by calculating), or by inspecting a triangle. Let's calculate: from the substitution we know that $\sin \theta = x/a$, and since $\cos \theta \ge 0$, we also have that
+\[
+  \cos \theta = \sqrt{1 - \sin^2 \theta} = \frac{1}{a} \sqrt{a^2 - x^2}.
+\]
+Putting these two results together, we find that
+\[
+  \tan \theta = \frac{\sin \theta}{\cos \theta} = \frac{x}{\sqrt{a^2 - x^2}},
+\]
+so that our integral becomes
+\[
+  I = \frac{1}{a^2} \frac{x}{\sqrt{a^2 - x^2}} + C.
+\]
+
+\section*{Case 2: Integrand contains $\sqrt{a^2 + x^2}$}
+
+\begin{itemize}
+\item Substitution: $x = a \tan \theta$.
+\item Inverse substitution: $\theta = \tan^{-1}(x/a)$, with $\theta \in (-\pi/2, \pi/2)$.
+\item Differential: $dx = a \sec^2 \theta d\theta$.
+\end{itemize}
+
+Example: Compute
+\[
+    I = \int\frac{dx}{\sqrt{a^2 + x^2}}.
+\]
+
+For this integral, there are no restrictions on the integrand: $x$ can be any value. The angle $\theta$ can be taken in the interval $(-\pi/2, \pi/2)$: as $\theta$ ranges from $-\pi/2$ to $\pi/2$, $x$ is free to range from $-\infty$ to $+\infty$. As in case I, this means that $\cos \theta > 0$ and therefore also $\sec \theta > 0$.
+
+The integrand becomes
+\[
+  \frac{1}{\sqrt{a^2 + x^2}} = \frac{1}{a \sec \theta},
+\]
+and the integral simplifies to
+\[
+  I = \int \frac{a \sec^2 \theta d\theta}{a \sec \theta} = \int \sec \theta d \theta = \ln \left| \sec \theta + \tan \theta \right| + C.
+\]
+As before, we have to write this result as a function of $x$. From the substitution, we immediately get that $\tan \theta = x/a$. On the other hand,
+\[
+  \sec \theta = \sqrt{1 + \tan^2 \theta} = \frac{\sqrt{a^2 + x^2}}{a}.
+\]
+Here we take the positive square root, because we showed earlier that $\sec \theta$ is always positive.
+
+Putting everything together, we obtain for our integral
+\[
+  I  = \ln \left| \frac{x + \sqrt{a^2 + x^2}}{a} \right| + C.
+\]
+This can be simplified further in two steps: first, observe that $x + \sqrt{a^2 + x^2}$ is always positive. Why is this? In class, we only covered the case $x > 0$, in which this result easily follows, but it is true for negative $x$ as well (show this by yourself). As a result, we can drop the absolute value from our result:
+\[
+  I  = \ln \left( \frac{x + \sqrt{a^2 + x^2}}{a} \right) + C.
+\]
+Secondly, we know that $\ln \frac{A}{B} = \ln A - \ln B$, so that
+\[
+  I  = \ln \left( x + \sqrt{a^2 + x^2} \right) \underbrace{- \ln a + C}_{= C},
+\]
+and we absorb the constant factor $- \ln a$ in our integration constant $C$ to finally obtain
+\[
+  I  = \ln \left( x + \sqrt{a^2 + x^2} \right) + C.
+\]
+
+\section*{Case 3: Integrand contains $\sqrt{x^2 - a^2}$}
+
+\begin{itemize}
+\item Substitution: $x = a \sec \theta$.
+\item Inverse substitution: $\theta = \cos^{-1}(a/x)$, with $\theta \in [0, \pi]$.
+\item Differential: $dx = a \sec \theta \tan \theta d\theta$.
+\end{itemize}
+
+Example: Compute
+\[
+  I = \int \frac{dx}{\sqrt{x^2 - a^2}}.
+\]
+
+This is the most complex case, because for the integrand to exist, $x^2 - a^2$ has to be positive, so that either $x > a$ or $x < -a$. We need to treat these two cases separately (although they are very similar).
+
+\subsection*{Case 3a: $x > a$}
+
+In this case, $a/x$ is between $0$ and $1$ and therefore $\theta$ is in the interval $(0, \pi/2)$. In particular, $\tan \theta$ is positive.
+
+The integrand becomes
+\[
+  \frac{1}{\sqrt{x^2 - a^2}} = \frac{1}{a \sqrt{\tan^2 \theta}} = \frac{1}{a \tan \theta},
+\]
+and the integral simplifies to
+\[
+  I = \int \frac{a \sec \theta \tan \theta}{a \tan \theta} d \theta = \int \sec \theta d\theta = \ln \left| \sec \theta + \tan \theta \right| + C.
+\]
+To write this as a function of $x$, we have from the substitution that $\sec \theta = x/a$, and for $\tan \theta$ we have
+\[
+  \tan \theta = \sqrt{\sec^2 \theta - 1} = \frac{\sqrt{x^2 - a^2}}{a},
+\]
+since we know that $\tan \theta$ is positive. Substituting these two expressions back into the integral and simplifying, our answer becomes
+\[
+  I  = \ln \left( x + \sqrt{x^2 - a^2} \right) + C.
+\]
+
+\subsection*{Case 3b: $x < - a$}
+
+Note that in this case, $x < 0$, and $a/x$ is between $-1$ and $0$, so that $\theta$ is in the interval $(\pi/2, \pi)$. In this case, $\tan \theta$ is \emph{negative}.
+
+By following the same approach as in the previous case, we can write our integral as
+\[
+  I = - \int \sec \theta d\theta = - \ln \left| \sec \theta + \tan \theta \right| + C.
+\]
+From the substitution, we still have $\sec \theta = x/a$, but now $\tan \theta = - \frac{\sqrt{x^2 - a^2}}{a}$, so that
+\[
+  I = -\ln \left| \frac{x - \sqrt{x^2 - a^2}}{a} \right| + C.
+\]
+This can be simplified further by multiplying by the conjugate expression inside the absolute value:
+\begin{align*}
+  I & = -\ln \left| \frac{x - \sqrt{x^2 - a^2}}{a} \frac{x + \sqrt{x^2 - a^2}}{x + \sqrt{x^2 - a^2}} \right| + C \\
+    & = -\ln \left| \frac{a}{x + \sqrt{x^2 - a^2}} \right| + C \\
+    & = \ln \left| x + \sqrt{x^2 - a^2} \right| + \underbrace{C - \ln a}_{= C}. \\
+\end{align*}
+We can get rid of the absolute value sign, by noting that $x + \sqrt{x^2 - a^2}$ is always negative (show this by yourself), so that $\left| x + \sqrt{x^2 - a^2} \right| = - x - \sqrt{x^2 - a^2}$, and 
+\[
+  I = \ln\left( - x - \sqrt{x^2 - a^2} \right) + C.
+\]
+\end{document}
