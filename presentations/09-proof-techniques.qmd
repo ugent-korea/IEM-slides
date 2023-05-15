@@ -115,11 +115,15 @@ $$
 	1 + 3 + 5 + \cdots + (2n - 1) = n^2.
 $$
 
-## Technique X: if all else fails
+## Exam problem
+
+![](./images/08-proof-techniques/proof-question.png){fig-align="center"}
+
+## Proof technique X: proof by intimidation
 
 ![](./images/08-proof-techniques/intimidation.jpeg){fig-align="center"}
 
-. . .
 
-Proof by **intimidation** -- don't use this on the exam!
+## Proof technique Y: proof by bluffing
 
+![](./images/08-proof-techniques/bluffing.png){fig-align="center"}
