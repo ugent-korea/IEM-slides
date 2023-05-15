@@ -69,7 +69,7 @@ $\displaystyle \int \tan x \, dx = - \ln |\cos x| + C$ &nbsp; &nbsp;   😱
 
 Exponential/logarithmic functions:
 
-- $\displaystyle \int e^x = e^x + C$
+- $\displaystyle \int e^x dx = e^x + C$
 - $\displaystyle \int \frac{dx}{x} = \ln |x| + C$
 
 Inverse trigonometric functions:
