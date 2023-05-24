@@ -7,6 +7,13 @@
     "text": "1 - Trigonometry (1/5): Introduction\n1 - Trigonometry (2/5): Formulas\n1 - Trigonometry (3/5): Geometry of triangles\n1 - Trigonometry (4/5): Trigonometric equations\n1 - Trigonometry (5/5): Inverse trigonometric functions\n2 - Coordinate Geometry\n3 - Limits and Continuity (1/2)\n3 - Limits and Continuity (2/2)\n4 - Derivatives (1/2)\n4 - Derivatives (2/2)\n5 - Complex Numbers\n6 - Polynomials (1/2)\n6 - Polynomials (2/2)\n7 - The Binomial Theorem\n8 - Integration: Definitions\n8 - Integration: Techniques\n8 - Integration: Partial Fractions\n8 - Integration: Inverse Trigonometric Substitutions\n8 - Integration: Applications\n9 - Proof Techniques"
   },
   {
+    "objectID": "index.html#presentations",
+    "href": "index.html#presentations",
+    "title": "Introduction to Engineering Mathematics",
+    "section": "",
+    "text": "1 - Trigonometry (1/5): Introduction\n1 - Trigonometry (2/5): Formulas\n1 - Trigonometry (3/5): Geometry of triangles\n1 - Trigonometry (4/5): Trigonometric equations\n1 - Trigonometry (5/5): Inverse trigonometric functions\n2 - Coordinate Geometry\n3 - Limits and Continuity (1/2)\n3 - Limits and Continuity (2/2)\n4 - Derivatives (1/2)\n4 - Derivatives (2/2)\n5 - Complex Numbers\n6 - Polynomials (1/2)\n6 - Polynomials (2/2)\n7 - The Binomial Theorem\n8 - Integration: Definitions\n8 - Integration: Techniques\n8 - Integration: Partial Fractions\n8 - Integration: Inverse Trigonometric Substitutions\n8 - Integration: Applications\n9 - Proof Techniques"
+  },
+  {
     "objectID": "presentations/05-complex-numbers.html#overview",
     "href": "presentations/05-complex-numbers.html#overview",
     "title": "Complex Numbers",
@@ -18,7 +25,7 @@
     "href": "presentations/05-complex-numbers.html#motivation-solving-quadratic-equations",
     "title": "Complex Numbers",
     "section": "Motivation: solving quadratic equations",
-    "text": "Motivation: solving quadratic equations\nFind \\(x\\) so that \\(x^2 - 2x + 2 = 0\\).\n\nAs \\(D = - 4 < 0\\), there are no real solutions\nIf we set \\(i = \\sqrt{-1}\\), then we find two solutions.\n\nOK to calculate with \\(i\\), as long as we remember \\[\n    \\boxed{i^2 = -1.}\n\\]"
+    "text": "Motivation: solving quadratic equations\nFind \\(x\\) so that \\(x^2 - 2x + 2 = 0\\).\n\nAs \\(D = - 4 &lt; 0\\), there are no real solutions\nIf we set \\(i = \\sqrt{-1}\\), then we find two solutions.\n\nOK to calculate with \\(i\\), as long as we remember \\[\n    \\boxed{i^2 = -1.}\n\\]"
   },
   {
     "objectID": "presentations/05-complex-numbers.html#number-systems",
@@ -193,7 +200,7 @@
     "href": "presentations/03b-limits-continuity.html#limit-laws-continued",
     "title": "Limits and Continuity (2/2)",
     "section": "Limit laws (continued)",
-    "text": "Limit laws (continued)\n\n\\(\\lim_{x \\to \\infty} f(x)^{m/n} = \\left(\\lim_{x \\to \\infty} f(x) \\right)^{m/n} = L^{m/n}\\), if\n\n\\(L \\ge 0\\) for \\(n\\) even\n\\(L \\ne 0\\) for \\(m\\) negative\n\nIf \\(f(x) \\le g(x)\\), then \\(\\lim_{x \\to \\infty} f(x) \\le \\lim_{x \\to \\infty} g(x)\\)\n\\(\\lim_{x \\to \\infty} 1/x^n = 0\\), if \\(n > 0\\)\n\\(\\lim_{x \\to \\infty} g(f(x)) = \\lim_{y \\to c} g(y)\\), where \\(c = \\lim_{x\\to \\infty}f(x)\\), if\n\n\\(c\\) is constant (not equal to \\(\\pm \\infty\\))\n\\(f\\) is continuous (see later)"
+    "text": "Limit laws (continued)\n\n\\(\\lim_{x \\to \\infty} f(x)^{m/n} = \\left(\\lim_{x \\to \\infty} f(x) \\right)^{m/n} = L^{m/n}\\), if\n\n\\(L \\ge 0\\) for \\(n\\) even\n\\(L \\ne 0\\) for \\(m\\) negative\n\nIf \\(f(x) \\le g(x)\\), then \\(\\lim_{x \\to \\infty} f(x) \\le \\lim_{x \\to \\infty} g(x)\\)\n\\(\\lim_{x \\to \\infty} 1/x^n = 0\\), if \\(n &gt; 0\\)\n\\(\\lim_{x \\to \\infty} g(f(x)) = \\lim_{y \\to c} g(y)\\), where \\(c = \\lim_{x\\to \\infty}f(x)\\), if\n\n\\(c\\) is constant (not equal to \\(\\pm \\infty\\))\n\\(f\\) is continuous (see later)"
   },
   {
     "objectID": "presentations/03b-limits-continuity.html#examples",
@@ -277,7 +284,7 @@
     "href": "presentations/03b-limits-continuity.html#leftright-continuity",
     "title": "Limits and Continuity (2/2)",
     "section": "Left/right continuity",
-    "text": "Left/right continuity\nAt \\(x = a\\), \\(f(x)\\) is …\n\nRight continuous if \\(\\displaystyle \\lim_{x\\to a+} f(x) = f(a)\\)\nLeft continuous if \\(\\displaystyle \\lim_{x\\to a-} f(x) = f(a)\\).\n\nExample: the Heaviside function is defined by \\(H(x) = 0\\) when \\(x < 0\\) and \\(H(x) = 1\\) when \\(x \\ge 0\\). Is \\(H(x)\\) right or left continuous at \\(x = 0\\)?"
+    "text": "Left/right continuity\nAt \\(x = a\\), \\(f(x)\\) is …\n\nRight continuous if \\(\\displaystyle \\lim_{x\\to a+} f(x) = f(a)\\)\nLeft continuous if \\(\\displaystyle \\lim_{x\\to a-} f(x) = f(a)\\).\n\nExample: the Heaviside function is defined by \\(H(x) = 0\\) when \\(x &lt; 0\\) and \\(H(x) = 1\\) when \\(x \\ge 0\\). Is \\(H(x)\\) right or left continuous at \\(x = 0\\)?"
   },
   {
     "objectID": "presentations/03b-limits-continuity.html#continuity-on-an-interval",
@@ -361,14 +368,14 @@
     "href": "presentations/04b-derivatives.html#characteristics-of-velocity",
     "title": "Derivatives (2/2): Applications",
     "section": "Characteristics of velocity",
-    "text": "Characteristics of velocity\n\n\\(v(t) > 0\\): moving to the right (\\(x(t)\\) increases)\n\\(v(t) < 0\\): moving to the left (\\(x(t)\\) decreases)\n\\(v(t) = 0\\): instantaneously at rest"
+    "text": "Characteristics of velocity\n\n\\(v(t) &gt; 0\\): moving to the right (\\(x(t)\\) increases)\n\\(v(t) &lt; 0\\): moving to the left (\\(x(t)\\) decreases)\n\\(v(t) = 0\\): instantaneously at rest"
   },
   {
     "objectID": "presentations/04b-derivatives.html#acceleration",
     "href": "presentations/04b-derivatives.html#acceleration",
     "title": "Derivatives (2/2): Applications",
     "section": "Acceleration",
-    "text": "Acceleration\nThe acceleration \\(a(t)\\) is the rate of change of the velocity: \\[\n    a(t) = \\dot{v}(t) = \\ddot{x}(t).\n\\]\nCharacteristics:\n\n\\(a(t) > 0\\): \\(v(t)\\) increases\n\\(a(t) < 0\\): \\(v(t)\\) decreases\n\nSpeeding up and slowing down:\n\n\\(a(t) \\cdot v(t) > 0\\): speeding up\n\\(a(t) \\cdot v(t) < 0\\): slowing down"
+    "text": "Acceleration\nThe acceleration \\(a(t)\\) is the rate of change of the velocity: \\[\n    a(t) = \\dot{v}(t) = \\ddot{x}(t).\n\\]\nCharacteristics:\n\n\\(a(t) &gt; 0\\): \\(v(t)\\) increases\n\\(a(t) &lt; 0\\): \\(v(t)\\) decreases\n\nSpeeding up and slowing down:\n\n\\(a(t) \\cdot v(t) &gt; 0\\): speeding up\n\\(a(t) \\cdot v(t) &lt; 0\\): slowing down"
   },
   {
     "objectID": "presentations/04b-derivatives.html#example-1",
@@ -711,7 +718,7 @@
     "href": "presentations/01a-trigonometry-basic-identities.html#adding-2pi-to-an-angle",
     "title": "Trigonometry: Introduction and Overview",
     "section": "Adding \\(2\\pi\\) to an angle",
-    "text": "Adding \\(2\\pi\\) to an angle\n\n\n\nPoint \\(P\\) is determined by the angle \\(\\theta\\).\n\\(P\\) stays same when adding \\(\\pm 2 \\pi\\) to \\(\\theta\\).\n\n\\(\\Rightarrow\\) All angles \\(\\theta + 2k \\pi\\) with \\(k \\in \\mathbb{Z}\\) give the same point \\(P\\).\nPrincipal angle: \\(\\theta\\) such that \\(-\\pi < \\theta \\le \\pi\\)."
+    "text": "Adding \\(2\\pi\\) to an angle\n\n\n\nPoint \\(P\\) is determined by the angle \\(\\theta\\).\n\\(P\\) stays same when adding \\(\\pm 2 \\pi\\) to \\(\\theta\\).\n\n\\(\\Rightarrow\\) All angles \\(\\theta + 2k \\pi\\) with \\(k \\in \\mathbb{Z}\\) give the same point \\(P\\).\nPrincipal angle: \\(\\theta\\) such that \\(-\\pi &lt; \\theta \\le \\pi\\)."
   },
   {
     "objectID": "presentations/01a-trigonometry-basic-identities.html#finding-the-coordinates-of-a-point",
@@ -844,7 +851,7 @@
     "href": "presentations/06b-polynomials.html#how-many-roots-can-a-polynomial-have",
     "title": "Theory of equations (2/2): Polynomial equations",
     "section": "How many roots can a polynomial have?",
-    "text": "How many roots can a polynomial have?\nTheorem: A polynomial \\(P(x) \\ne 0\\) cannot have more than \\(n\\) distinct roots, where \\(n = \\deg P(x)\\).\nProof: Assume that there are \\(m\\) distinct roots \\(\\alpha_1, \\ldots, \\alpha_m\\) , with \\(m > \\deg P(x)\\). Then by the remainder theorem, \\[\n    P(x) = (x - \\alpha_1) \\cdots (x - \\alpha_m) Q(x).\n\\]\nThe left-hand side has degree \\(n\\), whereas the right-hand side has degree at least \\(m > n\\). This is a contradiction."
+    "text": "How many roots can a polynomial have?\nTheorem: A polynomial \\(P(x) \\ne 0\\) cannot have more than \\(n\\) distinct roots, where \\(n = \\deg P(x)\\).\nProof: Assume that there are \\(m\\) distinct roots \\(\\alpha_1, \\ldots, \\alpha_m\\) , with \\(m &gt; \\deg P(x)\\). Then by the remainder theorem, \\[\n    P(x) = (x - \\alpha_1) \\cdots (x - \\alpha_m) Q(x).\n\\]\nThe left-hand side has degree \\(n\\), whereas the right-hand side has degree at least \\(m &gt; n\\). This is a contradiction."
   },
   {
     "objectID": "presentations/06b-polynomials.html#relation-between-roots-and-coefficients",
@@ -1117,7 +1124,7 @@
     "href": "presentations/08d-integration-inverse-trig.html#tan-fractheta2-substitution",
     "title": "Integration: Inverse trigonometric substitution",
     "section": "\\(\\tan \\frac{\\theta}{2}\\)-substitution",
-    "text": "\\(\\tan \\frac{\\theta}{2}\\)-substitution\nUseful when the integrand is a rational function of \\(\\sin \\theta\\) and \\(\\cos \\theta\\).\n\nSubstitution: \\(t = \\tan \\frac{\\theta}{2}\\), so that \\(\\theta = \\tan^{-1}(2t)\\)\nDifferential: \\[\nd \\theta = \\frac{2 dt}{1 + t^2}\n\\]\n\\(t\\)-formulas: \\[\n  \\sin \\theta = \\frac{2t}{1+t^2} \\quad \\text{and} \\quad \\cos \\theta = \\frac{1 - t^2}{1 + t^2}.\n\\]"
+    "text": "\\(\\tan \\frac{\\theta}{2}\\)-substitution\nUseful when the integrand is a rational function of \\(\\sin \\theta\\) and \\(\\cos \\theta\\).\n\nSubstitution: \\(t = \\tan \\frac{\\theta}{2}\\), so that \\(\\theta = 2\\tan^{-1}(t)\\)\nDifferential: \\[\nd \\theta = \\frac{2 dt}{1 + t^2}\n\\]\n\\(t\\)-formulas: \\[\n  \\sin \\theta = \\frac{2t}{1+t^2} \\quad \\text{and} \\quad \\cos \\theta = \\frac{1 - t^2}{1 + t^2}.\n\\]"
   },
   {
     "objectID": "presentations/08d-integration-inverse-trig.html#example-1",
@@ -1152,7 +1159,7 @@
     "href": "presentations/08c-integration-partial-fractions.html#step-1-divide-if-necessary",
     "title": "Integration: Partial Fractions",
     "section": "Step 1: Divide if necessary",
-    "text": "Step 1: Divide if necessary\nIf the degree of \\(P(x)\\) is greater than or equal to the degree of \\(Q(x)\\), do a polynomial division: \\[\n    \\int \\frac{P(x)}{Q(x)} dx = \\int S(x) dx + \\int \\frac{R(x)}{Q(x)} dx,\n\\] with \\(S(x)\\) the quotient and \\(R(x)\\) the remainder.\n\nRecall: \\(\\deg R(x) < \\deg Q(x)\\).\nFrom now on, we will suppose that this division has already been done, so that \\(\\deg P(x) < \\deg Q(x)\\)."
+    "text": "Step 1: Divide if necessary\nIf the degree of \\(P(x)\\) is greater than or equal to the degree of \\(Q(x)\\), do a polynomial division: \\[\n    \\int \\frac{P(x)}{Q(x)} dx = \\int S(x) dx + \\int \\frac{R(x)}{Q(x)} dx,\n\\] with \\(S(x)\\) the quotient and \\(R(x)\\) the remainder.\n\nRecall: \\(\\deg R(x) &lt; \\deg Q(x)\\).\nFrom now on, we will suppose that this division has already been done, so that \\(\\deg P(x) &lt; \\deg Q(x)\\)."
   },
   {
     "objectID": "presentations/08c-integration-partial-fractions.html#special-case-1-linear-denominator",
@@ -1362,7 +1369,7 @@
     "href": "presentations/02-coordinate-geometry.html#different-representations-of-lines",
     "title": "Coordinate Geometry",
     "section": "Different representations of lines",
-    "text": "Different representations of lines\n\nSlope/intercept:\n\n\\(y = mx + q\\) (not parallel to \\(y\\)-axis)\n\\(x = a\\) (parallel)\n\nLinear representation: \\(ax + by + c = 0\\)\nPolar representation: \\[\nr = \\frac{q}{\\sin \\theta - m \\cos \\theta}\n\\]"
+    "text": "Different representations of lines\n\nSlope/intercept:\n\n\\(y = mx + q\\) (not parallel to \\(y\\)-axis)\n\\(x = a\\) (parallel)\n\nLinear representation: \\(ax + by + c = 0\\)\nPolar representation:\n\nFor line through the origin: \\(\\tan \\theta = m\\)\nFor line not through the origin: \\[\nr = \\frac{q}{\\sin \\theta - m \\cos \\theta}\n\\]"
   },
   {
     "objectID": "presentations/02-coordinate-geometry.html#exercise",
@@ -1551,7 +1558,7 @@
     "href": "presentations/09-proof-techniques.html#technique-1-direct-proof",
     "title": "Proof Techniques",
     "section": "Technique 1: direct proof",
-    "text": "Technique 1: direct proof\n\nStart from \\(p\\), then work your way to \\(q\\).\nThis is how we’ve constructed most proofs so far.\n\nExample:\n\nIn words: For each positive real number \\(x\\), there exists a real number \\(y\\) such that \\(y(y+1) = x\\).\nMathematically: \\(\\forall x > 0 \\in \\mathbb{R} \\Rightarrow \\exists y \\in \\mathbb{R}: y(y+1) = x\\)."
+    "text": "Technique 1: direct proof\n\nStart from \\(p\\), then work your way to \\(q\\).\nThis is how we’ve constructed most proofs so far.\n\nExample:\n\nIn words: For each positive real number \\(x\\), there exists a real number \\(y\\) such that \\(y(y+1) = x\\).\nMathematically: \\(\\forall x &gt; 0 \\in \\mathbb{R} \\Rightarrow \\exists y \\in \\mathbb{R}: y(y+1) = x\\)."
   },
   {
     "objectID": "presentations/09-proof-techniques.html#technique-2-proof-by-contraposition",
@@ -2181,14 +2188,14 @@
     "href": "presentations/03a-limits-continuity.html#examples-2",
     "title": "Limits and Continuity (1/2)",
     "section": "Examples",
-    "text": "Examples\n\n\\(\\displaystyle \\lim_{x\\to 0+} \\sqrt{x}\\)\n\\(\\displaystyle \\lim_{x \\to 0} \\frac{|x|}{x}\\)\n\\(\\displaystyle \\lim_{x \\to 2} \\frac{|x-2|}{x^2 + x - 6}\\)\n\\(\\displaystyle \\lim_{x\\to\\pi}f(x)\\), where \\(f(x) = \\sin x\\) when \\(x < \\pi\\) and \\(f(x) = \\sqrt{x - \\pi}\\) otherwise."
+    "text": "Examples\n\n\\(\\displaystyle \\lim_{x\\to 0+} \\sqrt{x}\\)\n\\(\\displaystyle \\lim_{x \\to 0} \\frac{|x|}{x}\\)\n\\(\\displaystyle \\lim_{x \\to 2} \\frac{|x-2|}{x^2 + x - 6}\\)\n\\(\\displaystyle \\lim_{x\\to\\pi}f(x)\\), where \\(f(x) = \\sin x\\) when \\(x &lt; \\pi\\) and \\(f(x) = \\sqrt{x - \\pi}\\) otherwise."
   },
   {
     "objectID": "presentations/03a-limits-continuity.html#limit-laws",
     "href": "presentations/03a-limits-continuity.html#limit-laws",
     "title": "Limits and Continuity (1/2)",
     "section": "Limit laws",
-    "text": "Limit laws\n\n\\(\\lim_{x \\to a} x = a\\)\n\\(\\lim_{x \\to a} c = c\\)\n\\(\\lim_{x \\to a} (f(x) + g(x)) = \\lim_{x \\to a} f(x) + \\lim_{x \\to a} g(x)\\)\n\\(\\lim_{x \\to a} (c(f(x))) = c \\lim_{x \\to a} f(x)\\)\n\\(\\lim_{x \\to a}(f(x)g(x)) = \\lim_{x \\to a}f(x) \\lim_{x \\to a}g(x)\\)\n\\(\\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\frac{\\lim_{x \\to a}f(x)}{\\lim_{x \\to a}g(x)}\\) if \\(\\lim_{x \\to a} g(x) \\ne 0\\)\n\\(\\lim_{x \\to a}\\left(f(x)^{m/n}\\right) = \\left( \\lim_{x \\to a}f(x) \\right)^{m/n} = L^{m/n}\\),\n\nIf \\(n\\) even: \\(L\\) must be positive\nIf \\(m < 0\\): \\(L\\) must be different from 0."
+    "text": "Limit laws\n\n\\(\\lim_{x \\to a} x = a\\)\n\\(\\lim_{x \\to a} c = c\\)\n\\(\\lim_{x \\to a} (f(x) + g(x)) = \\lim_{x \\to a} f(x) + \\lim_{x \\to a} g(x)\\)\n\\(\\lim_{x \\to a} (c(f(x))) = c \\lim_{x \\to a} f(x)\\)\n\\(\\lim_{x \\to a}(f(x)g(x)) = \\lim_{x \\to a}f(x) \\lim_{x \\to a}g(x)\\)\n\\(\\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\frac{\\lim_{x \\to a}f(x)}{\\lim_{x \\to a}g(x)}\\) if \\(\\lim_{x \\to a} g(x) \\ne 0\\)\n\\(\\lim_{x \\to a}\\left(f(x)^{m/n}\\right) = \\left( \\lim_{x \\to a}f(x) \\right)^{m/n} = L^{m/n}\\),\n\nIf \\(n\\) even: \\(L\\) must be positive\nIf \\(m &lt; 0\\): \\(L\\) must be different from 0."
   },
   {
     "objectID": "presentations/03a-limits-continuity.html#limit-laws-1",
