@@ -262,9 +262,12 @@ $$
    - $x = a$ (parallel)
 2. Linear representation: $ax + by + c = 0$
 3. Polar representation:
+   - For line through the origin: $\tan \theta = m$
+   - For line not through the origin:
 $$
    r = \frac{q}{\sin \theta - m \cos \theta}
 $$
+
 
 ## Exercise
 
