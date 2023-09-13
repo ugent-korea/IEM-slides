@@ -247,7 +247,7 @@ Angle of **depression**: you look **down** at something
 
 ## Example
 
-From a plane flying vertically over a straight road, the angles of depression of 2 consecutive milestones are 45$^\circ$ and 60$^\circ$. Find the height at which the plane is flying. 
+From a plane flying horizontally over a straight road, the angles of depression of 2 consecutive milestones are 45$^\circ$ and 60$^\circ$. Find the height at which the plane is flying. 
 
 ## Problems for you to try (solution next lecture) {.smaller}
 
