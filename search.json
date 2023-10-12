@@ -2072,39 +2072,39 @@
     "text": "Overview\n\nDefinition of the inverse trigonometric functions\nExamples"
   },
   {
+    "objectID": "presentations/01e-trigonometry-inverse-functions.html#inverting-the-sine-function",
+    "href": "presentations/01e-trigonometry-inverse-functions.html#inverting-the-sine-function",
+    "title": "Trigonometry: Inverse Trigonometric Functions",
+    "section": "Inverting the sine function",
+    "text": "Inverting the sine function\n\nThe sine function turns angles into sine values.\nThe inverse sine turns sine values back into angles.\nNotation: \\(\\sin^{-1}(x)\\), \\(\\arcsin x\\)\n\nProblem: Many values in the range correspond to the same angle!"
+  },
+  {
+    "objectID": "presentations/01e-trigonometry-inverse-functions.html#restricting-the-domain",
+    "href": "presentations/01e-trigonometry-inverse-functions.html#restricting-the-domain",
+    "title": "Trigonometry: Inverse Trigonometric Functions",
+    "section": "Restricting the domain",
+    "text": "Restricting the domain\nSolution: restrict the domain of the sine function so that there is exactly one angle corresponding to each value.\n\nThis gives us a meaningful way to define the inverse sine."
+  },
+  {
     "objectID": "presentations/01e-trigonometry-inverse-functions.html#the-inverse-sine-function",
     "href": "presentations/01e-trigonometry-inverse-functions.html#the-inverse-sine-function",
     "title": "Trigonometry: Inverse Trigonometric Functions",
     "section": "The inverse sine function",
-    "text": "The inverse sine function\n\nThe sine function turns angles into sine values.\nThe inverse sine turns sine values back into angles.\nNotation: \\(\\sin^{-1}(x)\\), \\(\\arcsin x\\)\n\nProblem: Many values in the range correspond to the same angle!"
-  },
-  {
-    "objectID": "presentations/01e-trigonometry-inverse-functions.html#section",
-    "href": "presentations/01e-trigonometry-inverse-functions.html#section",
-    "title": "Trigonometry: Inverse Trigonometric Functions",
-    "section": "",
-    "text": "Solution: restrict the domain of the sine function so that there is exactly one angle corresponding to each value.\nThe inverse sine function takes a value \\(y \\in [-1, 1]\\) and turns it into an angle \\(\\theta \\in [-\\pi/2, \\pi/2]\\)."
-  },
-  {
-    "objectID": "presentations/01e-trigonometry-inverse-functions.html#section-1",
-    "href": "presentations/01e-trigonometry-inverse-functions.html#section-1",
-    "title": "Trigonometry: Inverse Trigonometric Functions",
-    "section": "",
-    "text": "We are not used to functions whose domain is the \\(y\\)-axis and whose range is the \\(x\\)-axis. So we switch \\(x\\) and \\(y\\) to get a function that “looks normal”.\n\nThe domain of \\(\\arcsin\\) is \\([-1, 1]\\) and the range is \\([-\\pi/2, \\pi/2]\\)."
+    "text": "The inverse sine function\n\nDomain: \\([-1, 1]\\), range: \\([-\\pi/2, \\pi/2]\\)\nCancellation properties:\n\n\\(\\sin(\\arcsin(y)) = y\\) for all \\(y \\in [-1, 1]\\)\n\\(\\arcsin(\\sin(\\theta)) = \\theta\\) for all \\(\\theta \\in [-\\pi/2, \\pi/2]\\)."
   },
   {
     "objectID": "presentations/01e-trigonometry-inverse-functions.html#the-inverse-cosine-function",
     "href": "presentations/01e-trigonometry-inverse-functions.html#the-inverse-cosine-function",
     "title": "Trigonometry: Inverse Trigonometric Functions",
     "section": "The inverse cosine function",
-    "text": "The inverse cosine function\n\nFor the inverse cosine, we restrict \\(\\cos \\theta\\) to \\([0, \\pi]\\).\nThe domain of \\(\\arccos\\) is \\([-1, 1]\\) and the range is \\([0, \\pi]\\)."
+    "text": "The inverse cosine function\n\nDomain: \\([-1, 1]\\), range: \\([0, \\pi]\\)\nCancellation properties:\n\n\\(\\cos(\\arccos(y)) = y\\) for all \\(y \\in [-1, 1]\\)\n\\(\\arccos(\\cos(\\theta)) = \\theta\\) for all \\(\\theta \\in [0, \\pi]\\)"
   },
   {
     "objectID": "presentations/01e-trigonometry-inverse-functions.html#the-inverse-tangent-function",
     "href": "presentations/01e-trigonometry-inverse-functions.html#the-inverse-tangent-function",
     "title": "Trigonometry: Inverse Trigonometric Functions",
     "section": "The inverse tangent function",
-    "text": "The inverse tangent function\n\nFor the inverse tangent, we restrict \\(\\tan\\) to \\([-\\pi/2, \\pi/2]\\).\nThe domain of \\(\\arctan\\) is all of \\(\\mathbb{R}\\), and the range is \\([-\\pi/2, \\pi/2]\\)."
+    "text": "The inverse tangent function\n\nDomain: all of \\(\\mathbb{R}\\), range: \\([-\\pi/2, \\pi/2]\\)\nCancellation properties:\n\n\\(\\tan(\\arctan (y)) = y\\) for all \\(y \\in \\mathbb{R}\\)\n\\(\\arctan(\\tan \\theta) = \\theta\\) for all \\(\\theta \\in [-\\pi/2, \\pi/2]\\)"
   },
   {
     "objectID": "presentations/01e-trigonometry-inverse-functions.html#notation-warning",

@@ -345,8 +345,8 @@ Prof.&nbsp;Joris Vankerschaver
 <li>Examples</li>
 </ol>
 </section>
-<section id="the-inverse-sine-function" class="slide level2">
-<h2>The inverse sine function</h2>
+<section id="inverting-the-sine-function" class="slide level2">
+<h2>Inverting the sine function</h2>
 <ul>
 <li>The sine function turns angles into sine values.</li>
 <li>The <strong>inverse sine</strong> turns sine values back into angles.</li>
@@ -355,36 +355,48 @@ Prof.&nbsp;Joris Vankerschaver
 <p><strong>Problem:</strong> Many values in the range correspond to the same angle!</p>
 
 <img data-src="./images/01-trigonometry/inverse-sine-1.svg" class="r-stretch quarto-figure-center"></section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="restricting-the-domain" class="slide level2">
+<h2>Restricting the domain</h2>
 <p>Solution: restrict the domain of the sine function so that there is exactly one angle corresponding to each value.</p>
-<p>The <strong>inverse sine function</strong> takes a value <span class="math inline">\(y \in [-1, 1]\)</span> and turns it into an angle <span class="math inline">\(\theta \in [-\pi/2, \pi/2]\)</span>.</p>
 
-<img data-src="./images/01-trigonometry/inverse-sine-limited.svg" class="r-stretch"></section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<p>We are not used to functions whose domain is the <span class="math inline">\(y\)</span>-axis and whose range is the <span class="math inline">\(x\)</span>-axis. So we switch <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> to get a function that “looks normal”.</p>
+<img data-src="./images/01-trigonometry/inverse-sine-limited.svg" class="r-stretch"><p>This gives us a meaningful way to define the inverse sine.</p>
+</section>
+<section id="the-inverse-sine-function" class="slide level2">
+<h2>The inverse sine function</h2>
 <ul>
-<li>The domain of <span class="math inline">\(\arcsin\)</span> is <span class="math inline">\([-1, 1]\)</span> and the range is <span class="math inline">\([-\pi/2, \pi/2]\)</span>.</li>
+<li>Domain: <span class="math inline">\([-1, 1]\)</span>, range: <span class="math inline">\([-\pi/2, \pi/2]\)</span></li>
+<li>Cancellation properties:
+<ul>
+<li><span class="math inline">\(\sin(\arcsin(y)) = y\)</span> for all <span class="math inline">\(y \in [-1, 1]\)</span></li>
+<li><span class="math inline">\(\arcsin(\sin(\theta)) = \theta\)</span> for all <span class="math inline">\(\theta \in [-\pi/2, \pi/2]\)</span>.</li>
+</ul></li>
 </ul>
 
-<img data-src="./images/01-trigonometry/inverse-sine-flipped.svg" class="r-stretch"></section>
+<img data-src="./images/01-trigonometry/inverse-sine-flipped.svg" class="r-stretch quarto-figure-center"></section>
 <section id="the-inverse-cosine-function" class="slide level2">
 <h2>The inverse cosine function</h2>
 <ul>
-<li>For the inverse cosine, we restrict <span class="math inline">\(\cos \theta\)</span> to <span class="math inline">\([0, \pi]\)</span>.</li>
-<li>The domain of <span class="math inline">\(\arccos\)</span> is <span class="math inline">\([-1, 1]\)</span> and the range is <span class="math inline">\([0, \pi]\)</span>.</li>
+<li>Domain: <span class="math inline">\([-1, 1]\)</span>, range: <span class="math inline">\([0, \pi]\)</span></li>
+<li>Cancellation properties:
+<ul>
+<li><span class="math inline">\(\cos(\arccos(y)) = y\)</span> for all <span class="math inline">\(y \in [-1, 1]\)</span></li>
+<li><span class="math inline">\(\arccos(\cos(\theta)) = \theta\)</span> for all <span class="math inline">\(\theta \in [0, \pi]\)</span></li>
+</ul></li>
 </ul>
 
-<img data-src="./images/01-trigonometry/inverse-cosine-flipped.svg" class="r-stretch"></section>
+<img data-src="./images/01-trigonometry/inverse-cosine-flipped.svg" class="r-stretch quarto-figure-center"></section>
 <section id="the-inverse-tangent-function" class="slide level2">
 <h2>The inverse tangent function</h2>
 <ul>
-<li>For the inverse tangent, we restrict <span class="math inline">\(\tan\)</span> to <span class="math inline">\([-\pi/2, \pi/2]\)</span>.</li>
-<li>The domain of <span class="math inline">\(\arctan\)</span> is all of <span class="math inline">\(\mathbb{R}\)</span>, and the range is <span class="math inline">\([-\pi/2, \pi/2]\)</span>.</li>
+<li>Domain: all of <span class="math inline">\(\mathbb{R}\)</span>, range: <span class="math inline">\([-\pi/2, \pi/2]\)</span></li>
+<li>Cancellation properties:
+<ul>
+<li><span class="math inline">\(\tan(\arctan (y)) = y\)</span> for all <span class="math inline">\(y \in \mathbb{R}\)</span></li>
+<li><span class="math inline">\(\arctan(\tan \theta) = \theta\)</span> for all <span class="math inline">\(\theta \in [-\pi/2, \pi/2]\)</span></li>
+</ul></li>
 </ul>
 
-<img data-src="./images/01-trigonometry/inverse-tangent-flipped.svg" class="r-stretch"></section>
+<img data-src="./images/01-trigonometry/inverse-tangent-flipped.svg" class="r-stretch quarto-figure-center"></section>
 <section id="notation-warning" class="slide level2">
 <h2>Notation (warning)</h2>
 <p>Don’t confuse <span class="math display">\[
