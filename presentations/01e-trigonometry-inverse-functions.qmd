@@ -14,7 +14,7 @@ format:
 1. Definition of the inverse trigonometric functions
 1. Examples
 
-## The inverse sine function
+## Inverting the sine function
 
 - The sine function turns angles into sine values.
 - The **inverse sine** turns sine values back into angles.
@@ -24,36 +24,42 @@ format:
 
 ![](./images/01-trigonometry/inverse-sine-1.svg){fig-align="center"}
 
-##
+## Restricting the domain
 
-Solution: restrict the domain of the sine function so that there is exactly one angle corresponding to each value.
-
-The **inverse sine function** takes a value $y \in [-1, 1]$  and turns it into an angle $\theta \in [-\pi/2, \pi/2]$.
+Solution: restrict the domain of the sine function so that there is exactly one angle corresponding to each value. 
 
 ![](./images/01-trigonometry/inverse-sine-limited.svg)
 
-##
+This gives us a meaningful way to define the inverse sine.
 
-We are not used to functions whose domain is the $y$-axis and whose range is the $x$-axis. So we switch $x$ and $y$ to get a function that "looks normal".
+## The inverse sine function
 
-- The domain of $\arcsin$ is $[-1, 1]$ and the range is $[-\pi/2, \pi/2]$.
+- Domain: $[-1, 1]$, range: $[-\pi/2, \pi/2]$
+- Cancellation properties:
+  - $\sin(\arcsin(y)) = y$ for all $y \in [-1, 1]$
+  - $\arcsin(\sin(\theta)) = \theta$ for all $\theta \in [-\pi/2, \pi/2]$.
 
-![](./images/01-trigonometry/inverse-sine-flipped.svg)
+
+![](./images/01-trigonometry/inverse-sine-flipped.svg){fig-align="center"}
 
 ## The inverse cosine function
 
-- For the inverse cosine, we restrict $\cos \theta$ to $[0, \pi]$.
-- The domain of $\arccos$ is $[-1, 1]$ and the range is $[0, \pi]$.
+- Domain: $[-1, 1]$, range: $[0, \pi]$
+- Cancellation properties:
+  - $\cos(\arccos(y)) = y$ for all $y \in [-1, 1]$
+  - $\arccos(\cos(\theta)) = \theta$ for all $\theta \in [0, \pi]$
 
-![](./images/01-trigonometry/inverse-cosine-flipped.svg)
+![](./images/01-trigonometry/inverse-cosine-flipped.svg){fig-align="center"}
 
 ## The inverse tangent function
 
-- For the inverse tangent, we restrict $\tan$ to $[-\pi/2, \pi/2]$.
-- The domain of $\arctan$ is all of $\mathbb{R}$, and the range is $[-\pi/2, \pi/2]$.
+- Domain: all of $\mathbb{R}$, range: $[-\pi/2, \pi/2]$
+- Cancellation properties:
+  - $\tan(\arctan (y)) = y$ for all $y \in \mathbb{R}$
+  - $\arctan(\tan \theta) = \theta$ for all $\theta \in [-\pi/2, \pi/2]$
+  
 
-
-![](./images/01-trigonometry/inverse-tangent-flipped.svg)
+![](./images/01-trigonometry/inverse-tangent-flipped.svg){fig-align="center"}
 
 ## Notation (warning)
 
