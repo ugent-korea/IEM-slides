@@ -26,7 +26,10 @@ format:
 
 ## Integration by substitution
 
-**Idea:** *Find an "inner function" whose derivative also occurs in the integral. Substitute this inner function to get an easier integral.*
+**Idea:** *Find a function whose derivative also occurs in the integral. Replace this function by a new variable to get an easier integral.*
+
+- Don't forget to change the differential!
+- Substitute everything!
 
 **Example:** compute $\displaystyle \int x \sin(1 + x^2) \, dx$
 
@@ -59,7 +62,7 @@ Compute the following integrals:
 
 ## Trigonometric integration
 
-**Idea:** *Use a substitution, where the inner function is a trigonometric function.*
+**Useful when:** integrand contains trigonometric functions. 
 
 **Examples:** compute 
 
@@ -92,12 +95,12 @@ Compute the following integrals:
 
 ## Integration by parts
 
-**Idea:** *Trade off derivatives and integrals to obtain an integral that is easier to solve.*
+**Idea:** *Transform integral into a simpler integral (easier to solve)*.
 
 **Rule:** $\displaystyle \int f'(x) g(x) \, dx = f(x)g(x) - \int f(x)g'(x) \, dx$
 
 **Example:** compute $\displaystyle \int \ln x \, dx$
-
+ 
 ## Examples
 
 Compute the following integrals:
