@@ -53,21 +53,21 @@ $$
 
 ## Case 1: $\sqrt{a^2 - x^2}$
 
-- Substitution: $x = a \sin \theta$
+- Substitution: $x = a \sin \theta$, with $\theta \in [-\pi/2, \pi/2]$
 - Differential: $dx = a \cos \theta \, d \theta$
 
 Example: $\displaystyle \int \frac{dx}{(5 - x^2)^{3/2}}$
 
 ## Case 2: $\sqrt{a^2 + x^2}$
 
-- Substitution: $x = a \tan \theta$
+- Substitution: $x = a \tan \theta$, with $\theta \in (-\pi/2, \pi/2)$
 - Differential: $dx = a \sec^2 \theta \, d \theta$
 
 Example: $\displaystyle \int \frac{dx}{\sqrt{1 + 4x^2}}$
 
 ## Case 3: $\sqrt{x^2 - a^2}$
 
-- Substitution: $x = a \sec \theta$
+- Substitution: $x = a \sec \theta$, with $\theta \in (0, \pi)$ (**two cases**)
 - Differential: $dx = a \tan \theta \sec \theta \, d \theta$
 
 Example: $\displaystyle \int \frac{dx}{\sqrt{x^2 - a^2}}$

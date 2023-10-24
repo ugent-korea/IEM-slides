@@ -136,18 +136,18 @@ Find $\displaystyle \int \frac{dx}{x^3 - 5x^2 + 8x - 4}$.
 ## Summary {.smaller}
 
 1. If $\deg P(x) \ge \deg Q(x)$, do polynomial division.
-2. Factor the denominator $Q(x)$:
-   - All distinct roots:
+2. Factor the denominator $Q(x)$ and write partial fractions for each root:
+   - Distinct roots (roots with multiplicity 1):
      $$
-        \frac{P(x)}{Q(x)} = \cdots + \frac{A_1}{x - \alpha_1} + \cdots + \frac{A_k}{x - \alpha_k}.
+        \text{PF} = \frac{A}{x - \alpha}.
      $$
    - Irreducible quadratic factors:
      $$
-        \frac{P(x)}{Q(x)} = \cdots + \frac{Ax+B}{x^2 + \cdots}
+        \text{PF} = \frac{Ax+B}{x^2 + \cdots}
      $$
-   - Repeated linear factors:
+   - Root with multiplicity $p$:
      $$
-        \frac{P(x)}{Q(x)} = \cdots + \frac{A_1}{x - \alpha} + \cdots + \frac{A_p}{(x - \alpha)^p}
+        \frac{A_1}{x - \alpha} + \cdots + \frac{A_p}{(x - \alpha)^p}.
      $$
-     
-These three cases can happen at the same time!!
+3. Find the coefficients in the partial fraction expansion by solving a system of equations.
+4. Integrate the partial fraction expansion.
