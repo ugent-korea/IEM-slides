@@ -458,20 +458,21 @@ Prof.&nbsp;Joris Vankerschaver
 <h2>Summary</h2>
 <ol type="1">
 <li>If <span class="math inline">\(\deg P(x) \ge \deg Q(x)\)</span>, do polynomial division.</li>
-<li>Factor the denominator <span class="math inline">\(Q(x)\)</span>:
+<li>Factor the denominator <span class="math inline">\(Q(x)\)</span> and write partial fractions for each root:
 <ul>
-<li>All distinct roots: <span class="math display">\[
-   \frac{P(x)}{Q(x)} = \cdots + \frac{A_1}{x - \alpha_1} + \cdots + \frac{A_k}{x - \alpha_k}.
+<li>Distinct roots (roots with multiplicity 1): <span class="math display">\[
+   \text{PF} = \frac{A}{x - \alpha}.
 \]</span></li>
 <li>Irreducible quadratic factors: <span class="math display">\[
-   \frac{P(x)}{Q(x)} = \cdots + \frac{Ax+B}{x^2 + \cdots}
+   \text{PF} = \frac{Ax+B}{x^2 + \cdots}
 \]</span></li>
-<li>Repeated linear factors: <span class="math display">\[
-   \frac{P(x)}{Q(x)} = \cdots + \frac{A_1}{x - \alpha} + \cdots + \frac{A_p}{(x - \alpha)^p}
+<li>Root with multiplicity <span class="math inline">\(p\)</span>: <span class="math display">\[
+   \frac{A_1}{x - \alpha} + \cdots + \frac{A_p}{(x - \alpha)^p}.
 \]</span></li>
 </ul></li>
+<li>Find the coefficients in the partial fraction expansion by solving a system of equations.</li>
+<li>Integrate the partial fraction expansion.</li>
 </ol>
-<p>These three cases can happen at the same time!!</p>
 
 <div class="footer footer-default">
 

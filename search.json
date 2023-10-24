@@ -1089,21 +1089,21 @@
     "href": "presentations/08d-integration-inverse-trig.html#case-1-sqrta2---x2",
     "title": "Integration: Inverse trigonometric substitution",
     "section": "Case 1: \\(\\sqrt{a^2 - x^2}\\)",
-    "text": "Case 1: \\(\\sqrt{a^2 - x^2}\\)\n\nSubstitution: \\(x = a \\sin \\theta\\)\nDifferential: \\(dx = a \\cos \\theta \\, d \\theta\\)\n\nExample: \\(\\displaystyle \\int \\frac{dx}{(5 - x^2)^{3/2}}\\)"
+    "text": "Case 1: \\(\\sqrt{a^2 - x^2}\\)\n\nSubstitution: \\(x = a \\sin \\theta\\), with \\(\\theta \\in [-\\pi/2, \\pi/2]\\)\nDifferential: \\(dx = a \\cos \\theta \\, d \\theta\\)\n\nExample: \\(\\displaystyle \\int \\frac{dx}{(5 - x^2)^{3/2}}\\)"
   },
   {
     "objectID": "presentations/08d-integration-inverse-trig.html#case-2-sqrta2-x2",
     "href": "presentations/08d-integration-inverse-trig.html#case-2-sqrta2-x2",
     "title": "Integration: Inverse trigonometric substitution",
     "section": "Case 2: \\(\\sqrt{a^2 + x^2}\\)",
-    "text": "Case 2: \\(\\sqrt{a^2 + x^2}\\)\n\nSubstitution: \\(x = a \\tan \\theta\\)\nDifferential: \\(dx = a \\sec^2 \\theta \\, d \\theta\\)\n\nExample: \\(\\displaystyle \\int \\frac{dx}{\\sqrt{1 + 4x^2}}\\)"
+    "text": "Case 2: \\(\\sqrt{a^2 + x^2}\\)\n\nSubstitution: \\(x = a \\tan \\theta\\), with \\(\\theta \\in (-\\pi/2, \\pi/2)\\)\nDifferential: \\(dx = a \\sec^2 \\theta \\, d \\theta\\)\n\nExample: \\(\\displaystyle \\int \\frac{dx}{\\sqrt{1 + 4x^2}}\\)"
   },
   {
     "objectID": "presentations/08d-integration-inverse-trig.html#case-3-sqrtx2---a2",
     "href": "presentations/08d-integration-inverse-trig.html#case-3-sqrtx2---a2",
     "title": "Integration: Inverse trigonometric substitution",
     "section": "Case 3: \\(\\sqrt{x^2 - a^2}\\)",
-    "text": "Case 3: \\(\\sqrt{x^2 - a^2}\\)\n\nSubstitution: \\(x = a \\sec \\theta\\)\nDifferential: \\(dx = a \\tan \\theta \\sec \\theta \\, d \\theta\\)\n\nExample: \\(\\displaystyle \\int \\frac{dx}{\\sqrt{x^2 - a^2}}\\)"
+    "text": "Case 3: \\(\\sqrt{x^2 - a^2}\\)\n\nSubstitution: \\(x = a \\sec \\theta\\), with \\(\\theta \\in (0, \\pi)\\) (two cases)\nDifferential: \\(dx = a \\tan \\theta \\sec \\theta \\, d \\theta\\)\n\nExample: \\(\\displaystyle \\int \\frac{dx}{\\sqrt{x^2 - a^2}}\\)"
   },
   {
     "objectID": "presentations/08d-integration-inverse-trig.html#higher-roots",
@@ -1243,7 +1243,7 @@
     "href": "presentations/08c-integration-partial-fractions.html#summary",
     "title": "Integration: Partial Fractions",
     "section": "Summary",
-    "text": "Summary\n\nIf \\(\\deg P(x) \\ge \\deg Q(x)\\), do polynomial division.\nFactor the denominator \\(Q(x)\\):\n\nAll distinct roots: \\[\n   \\frac{P(x)}{Q(x)} = \\cdots + \\frac{A_1}{x - \\alpha_1} + \\cdots + \\frac{A_k}{x - \\alpha_k}.\n\\]\nIrreducible quadratic factors: \\[\n   \\frac{P(x)}{Q(x)} = \\cdots + \\frac{Ax+B}{x^2 + \\cdots}\n\\]\nRepeated linear factors: \\[\n   \\frac{P(x)}{Q(x)} = \\cdots + \\frac{A_1}{x - \\alpha} + \\cdots + \\frac{A_p}{(x - \\alpha)^p}\n\\]\n\n\nThese three cases can happen at the same time!!"
+    "text": "Summary\n\nIf \\(\\deg P(x) \\ge \\deg Q(x)\\), do polynomial division.\nFactor the denominator \\(Q(x)\\) and write partial fractions for each root:\n\nDistinct roots (roots with multiplicity 1): \\[\n   \\text{PF} = \\frac{A}{x - \\alpha}.\n\\]\nIrreducible quadratic factors: \\[\n   \\text{PF} = \\frac{Ax+B}{x^2 + \\cdots}\n\\]\nRoot with multiplicity \\(p\\): \\[\n   \\frac{A_1}{x - \\alpha} + \\cdots + \\frac{A_p}{(x - \\alpha)^p}.\n\\]\n\nFind the coefficients in the partial fraction expansion by solving a system of equations.\nIntegrate the partial fraction expansion."
   },
   {
     "objectID": "presentations/02-coordinate-geometry.html#contents",
@@ -1789,7 +1789,7 @@
     "href": "presentations/08b-integration-techniques.html#integration-by-substitution",
     "title": "Integration: Techniques",
     "section": "Integration by substitution",
-    "text": "Integration by substitution\nIdea: Find an “inner function” whose derivative also occurs in the integral. Substitute this inner function to get an easier integral.\nExample: compute \\(\\displaystyle \\int x \\sin(1 + x^2) \\, dx\\)"
+    "text": "Integration by substitution\nIdea: Find a function whose derivative also occurs in the integral. Replace this function by a new variable to get an easier integral.\n\nDon’t forget to change the differential!\nSubstitute everything!\n\nExample: compute \\(\\displaystyle \\int x \\sin(1 + x^2) \\, dx\\)"
   },
   {
     "objectID": "presentations/08b-integration-techniques.html#substitution-definite-integrals",
@@ -1824,7 +1824,7 @@
     "href": "presentations/08b-integration-techniques.html#trigonometric-integration",
     "title": "Integration: Techniques",
     "section": "Trigonometric integration",
-    "text": "Trigonometric integration\nIdea: Use a substitution, where the inner function is a trigonometric function.\nExamples: compute\n\n\\(\\displaystyle \\int \\tan x \\, dx\\)\n\\(\\displaystyle \\int \\cot x \\, dx\\)"
+    "text": "Trigonometric integration\nUseful when: integrand contains trigonometric functions.\nExamples: compute\n\n\\(\\displaystyle \\int \\tan x \\, dx\\)\n\\(\\displaystyle \\int \\cot x \\, dx\\)"
   },
   {
     "objectID": "presentations/08b-integration-techniques.html#examples-3",
@@ -1852,7 +1852,7 @@
     "href": "presentations/08b-integration-techniques.html#integration-by-parts",
     "title": "Integration: Techniques",
     "section": "Integration by parts",
-    "text": "Integration by parts\nIdea: Trade off derivatives and integrals to obtain an integral that is easier to solve.\nRule: \\(\\displaystyle \\int f'(x) g(x) \\, dx = f(x)g(x) - \\int f(x)g'(x) \\, dx\\)\nExample: compute \\(\\displaystyle \\int \\ln x \\, dx\\)"
+    "text": "Integration by parts\nIdea: Transform integral into a simpler integral (easier to solve).\nRule: \\(\\displaystyle \\int f'(x) g(x) \\, dx = f(x)g(x) - \\int f(x)g'(x) \\, dx\\)\nExample: compute \\(\\displaystyle \\int \\ln x \\, dx\\)"
   },
   {
     "objectID": "presentations/08b-integration-techniques.html#examples-6",
