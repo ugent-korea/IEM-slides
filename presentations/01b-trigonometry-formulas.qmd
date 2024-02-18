@@ -1,5 +1,5 @@
 ---
-title: "Trigonometry: Formulas"
+title: "Trigonometry (2/5): Formulas"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:

@@ -1,5 +1,5 @@
 ---
-title: "Trigonometry: Inverse Trigonometric Functions"
+title: "Trigonometry (5/5): Inverse Trigonometric Functions"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:

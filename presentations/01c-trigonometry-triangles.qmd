@@ -1,5 +1,5 @@
 ---
-title: "Trigonometry: Geometry of Triangles"
+title: "Trigonometry (3/5): Geometry of Triangles"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:

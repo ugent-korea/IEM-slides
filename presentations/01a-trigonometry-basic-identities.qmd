@@ -1,5 +1,5 @@
 ---
-title: "Trigonometry: Introduction and Overview"
+title: "Trigonometry (1/5): Introduction and Overview"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:
