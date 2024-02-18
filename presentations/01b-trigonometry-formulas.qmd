@@ -1,12 +1,16 @@
 ---
-title: "Trigonometry: Formulas"
+title: "Trigonometry (2/5): Formulas"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:
-  revealjs:
-    theme: [default, custom.scss]
-    slide-number: true
-    css: style.css
+  beamer:
+    theme: Pittsburgh
+    colortheme: default
+    fonttheme: default
+    header-includes: |
+      \setbeamertemplate{frametitle}[default][left]
+      \usepackage{empheq}
+classoption: t
 ---
 
 ## Overview
@@ -24,20 +28,20 @@ format:
 - You should learn all of these formulas by heart.
 - The best way to learn these formulas is by doing lots of practice problems.
 - Often, knowing the derivation of a formula will also help you remember it.
-- Follow along with the blackboard lectures to fill in missing steps.
+- Follow along with the lectures to fill in missing steps.
 
 
 ## Reflection across the $x$-axis (even/odd identities)
 
 :::: {.columns }
 ::: {.column width="60%"}
-$$
-    \boxed{
-        \begin{align*}
-            \cos(-\theta) & = \phantom{-} \cos \theta \\
-            \sin(-\theta) & = - \sin \theta \\
-        \end{align*}}
-$$
+
+Formulas:
+
+\begin{empheq}[box=\fbox]{align*}
+    \cos(-\theta) & = \phantom{-} \cos \theta \\
+    \sin(-\theta) & = - \sin \theta
+\end{empheq}
 
 Example: Compute $\sin(-\pi/4)$
 
@@ -52,13 +56,13 @@ Example: Compute $\sin(-\pi/4)$
 
 :::: {.columns }
 ::: {.column width="60%"}
-$$
-    \boxed{
-        \begin{align*}
+Formulas:
+
+\begin{empheq}[box=\fbox]{align*}
             \cos(\pi - \theta) & = - \cos\theta \\
             \sin(\pi - \theta) & = \phantom{-} \sin \theta
-        \end{align*}}
-$$
+\end{empheq}
+
 :::
 ::: {.column width="40%"}
 ![](./images/01-trigonometry/reflection-y.svg)
@@ -69,14 +73,14 @@ $$
 
 :::: {.columns }
 ::: {.column width="60%"}
-$$
-    \boxed{
-        \begin{align*}
+Formulas:
+
+\begin{empheq}[box=\fbox]{align*}
             \cos(\pi + \theta) & = - \cos \theta \\
             \sin(\pi + \theta) & = - \sin \theta \\
             \tan(\pi + \theta) & = \phantom{-} \tan\theta
-        \end{align*}}
-$$
+\end{empheq}
+
 :::
 ::: {.column width="40%"}
 ![](./images/01-trigonometry/shift-formulas.svg)
@@ -85,29 +89,27 @@ $$
 
 ## Shift formulas (by $\pi/2$)
 
-$$
-    \boxed{
-        \begin{align*}
+Formulas:
+
+\begin{empheq}[box=\fbox]{align*}
             \sin \left( \frac{\pi}{2} - \theta\right) & = \cos \theta \\
             \cos \left( \frac{\pi}{2} - \theta\right) & = \sin \theta \\
             \tan \left( \frac{\pi}{2} - \theta\right) & = \cot \theta
-        \end{align*}}
-$$    
+\end{empheq}
 
 - Proof skipped.
 - **Very important formulas** to turn $\sin$ into $\cos$ and vice versa.
 
 ## Addition/subtraction formulas (for $\sin$ and $\cos$)
 
-$$
-    \boxed{
-        \begin{align*}
+Formulas:
+
+\begin{empheq}[box=\fbox]{align*}
             \sin(\alpha + \beta) & = \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
             \sin(\alpha - \beta) & = \sin \alpha \cos \beta - \cos \alpha \sin \beta \\
             \cos(\alpha + \beta) & = \cos \alpha \cos \beta - \sin \alpha \sin \beta \\
-            \cos(\alpha - \beta) & = \cos \alpha \cos \beta + \sin \alpha \sin \beta \\
-        \end{align*}}
-$$
+            \cos(\alpha - \beta) & = \cos \alpha \cos \beta + \sin \alpha \sin \beta
+\end{empheq}
 
 - Proof skipped.
 - Note the signs for $\cos$!
@@ -119,36 +121,32 @@ Compute $\displaystyle \sin\left( \frac{7 \pi}{12} \right)$.
 
 ## Addition/subtraction formulas (for $\tan$)
 
-$$ 
-    \boxed{
-        \begin{align*}
+Formulas:
+
+\begin{empheq}[box=\fbox]{align*}
             \tan(\alpha + \beta) & = \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \\
             \tan(\alpha - \beta) & = \frac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta}
-        \end{align*}}
-$$
+\end{empheq}
+
 
 ## Double-angle formulas ($2\theta \to \theta$)
 
-$$
-    \boxed{
-        \begin{align*}
+Formulas:
+
+\begin{empheq}[box=\fbox]{align*}
             \sin(2 \theta) & = 2 \sin \theta \cos \theta \\
             \cos(2 \theta) & = \cos^2 \theta - \sin^2 \theta \\
             \tan(2 \theta) & = \frac{2 \tan \theta}{1 - \tan^2 \theta}
-        \end{align*}}
-$$
+\end{empheq}
 
 - Follows from the addition/subtraction formulas.
 - The double-angle formula for $\cos$ can also be written as
 
-$$
-    \boxed{
-        \begin{align*}
+\begin{empheq}[box=\fbox]{align*}
             \cos(2 \theta) & = \cos^2 \theta - \sin^2 \theta \\
                            & = 2 \cos^2 \theta - 1 \\
                            & = 1 - 2 \sin^2 \theta
-        \end{align*}}
-$$
+\end{empheq}
 
 ## Example
 
@@ -156,16 +154,15 @@ Prove that $\displaystyle \tan\left(\frac{\pi}{4} + x\right) = \frac{1 + \tan x}
 
 ## Half-angle formulas ($\theta \to 2\theta$)
 
-$$
-    \boxed{
-        \begin{align*}
+Formulas:
+
+\begin{empheq}[box=\fbox]{align*}
             \cos^2 \theta & = \frac{1 + \cos(2\theta)}{2} \\
             \sin^2 \theta & = \frac{1 - \cos(2\theta)}{2} \\            
             \tan^2 \theta & = \frac{1 - \cos(2\theta)}{1 + \cos(2\theta)}
-        \end{align*}}
-$$
+\end{empheq}
 
-- These formulas are useful to compute integrals of powers of $\sin$ and $\cos$.
+These formulas are useful to compute integrals of powers of $\sin$ and $\cos$.
 
 ## Example
 
@@ -173,27 +170,27 @@ Express $\cos^2 x \sin^2 x$ as a combination of sines and cosines, without any p
 
 ## Product-to-sum formulas
 
-$$
-    \boxed{
-        \begin{align*}
-            \sin \alpha \cos \beta & = \frac{1}{2}(\sin(\alpha + \beta) + \sin(\alpha - \beta)) \\
-            \cos \alpha \sin \beta & = \frac{1}{2}(\sin(\alpha + \beta) - \sin(\alpha - \beta)) \\
-            \cos \alpha \cos \beta & = \frac{1}{2}(\cos(\alpha + \beta) + \cos(\alpha - \beta) \\
-            \sin \alpha \sin \beta & = \frac{1}{2}(\cos(\alpha - \beta) - \cos(\alpha + \beta)
-    \end{align*}}
-$$
+Formulas:
+
+\begin{empheq}[box=\fbox]{align*}
+    \sin \alpha \cos \beta & = \frac{1}{2}(\sin(\alpha + \beta) + \sin(\alpha - \beta)) \\
+    \cos \alpha \sin \beta & = \frac{1}{2}(\sin(\alpha + \beta) - \sin(\alpha - \beta)) \\
+    \cos \alpha \cos \beta & = \frac{1}{2}(\cos(\alpha + \beta) + \cos(\alpha - \beta) \\
+    \sin \alpha \sin \beta & = \frac{1}{2}(\cos(\alpha - \beta) - \cos(\alpha + \beta)
+\end{empheq}
+
 
 ## Sum-to-product formulas
 
-$$
-    \boxed{
-        \begin{align*}
+Formulas:
+
+\begin{empheq}[box=\fbox]{align*}
             \sin \alpha + \sin \beta & = \phantom{-} 2\sin\left(\frac{\alpha+\beta}{2}\right) \cos\left(\frac{\alpha-\beta}{2}\right) \\
             \sin \alpha - \sin \beta & = \phantom{-} 2\cos\left(\frac{\alpha+\beta}{2}\right) \sin\left(\frac{\alpha-\beta}{2}\right) \\            
             \cos \alpha + \cos \beta & = \phantom{-} 2\cos\left(\frac{\alpha+\beta}{2}\right) \cos\left(\frac{\alpha-\beta}{2}\right) \\
             \cos \alpha - \cos \beta & = - 2\sin\left(\frac{\alpha+\beta}{2}\right) \sin\left(\frac{\alpha-\beta}{2}\right)
-        \end{align*}}
-$$        
+\end{empheq}
+
 
 ## Graphs of sine/cosine
 
@@ -214,7 +211,7 @@ The sine and cosine:
 
 ## Graph of the tangent function
 
-![](./images/01-trigonometry/graph-tangent.svg){width="75%"}
+![](./images/01-trigonometry/graph-tangent.svg){fig-align=center width="75%"}
 
 The tangent function:
 

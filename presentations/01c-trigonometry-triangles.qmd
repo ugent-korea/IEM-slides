@@ -1,12 +1,16 @@
 ---
-title: "Trigonometry: Geometry of Triangles"
+title: "Trigonometry (3/5): Geometry of Triangles"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:
-  revealjs:
-    theme: [default, custom.scss]
-    slide-number: true
-    css: style.css
+  beamer:
+    theme: Pittsburgh
+    colortheme: default
+    fonttheme: default
+    header-includes: |
+      \setbeamertemplate{frametitle}[default][left]
+      \usepackage{empheq}
+classoption: t
 ---
 
 ## Overview
@@ -41,7 +45,6 @@ Different kinds of triangles:
 
 ![](./images/01-trigonometry/right-angle-triangle.svg)
 
-Proof: blackboard
 
 ## Example
 
@@ -65,6 +68,13 @@ A student sees the top of the Posco tower in central Songdo under an angle of $3
 
 :::: {.columns }
 ::: {.column width="60%"}
+
+Formulas:
+
+\begin{empheq}[box=\fbox]{equation*}
+   \frac{\sin \alpha}{a} = \frac{\sin \beta}{b} = \frac{\sin \gamma}{c}
+\end{empheq}
+
 Useful when you know
 
 - 2 angles + 1 side, or
@@ -72,17 +82,9 @@ Useful when you know
 
 and want to know the others.
 
-Derivation: blackboard (optional)
 :::
 ::: {.column width="40%"}
 ![](./images/01-trigonometry/triangle-sine-formula.svg){fig-align="center"}
-
-$$
-    \boxed{
-        \frac{\sin \alpha}{a} = \frac{\sin \beta}{b} = \frac{\sin \gamma}{c}
-    }
-$$
-
 :::
 ::::
 
@@ -131,6 +133,14 @@ Given a triangle with angle $\alpha = 42^\circ$ and sides $a = 70$ and $b = 112$
 
 :::: {.columns }
 ::: {.column width="60%"}
+Formulas:
+\begin{empheq}[box=\fbox]{align*}
+            a^2 & = b^2 + c^2 - 2bc \cos \alpha \\
+            b^2 & = a^2 + c^2 - 2ac \cos \beta \\
+            c^2 & = a^2 + b^2 - 2ab \cos \gamma
+\end{empheq}
+
+
 Useful when you know
 
 - 2 sides + 1 angle in between, or
@@ -138,20 +148,9 @@ Useful when you know
 
 and want to know the other side/angles.
 
-Derivation: blackboard (optional)
 :::
 ::: {.column width="40%"}
 ![](./images/01-trigonometry/triangle-sine-formula.svg){fig-align="center"}
-
-$$
-    \boxed{
-        \begin{align*}
-            a^2 & = b^2 + c^2 - 2bc \cos \alpha \\
-            b^2 & = a^2 + c^2 - 2ac \cos \beta \\
-            c^2 & = a^2 + b^2 - 2ab \cos \gamma
-        \end{align*}}
-$$
-
 :::
 ::::
 
@@ -185,51 +184,45 @@ If the ratio of the sides of a triangle is $a : b : c = 4 : 5 : 6$, prove that t
 
 - Express sin/cos as a function of the sides + semi-perimeter.
 - Semi-perimeter: half ("semi") of the circumference ("perimeter")
+- **You don't have to memorize these formulas, but you should know they exist.**
 
-:::: {.columns }
+:::: {.columns align=bottom}
 ::: {.column width="50%"}
-\begin{align*}
+\begin{empheq}[box=\fbox]{align*}
     \sin \frac{\alpha}{2} & = \sqrt{\frac{(s-b)(s-c)}{bc}} \\
     \sin \frac{\beta}{2}  & = \sqrt{\frac{(s-a)(s-c)}{ac}} \\
     \sin \frac{\gamma}{2} & = \sqrt{\frac{(s-a)(s-b)}{ab}}
-\end{align*}
+\end{empheq}
 :::
 ::: {.column width="50%"}
-\begin{align*}
+\begin{empheq}[box=\fbox]{align*}
     \cos \frac{\alpha}{2} & = \sqrt{\frac{s(s-a)}{bc}} \\
     \cos \frac{\beta}{2}  & = \sqrt{\frac{s(s-b)}{ac}} \\
     \cos \frac{\gamma}{2} & = \sqrt{\frac{s(s-c)}{ab}}
-\end{align*}
+\end{empheq}
 :::
 ::::
 
-- **You don't have to memorize these formulas, but you should know they exist.**
+
 
 ## Formula for the area: Heron's formula
 
 - Expresses area as a function of the lengths of the sides
-- Expresses sine of angles as function of area
+\begin{empheq}[box=\fbox]{equation*}
+    \text{Area} = \sqrt{s(s-a)(s-b)(s-c)}
+\end{empheq}
 
-:::: {.columns }
-::: {.column width="50%"}
-$$
-    \boxed{\text{Area} = \sqrt{s(s-a)(s-b)(s-c)}}
-$$
-:::
-::: {.column width="50%"}
-$$
-    \begin{align*}
-        \sin \alpha & = 2 \frac{\text{Area}}{bc} \\
-        \sin \beta  & = 2 \frac{\text{Area}}{ac} \\
-        \sin \gamma & = 2 \frac{\text{Area}}{ab} \\
-    \end{align*}
-$$
-:::
-::::
+- Expresses sine of angles as function of area:
+\begin{empheq}[box=\fbox]{equation*}
+    \sin \alpha = 2 \frac{\text{Area}}{bc}, \quad
+    \sin \beta  = 2 \frac{\text{Area}}{ac}, \quad
+    \sin \gamma = 2 \frac{\text{Area}}{ab}.
+\end{empheq}
+
 
 ## Problems involving height/distance: terminology
 
-:::: {.columns }
+:::: {.columns align=bottom}
 ::: {.column width="50%"}
 
 ![](./images/01-trigonometry/angle-of-elevation.svg){fig-align="center"}
@@ -255,4 +248,4 @@ From a plane flying horizontally over a straight road, the angles of depression 
 
 - A man lies on the ground and observes that a temple and a flagpole on that temple subtend equal angles at his eyes. If the height of the temple is 10m and that of the flagpole is 20m, find the subtended angles and the distance between the temple and the man.
 
-- Crown Prince Lee Chang stands on the fortress walls and overlooks an approaching zombie army. He observes a zombie under an angle of depression of 45° and shoots an arrow. One second later, he shoots an arrow at the same zombie under an angle of depression of 60°. How soon will the zombie reach the base of the wall?
+- You are standing on the fortress walls, overlooking an approaching zombie army. You observe a zombie under an angle of depression of 45° and shoot an arrow. One second later, you shoot another arrow at the same zombie under an angle of depression of 60°. How soon will the zombie reach the base of the wall?

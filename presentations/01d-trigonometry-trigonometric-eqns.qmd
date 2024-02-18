@@ -1,12 +1,16 @@
 ---
-title: "Trigonometry: Trigonometric Equations"
+title: "Trigonometry (4/5): Trigonometric Equations"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:
-  revealjs:
-    theme: [default, custom.scss]
-    slide-number: true
-    css: style.css
+  beamer:
+    theme: Pittsburgh
+    colortheme: default
+    fonttheme: default
+    header-includes: |
+      \setbeamertemplate{frametitle}[default][left]
+      \usepackage{empheq}
+classoption: t
 ---
 
 ## Overview
@@ -14,27 +18,28 @@ format:
 1. Word problems: solutions
 2. Trigonometric equations
 
+# Solutions of the word problems
+
 ## Word problem 1 {.smaller}
 
 You see a town on a hillside at an angle of elevation of 30°. You walk 80 meters (horizontally, along the ground) and see the town at an angle of elevation of 60°. Find the height of the town above ground level.
+
+##
 
 ## Word problem 2 {.smaller}
 
 A man lies on the ground and observes that a temple and a flagpole on that temple subtend equal angles at his eyes. If the height of the temple is 10m and that of the flagpole is 20m, find the subtended angles and the distance between the temple and the man.
 
+##
+
 ## Word problem 3 {.smaller}
 
-![](./images/01-trigonometry/crown-prince.png){.absolute top=25 right=0 width=250}
+![](./images/01-trigonometry/crown-prince.png){width="30%"}
+![](./images/01-trigonometry/ashin-cropped.png){width="40%"}
 
-![](./images/01-trigonometry/ashin-cropped.png){.absolute top=300 right=0 width=250}
+You are standing on the fortress walls, overlooking an approaching zombie army. You observe a zombie under an angle of depression of 45° and shoot an arrow. One second later, you shoot another arrow at the same zombie under an angle of depression of 60°. How soon will the zombie reach the base of the wall?
 
-:::: {.columns }
-::: {.column width="75%"}
-Crown Prince Lee Chang/Ashin of the North stands on the fortress walls and overlooks an approaching zombie army. (S)He observes a zombie under an angle of depression of 45° and shoots an arrow. One second later, (s)he shoots an arrow at the same zombie under an angle of depression of 60°. How soon will the zombie reach the base of the wall?
-:::
-::: {.column width="25%"}
-:::
-::::
+##
 
 # Trigonometric equations
 
@@ -58,30 +63,37 @@ Find all solutions of $2 \cos^2\theta - 7 \cos \theta + 3 = 0$.
 
 ## Case 1: $\sin \theta = \sin \alpha$, with $\alpha \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$
 
-$$
-    \boxed{\theta = (-1)^k \alpha + k\pi, \quad k \in \mathbb{Z}}
-$$
+\begin{empheq}[box=\fbox]{equation*}
+    \theta = (-1)^k \alpha + k\pi, \quad k \in \mathbb{Z}
+\end{empheq}
+
+##
 
 ## Case 2: $\cos \theta = \cos \alpha$, with $\alpha \in [0, \pi]$
 
-$$
-    \boxed{\theta = \pm \alpha + 2k\pi, \quad k \in \mathbb{Z}}
-$$
+\begin{empheq}[box=\fbox]{equation*}
+    \theta = \pm \alpha + 2k\pi, \quad k \in \mathbb{Z}
+\end{empheq}
+
+##
 
 ## Case 3: $\tan \theta = \tan \alpha$, with $\alpha \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$
 
-$$
-    \boxed{\theta = \alpha + k\pi, \quad k \in \mathbb{Z}}
-$$
+\begin{empheq}[box=\fbox]{equation*}
+    \theta = \alpha + k\pi, \quad k \in \mathbb{Z}
+\end{empheq}
+
+##
 
 ## Case 4: $a \cos \theta + b \sin \theta = c$
 
 Necessary condition for solution to exist: $|c| \le \sqrt{a^2 + b^2}$.
 
-$$
-    \boxed{\theta = \alpha \pm \beta + 2k\pi, \quad k \in \mathbb{Z}}
-$$
+\begin{empheq}[box=\fbox]{equation*}
+    \theta = \alpha \pm \beta + 2k\pi, \quad k \in \mathbb{Z}
+\end{empheq}
 
+##
 
 ## Example 1
 

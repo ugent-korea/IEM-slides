@@ -1,12 +1,15 @@
 ---
-title: "Trigonometry: Introduction and Overview"
+title: "Trigonometry (1/5): Introduction and Overview"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:
-  revealjs:
-    theme: [default, custom.scss]
-    slide-number: true
-    css: style.css
+  beamer:
+    theme: Pittsburgh
+    colortheme: default
+    fonttheme: default
+    header-includes: |
+      \setbeamertemplate{frametitle}[default][left]
+classoption: t
 ---
 
 ## Contents
@@ -17,7 +20,7 @@ format:
 
 ## The unit circle
 
-:::: {.columns }
+:::: {.columns align=center }
 ::: {.column width="60%"}
 
 - The circle of radius 1 in the $xy$-plane, centered on the origin.
@@ -33,23 +36,20 @@ format:
 
 ## Example
 
+
 If $P(\sqrt{3}/2, y)$ is a point on the unit circle, find the value of $y$.
+
 
 
 ## Angles and points on the unit circle
 
-:::: {.columns }
+:::: {.columns align=center }
 ::: {.column width="60%"}
 
 - Each point $P(x, y)$ defines an angle $\theta$ measured from the positive $x$-axis in counterclockwise direction.
 
 - Angles measured in degrees or radians.
   - Value of $\theta$ in radians: length of arc subtended by $\theta$ (length of the red segment)
-
-- Notation: Greek letters
-  - $\alpha$, $\beta$, $\gamma$, ... (alpha, beta, gamma, ...)
-  - $\varphi$, $\phi$ (phi)
-  - $\theta$, $\xi$, ... (theta, xi, ...)
 
 :::
 
@@ -60,9 +60,10 @@ If $P(\sqrt{3}/2, y)$ is a point on the unit circle, find the value of $y$.
 :::
 ::::
 
+
 ## Converting between angles and radians
 
-:::: {.columns }
+:::: {.columns}
 ::: {.column width="60%"}
 
 General formula to convert between degrees and radians:
@@ -83,17 +84,24 @@ General formula to convert between degrees and radians:
 :::
 ::::
 
+
 ## Negative angles
 
-Measured from the positive $x$-axis, in clockwise direction.
+:::: {.columns align=center}
 
+::: {.column width="50%"}
+Measured from the positive $x$-axis, in clockwise direction.
+:::
+
+::: {.column width="50%"}
 ![](./images/01-trigonometry/unit-circle-negative-angles.png){fig-align="center"}
+:::
+
+::::
 
 
 ## Adding $2\pi$ to an angle
 
-:::: {.columns }
-::: {.column width="60%"}
 
 - Point $P$ is determined by the angle $\theta$.
 - $P$ stays same when adding $\pm 2 \pi$ to $\theta$.
@@ -102,50 +110,41 @@ $\Rightarrow$ All angles $\theta + 2k \pi$ with $k \in \mathbb{Z}$ give the same
 
 **Principal angle**: $\theta$ such that $-\pi < \theta \le \pi$.
 
-:::
-::: {.column width="40%"}
-![](./images/01-trigonometry/unit-circle-angle-2pi.svg){fig-align="center"}
-:::
-::::
+
+![](./images/01-trigonometry/unit-circle-angle-2pi.svg){fig-align="center" width="50%"}
 
 
 ## Finding the coordinates of a point
 
-:::: {.columns }
-::: {.column width="60%"}
 Given an angle $\theta$, find the coordinates of $P(x, y)$.
-
-Easy cases:
 
 1. $\theta = \pi/2$
 2. $\theta = 3\pi$
 3. $\theta = -\pi/2$
-:::
 
-::: {.column width="40%"}
-![](./images/01-trigonometry/unit-circle-point-coordinates.svg)
-:::
-::::
+![](./images/01-trigonometry/unit-circle-point-coordinates.svg){fig-align="center" width="50%"}
+
 
 ## Finding the coordinates of a point
 
-:::: {.columns }
-::: {.column width="60%"}
-
-Complex case:
+Slightly more involved case:
 
 4. $\theta = \pi/4$
 
-:::
 
-::: {.column width="40%"}
-![](./images/01-trigonometry/unit-circle-point-coordinates-pi4.svg)
-:::
-::::
+![](./images/01-trigonometry/unit-circle-point-coordinates-pi4.svg){fig-align="center" width="50%"}
 
 ## Important angles
 
-
+| Angle   | $x$-coordinate | $y$-coordinate |
+|---------|----:|-----:|
+| $0$     | $1$ | $0$ |
+| $\pi/6$ | $\sqrt{3}/2$ | $1/2$ |
+| $\pi/4$ | $\sqrt{2}/2$ | $\sqrt{2}/2$ |
+| $\pi/3$ | $1/2$        | $\sqrt{3}/2$ |
+| $\pi/2$ | $0$          | $1$          |
+| $\pi$   | $-1$         | $0$          |
+| $2\pi$  | $1$          | $0$          |
 
 ## Trigonometric functions as coordinates
 
@@ -175,28 +174,29 @@ Given that $\displaystyle \theta = \frac{\pi}{6}$, find the values of all 6 trig
 
 ## Fundamental identity
 
-:::: {.columns }
-::: {.column width="60%"}
 - $P(x, y)$ is on the unit circle: $x^2 + y^2 = 1$
-- $x = \cos \theta$ and $y = \sin \theta$
-
+- Put $x = \cos \theta$ and $y = \sin \theta$ to obtain the **fundamental identity**:
 $$
-    \Rightarrow \fbox{$\cos^2 \theta + \sin^2 \theta = 1$}
+    \fbox{$\cos^2 \theta + \sin^2 \theta = 1$}
 $$    
 
-- Notation: $\sin^k \theta = (\sin \theta)^k$, and similar for other trig functions.
+![](./images/01-trigonometry/unit-circle-trig-sin-cos.svg){fig-align="center" width="50%"}
 
-:::
-::: {.column width="40%"}
+## Aside: notation
 
-![](./images/01-trigonometry/unit-circle-trig-sin-cos.svg)
+Be very careful when you see $\sin^k \theta$.
 
-:::
-::::
+- Positive exponent (**power**):
+$$
+    \sin^k \theta = (\sin \theta)^k.
+$$
+- Negative exponent $-1$ (**inverse function**):
+$$
+    \sin^{-1} y = \arcsin y.
+$$
+
 
 ## Fundamental identity: consequences
-
-Proof: blackboard
 
 :::: {.columns }
 ::: {.column width="50%"}
@@ -211,6 +211,7 @@ $$
 :::
 ::::
 
+
 ## Example
 
 Suppose $\displaystyle \cos \theta = -\frac{4}{5}$ and $\theta$ is in quadrant III. Find $\sin \theta$ and $\tan \theta$.
@@ -220,20 +221,16 @@ Suppose $\displaystyle \cos \theta = -\frac{4}{5}$ and $\theta$ is in quadrant I
 :::: {.columns }
 ::: {.column width="60%"}
 - Sine and cosine are $2\pi$-periodic:
-$$
-    \boxed{
-        \begin{align*}
-            \sin(\theta \pm 2 \pi) & = \sin \theta \\
-            \cos(\theta \pm 2 \pi) & = \cos \theta
-        \end{align*}}
-$$
+\begin{align*}
+\sin(\theta \pm 2 \pi) & = \sin \theta \\
+\cos(\theta \pm 2 \pi) & = \cos \theta
+\end{align*}
+
 - The tangent is $\pi$-periodic:
-$$
-    \boxed{
-        \begin{align*}
-            \tan(\theta \pm \pi) & = \tan \theta
-        \end{align*}}
-$$
+\begin{align*}
+\tan(\theta \pm \pi) & = \tan \theta
+\end{align*}
+
 
 Example: Compute $\displaystyle \tan\left(\frac{8093 \pi}{4}\right)$
 :::
@@ -241,9 +238,4 @@ Example: Compute $\displaystyle \tan\left(\frac{8093 \pi}{4}\right)$
 ![](./images/01-trigonometry/unit-circle-trig-functions-variant.svg)
 :::
 ::::
-
-
-
-
-
 
