@@ -3,10 +3,11 @@ title: "Trigonometry: Introduction and Overview"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:
-  revealjs:
-    theme: [default, custom.scss]
-    slide-number: true
-    css: style.css
+  beamer:
+    theme: Pittsburgh
+    colortheme: default
+    fonttheme: default
+
 ---
 
 ## Contents
@@ -60,6 +61,7 @@ If $P(\sqrt{3}/2, y)$ is a point on the unit circle, find the value of $y$.
 :::
 ::::
 
+
 ## Converting between angles and radians
 
 :::: {.columns }
@@ -82,6 +84,7 @@ General formula to convert between degrees and radians:
 
 :::
 ::::
+
 
 ## Negative angles
 
@@ -181,7 +184,7 @@ Given that $\displaystyle \theta = \frac{\pi}{6}$, find the values of all 6 trig
 - $x = \cos \theta$ and $y = \sin \theta$
 
 $$
-    \Rightarrow \fbox{$\cos^2 \theta + \sin^2 \theta = 1$}
+    \Rightarrow \cos^2 \theta + \sin^2 \theta = 1
 $$    
 
 - Notation: $\sin^k \theta = (\sin \theta)^k$, and similar for other trig functions.
@@ -211,6 +214,7 @@ $$
 :::
 ::::
 
+
 ## Example
 
 Suppose $\displaystyle \cos \theta = -\frac{4}{5}$ and $\theta$ is in quadrant III. Find $\sin \theta$ and $\tan \theta$.
@@ -220,20 +224,16 @@ Suppose $\displaystyle \cos \theta = -\frac{4}{5}$ and $\theta$ is in quadrant I
 :::: {.columns }
 ::: {.column width="60%"}
 - Sine and cosine are $2\pi$-periodic:
-$$
-    \boxed{
-        \begin{align*}
-            \sin(\theta \pm 2 \pi) & = \sin \theta \\
-            \cos(\theta \pm 2 \pi) & = \cos \theta
-        \end{align*}}
-$$
+\begin{align*}
+\sin(\theta \pm 2 \pi) & = \sin \theta \\
+\cos(\theta \pm 2 \pi) & = \cos \theta
+\end{align*}
+
 - The tangent is $\pi$-periodic:
-$$
-    \boxed{
-        \begin{align*}
-            \tan(\theta \pm \pi) & = \tan \theta
-        \end{align*}}
-$$
+\begin{align*}
+\tan(\theta \pm \pi) & = \tan \theta
+\end{align*}
+
 
 Example: Compute $\displaystyle \tan\left(\frac{8093 \pi}{4}\right)$
 :::
@@ -241,9 +241,4 @@ Example: Compute $\displaystyle \tan\left(\frac{8093 \pi}{4}\right)$
 ![](./images/01-trigonometry/unit-circle-trig-functions-variant.svg)
 :::
 ::::
-
-
-
-
-
 
