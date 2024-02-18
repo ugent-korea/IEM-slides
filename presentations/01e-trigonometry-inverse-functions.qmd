@@ -3,10 +3,14 @@ title: "Trigonometry: Inverse Trigonometric Functions"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:
-  revealjs:
-    theme: [default, custom.scss]
-    slide-number: true
-    css: style.css
+  beamer:
+    theme: Pittsburgh
+    colortheme: default
+    fonttheme: default
+    header-includes: |
+      \setbeamertemplate{frametitle}[default][left]
+      \usepackage{empheq}
+classoption: t
 ---
 
 ## Overview
