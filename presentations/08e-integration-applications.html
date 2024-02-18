@@ -8,7 +8,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.550">
 
   <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
   <title>Integration: Applications</title>
@@ -157,7 +157,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -342,7 +343,7 @@ Prof.&nbsp;Joris Vankerschaver
 <h2>Reminder: area under the curve</h2>
 <p>&nbsp;</p>
 
-<img data-src="./images/09-integration/area-mixed.svg" class="r-stretch quarto-figure-center"><p><span class="math display">\[
+<img data-src="./images/09-integration/area-mixed.svg" class="quarto-figure quarto-figure-center r-stretch"><p><span class="math display">\[
     \text{Area} = \int_a^{c_1} f(x) dx - \int_{c_1}^{c_2} f(x) dx + \int_{c_2}^b f(x) dx.
 \]</span></p>
 <p>&nbsp;</p>
@@ -353,7 +354,7 @@ Prof.&nbsp;Joris Vankerschaver
 <h2>Area between two curves</h2>
 <p>&nbsp;</p>
 
-<img data-src="./images/09-integration/area-two-curves.svg" class="r-stretch quarto-figure-center"><p>&nbsp;</p>
+<img data-src="./images/09-integration/area-two-curves.svg" class="quarto-figure quarto-figure-center r-stretch"><p>&nbsp;</p>
 <div class="fragment">
 <div class="absolute" style="top: 42%; left: 4%; width: 150px; ">
 <p><span class="math display">\[
@@ -448,8 +449,10 @@ Prof.&nbsp;Joris Vankerschaver
 <h2>Example</h2>
 <p>Find the area of the region between <span class="math inline">\(x = 12 - y^2\)</span> and <span class="math inline">\(y = -x\)</span>.</p>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
@@ -478,7 +481,6 @@ Prof.&nbsp;Joris Vankerschaver
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -739,10 +741,9 @@ Prof.&nbsp;Joris Vankerschaver
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -752,8 +753,17 @@ Prof.&nbsp;Joris Vankerschaver
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

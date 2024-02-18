@@ -8,7 +8,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.550">
 
   <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
   <title>Derivatives (2/2): Applications</title>
@@ -157,7 +157,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -365,7 +366,7 @@ Prof.&nbsp;Joris Vankerschaver
 <section id="section" class="slide level2">
 <h2></h2>
 
-<img data-src="./images/04-derivatives/implicit-curve.png" class="r-stretch quarto-figure-center"><p>Figure made with <a href="https://www.wolframalpha.com/input?i=plot+x%5E2+%2B+xy+%2B+2y%5E3+%3D+4">Wolfram Alpha</a>.</p>
+<img data-src="./images/04-derivatives/implicit-curve.png" class="quarto-figure quarto-figure-center r-stretch"><p>Figure made with <a href="https://www.wolframalpha.com/input?i=plot+x%5E2+%2B+xy+%2B+2y%5E3+%3D+4">Wolfram Alpha</a>.</p>
 </section>
 <section id="velocity-and-acceleration" class="slide level2">
 <h2>Velocity and acceleration</h2>
@@ -434,7 +435,7 @@ Prof.&nbsp;Joris Vankerschaver
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="04b-derivatives_files/figure-revealjs/cell-2-output-1.png" width="470" height="565"></p>
+<p><img data-src="04b-derivatives_files/figure-revealjs/cell-2-output-1.png" class="quarto-figure quarto-figure-center" width="470" height="565"></p>
 </figure>
 </div>
 </div>
@@ -448,10 +449,12 @@ Prof.&nbsp;Joris Vankerschaver
 <li>The 3rd derivative is also know as “jerk”.</li>
 </ul>
 
-<img data-src="./images/04-derivatives/nixon.jpeg" class="r-stretch quarto-figure-center"><p>Source: <a href="https://twitter.com/fermatslibrary/status/1644385429498494999">Fermat’s library</a></p>
+<img data-src="./images/04-derivatives/nixon.jpeg" class="quarto-figure quarto-figure-center r-stretch"><p>Source: <a href="https://twitter.com/fermatslibrary/status/1644385429498494999">Fermat’s library</a></p>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
@@ -480,7 +483,6 @@ Prof.&nbsp;Joris Vankerschaver
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -741,10 +743,9 @@ Prof.&nbsp;Joris Vankerschaver
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -754,8 +755,17 @@ Prof.&nbsp;Joris Vankerschaver
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
