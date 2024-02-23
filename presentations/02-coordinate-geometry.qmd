@@ -3,10 +3,15 @@ title: Coordinate Geometry
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:
-  revealjs:
-    theme: [default, custom.scss]
-    slide-number: true
-    css: style.css
+  beamer:
+    theme: Pittsburgh
+    colortheme: default
+    fonttheme: default
+    header-includes: |
+      \setbeamertemplate{frametitle}[default][left]
+      \setbeamertemplate{footline}[frame number]
+      \usepackage{empheq}
+classoption: t
 ---
 
 
@@ -22,17 +27,15 @@ format:
 
 Studying geometry through coordinate calculations.
 
-:::: {.columns .v-center-container}
+:::: {.columns align=center}
 
 ::: {.column width="50%"}
-
 
 ![](./images/02-coordinate-geometry/coordinate-system.svg){fig-align="center"}
 
 :::
 
 ::: {.column width="50%"}
-
 
 ![](./images/02-coordinate-geometry/descartes.png){fig-align="center"}
 
@@ -43,7 +46,7 @@ Studying geometry through coordinate calculations.
 
 ## Example: distance between two points
 
-:::: {.columns .v-center-container}
+:::: {.columns align=center}
 
 ::: {.column width="50%"}
 Distance between $P$ and $Q$:
@@ -64,7 +67,7 @@ $$
 
 ## Example: midpoint between two points
 
-:::: {.columns .v-center-container}
+:::: {.columns align=center}
 
 ::: {.column width="50%"}
 Coordinates of midpoint between $P$ and $Q$:
@@ -87,9 +90,9 @@ $$
 - **Ellipse**: All points for which the sum of distances to two fixed points (focal points) is constant
 - **Parabola**: All points that are at equal distance from a fixed point and a given line (directrix)
 
-:::: {.columns}
+:::: {.columns align=center}
 ::: {.column width="50%"}
-![](./images/02-coordinate-geometry/compass.png){fig-align="right" height="200"}
+![](./images/02-coordinate-geometry/compass.png){fig-align="right" height="150"}
 :::
 ::: {.column width="50%"}
 ![](./images/02-coordinate-geometry/gardener.png){fig-align="left" height="200"}
@@ -222,10 +225,17 @@ $$
 
 ## Parallel/perpendicular lines
 
-- Two lines are **parallel** if their slopes are the same: $\boxed{m_1 = m_2}$
-- Two lines are **perpendicular** if their slopes satisfy: $\boxed{m_1 m_2 = -1}$
+Two lines are ...
 
-![](./images/02-coordinate-geometry/par-perp.svg){fig-align="center" height="300"}
+- **parallel** if their slopes are the same: $\boxed{m_1 = m_2}$
+- **perpendicular** if their slopes satisfy: $\boxed{m_1 m_2 = -1}$
+
+![](./images/02-coordinate-geometry/par-perp.svg){fig-align="center" height="150"}
+
+In general, the angle $\theta$ between two lines is determined by
+$$
+  \tan \theta = \left| \frac{m_1 - m_2}{1 + m_1m_2} \right|.
+$$
 
 ## Example
 
@@ -236,7 +246,7 @@ Given two lines $L_1: x + 2y - 3 = 0$ and $L_2: kx + y - 5 = 0$, for which value
 
 ## Distance of a point to a line
 
-:::: {.columns .v-center-container}
+:::: {.columns align=center}
 
 ::: {.column width="60%"}
 
@@ -279,6 +289,6 @@ Find the equation of the common tangent line between two touching circles given 
 
 ##
 
-![](./images/02-coordinate-geometry/coordinate_plane_closure.png){fig-align='center'}
+![](./images/02-coordinate-geometry/coordinate_plane_closure.png){fig-align='center' height="80%"}
 
 Source: [xkcd 2735](https://xkcd.com/2735/)
