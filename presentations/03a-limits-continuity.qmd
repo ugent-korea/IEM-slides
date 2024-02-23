@@ -3,10 +3,15 @@ title: Limits and Continuity (1/2)
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:
-  revealjs:
-    theme: [default, custom.scss]
-    slide-number: true
-    css: style.css
+  beamer:
+    theme: Pittsburgh
+    colortheme: default
+    fonttheme: default
+    header-includes: |
+      \setbeamertemplate{frametitle}[default][left]
+      \setbeamertemplate{footline}[frame number]
+      \usepackage{empheq}
+classoption: t
 ---
 
 ## Contents
@@ -20,7 +25,7 @@ format:
 
 ## Motivation
 
-:::: {.columns .v-center-container}
+:::: {.columns align=center}
 
 ::: {.column width="60%"}
 
@@ -45,7 +50,7 @@ What is the slope of the line when $Q$ gets "infinitely close" to $P$?
 
 ## Definition of limit
 
-![](./images/03-limits-continuity/limit-definition.svg){.absolute right=-100 top=100 height=250}
+![](./images/03-limits-continuity/limit-definition.svg){fig-align="center" height="30%"}
 
 - We write:
 $$
