@@ -9,6 +9,7 @@ format:
     fonttheme: default
     header-includes: |
       \setbeamertemplate{frametitle}[default][left]
+      \setbeamertemplate{footline}[frame number]
 classoption: t
 ---
 
