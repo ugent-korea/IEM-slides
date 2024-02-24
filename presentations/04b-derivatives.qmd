@@ -3,10 +3,17 @@ title: "Derivatives (2/2): Applications"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:
-  revealjs:
-    theme: [default, custom.scss]
-    slide-number: true
-    css: style.css
+  beamer:
+    theme: Pittsburgh
+    colortheme: default
+    fonttheme: default
+    header-includes: |
+      \setbeamertemplate{frametitle}[default][left]
+      \setbeamertemplate{footline}[frame number]
+      \usepackage{empheq}
+      \newcommand{\red}[1]{\color{red}{#1}}
+      \newcommand{\blue}[1]{\color{blue}{#1}}
+classoption: t
 jupyter: python3    
 ---
 
@@ -34,7 +41,7 @@ Find an equation for the tangent line to the curve defined by $x^2 + xy + 2y^3 =
 
 ## 
 
-![](./images/04-derivatives/implicit-curve.png){fig-align="center"}
+![](./images/04-derivatives/implicit-curve.png){fig-align="center" height="80%"}
 
 Figure made with [Wolfram Alpha](https://www.wolframalpha.com/input?i=plot+x%5E2+%2B+xy+%2B+2y%5E3+%3D+4).
 
@@ -104,7 +111,7 @@ A particle $P$ moves along the $x$-axis with position given by $x(t) = 2 t^3 - 1
 import numpy as np
 import matplotlib.pyplot as plt
 
-fig, (ax0, ax1, ax2) = plt.subplots(nrows=3, figsize=(5, 6))
+fig, (ax0, ax1, ax2) = plt.subplots(nrows=3, figsize=(5, 4))
 t = np.linspace(0, 5)
 x = 2*t**3 - 15*t**2 + 24*t
 v = 6*t**2 - 30*t + 24
@@ -133,6 +140,6 @@ In the fall of 1972, President Nixon announced that "the rate of increase of inf
 - Probably the first time a sitting president used the 3rd derivative.
 - The 3rd derivative is also know as "jerk".
 
-![](./images/04-derivatives/nixon.jpeg){fig-align="center"}
+![](./images/04-derivatives/nixon.jpeg){fig-align="center" width="80%"}
 
 Source: [Fermat's library](https://twitter.com/fermatslibrary/status/1644385429498494999)

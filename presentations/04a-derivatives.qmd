@@ -3,10 +3,17 @@ title: Derivatives (1/2)
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:
-  revealjs:
-    theme: [default, custom.scss]
-    slide-number: true
-    css: style.css
+  beamer:
+    theme: Pittsburgh
+    colortheme: default
+    fonttheme: default
+    header-includes: |
+      \setbeamertemplate{frametitle}[default][left]
+      \setbeamertemplate{footline}[frame number]
+      \usepackage{empheq}
+      \newcommand{\red}[1]{\color{red}{#1}}
+      \newcommand{\blue}[1]{\color{blue}{#1}}
+classoption: t
 ---
 
 ## Contents
@@ -98,19 +105,29 @@ Now that we can take the derivative of a function, we can take the derivative of
 | ...                                    | ...                    |
 | $f^{(n)}(x) = \frac{d}{dx} f^{(n-1)}(x)$ | $n$th-order derivative |
 
-## Derivative of a polynomial: basic rules
-
-1. $\displaystyle \frac{d}{dx} c = 0$
-2. $\displaystyle \frac{d x^n}{dx} = nx^{n-1}$ for $n \ne 0$.
 
 ## Derivative of a polynomial: basic rules
 
-3. $\displaystyle \frac{d}{dx}(cf(x)) = c\frac{d f}{dx}$.
-4. $\displaystyle \frac{d}{dx}(f(x) + g(x)) = \frac{d f}{dx} + \frac{dg}{dx}$.
+1. $$
+    \frac{d}{dx} c = 0
+    $$
+2. $$
+    \frac{d x^n}{dx} = nx^{n-1} \quad \text{for $n \ne 0$}
+    $$
+
+## Derivative of a polynomial: basic rules
+
+3. $$
+    \frac{d}{dx}(cf(x)) = c\frac{d f}{dx}
+    $$
+4. $$
+ \frac{d}{dx}(f(x) + g(x)) = \frac{d f}{dx} + \frac{dg}{dx}
+ $$
 
 ## Examples
 
 Compute the derivative of $f(x) = 3x^2 + 7x - 5$.
+
 
 ## Derivative of the exponential/logarithm
 
@@ -128,15 +145,21 @@ For a different base:
 - The last two rules will follow from the chain rule
 - **Do not confuse the rules for $a^x$ and $x^n$!**
 
+
+
 ## Product and quotient rules
 
-- $\displaystyle \frac{d}{dx}(f(x)g(x)) = f'(x) g(x) + f(x) g'(x)$.
-- $\displaystyle \frac{d}{dx} \frac{f(x)}{g(x)} = \frac{f'(x) g(x) - f(x) g'(x)}{g(x)^2}$.
+\begin{align*}
+  \frac{d}{dx}(f(x)g(x)) & = f'(x) g(x) + f(x) g'(x) \\
+  \frac{d}{dx} \frac{f(x)}{g(x)} & = \frac{f'(x) g(x) - f(x) g'(x)}{g(x)^2}
+\end{align*}
 
 Examples: Compute
 
 - $\displaystyle \frac{d}{dx}(x^2 e^x)$
 - $\displaystyle \frac{d}{dx} \frac{x + 1}{x + 3}$
+
+
 
 ## Derivatives of trigonometric functions
 
@@ -160,7 +183,7 @@ Example solution:
 $$
     \frac{d}{dx} \csc x = \frac{d}{dx} \frac{1}{\sin x} = \frac{1'\cdot \sin x - \sin'(x) \cdot 1}{\sin^2 x} = - \frac{\cos x}{\sin^2 x}.
 $$
-(This will be easier once we cover the *chain rule*)
+(This will be easier once we cover the **chain rule**)
 
 ## Derivatives of inverse trigonometric functions 
 
@@ -173,9 +196,6 @@ $$
 These rules can be derived by means of *implicit differentation*, which we will cover later.
 
 ## The chain rule
-
-\newcommand{\red}[1]{\color{red}{#1}}
-\newcommand{\blue}[1]{\color{blue}{#1}}
 
 - Useful for composite functions $F = \red{f} \circ \blue{g}$ ("$\red{f}$ after $\blue{g}$")
 - If $\red{f}(x)$ and $\blue{g}(x)$ are differentiable, then the composite function $F(x)$ is also differentiable and
