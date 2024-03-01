@@ -3,10 +3,17 @@ title: "Theory of equations (2/2): Polynomial equations"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:
-  revealjs:
-    theme: [default, custom.scss]
-    slide-number: true
-    css: style.css
+  beamer:
+    theme: Pittsburgh
+    colortheme: default
+    fonttheme: default
+    header-includes: |
+      \setbeamertemplate{frametitle}[default][left]
+      \setbeamertemplate{footline}[frame number]
+      \usepackage{empheq}
+      \newcommand{\red}[1]{\color{red}{#1}}
+      \newcommand{\blue}[1]{\color{blue}{#1}}
+classoption: t
 ---
 
 ## Contents
