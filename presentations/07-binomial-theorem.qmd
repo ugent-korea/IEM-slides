@@ -3,10 +3,17 @@ title: "The binomial theorem"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:
-  revealjs:
-    theme: [default, custom.scss]
-    slide-number: true
-    css: style.css
+  beamer:
+    theme: Pittsburgh
+    colortheme: default
+    fonttheme: default
+    header-includes: |
+      \setbeamertemplate{frametitle}[default][left]
+      \setbeamertemplate{footline}[frame number]
+      \usepackage{empheq}
+      \newcommand{\red}[1]{\color{red}{#1}}
+      \newcommand{\blue}[1]{\color{blue}{#1}}
+classoption: t
 ---
 
 ## Overview
@@ -68,9 +75,11 @@ $$
 
 For all $n$ and $k \le n$:
 
-1. $\displaystyle {n \choose 0} = {n \choose n} = 1$.
-2. $\displaystyle {n \choose 1} = {n \choose n - 1} = n$.
-3. $\displaystyle {n \choose k} = {n \choose n - k}$.
+\begin{align*} 
+    {n \choose 0} & = {n \choose n} = 1 \\
+    {n \choose 1} & = {n \choose n - 1} = n \\
+    {n \choose k} & = {n \choose n - k}
+\end{align*}
 
 ## Rewriting Pascal's triangle using binomial coefficients
 

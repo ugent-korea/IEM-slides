@@ -3,10 +3,17 @@ title: "Theory of equations (1/2): Working with polynomials"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:
-  revealjs:
-    theme: [default, custom.scss]
-    slide-number: true
-    css: style.css
+  beamer:
+    theme: Pittsburgh
+    colortheme: default
+    fonttheme: default
+    header-includes: |
+      \setbeamertemplate{frametitle}[default][left]
+      \setbeamertemplate{footline}[frame number]
+      \usepackage{empheq}
+      \newcommand{\red}[1]{\color{red}{#1}}
+      \newcommand{\blue}[1]{\color{blue}{#1}}
+classoption: t
 ---
 
 ## Overview
@@ -97,6 +104,10 @@ Algorithm:
 4. Drop next term
 5. Repeat steps 1-4.
 
+## Example
+
+Divide $P(x) = 3x^4 - x^3 + 2x^2 - 2x - 1$ by $D(x) = x+2$.
+
 ## Synthetic division
 
 Algorithm:
@@ -123,7 +134,7 @@ $$
 
 Step-by-step walkthroughs of both algorithms (from the 2021-22 version of this course):
 
-- Polynomial long division: https://youtu.be/RyRqUg5oycE?t=499
-- Synthetic division: https://youtu.be/NqQeMfGEzk4
+- Polynomial long division: \url{https://youtu.be/RyRqUg5oycE?t=499}
+- Synthetic division: \url{https://youtu.be/NqQeMfGEzk4}
 
 These videos can be found on Ufora as well.
