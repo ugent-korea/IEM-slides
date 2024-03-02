@@ -3,10 +3,17 @@ title: "Integration: Techniques"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:
-  revealjs:
-    theme: [default, custom.scss]
-    slide-number: true
-    css: style.css
+  beamer:
+    theme: Pittsburgh
+    colortheme: default
+    fonttheme: default
+    header-includes: |
+      \setbeamertemplate{frametitle}[default][left]
+      \setbeamertemplate{footline}[frame number]
+      \usepackage{empheq}
+      \newcommand{\red}[1]{\color{red}{#1}}
+      \newcommand{\blue}[1]{\color{blue}{#1}}
+classoption: t
 ---
 
 ## Overview
@@ -18,7 +25,7 @@ format:
 
 ##
 
-![Source: [https://xkcd.com/2117/](https://xkcd.com/2117/)](./images/09-integration/xkcd-2117.png){fig-align="center"}
+![Source: [https://xkcd.com/2117/](https://xkcd.com/2117/)](./images/09-integration/xkcd-2117.png){fig-align="center" height="80%"}
 
 ## Warning
 
@@ -157,4 +164,4 @@ Let $\displaystyle I_n = \int_0^{\pi/2} \cos^n x \, dx$. Find a reduction formul
 
 ##
 
-![Source: [https://xkcd.com/1201/](https://xkcd.com/1201/)](./images/09-integration/xkcd-1201.png){fig-align="center"}
+![Source: [https://xkcd.com/1201/](https://xkcd.com/1201/)](./images/09-integration/xkcd-1201.png){fig-align="center" height="80%"}

@@ -3,10 +3,17 @@ title: "Integration: Applications"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
 format:
-  revealjs:
-    theme: [default, custom.scss]
-    slide-number: true
-    css: style.css
+  beamer:
+    theme: Pittsburgh
+    colortheme: default
+    fonttheme: default
+    header-includes: |
+      \setbeamertemplate{frametitle}[default][left]
+      \setbeamertemplate{footline}[frame number]
+      \usepackage{empheq}
+      \newcommand{\red}[1]{\color{red}{#1}}
+      \newcommand{\blue}[1]{\color{blue}{#1}}
+classoption: t
 ---
 
 ## Reminder: area under the curve
@@ -19,104 +26,11 @@ $$
     \text{Area} = \int_a^{c_1} f(x) dx - \int_{c_1}^{c_2} f(x) dx + \int_{c_2}^b f(x) dx.
 $$
 
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
 
 ## Area between two curves
 
-&nbsp;
-
 ![](./images/09-integration/area-two-curves.svg){fig-align="center"}
 
-&nbsp;
-
-. . .
-
-::: {.absolute top="42%" left="4%" width="150"}
-$$
-\phantom{\int}\text{Area}
-$$
-:::
-
-::: {.absolute top="42%" left="22%" width="150"}
-$$
-\phantom{\int}=
-$$
-:::
-
-. . .
-
-::: {.absolute top="42%" left="42%" width="150"}
-$$
-    \int_a^b f(x) dx
-$$
-:::
-
-. . .
-
-::: {.absolute top="42%" left="59%" width="150"}
-$$
-\phantom{\int}-
-$$
-:::
-
-. . .
-
-::: {.absolute top="42%" left="77%" width="150"}
-$$
-    \int_a^b g(x) dx
-$$
-:::
-
-. . . 
-
-::: {.absolute top="62%" left="22%" width="150"}
-$$
-\phantom{\int}=
-$$
-:::
-
-::: {.absolute top="62%" left="42%" width="150"}
-$$
-    \int_a^b (f(x) - g(x)) dx
-$$
-:::
-
-. . .
-
-::: {.absolute top="77%" left="50%" width="250"}
-::: {style="color: red"}
-Upper - Lower
-:::
-:::
-
-::: {.absolute top="14%" left="10%" width="250"}
-::: {style="color: red"}
-Upper
-:::
-:::
-
-::: {.absolute top="31%" left="8%" width="250"}
-::: {style="color: red"}
-Lower
-:::
-:::
-
-::: {.absolute top="14%" left="43%" width="250"}
-::: {style="color: red"}
-Upper
-:::
-:::
-
-::: {.absolute top="31%" left="80%" width="250"}
-::: {style="color: red"}
-Lower
-:::
-:::
 
 ## Recipe for finding the area
 
