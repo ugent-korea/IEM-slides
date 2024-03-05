@@ -1,0 +1,14 @@
+# latex cruft
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.xdv
+*.synctex.gz
+auto
+
+# build artifacts
+01d-solutions-trigonometric-eqns.pdf
+03b-solutions-limits.pdf
+08d-inverse-trigonometric-integration.pdf
+extra-extra-problems.pdf
