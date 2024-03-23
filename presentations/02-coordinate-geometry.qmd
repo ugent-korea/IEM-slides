@@ -243,6 +243,10 @@ Given two lines $L_1: x + 2y - 3 = 0$ and $L_2: kx + y - 5 = 0$, for which value
 
 1. Parallel?
 2. Perpendicular?
+3. At an angle of $45^\circ$?
+
+##
+
 
 ## Distance of a point to a line
 
