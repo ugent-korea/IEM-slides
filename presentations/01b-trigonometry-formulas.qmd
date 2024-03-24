@@ -223,3 +223,7 @@ The tangent function:
 ## Example
 
 Find the fundamental period of $\sin(2 x)$.
+
+##
+
+![](./images/01-trigonometry/sine-wave-beach.jpeg){fig-align=center}
