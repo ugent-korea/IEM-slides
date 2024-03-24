@@ -275,3 +275,8 @@ $$
   \sqrt{ab} \ne \sqrt{a}\sqrt{b}.
 $$    
 
+##
+
+![](./images/05-complex-numbers/cartoon-tom-gauld.jpeg)
+
+Source: Tom Gauld
