@@ -48,24 +48,27 @@ Example: $\displaystyle \int_0^2 (1+x)^5 \, dx$
 
 ## Examples
 
-Compute the following integrals:
-
-- $\displaystyle \int a^{bx} \, dx$
-- $\displaystyle \int x^3 \cos(x^4 + 2) \, dx$
+$\displaystyle \int a^{bx} \, dx$
 
 ## Examples
 
-Compute the following integrals:
-
-- $\displaystyle \int \frac{\sin(3 \ln x)}{x} \, dx$
-- $\displaystyle \int x^5 \sqrt{1 + x^2} \, dx$
+$\displaystyle \int x^3 \cos(x^4 + 2) \, dx$
 
 ## Examples
 
-Compute the following integrals:
+$\displaystyle \int \frac{\sin(3 \ln x)}{x} \, dx$
 
-- $\displaystyle \int e^x \sqrt{1 + e^x} \, dx$
-- $\displaystyle \int \frac{dx}{x^2 + 4x + 5}$
+## Examples
+
+$\displaystyle \int x^5 \sqrt{1 + x^2} \, dx$
+
+## Examples
+
+$\displaystyle \int e^x \sqrt{1 + e^x} \, dx$
+
+## Examples
+
+$\displaystyle \int \frac{dx}{x^2 + 4x + 5}$
 
 ## Trigonometric integration
 
@@ -78,27 +81,39 @@ Compute the following integrals:
 
 ## Examples
 
-Compute the following integrals:
-
-- $\displaystyle \int \sec x \, dx$
-- $\displaystyle \int \csc x \, dx$
+$\displaystyle \int \sec x \, dx$
 
 ## Examples
 
-Compute the following integrals:
-
-- $\displaystyle \int \sin^3 x \cos^8 x \, dx$
-- $\displaystyle \int \cos^5 x \, dx$
-- $\displaystyle \int \cos^2 x \, dx$
-- $\displaystyle \int \sin^2 x \, dx$
-- $\displaystyle \int \sin^4 x \, dx$
+$\displaystyle \int \csc x \, dx$
 
 ## Examples
 
-Compute the following integrals:
+$\displaystyle \int \sin^3 x \cos^8 x \, dx$
 
-- $\displaystyle \int \tan^2 x \, dx$
-- $\displaystyle \int \sec^4 x \, dx$
+## Examples
+
+$\displaystyle \int \cos^5 x \, dx$
+
+## Examples
+
+$\displaystyle \int \cos^2 x \, dx$
+
+## Examples
+
+$\displaystyle \int \sin^2 x \, dx$
+
+## Examples
+
+$\displaystyle \int \sin^4 x \, dx$
+
+## Examples
+
+$\displaystyle \int \tan^2 x \, dx$
+
+## Examples
+
+$\displaystyle \int \sec^4 x \, dx$
 
 ## Integration by parts
 
@@ -110,10 +125,11 @@ Compute the following integrals:
  
 ## Examples
 
-Compute the following integrals:
+$\displaystyle \int \sec^3 x \, dx$
 
-- $\displaystyle \int \sec^3 x \, dx$
-- $\displaystyle \int e^{ax} \cos(bx) \, dx$
+## Examples
+
+$\displaystyle \int e^{ax} \cos(bx) \, dx$
 
 ## Reduction formula
 
@@ -125,7 +141,9 @@ Compute the following integrals:
 
 Let $\displaystyle I_n = \int_0^{\pi/2} \cos^n x \, dx$. Find a reduction formula for $I_n$.
 
-## Solutions
+# Solutions
+
+##
 
 - $\displaystyle \int x \sin(1 + x^2) \, dx = - \frac{1}{2} \cos(1 + x^2) + C$
 - $\displaystyle \int_0^2 (1 + x)^5 \, dx = \frac{364}{3}$
