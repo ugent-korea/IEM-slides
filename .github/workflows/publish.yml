@@ -17,15 +17,10 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Install TeXlive and rsvg-convert
-        run: sudo apt-get update && sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super librsvg2-bin
-
-      - name: Initalize tlmgr
-        run: tlmgr init-usertree
-
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
+          tinytex: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
