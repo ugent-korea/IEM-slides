@@ -16,12 +16,11 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
 
-      - name: Install TeXlive and rsvg-convert
-        run: sudo apt-get update && sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super librsvg2-bin
-
-      - name: Initalize tlmgr
-        run: tlmgr init-usertree
+      - name: Install rsvg-convert
+        run: sudo apt-get update && sudo apt-get install librsvg2-bin
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
