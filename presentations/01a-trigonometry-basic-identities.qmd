@@ -15,9 +15,10 @@ classoption: t
 
 ## Contents
 
-1. Angles and points on the unit circle
-2. Trigonometric functions as coordinates
-3. Basic trigonometric identities
+\tableofcontents
+
+
+# Angles and points on the unit circle
 
 ## The unit circle
 
@@ -34,13 +35,9 @@ classoption: t
 :::
 ::::
 
-
 ## Example
 
-
 If $P(\sqrt{3}/2, y)$ is a point on the unit circle, find the value of $y$.
-
-
 
 ## Angles and points on the unit circle
 
@@ -115,6 +112,8 @@ $\Rightarrow$ All angles $\theta + 2k \pi$ with $k \in \mathbb{Z}$ give the same
 ![](./images/01-trigonometry/unit-circle-angle-2pi.svg){fig-align="center" width="50%"}
 
 
+# Trigonometric functions as coordinates
+
 ## Finding the coordinates of a point
 
 Given an angle $\theta$, find the coordinates of $P(x, y)$.
@@ -172,6 +171,10 @@ Let $\theta$ be an angle with point $P(x, y)$.
 ## Example
 
 Given that $\displaystyle \theta = \frac{\pi}{6}$, find the values of all 6 trigonometric functions.
+
+
+# Basic trigonometric identities
+
 
 ## Fundamental identity
 
