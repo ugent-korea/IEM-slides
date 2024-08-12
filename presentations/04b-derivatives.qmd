@@ -7,12 +7,9 @@ format:
     theme: Pittsburgh
     colortheme: default
     fonttheme: default
-    header-includes: |
-      \setbeamertemplate{frametitle}[default][left]
-      \setbeamertemplate{footline}[frame number]
-      \usepackage{empheq}
-      \newcommand{\red}[1]{\color{red}{#1}}
-      \newcommand{\blue}[1]{\color{blue}{#1}}
+    include-in-header:
+      - file: header.tex
+
 classoption: t
 jupyter: python3    
 ---
