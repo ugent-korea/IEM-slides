@@ -1,1 +1,1 @@
-Sitemap: https://jvkersch.github.io/engineering-math/sitemap.xml
+Sitemap: https://ugent-korea.github.io/IEM-slides/sitemap.xml
