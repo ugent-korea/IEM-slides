@@ -15,12 +15,7 @@ classoption: t
 
 ## Overview
 
-1. Reflection identities
-1. Shift formulas
-1. Addition/subtraction
-1. Double/half angle
-1. Sum-to-product
-1. Product-to-sum
+\tableofcontents
 
 ## Notes for this chapter
 
@@ -29,6 +24,8 @@ classoption: t
 - Often, knowing the derivation of a formula will also help you remember it.
 - Follow along with the lectures to fill in missing steps.
 
+
+# Reflection identities
 
 ## Reflection across the $x$-axis (even/odd identities)
 
@@ -68,6 +65,8 @@ Formulas:
 :::
 ::::
 
+# Shift formulas
+
 ## Shift formulas (by $\pi$)
 
 :::: {.columns }
@@ -99,6 +98,8 @@ Formulas:
 - Proof skipped.
 - **Very important formulas** to turn $\sin$ into $\cos$ and vice versa.
 
+# Addition/subtraction formulas
+
 ## Addition/subtraction formulas (for $\sin$ and $\cos$)
 
 Formulas:
@@ -127,6 +128,7 @@ Formulas:
             \tan(\alpha - \beta) & = \frac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta}
 \end{empheq}
 
+# Double/half angle formulas
 
 ## Double-angle formulas ($2\theta \to \theta$)
 
@@ -166,6 +168,8 @@ These formulas are useful to compute integrals of powers of $\sin$ and $\cos$.
 ## Example
 
 Express $\cos^2 x \sin^2 x$ as a combination of sines and cosines, without any powers.
+
+# Formulas for product to sum and sum to product
 
 ## Product-to-sum formulas
 
