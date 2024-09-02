@@ -15,13 +15,7 @@ classoption: t
 
 ## Overview
 
-1. Reflection identities
-1. Shift formulas
-1. Addition/subtraction
-1. Double/half angle
-1. Sum-to-product
-1. Product-to-sum
-1. Graphs of trigonometric functions
+\tableofcontents
 
 ## Notes for this chapter
 
@@ -30,6 +24,8 @@ classoption: t
 - Often, knowing the derivation of a formula will also help you remember it.
 - Follow along with the lectures to fill in missing steps.
 
+
+# Reflection identities
 
 ## Reflection across the $x$-axis (even/odd identities)
 
@@ -69,6 +65,8 @@ Formulas:
 :::
 ::::
 
+# Shift formulas
+
 ## Shift formulas (by $\pi$)
 
 :::: {.columns }
@@ -100,6 +98,8 @@ Formulas:
 - Proof skipped.
 - **Very important formulas** to turn $\sin$ into $\cos$ and vice versa.
 
+# Addition/subtraction formulas
+
 ## Addition/subtraction formulas (for $\sin$ and $\cos$)
 
 Formulas:
@@ -128,6 +128,7 @@ Formulas:
             \tan(\alpha - \beta) & = \frac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta}
 \end{empheq}
 
+# Double/half angle formulas
 
 ## Double-angle formulas ($2\theta \to \theta$)
 
@@ -168,6 +169,8 @@ These formulas are useful to compute integrals of powers of $\sin$ and $\cos$.
 
 Express $\cos^2 x \sin^2 x$ as a combination of sines and cosines, without any powers.
 
+# Formulas for product to sum and sum to product
+
 ## Product-to-sum formulas
 
 Formulas:
@@ -191,38 +194,3 @@ Formulas:
             \cos \alpha - \cos \beta & = - 2\sin\left(\frac{\alpha+\beta}{2}\right) \sin\left(\frac{\alpha-\beta}{2}\right)
 \end{empheq}
 
-
-## Graphs of sine/cosine
-
-:::: {.columns }
-::: {.column width="50%"}
-![](./images/01-trigonometry/graph-sine.svg)
-:::
-::: {.column width="50%"}
-![](./images/01-trigonometry/graph-cosine.svg)
-:::
-::::
-
-The sine and cosine: 
-
-- Are defined for every real number.
-- Oscillate between -1 and +1.
-- Repeat themselves every $2 \pi$ radians (**fundamental period**).
-
-## Graph of the tangent function
-
-![](./images/01-trigonometry/graph-tangent.svg){fig-align=center width="75%"}
-
-The tangent function:
-
-- Is defined for every real number, **except multiples of $\pi/2$**.
-- Can take on arbitrary values.
-- Repeats itself every $\pi$ radians (fundamental period).
-
-## Example
-
-Find the fundamental period of $\sin(2 x)$.
-
-##
-
-![](./images/01-trigonometry/sine-wave-beach.jpeg){fig-align=center}
