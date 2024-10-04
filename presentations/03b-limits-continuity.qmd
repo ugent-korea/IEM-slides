@@ -242,7 +242,7 @@ In particular:
 
 If $f(x)$ is continuous and $\lim_{x \to a} g(x) = b$, then
 $$
-    \lim_{x \to a} f(g(x)) = f(b) = f\left( \lim_{x \to b} g(x) \right).
+    \lim_{x \to a} f(g(x)) = f(b) = f\left( \lim_{x \to a} g(x) \right).
 $$
 
 Example: $\displaystyle \lim_{x \to 2} \sin\left( \frac{2-x}{4-x^2}\pi\right)$
