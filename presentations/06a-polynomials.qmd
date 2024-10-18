@@ -65,7 +65,7 @@ For every two polynomials $P(x)$ and $D(x)$, we can write the rational function 
 $$
     \frac{P(x)}{D(x)} = Q(x) + \frac{R(x)}{D(x)},
 $$
-with $P(x)$ the **quotient** and $R(x)$ the **remainder**. In other words
+with $Q(x)$ the **quotient** and $R(x)$ the **remainder**. In other words
 $$
     P(x) = Q(x) D(x) + R(x).
 $$
