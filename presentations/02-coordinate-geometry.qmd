@@ -231,10 +231,20 @@ Two lines are ...
 
 ![](./images/02-coordinate-geometry/par-perp.svg){fig-align="center" height="150"}
 
-In general, the angle $\theta$ between two lines is determined by
+## Angle between two lines
+
+:::: {.columns}
+::: {.column width="50%"}
+In general, the angle $\theta$ between two lines is given by
 $$
-  \tan \theta = \left| \frac{m_1 - m_2}{1 + m_1m_2} \right|.
+  \tan \theta = \left| \frac{m_1 - m_2}{1 + m_1m_2} \right|,
 $$
+where $m_1$ and $m_2$ are the slopes of the lines.
+:::
+::: {.column width="50%"}
+![](./images/02-coordinate-geometry/angle.svg){fig-align="center" height="150"}
+:::
+::::
 
 ## Example
 
