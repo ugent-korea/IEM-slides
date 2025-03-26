@@ -7,10 +7,8 @@ format:
     theme: Pittsburgh
     colortheme: default
     fonttheme: default
-    header-includes: |
-      \setbeamertemplate{frametitle}[default][left]
-      \setbeamertemplate{footline}[frame number]
-      \usepackage{empheq}
+    include-in-header:
+      - file: header.tex
 classoption: t
 ---
 
