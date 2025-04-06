@@ -139,4 +139,8 @@ Factorize $P(x) = x^4 + 2x^3 + 2x^2 + 2x + 1$.
 
 In other words, if $z = \alpha +i \beta$ is a root with multiplicity $p$, then $\bar{z} = \alpha - i \beta$ is also a root with multiplicity $p$.
 
+##
 
+![](images/06-polynomials/roots.png){fig-align="center" height="85%"}
+
+Source: _The beauty of roots_, https://arxiv.org/pdf/2310.00326.
