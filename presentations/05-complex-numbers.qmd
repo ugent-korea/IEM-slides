@@ -23,7 +23,16 @@ classoption: t
 
 ![](images/05-complex-numbers/calvin-and-hobbes.png)
 
-## Motivation: solving quadratic equations
+## Motivation: working with "impossible" numbers
+
+At first, this expression looks like complete nonsense:
+$$
+    \sqrt{1 + \sqrt{-3}} + \sqrt{1 - \sqrt{-3}}
+$$
+
+But is it really?
+
+## Benefit: solving quadratic equations
 
 Find $x$ so that $x^2 - 2x + 2 = 0$.
 
