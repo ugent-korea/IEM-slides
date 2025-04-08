@@ -116,11 +116,11 @@ $$
 
 If $z$ is in quadrant 1 or 4, then
 $$
-    \theta = \tan^{1}(\frac{y}{x}).
+    \theta = \tan^{-1}(\frac{y}{x}).
 $$
 Otherwise ($z$ in quadrant 2 or 3)
 $$
-    \theta = \pi + \tan^{1}(\frac{y}{x}).
+    \theta = \pi + \tan^{-1}(\frac{y}{x}).
 $$
 
 
