@@ -77,29 +77,17 @@ Compute $\displaystyle \lim_{x \to 2} f(x)$, with $f(x)$ given by
 
 ## One-sided limits
 
-Sometimes the limit exists on "one side" of the function.
+Sometimes the limit is different depending on which side you approach $a$.
 
+![](./images/03-limits-continuity/left-right-limit.svg){fig-align="center" width="50%"}
 
-:::: {.columns}
-::: {.column width="48%"}
 $$
-  \lim_{x\to \pi/2} \tan x = ?
+  \lim_{x\to 0} f(x) = ?
 $$
 
-- $+\infty$ when $x \to 0$ from right
-- $-\infty$ when $x \to 0$ from left
+- $+2$ when $x \to 0$ from left
+- $-2$ when $x \to 0$ from right
 
-:::
-
-::: {.column width="4%"}
-:::
-
-::: {.column width="48%"}
-![](./images/03-limits-continuity/tan-limit.svg)
-
-:::
-
-::::
 
 ## Definition
 
