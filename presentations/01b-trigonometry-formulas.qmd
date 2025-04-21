@@ -194,3 +194,6 @@ Formulas:
             \cos \alpha - \cos \beta & = - 2\sin\left(\frac{\alpha+\beta}{2}\right) \sin\left(\frac{\alpha-\beta}{2}\right)
 \end{empheq}
 
+##
+
+![](./images/01-trigonometry/hoodie-formulas.jpg){fig-align="center"}
