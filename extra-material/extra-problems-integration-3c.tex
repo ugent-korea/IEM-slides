@@ -1,0 +1,71 @@
+\documentclass{article}
+
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{parskip}
+
+\DeclareMathOperator{\sgn}{sgn}
+
+
+\title{Problem 3c -- Extra Problems: Integration}
+\author{Introduction to Engineering Mathematics}
+%\date{May 2025}
+
+\begin{document}
+\maketitle
+
+For this problem, we need a number of facts that are not described explicitly in the course notes, but that can be derived in a similar way as was done for other inverse trigonometric functions.
+
+\section{Domain and range of the inverse secant}
+
+First, the inverse secant function $\sec^{-1}(x)$ is defined for all $x$ such that $|x| \ge 1$. When $x \ge 1$, we have that $0 \le \sec^{-1}(x) < \pi / 2$, and when $x \le -1$, we have that $\pi/2 < \sec^{-1}(x) \le \pi$. This follows from the definition of $\sec^{-1}(x)$, which we don't cover here.
+
+\section{Derivative of the inverse secant}
+
+Secondly, the derivative of $\sec^{-1}(x)$ is given by
+\[
+    \frac{d}{dx} \sec^{-1}(x) = 
+\]
+This follows from the chain rule: starting from the cancellation property
+\[
+    \sec \left( \sec^{-1}(x) \right) = x,
+\]
+we take the derivative of both sides to obtain
+\[
+    \frac{d}{dx} \sec^{-1}(x) = \frac{1}{x \tan\left( \sec^{-1}(x) \right)}.
+\]
+It remains to simplify $\tan \left( \sec^{-1}(x) \right)$. We distinguish two cases: when $x \ge 1$, we have that $0 \le \sec^{-1}(x) < \pi/2$, and therefore
+\[
+    \tan \left( \sec^{-1}(x) \right) = \sqrt{x^2 - 1} \quad \text{(when $x \ge 1$)}
+\]
+(you should check this). On the other hand, when $x \le -1$, we have $\pi/2 < \sec^{-1}(x) \le \pi$ and therefore
+\[
+    \tan \left( \sec^{-1}(x) \right) = - \sqrt{x^2 - 1} \quad \text{(when $x \le -1$)}
+\]
+(likewise, please check this). These two cases can be summarized into one expression by using the so-called \emph{sign function}:
+\[
+    \sgn(x) = \begin{cases}
+        \phantom{+}1 & \text{when $x > 0$} \\
+        -1 & \text{when $x < 0$}
+    \end{cases}
+\]
+so that
+\[
+\tan \left( \sec^{-1}(x) \right) = \sgn(x) \sqrt{x^2 - 1}
+\]
+irrespective of $x$.
+
+The derivative of $\sec^{-1}(x)$ therefore becomes
+\[
+    \frac{d}{dx} \sec^{-1}(x) = \frac{\sgn(x)}{x \sqrt{x^2 - 1}}.
+\]
+
+\section{Solving the integral}
+
+We can now solve the problem at hand: by integration by parts, we have that
+\begin{align*}
+    \int x \sec^{-1}(x) \, dx & = \frac{x^2}{2} \sec^{-1}(x) - \frac{1}{2} \int x^2 \frac{d}{dx} \sec^{-1}(x) \, dx \\
+    & = \frac{x^2}{2} \sec^{-1}(x) - \frac{1}{2} \sgn(x) \int \frac{x}{\sqrt{x^2 - 1}} \, dx \\
+    & = \frac{x^2}{2} \sec^{-1}(x) -  \frac{1}{2} \sgn(x) \sqrt{x^2 - 1} + C.
+\end{align*}
+
+\end{document}
