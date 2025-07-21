@@ -17,6 +17,8 @@ classoption: t
 
 \tableofcontents
 
+# Pascal's triangle
+
 ## Pascal's triangle
 
 Expand the following expressions and look at the coefficients.
@@ -57,6 +59,8 @@ Figures: Wikipedia.
 
 Use Pascal's triangle to expand $\displaystyle \left(2x + \frac{1}{x}\right)^5$.
 
+# Binomial coefficients
+
 ## Binomial coefficients
 
 - Factorial: $n! = n(n-1)(n-2) \cdots 2 \cdot 1$.
@@ -77,6 +81,8 @@ For all $n$ and $k \le n$:
 \end{align*}
 
 ## Rewriting Pascal's triangle using binomial coefficients
+
+# The binomial theorem
 
 ## The binomial expansion
 
