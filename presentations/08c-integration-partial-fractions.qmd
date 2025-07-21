@@ -13,6 +13,10 @@ format:
 classoption: t
 ---
 
+## Contents
+
+\tableofcontents
+
 ## What are partial fractions?
 
 Every rational function can be written as a sum of "simple" partial fractions. For example

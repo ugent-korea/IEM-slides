@@ -15,11 +15,7 @@ classoption: t
 
 ## Contents
 
-- Remainder theorems
-- Restrictions on the number of roots
-- Fundamental theorem of algebra
-- Complete factorization theorem
-- Conjugate zeros theorem
+\tableofcontents
 
 ## Overview
 

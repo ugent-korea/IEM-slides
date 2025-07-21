@@ -13,13 +13,9 @@ format:
 classoption: t
 ---
 
-## Overview
+## Contents
 
-- Motivation
-- Number systems
-- Graphical representation of complex numbers
-- Modules, argument, complex conjugate
-- Complex arithmetic
+\tableofcontents
 
 ![](images/05-complex-numbers/calvin-and-hobbes.png)
 

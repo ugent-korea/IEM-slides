@@ -16,8 +16,7 @@ jupyter: python3
 
 ## Contents
 
-- Implicit differentiation
-- Velocity and acceleration
+\tableofcontents
 
 ## Implicit differentiation
 

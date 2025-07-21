@@ -13,15 +13,9 @@ format:
 classoption: t
 ---
 
-## Overview
+## Contents
 
-1. Trigonometry in **right-angled** triangles
-1. Trigonometry in **arbitrary** triangles
-   - Law of sines
-   - Law of cosines
-   - Law of tangents
-1. Formulas for area and perimeter
-1. Height and distance problems
+\tableofcontents
 
 ## Terminology
 

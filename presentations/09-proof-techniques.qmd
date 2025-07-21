@@ -13,16 +13,9 @@ format:
 classoption: t
 ---
 
-## Overview
+## Contents
 
-- Logical statements
-  - Implication
-  - Equivalence
-  - Single statement
-- Proof techniques
-  1. Direct proof
-  2. Proof by contraposition
-  3. Proof by contradiction
+\tableofcontents
   4. Case enumeration
   5. Induction
 

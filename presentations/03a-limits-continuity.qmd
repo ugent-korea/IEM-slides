@@ -15,12 +15,7 @@ classoption: t
 
 ## Contents
 
-1. Limits
-2. One-sided limits
-3. Examples
-4. Limit laws
-5. Polynomial/rational functions
-6. The squeeze theorem
+\tableofcontents
 
 ## Motivation
 

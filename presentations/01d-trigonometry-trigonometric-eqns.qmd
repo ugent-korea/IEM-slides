@@ -13,10 +13,9 @@ format:
 classoption: t
 ---
 
-## Overview
+## Contents
 
-1. Word problems: solutions
-2. Trigonometric equations
+\tableofcontents
 
 # Solutions of the word problems
 

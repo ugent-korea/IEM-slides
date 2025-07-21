@@ -15,10 +15,7 @@ classoption: t
 
 ## Contents
 
-- Definite/indefinite integral
-- Relation with area
-- Properties
-- Examples
+\tableofcontents
 
 ## Indefinite integrals as antiderivatives
 

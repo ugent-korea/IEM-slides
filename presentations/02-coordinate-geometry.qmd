@@ -16,11 +16,7 @@ classoption: t
 
 ## Contents
 
-1. Coordinate geometry
-1. Locus of points
-1. Equations of circles
-1. Equations of lines
-1. Exercise
+\tableofcontents
 
 ## What is coordinate geometry?
 

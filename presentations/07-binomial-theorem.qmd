@@ -13,11 +13,9 @@ format:
 classoption: t
 ---
 
-## Overview
+## Contents
 
-- Pascal's triangle
-- Binomial coefficients
-- Binomial theorem
+\tableofcontents
 
 ## Pascal's triangle
 

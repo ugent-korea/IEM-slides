@@ -13,12 +13,9 @@ format:
 classoption: t
 ---
 
-## Overview
+## Contents
 
-- Integration by substitution
-- Trigonometric integration
-- Integration by parts
-- Reduction formulae
+\tableofcontents
 
 ##
 

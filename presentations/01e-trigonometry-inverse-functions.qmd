@@ -12,10 +12,9 @@ format:
 classoption: t
 ---
 
-## Overview
+## Contents
 
-1. Definition of the inverse trigonometric functions
-1. Examples
+\tableofcontents
 
 ## Inverting the sine function
 

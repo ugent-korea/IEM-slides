@@ -13,12 +13,9 @@ format:
 classoption: t
 ---
 
-## Overview
+## Contents
 
-- Inverse trigonometric substitution
-- Other substitutions
-  - Higher order roots
-  - $\tan\frac{\theta}{2}$-substitution
+\tableofcontents
 
 # Inverse trigonometric substitution
 

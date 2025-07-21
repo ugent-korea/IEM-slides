@@ -15,15 +15,7 @@ classoption: t
 
 ## Contents
 
-- Motivation: tangent lines
-- Definition of the derivative
-- Relation with continuity
-- Derivatives of
-  - Polynomials
-  - Exponential/logarithmic function
-  - Trigonometric functions
-- Sum/product rule
-- Chain rule
+\tableofcontents
 
 ## Motivation: tangent lines
 

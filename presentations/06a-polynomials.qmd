@@ -13,10 +13,9 @@ format:
 classoption: t
 ---
 
-## Overview
+## Contents
 
-- Polynomial long division
-- Synthetic division of polynomials
+\tableofcontents
 
 ## Reminder: what is a polynomial?
 
