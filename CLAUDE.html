@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
 
-<title>Introduction to Engineering Mathematics</title>
+<title>claude</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -80,59 +114,96 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Introduction to Engineering Mathematics</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Prof.&nbsp;Joris Vankerschaver </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="presentations" class="level2">
-<h2 class="anchored" data-anchor-id="presentations">Presentations</h2>
+<section id="claude.md" class="level1">
+<h1>CLAUDE.md</h1>
+<p>This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.</p>
+<section id="project-overview" class="level2">
+<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
+<p>This is a Quarto-based educational repository containing slide presentations for an “Introduction to Engineering Mathematics” course. The presentations cover topics from trigonometry to integration and are rendered as Beamer PDFs for academic use.</p>
+</section>
+<section id="common-commands" class="level2">
+<h2 class="anchored" data-anchor-id="common-commands">Common Commands</h2>
+<section id="rendering-presentations" class="level3">
+<h3 class="anchored" data-anchor-id="rendering-presentations">Rendering Presentations</h3>
+<p><strong>Preview a single presentation:</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview presentations/<span class="op">&lt;</span>name-of-slidedeck.qmd<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Render a single presentation to PDF:</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render presentations/<span class="op">&lt;</span>name-of-slidedeck.qmd<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Render all presentations using Make:</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> presentations</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> all</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Render individual presentation using Make:</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> presentations</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> <span class="op">&lt;</span>presentation-name<span class="op">&gt;</span>.pdf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="publishing" class="level3">
+<h3 class="anchored" data-anchor-id="publishing">Publishing</h3>
+<p><strong>Publish to GitHub Pages:</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish gh-pages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="environment-setup" class="level3">
+<h3 class="anchored" data-anchor-id="environment-setup">Environment Setup</h3>
+<p><strong>Create Conda environment for Python code execution:</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--yes</span> <span class="at">-n</span> engineering-math python=3.10 jupyter matplotlib numpy</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate engineering-math</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="repository-structure" class="level2">
+<h2 class="anchored" data-anchor-id="repository-structure">Repository Structure</h2>
 <ul>
-<li><a href="./presentations/01a-trigonometry-basic-identities.pdf">1 - Trigonometry (1/5): Introduction</a></li>
-<li><a href="./presentations/01b-trigonometry-formulas.pdf">1 - Trigonometry (2/5): Formulas</a></li>
-<li><a href="./presentations/01c-trigonometry-triangles.pdf">1 - Trigonometry (3/5): Geometry of triangles</a></li>
-<li><a href="./presentations/01d-trigonometry-trigonometric-eqns.pdf">1 - Trigonometry (4/5): Trigonometric equations</a></li>
-<li><a href="./presentations/01e-trigonometry-inverse-functions.pdf">1 - Trigonometry (5/5): Inverse trigonometric functions</a></li>
-<li><a href="./presentations/02-coordinate-geometry.pdf">2 - Coordinate Geometry</a></li>
-<li><a href="./presentations/03a-limits-continuity.pdf">3 - Limits and Continuity (1/2)</a></li>
-<li><a href="./presentations/03b-limits-continuity.pdf">3 - Limits and Continuity (2/2)</a></li>
-<li><a href="./presentations/04a-derivatives.pdf">4 - Derivatives (1/2)</a></li>
-<li><a href="./presentations/04b-derivatives.pdf">4 - Derivatives (2/2)</a></li>
-<li><a href="./presentations/05-complex-numbers.pdf">5 - Complex Numbers</a></li>
-<li><a href="./presentations/06a-polynomials.pdf">6 - Polynomials (1/2)</a></li>
-<li><a href="./presentations/06b-polynomials.pdf">6 - Polynomials (2/2)</a></li>
-<li><a href="./presentations/07-binomial-theorem.pdf">7 - The Binomial Theorem</a></li>
-<li><a href="./presentations/08a-integration-definitions.pdf">8 - Integration: Definitions</a></li>
-<li><a href="./presentations/08b-integration-techniques.pdf">8 - Integration: Techniques</a></li>
-<li><a href="./presentations/08c-integration-partial-fractions.pdf">8 - Integration: Partial Fractions</a></li>
-<li><a href="./presentations/08d-integration-inverse-trig.pdf">8 - Integration: Inverse Trigonometric Substitutions</a></li>
-<li><a href="./presentations/08e-integration-applications.pdf">8 - Integration: Applications</a></li>
-<li><a href="./presentations/09-proof-techniques.pdf">9 - Proof Techniques</a></li>
+<li><code>presentations/</code> - Main content directory containing Quarto markdown (.qmd) files for each presentation</li>
+<li><code>presentations/images/</code> - Subject-specific image folders organized by topic (01-trigonometry/, 02-coordinate-geometry/, etc.)</li>
+<li><code>presentations/header.tex</code> - Common LaTeX header with Beamer styling and custom commands</li>
+<li><code>presentations/Makefile</code> - Build automation for rendering all presentations</li>
+<li><code>extra-material/</code> - Additional LaTeX documents and problem sets</li>
+<li><code>_quarto.yml</code> - Quarto project configuration (website type, output directory)</li>
+<li><code>index.qmd</code> - Main landing page listing all presentations</li>
+<li><code>_freeze/</code> - Quarto cache directory for executed code blocks</li>
+</ul>
+</section>
+<section id="architecture-notes" class="level2">
+<h2 class="anchored" data-anchor-id="architecture-notes">Architecture Notes</h2>
+<section id="presentation-format" class="level3">
+<h3 class="anchored" data-anchor-id="presentation-format">Presentation Format</h3>
+<ul>
+<li>Presentations use Quarto markdown with YAML frontmatter</li>
+<li>Target format is Beamer (LaTeX) for PDF output<br>
+</li>
+<li>Common styling defined in <code>presentations/header.tex</code></li>
+<li>Images use SVG format when possible for scalability</li>
+</ul>
+</section>
+<section id="content-organization" class="level3">
+<h3 class="anchored" data-anchor-id="content-organization">Content Organization</h3>
+<ul>
+<li>Each major topic has multiple presentation parts (e.g., 01a, 01b, 01c for trigonometry)</li>
+<li>Images organized by topic in subdirectories under <code>presentations/images/</code></li>
+<li>Mathematical drawings created with Inkscape using IBM colorblind-friendly palette</li>
+</ul>
+</section>
+<section id="python-integration" class="level3">
+<h3 class="anchored" data-anchor-id="python-integration">Python Integration</h3>
+<ul>
+<li>Some presentations contain embedded Python code blocks</li>
+<li>Quarto executes Python code during rendering and inserts output</li>
+<li>Requires <code>engineering-math</code> Conda environment for mathematical packages</li>
+</ul>
+</section>
+<section id="visual-guidelines" class="level3">
+<h3 class="anchored" data-anchor-id="visual-guidelines">Visual Guidelines</h3>
+<ul>
+<li>Colors follow the 5-shade IBM colorblind-friendly palette</li>
+<li>Color palette file available in <code>tools/ibm.gpl</code></li>
 </ul>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
