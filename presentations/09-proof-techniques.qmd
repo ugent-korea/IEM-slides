@@ -16,8 +16,8 @@ classoption: t
 ## Contents
 
 \tableofcontents
-  4. Case enumeration
-  5. Induction
+
+# Logical foundations
 
 ## Proving an implication 
 
@@ -39,6 +39,8 @@ For example:
 - For $n = 10$, $2n = 20$ is even, but $10$ is not odd.
 
 
+# Direct proof techniques
+
 ## Technique 1: direct proof
 
 - Start from $p$, then work your way to $q$.
@@ -48,6 +50,8 @@ Example:
 
 - In words: *For each positive real number $x$, there exists a real number $y$ such that $y(y+1) = x$.*
 - Mathematically: $\forall x > 0 \in \mathbb{R} \Rightarrow \exists y \in \mathbb{R}: y(y+1) = x$.
+
+# Indirect proof techniques
 
 ## Technique 2: Proof by contraposition
 
@@ -92,6 +96,8 @@ Example: Prove that $\sqrt{2}$ is irrational.
 - Don't forget any subcases!
 
 Example: Show that for all $x, y \in \mathbb{R}$, $|xy| = |x||y|$.
+
+# Proof by induction
 
 ## Technique 5: Proof by induction
 
