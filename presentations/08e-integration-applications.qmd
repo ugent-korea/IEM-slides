@@ -17,6 +17,8 @@ classoption: t
 
 \tableofcontents
 
+# Area under curves
+
 ## Reminder: area under the curve
 
 &nbsp;
@@ -27,6 +29,8 @@ $$
     \text{Area} = \int_a^{c_1} f(x) dx - \int_{c_1}^{c_2} f(x) dx + \int_{c_2}^b f(x) dx.
 $$
 
+
+# Area between curves
 
 ## Area between two curves
 
