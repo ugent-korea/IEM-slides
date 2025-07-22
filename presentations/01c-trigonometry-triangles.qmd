@@ -2,20 +2,6 @@
 title: "Trigonometry (3/5): Geometry of Triangles"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
-format:
-  beamer:
-    theme: Pittsburgh
-    colortheme: default
-    fonttheme: default
-    toc: true
-    toc-depth: 2
-    slide-level: 3
-    include-in-header:
-      - file: header.tex
-    template-partials:
-      - toc.tex
-
-classoption: t
 ---
 
 # Right-angled triangles

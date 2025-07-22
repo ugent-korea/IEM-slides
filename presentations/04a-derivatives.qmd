@@ -2,20 +2,6 @@
 title: Derivatives (1/2)
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
-format:
-  beamer:
-    theme: Pittsburgh
-    colortheme: default
-    fonttheme: default
-    toc: true
-    toc-depth: 2
-    slide-level: 3
-    include-in-header:
-      - file: header.tex
-    template-partials:
-      - toc.tex
-
-classoption: t
 ---
 
 # Motivation and definition
