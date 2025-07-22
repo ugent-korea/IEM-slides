@@ -7,17 +7,19 @@ format:
     theme: Pittsburgh
     colortheme: default
     fonttheme: default
+    toc: true
+    toc-depth: 2
+    slide-level: 3
     include-in-header:
       - file: header.tex
+    template-partials:
+      - toc.tex
 
 classoption: t
 ---
 
-## Contents
 
-\tableofcontents
-
-## Motivation: tangent lines
+### Motivation: tangent lines
 
 In the previous class, we managed to compute the slope of the tangent line to the parabola $y = x^2$ by computing the limit
 $$
@@ -28,7 +30,7 @@ How would we do this for an **arbitrary curve** $y = f(x)$?
 
 ![](./images/04-derivatives/tangents.svg){fig-align="center"}
 
-## Derivative of a function
+### Derivative of a function
 
 We define the **derivative of $f(x)$ at $x = a$** ("f prime") as
 $$
@@ -43,15 +45,15 @@ This is sometimes easier to compute.
 
 If $f'(a)$ exists, we say that $f(x)$ is **differentiable** at $x = a$.
 
-## Examples
+### Examples
 
 Compute the derivative of $f(x) = 3x^2 + 7x - 5$ at $x = 1$.
 
-## Examples
+### Examples
 
 Compute the derivative of $f(x) = |x|$ at $x = a$.
 
-## The derivative as a function
+### The derivative as a function
 
 By letting $a$ vary in $f'(a)$, we obtain a function given by
 $$
@@ -64,11 +66,11 @@ $$
 $$
 all mean the same thing.
 
-## Example
+### Example
 
 Show that $\displaystyle \frac{d}{dx} \sqrt{x} = \frac{1}{2\sqrt{x}}$.
 
-## Properties of differentiable functions
+### Properties of differentiable functions
 
 We say that $y = f(x)$ is **differentiable on an interval $[a, b]$** if 
 
@@ -76,14 +78,14 @@ We say that $y = f(x)$ is **differentiable on an interval $[a, b]$** if
 - At $x = a$, the *right derivative* exists: $$f'(a) = \lim_{h \to 0+}\frac{f(a + h) - f(a)}{h}.$$
 - At $x = b$, the *left derivative* exists: $$f'(b) = \lim_{h \to 0-}\frac{f(b + h) - f(b)}{h}.$$
 
-## Link between differentiability and continuity
+### Link between differentiability and continuity
 
 - If $f(x)$ is differentiable at $x = a$, then $f(x)$ is also continuous at $x = a$.
 - The converse is not necessarily true!
 
 Example: Show that $y = |x|$ is differentiable for all $x \ne 0$.
 
-## Higher-order derivatives
+### Higher-order derivatives
 
 Now that we can take the derivative of a function, we can take the derivative of the derivative, and so on...
 
@@ -95,7 +97,7 @@ Now that we can take the derivative of a function, we can take the derivative of
 | $f^{(n)}(x) = \frac{d}{dx} f^{(n-1)}(x)$ | $n$th-order derivative |
 
 
-## Derivative of a polynomial: basic rules
+### Derivative of a polynomial: basic rules
 
 1. $$
     \frac{d}{dx} c = 0
@@ -104,7 +106,7 @@ Now that we can take the derivative of a function, we can take the derivative of
     \frac{d x^n}{dx} = nx^{n-1} \quad \text{for $n \ne 0$}
     $$
 
-## Derivative of a polynomial: basic rules
+### Derivative of a polynomial: basic rules
 
 3. $$
     \frac{d}{dx}(cf(x)) = c\frac{d f}{dx}
@@ -113,12 +115,12 @@ Now that we can take the derivative of a function, we can take the derivative of
  \frac{d}{dx}(f(x) + g(x)) = \frac{d f}{dx} + \frac{dg}{dx}
  $$
 
-## Examples
+### Examples
 
 Compute the derivative of $f(x) = 3x^2 + 7x - 5$.
 
 
-## Derivative of the exponential/logarithm
+### Derivative of the exponential/logarithm
 
 \begin{align*}
     \frac{d}{dx} e^x & = e^x \\
@@ -136,7 +138,7 @@ For a different base:
 
 
 
-## Product and quotient rules
+### Product and quotient rules
 
 \begin{align*}
   \frac{d}{dx}(f(x)g(x)) & = f'(x) g(x) + f(x) g'(x) \\
@@ -150,7 +152,7 @@ Examples: Compute
 
 
 
-## Derivatives of trigonometric functions
+### Derivatives of trigonometric functions
 
 \begin{align*}
     \frac{d}{dx} \sin x & = \cos x \\
@@ -158,7 +160,7 @@ Examples: Compute
     \frac{d}{dx} \tan x & = \frac{1}{\cos^2 x}
 \end{align*}
 
-## Examples
+### Examples
 
 Using the rules from the previous slide, show that
 
@@ -174,7 +176,7 @@ $$
 $$
 (This will be easier once we cover the **chain rule**)
 
-## Derivatives of inverse trigonometric functions 
+### Derivatives of inverse trigonometric functions 
 
 \begin{align*}
     \frac{d}{dx} \arcsin x & = \frac{1}{\sqrt{1 - x^2}} \\
@@ -184,7 +186,7 @@ $$
 
 These rules can be derived by means of *implicit differentation*, which we will cover later.
 
-## The chain rule
+### The chain rule
 
 - Useful for composite functions $F = \red{f} \circ \blue{g}$ ("$\red{f}$ after $\blue{g}$")
 - If $\red{f}(x)$ and $\blue{g}(x)$ are differentiable, then the composite function $F(x)$ is also differentiable and
@@ -192,10 +194,10 @@ $$
     F'(x) = \red{f'}(\blue{g}(x)) \cdot \blue{g'}(x).
 $$
 
-## Example
+### Example
 
 Compute $\displaystyle \frac{d}{dx} e^{\sqrt{\cos x}}$.
 
-## Example
+### Example
 
 Compute $\displaystyle \frac{d}{dx} x^{\sin(x)}$.

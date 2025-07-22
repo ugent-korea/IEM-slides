@@ -7,17 +7,19 @@ format:
     theme: Pittsburgh
     colortheme: default
     fonttheme: default
+    toc: true
+    toc-depth: 2
+    slide-level: 3
     include-in-header:
       - file: header.tex
+    template-partials:
+      - toc.tex
 
 classoption: t
 ---
 
-## Contents
 
-\tableofcontents
-
-## Motivation
+### Motivation
 
 :::: {.columns align=center}
 
@@ -42,7 +44,7 @@ What is the slope of the line when $Q$ gets "infinitely close" to $P$?
 
 ::::
 
-## Definition of limit
+### Definition of limit
 
 ![](./images/03-limits-continuity/limit-definition.svg){fig-align="center" height="30%"}
 
@@ -56,7 +58,7 @@ $$
   - As $x$ gets closer to $a$, $f(x)$ gets closer and closer to $L$ 
 
 
-## Examples
+### Examples
 
 Compute $\displaystyle \lim_{x \to 2} f(x)$, with $f(x)$ given by 
 
@@ -64,13 +66,13 @@ Compute $\displaystyle \lim_{x \to 2} f(x)$, with $f(x)$ given by
 - $f(x) = 2$ otherwise.
 
 
-## Examples
+### Examples
 
 1. $\displaystyle \lim_{x\to -2} \frac{x^2 + x - 2}{x^2 + 5x + 6}$
 2. $\displaystyle \lim_{x \to 0} \frac{x}{\sqrt{3 + x} - \sqrt{3 - x}}$
 
 
-## One-sided limits
+### One-sided limits
 
 Sometimes the limit is different depending on which side you approach $a$.
 
@@ -84,7 +86,7 @@ $$
 - $-2$ when $x \to 0$ from right
 
 
-## Definition
+### Definition
 
 :::: {.columns}
 ::: {.column width="46%"}
@@ -119,7 +121,7 @@ $$
 
 
 
-## Relation with two-sided limit
+### Relation with two-sided limit
 
 The two-sided limit exists,
 $$
@@ -130,7 +132,7 @@ $$
     \lim_{x \to a+} f(x) = L \quad \text{and} \quad \lim_{x \to a-} f(x) = L
 $$
 
-## Examples
+### Examples
 
 
 1. $\displaystyle \lim_{x\to 0+} \sqrt{x}$
@@ -139,7 +141,7 @@ $$
 4. $\displaystyle \lim_{x\to\pi}f(x)$, where $f(x) = \sin x$ when $x < \pi$ and $f(x) = \sqrt{x - \pi}$ otherwise.
 
 
-## Limit laws
+### Limit laws
 
 1. $\lim_{x \to a} x = a$
 2. $\lim_{x \to a} c = c$
@@ -152,14 +154,14 @@ $$
    - If $m < 0$: $L$ must be different from 0.
    
    
-## Limit laws
+### Limit laws
 
 8. If $f(x) = g(x)$ for all $x \ne a$ close to $a$, then $\lim_{x \to a} f(x) = \lim_{x \to a}g(x)$.
 9. If $f(x) \le g(x)$ for all $x \ne a$ close to $a$, then $\lim_{x \to a} f(x) \le \lim_{x \to a}g(x)$.
 
 These laws also hold for one-sided limits, with appropriate modifications.
 
-## Limits of polynomials and rational functions
+### Limits of polynomials and rational functions
 
 - Polynomial: $P(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n$
   $$
@@ -172,7 +174,7 @@ These laws also hold for one-sided limits, with appropriate modifications.
       \quad \text{if $Q(a) \ne 0$}.
   $$
   
-## The squeeze theorem
+### The squeeze theorem
 
 Lets you compute the limit of a difficult function $g(x)$ "squeezed" between two simple functions $f(x)$ and $h(x)$.
 
@@ -186,11 +188,11 @@ $$
 \lim_{x \to a} g(x) = L.
 $$
 
-## Example
+### Example
 
 Compute $\displaystyle \lim_{t \to 0} t^2 \sin\left(\frac{1}{t}\right)$.
 
-##
+###
 
 ![](./images/03-limits-continuity/squeeze-theorem.png)
 

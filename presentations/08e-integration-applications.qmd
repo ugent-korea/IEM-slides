@@ -7,19 +7,21 @@ format:
     theme: Pittsburgh
     colortheme: default
     fonttheme: default
+    toc: true
+    toc-depth: 2
+    slide-level: 3
     include-in-header:
       - file: header.tex
+    template-partials:
+      - toc.tex
 
 classoption: t
 ---
 
-## Contents
-
-\tableofcontents
 
 # Area under curves
 
-## Reminder: area under the curve
+### Reminder: area under the curve
 
 &nbsp;
 
@@ -32,26 +34,26 @@ $$
 
 # Area between curves
 
-## Area between two curves
+### Area between two curves
 
 ![](./images/09-integration/area-two-curves.svg){fig-align="center"}
 
 
-## Recipe for finding the area
+### Recipe for finding the area
 
 1. Make a figure
 2. Determine intersection points
 3. Figure out which curve is upper/lower
 4. Integrate
 
-## Example
+### Example
 
 Find the area bounded by $y = \sin x$, $y = 0$, and $\displaystyle x = \frac{3\pi}{2}$.
 
-## Example
+### Example
 
 Find the area of the region between the curves $y = x^2 - 2x$ and $y = 4 - x^2$.
 
-## Example 
+### Example 
 
 Find the area of the region between $x = 12 - y^2$ and $y = -x$.

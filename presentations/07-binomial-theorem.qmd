@@ -7,19 +7,21 @@ format:
     theme: Pittsburgh
     colortheme: default
     fonttheme: default
+    toc: true
+    toc-depth: 2
+    slide-level: 3
     include-in-header:
       - file: header.tex
+    template-partials:
+      - toc.tex
 
 classoption: t
 ---
 
-## Contents
-
-\tableofcontents
 
 # Pascal's triangle
 
-## Pascal's triangle
+### Pascal's triangle
 
 Expand the following expressions and look at the coefficients.
 
@@ -36,7 +38,7 @@ Based on this pattern, what is $(a + b)^7$?
 
 Would you be able to write down $(a + b)^{27}$?
 
-##
+###
 
 :::: {.columns }
 ::: {.column width="50%"}
@@ -55,13 +57,13 @@ Would you be able to write down $(a + b)^{27}$?
 
 Figures: Wikipedia.
 
-## Example
+### Example
 
 Use Pascal's triangle to expand $\displaystyle \left(2x + \frac{1}{x}\right)^5$.
 
 # Binomial coefficients
 
-## Binomial coefficients
+### Binomial coefficients
 
 - Factorial: $n! = n(n-1)(n-2) \cdots 2 \cdot 1$.
 - Binomial coefficient (also called "n-choose-k"):
@@ -70,7 +72,7 @@ $$
 $$
 - Measures the number of ways of choosing $k$ objects from among $n$ choices.
 
-## Properties
+### Properties
 
 For all $n$ and $k \le n$:
 
@@ -80,11 +82,11 @@ For all $n$ and $k \le n$:
     {n \choose k} & = {n \choose n - k}
 \end{align*}
 
-## Rewriting Pascal's triangle using binomial coefficients
+### Rewriting Pascal's triangle using binomial coefficients
 
 # The binomial theorem
 
-## The binomial expansion
+### The binomial expansion
 
 Putting everything we've learned together, we get
 $$
@@ -95,10 +97,10 @@ $$
     (a + b)^n = \sum_{k = 0}^n {n \choose k} a^{n - k} b^k.
 $$
 
-## Example
+### Example
 
 Use the binomial expansion to expand $\displaystyle (\sqrt{x} - 1)^7$.
 
-## Visual proof of the binomial expansion (optional)
+### Visual proof of the binomial expansion (optional)
 
 ![](./images/07-binomial/binomial-proof.png){fig-align="center"}

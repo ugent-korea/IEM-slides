@@ -10,7 +10,6 @@ format:
     toc: true
     toc-depth: 2
     slide-level: 3
-    keep-tex: true
     include-in-header:
       - file: header.tex
     template-partials: 

@@ -7,84 +7,86 @@ format:
     theme: Pittsburgh
     colortheme: default
     fonttheme: default
+    toc: true
+    toc-depth: 2
+    slide-level: 3
     include-in-header:
       - file: header.tex
+    template-partials:
+      - toc.tex
 
 classoption: t
 ---
 
-## Contents
-
-\tableofcontents
 
 # Solutions of the word problems
 
-## Word problem 1 {.smaller}
+### Word problem 1 {.smaller}
 
 You see a town on a hillside at an angle of elevation of 30°. You walk 80 meters (horizontally, along the ground) and see the town at an angle of elevation of 60°. Find the height of the town above ground level.
 
-##
+###
 
-## Word problem 2 {.smaller}
+### Word problem 2 {.smaller}
 
 A man lies on the ground and observes that a temple and a flagpole on that temple subtend equal angles at his eyes. If the height of the temple is 10m and that of the flagpole is 20m, find the subtended angles and the distance between the temple and the man.
 
-##
+###
 
-## Word problem 3 {.smaller}
+### Word problem 3 {.smaller}
 
 ![](./images/01-trigonometry/crown-prince.png){width="30%"}
 ![](./images/01-trigonometry/ashin-cropped.png){width="40%"}
 
 You are standing on the fortress walls, overlooking an approaching zombie army. You observe a zombie under an angle of depression of 45° and shoot an arrow. One second later, you shoot another arrow at the same zombie under an angle of depression of 60°. How soon will the zombie reach the base of the wall?
 
-##
+###
 
 # Trigonometric equations
 
-## Overview
+### Overview
 
 - Trigonometric equation: involves $\sin$, $\cos$, $\tan$, ...
 - No general solution method (but 4 typical cases)
 - Often requires reformulating before solution can be found.
 
-## Example 1
+### Example 1
 
 Find all solutions of $\displaystyle \sin \theta = \frac{1}{2}$.
 
-## Example 2
+### Example 2
 
 Find all solutions of $\displaystyle \tan^2 \theta = 3$.
 
-## Example 3
+### Example 3
 
 Find all solutions of $2 \cos^2\theta - 7 \cos \theta + 3 = 0$.
 
-## Case 1: $\sin \theta = \sin \alpha$, with $\alpha \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$
+### Case 1: $\sin \theta = \sin \alpha$, with $\alpha \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$
 
 \begin{empheq}[box=\fbox]{equation*}
     \theta = (-1)^k \alpha + k\pi, \quad k \in \mathbb{Z}
 \end{empheq}
 
-##
+###
 
-## Case 2: $\cos \theta = \cos \alpha$, with $\alpha \in [0, \pi]$
+### Case 2: $\cos \theta = \cos \alpha$, with $\alpha \in [0, \pi]$
 
 \begin{empheq}[box=\fbox]{equation*}
     \theta = \pm \alpha + 2k\pi, \quad k \in \mathbb{Z}
 \end{empheq}
 
-##
+###
 
-## Case 3: $\tan \theta = \tan \alpha$, with $\alpha \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$
+### Case 3: $\tan \theta = \tan \alpha$, with $\alpha \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$
 
 \begin{empheq}[box=\fbox]{equation*}
     \theta = \alpha + k\pi, \quad k \in \mathbb{Z}
 \end{empheq}
 
-##
+###
 
-## Case 4: $a \cos \theta + b \sin \theta = c$
+### Case 4: $a \cos \theta + b \sin \theta = c$
 
 Necessary condition for solution to exist: $|c| \le \sqrt{a^2 + b^2}$.
 
@@ -92,33 +94,33 @@ Necessary condition for solution to exist: $|c| \le \sqrt{a^2 + b^2}$.
     \theta = \alpha \pm \beta + 2k\pi, \quad k \in \mathbb{Z}
 \end{empheq}
 
-##
+###
 
-## Example 1
+### Example 1
 
 Find all solutions of $\tan x \tan 4x = 1$.
 
-## Example 2
+### Example 2
 
 Find all solutions of $1 + \sin \theta = 2 \cos^2 \theta$.
 
-## Example 3
+### Example 3
 
 Find all solutions of $\sin 2\theta = \cos \theta$.
 
-## Example 4
+### Example 4
 
 Find all solutions of $\tan x - \cot x = \csc x$.
 
-## Example 5
+### Example 5
 
 Find all solutions of $\sin x + 2 \cos x = 1$.
 
-## Example 6
+### Example 6
 
 Find all solutions in $[0, 2\pi]$ of $\cos \theta + 1 = \sin \theta$.
 
-## Example 7
+### Example 7
 
 Find all solutions of $\cos \theta + \cos 2 \theta + \cos 3 \theta = 0$.
 

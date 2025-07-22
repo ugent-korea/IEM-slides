@@ -7,19 +7,21 @@ format:
     theme: Pittsburgh
     colortheme: default
     fonttheme: default
+    toc: true
+    toc-depth: 2
+    slide-level: 3
     include-in-header:
       - file: header.tex
+    template-partials:
+      - toc.tex
 
 classoption: t
 ---
 
-## Contents
-
-\tableofcontents
 
 ![](images/05-complex-numbers/calvin-and-hobbes.png)
 
-## Motivation: working with "impossible" numbers
+### Motivation: working with "impossible" numbers
 
 At first, this expression looks like complete nonsense:
 $$
@@ -28,7 +30,7 @@ $$
 
 But is it really?
 
-## Benefit: solving quadratic equations
+### Benefit: solving quadratic equations
 
 Find $x$ so that $x^2 - 2x + 2 = 0$.
 
@@ -40,7 +42,7 @@ $$
     \boxed{i^2 = -1.}
 $$
 
-## Number systems
+### Number systems
 
 | Symbol       | Elements                             | Used for           |
 |--------------|--------------------------------------|--------------------|
@@ -50,7 +52,7 @@ $$
 | $\mathbb{R}$ | $\mathbb{Q}$ and irrational numbers: $e$, $\pi$, ...     | Limits             |
 | $\mathbb{C}$ | $a + ib$, with $a, b \in \mathbb{R}$ | Solving equations  |
 
-## Graphical representation of complex numbers
+### Graphical representation of complex numbers
 
 :::: {.columns}
 
@@ -76,7 +78,7 @@ Argand plane:
 :::
 ::::
 
-## Example
+### Example
 
 In the complex plane, find the location of:
 
@@ -86,7 +88,7 @@ In the complex plane, find the location of:
 - $S = \{ z\in\mathbb{C}: \operatorname{Re}(z) \le 1\}$
 
 
-## Modulus and argument
+### Modulus and argument
 
 :::: {.columns .v-center-container}
 
@@ -108,7 +110,7 @@ $$
 :::
 ::::
 
-## Finding the argument (continued)
+### Finding the argument (continued)
 
 If $z$ is in quadrant 1 or 4, then
 $$
@@ -121,7 +123,7 @@ $$
 
 
 
-## Polar representation of complex numbers
+### Polar representation of complex numbers
 
 If $r$ is the modulus and $\theta$ the argument of $z = x + iy$, then
 $$
@@ -139,7 +141,7 @@ This gives us the **polar representation of $z$**:
       & = \boxed{r( \cos \theta + i \sin \theta) }
 \end{align*}
 
-## Example
+### Example
 
 Find the polar representation of 
 
@@ -147,7 +149,7 @@ Find the polar representation of
 - $z_2 = 1 + i$
 - $z_3 = - \sqrt{3} - i$
 
-## Complex conjugate
+### Complex conjugate
 
 :::: {.columns .v-center-container}
 
@@ -171,7 +173,7 @@ Properties:
 :::
 ::::
 
-## Adding and subtracting complex numbers
+### Adding and subtracting complex numbers
 
 Complex numbers can be added/subtracted component-wise: if $z = x + iy$ and $w = a + ib$, then
 \begin{align*}
@@ -195,7 +197,7 @@ This has a nice geometric interpretation via the **parallellogram rule**:
 :::
 ::::
 
-## Multiplying complex numbers
+### Multiplying complex numbers
 
 If $z = x + iy$ and $w = a + ib$, then (using $i^2 = -1$)
 \begin{align*}
@@ -208,7 +210,7 @@ Properties:
 1. $z \bar{z} = |z|^2$
 2. $\overline{zw} = \bar{z} \cdot \bar{w}$
 
-## Product of complex numbers in polar form
+### Product of complex numbers in polar form
 
 Write
 \begin{align*}
@@ -227,7 +229,7 @@ In particular, we get
 - $\operatorname{Arg}(wz) = \theta + \phi = \operatorname{Arg}(w) + \operatorname{Arg}(z)$
 
 
-## De Moivre's theorem
+### De Moivre's theorem
 
 From the product rule, we get
 \begin{align*}
@@ -240,7 +242,7 @@ $$
     \boxed{(\cos \theta + i \sin \theta)^n = \cos(n\theta) + i\sin(n \theta).}
 $$
 
-## Division of complex numbers
+### Division of complex numbers
 
 We put
 $$
@@ -261,7 +263,7 @@ $$
     \operatorname{Arg}(z/w) = \operatorname{Arg}(z) - \operatorname{Arg}(w).
 $$    
 
-## Useful properties of complex numbers
+### Useful properties of complex numbers
 
 - $\overline{z + w} = \bar{z} + \bar{w}$
 - $\overline{zw} = \bar{z} \bar{w}$
@@ -272,26 +274,26 @@ Property: to take the conjugate of a complicated expression, it suffices to take
 
 Example: Given $\displaystyle z = i \frac{Z- 1}{Z+1}$, compute $\bar{z}$.
 
-## Examples
+### Examples
 
 - Find the modulus and argument of $z = (3+5i)(4-2i)$.
 - Simplify the complex number $z = \frac{7 + 3i}{4i}$.
 
-## Examples
+### Examples
 
 Simplify the following complex numbers as much as possible:
 
 - $z = \frac{1+i}{1-i}$ 
 - $z = i^{2022}$
 
-## Caveat
+### Caveat
 
 Keep in mind that, for complex numbers,
 $$
   \sqrt{ab} \ne \sqrt{a}\sqrt{b}.
 $$    
 
-##
+###
 
 ![](./images/05-complex-numbers/cartoon-tom-gauld.jpeg)
 

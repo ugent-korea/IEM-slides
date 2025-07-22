@@ -7,17 +7,19 @@ format:
     theme: Pittsburgh
     colortheme: default
     fonttheme: default
+    toc: true
+    toc-depth: 2
+    slide-level: 3
     include-in-header:
       - file: header.tex
+    template-partials:
+      - toc.tex
 
 classoption: t
 ---
 
-## Contents
 
-\tableofcontents
-
-## Terminology
+### Terminology
 
 ![](./images/01-trigonometry/triangles-all.svg)
 
@@ -35,12 +37,12 @@ Different kinds of triangles:
 :::
 ::::
 
-## Trigonometry in **right-angled** triangles
+### Trigonometry in **right-angled** triangles
 
 ![](./images/01-trigonometry/right-angle-triangle.svg)
 
 
-## Example
+### Example
 
 :::: {.columns }
 ::: {.column width="60%"}
@@ -52,13 +54,13 @@ Find $\sin \alpha$, $\cos \alpha$, $\tan \alpha$.
 ::::
 
 
-## Example
+### Example
 
 A student sees the top of the Posco tower in central Songdo under an angle of $30^\circ$. Knowing that the Posco tower is approximately 300m tall, how far away is the student from the base of the tower?
 
 ![](./images/01-trigonometry/songdo.png){fig-align="center" height="50%"}
 
-## Trigonometry in general triangles: law of sines
+### Trigonometry in general triangles: law of sines
 
 :::: {.columns }
 ::: {.column width="60%"}
@@ -82,7 +84,7 @@ and want to know the others.
 :::
 ::::
 
-## Example
+### Example
 
 :::: {.columns }
 ::: {.column width="60%"}
@@ -93,7 +95,7 @@ Find $a$ and $b$.
 :::
 ::::
 
-## Ambiguous cases (1/3)
+### Ambiguous cases (1/3)
 
 :::: {.columns }
 ::: {.column width="60%"}
@@ -105,7 +107,7 @@ Find the angle $\gamma$.
 ::::
 
 
-## Ambiguous cases (2/3)
+### Ambiguous cases (2/3)
 
 :::: {.columns }
 ::: {.column width="60%"}
@@ -117,13 +119,13 @@ Find the angle $\alpha$.
 ::::
 
 
-## Ambiguous cases (3/3)
+### Ambiguous cases (3/3)
 
 Given a triangle with angle $\alpha = 42^\circ$ and sides $a = 70$ and $b = 112$. Find the angle $\beta$.
 
 
 
-## Trigonometry in general triangles: law of cosines
+### Trigonometry in general triangles: law of cosines
 
 :::: {.columns }
 ::: {.column width="60%"}
@@ -148,7 +150,7 @@ and want to know the other side/angles.
 :::
 ::::
 
-## Example
+### Example
 
 :::: {.columns }
 ::: {.column width="60%"}
@@ -159,7 +161,7 @@ Find the angles $\alpha$, $\beta$, and $\gamma$.
 :::
 ::::
 
-## Example
+### Example
 
 :::: {.columns }
 ::: {.column width="60%"}
@@ -170,11 +172,11 @@ Find the angle $\alpha$.
 :::
 ::::
 
-## Example
+### Example
 
 If the ratio of the sides of a triangle is $a : b : c = 4 : 5 : 6$, prove that the greatest angle is twice the smallest angle.
 
-## Semi-perimeter formulas
+### Semi-perimeter formulas
 
 - Express sin/cos as a function of the sides + semi-perimeter.
 - Semi-perimeter: half ("semi") of the circumference ("perimeter")
@@ -199,7 +201,7 @@ If the ratio of the sides of a triangle is $a : b : c = 4 : 5 : 6$, prove that t
 
 
 
-## Formula for the area: Heron's formula
+### Formula for the area: Heron's formula
 
 - Expresses area as a function of the lengths of the sides
 \begin{empheq}[box=\fbox]{equation*}
@@ -214,7 +216,7 @@ If the ratio of the sides of a triangle is $a : b : c = 4 : 5 : 6$, prove that t
 \end{empheq}
 
 
-## Problems involving height/distance: terminology
+### Problems involving height/distance: terminology
 
 :::: {.columns align=bottom}
 ::: {.column width="50%"}
@@ -232,11 +234,11 @@ Angle of **depression**: you look **down** at something
 :::
 ::::
 
-## Example
+### Example
 
 From a plane flying horizontally over a straight road, you see two road signs under an angle of 45$^\circ$ and 60$^\circ$, respectively. The two road signs are 1 km apart. Find the height at which the plane is flying. 
 
-## Problems for you to try (solution next lecture) {.smaller}
+### Problems for you to try (solution next lecture) {.smaller}
 
 - You see a town on a hillside at an angle of elevation of 30°. You walk 80 meters (horizontally, along the ground) and see the town at an angle of elevation of 60°. Find the height of the town above ground level.
 

@@ -7,16 +7,18 @@ format:
     theme: Pittsburgh
     colortheme: default
     fonttheme: default
+    toc: true
+    toc-depth: 2
+    slide-level: 3
     include-in-header:
       - file: header.tex
+    template-partials:
+      - toc.tex
 classoption: t
 ---
 
-## Contents
 
-\tableofcontents
-
-## Inverting the sine function
+### Inverting the sine function
 
 - The sine function turns angles into sine values.
 - The **inverse sine** turns sine values back into angles.
@@ -26,7 +28,7 @@ classoption: t
 
 ![](./images/01-trigonometry/inverse-sine-1.svg){fig-align="center"}
 
-## Restricting the domain
+### Restricting the domain
 
 Solution: restrict the domain of the sine function so that there is exactly one angle corresponding to each value. 
 
@@ -34,7 +36,7 @@ Solution: restrict the domain of the sine function so that there is exactly one 
 
 This gives us a meaningful way to define the inverse sine.
 
-## The inverse sine function
+### The inverse sine function
 
 - Domain: $[-1, 1]$, range: $[-\pi/2, \pi/2]$
 - Cancellation properties:
@@ -44,7 +46,7 @@ This gives us a meaningful way to define the inverse sine.
 
 ![](./images/01-trigonometry/inverse-sine-flipped.svg){fig-align="center"}
 
-## The inverse cosine function
+### The inverse cosine function
 
 - Domain: $[-1, 1]$, range: $[0, \pi]$
 - Cancellation properties:
@@ -53,7 +55,7 @@ This gives us a meaningful way to define the inverse sine.
 
 ![](./images/01-trigonometry/inverse-cosine-flipped.svg){fig-align="center"}
 
-## The inverse tangent function
+### The inverse tangent function
 
 - Domain: all of $\mathbb{R}$, range: $[-\pi/2, \pi/2]$
 - Cancellation properties:
@@ -63,7 +65,7 @@ This gives us a meaningful way to define the inverse sine.
 
 ![](./images/01-trigonometry/inverse-tangent-flipped.svg){fig-align="center"}
 
-## Notation (warning)
+### Notation (warning)
 
 Don't confuse
 $$
@@ -74,10 +76,10 @@ $$
     \sin^{-1} x = \arcsin x.
 $$
 
-## Example
+### Example
 
 Simplify the following expression: $\displaystyle \tan\left(\sin^{-1} \frac{2}{3} \right)$.
 
-## Example
+### Example
 
 Show that $\displaystyle \arccos x = \frac{\pi}{2} - \arcsin x$.
