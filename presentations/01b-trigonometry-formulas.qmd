@@ -2,22 +2,10 @@
 title: "Trigonometry (2/5): Formulas"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
-format:
-  beamer:
-    theme: Pittsburgh
-    colortheme: default
-    fonttheme: default
-    include-in-header:
-      - file: header.tex
-
-classoption: t
 ---
 
-## Overview
 
-\tableofcontents
-
-## Notes for this chapter
+### Notes for this chapter
 
 - You should learn all of these formulas by heart.
 - The best way to learn these formulas is by doing lots of practice problems.
@@ -27,7 +15,7 @@ classoption: t
 
 # Reflection identities
 
-## Reflection across the $x$-axis (even/odd identities)
+### Reflection across the $x$-axis (even/odd identities)
 
 :::: {.columns }
 ::: {.column width="60%"}
@@ -48,7 +36,7 @@ Example: Compute $\sin(-\pi/4)$
 :::
 ::::
 
-## Reflection across the $y$-axis (complementary angles)
+### Reflection across the $y$-axis (complementary angles)
 
 :::: {.columns }
 ::: {.column width="60%"}
@@ -67,7 +55,7 @@ Formulas:
 
 # Shift formulas
 
-## Shift formulas (by $\pi$)
+### Shift formulas (by $\pi$)
 
 :::: {.columns }
 ::: {.column width="60%"}
@@ -85,7 +73,7 @@ Formulas:
 :::
 ::::
 
-## Shift formulas (by $\pi/2$)
+### Shift formulas (by $\pi/2$)
 
 Formulas:
 
@@ -100,7 +88,7 @@ Formulas:
 
 # Addition/subtraction formulas
 
-## Addition/subtraction formulas (for $\sin$ and $\cos$)
+### Addition/subtraction formulas (for $\sin$ and $\cos$)
 
 Formulas:
 
@@ -115,11 +103,11 @@ Formulas:
 - Note the signs for $\cos$!
 - Every formula on the previous slides can be derived from these formulas.
 
-## Example
+### Example
 
 Compute $\displaystyle \sin\left( \frac{7 \pi}{12} \right)$.
 
-## Addition/subtraction formulas (for $\tan$)
+### Addition/subtraction formulas (for $\tan$)
 
 Formulas:
 
@@ -130,7 +118,7 @@ Formulas:
 
 # Double/half angle formulas
 
-## Double-angle formulas ($2\theta \to \theta$)
+### Double-angle formulas ($2\theta \to \theta$)
 
 Formulas:
 
@@ -149,11 +137,11 @@ Formulas:
                            & = 1 - 2 \sin^2 \theta
 \end{empheq}
 
-## Example
+### Example
 
 Prove that $\displaystyle \tan\left(\frac{\pi}{4} + x\right) = \frac{1 + \tan x}{1 - \tan x}$.
 
-## Half-angle formulas ($\theta \to 2\theta$)
+### Half-angle formulas ($\theta \to 2\theta$)
 
 Formulas:
 
@@ -165,13 +153,13 @@ Formulas:
 
 These formulas are useful to compute integrals of powers of $\sin$ and $\cos$.
 
-## Example
+### Example
 
 Express $\cos^2 x \sin^2 x$ as a combination of sines and cosines, without any powers.
 
 # Formulas for product to sum and sum to product
 
-## Product-to-sum formulas
+### Product-to-sum formulas
 
 Formulas:
 
@@ -183,7 +171,7 @@ Formulas:
 \end{empheq}
 
 
-## Sum-to-product formulas
+### Sum-to-product formulas
 
 Formulas:
 
@@ -194,6 +182,6 @@ Formulas:
             \cos \alpha - \cos \beta & = - 2\sin\left(\frac{\alpha+\beta}{2}\right) \sin\left(\frac{\alpha-\beta}{2}\right)
 \end{empheq}
 
-##
+###
 
 ![](./images/01-trigonometry/hoodie-formulas.jpg){fig-align="center"}

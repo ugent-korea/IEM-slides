@@ -2,31 +2,12 @@
 title: "Proof Techniques"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
-format:
-  beamer:
-    theme: Pittsburgh
-    colortheme: default
-    fonttheme: default
-    include-in-header:
-      - file: header.tex
-
-classoption: t
 ---
 
-## Overview
 
-- Logical statements
-  - Implication
-  - Equivalence
-  - Single statement
-- Proof techniques
-  1. Direct proof
-  2. Proof by contraposition
-  3. Proof by contradiction
-  4. Case enumeration
-  5. Induction
+# Logical foundations
 
-## Proving an implication 
+### Proving an implication 
 
 - "If $p$ is true, then $q$ is also true."
 - Notation: $p \Rightarrow q$
@@ -36,7 +17,7 @@ For example:
 - If $n$ is an odd number, then $2n$ is an even number.
 - If it rains, then the ground gets wet.
 
-## Caveat
+### Caveat
 
 *$p \Rightarrow q$ does not mean that $q \Rightarrow p$!*
 
@@ -46,7 +27,9 @@ For example:
 - For $n = 10$, $2n = 20$ is even, but $10$ is not odd.
 
 
-## Technique 1: direct proof
+# Direct proof techniques
+
+### Technique 1: direct proof
 
 - Start from $p$, then work your way to $q$.
 - This is how we've constructed most proofs so far.
@@ -56,7 +39,9 @@ Example:
 - In words: *For each positive real number $x$, there exists a real number $y$ such that $y(y+1) = x$.*
 - Mathematically: $\forall x > 0 \in \mathbb{R} \Rightarrow \exists y \in \mathbb{R}: y(y+1) = x$.
 
-## Technique 2: Proof by contraposition
+# Indirect proof techniques
+
+### Technique 2: Proof by contraposition
 
 - "If $p$ then $q$" is logically equivalent to "if not $q$ then not $p$".
 - Start from "not $q$", work towards "not $p$".
@@ -64,7 +49,7 @@ Example:
 
 Example: Show that if $n^2$ is even (for $n$ a natural number), then $n$ is also even.
 
-## Caveat: negating a logical statement
+### Caveat: negating a logical statement
 
 De Morgan's laws:
 
@@ -73,14 +58,14 @@ De Morgan's laws:
 
 Example: Show that if $x^2 \ne 1$, then $x \ne \pm 1$.
 
-## Technique 3: Proof by contradiction
+### Technique 3: Proof by contradiction
 
 - Assume that $q$ is not true, start from $p$, and work towards a contradiction.
 - If a contradiction is found, our starting assumption must have been false, and therefore $q$ is true.
 
 Example: Prove that if $x^2 = 2x$ and $x \ne 0$, then $x = 2$.
 
-## Proving an equivalence
+### Proving an equivalence
 
 - "$p$ holds if and only if (iff) $q$ holds."
 - Notation: $p \Leftrightarrow q$
@@ -89,18 +74,20 @@ Proving an equivalence means proving two implications: $p \Rightarrow q$ and $q 
 
 Example: Prove that $n^2$ is even if and only if $n$ is even.
 
-## Proving a single statement
+### Proving a single statement
 
 Example: Prove that $\sqrt{2}$ is irrational.
 
-## Technique 4: Proof by case enumeration
+### Technique 4: Proof by case enumeration
 
 - Split statement into subcases, prove each case separately.
 - Don't forget any subcases!
 
 Example: Show that for all $x, y \in \mathbb{R}$, $|xy| = |x||y|$.
 
-## Technique 5: Proof by induction
+# Proof by induction
+
+### Technique 5: Proof by induction
 
 - Prove that a statement $P(n)$ holds for every natural number $n$.
 - Proceeds in two steps:
@@ -112,22 +99,22 @@ $$
 	1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2}.
 $$
 
-## Example
+### Example
 
 Show that the sum of the first $n$ odd numbers is equal to $n^2$:
 $$
 	1 + 3 + 5 + \cdots + (2n - 1) = n^2.
 $$
 
-## Exam problem
+### Exam problem
 
 ![](./images/08-proof-techniques/proof-question.png){fig-align="center"}
 
-## Proof technique X: proof by intimidation
+### Proof technique X: proof by intimidation
 
 ![](./images/08-proof-techniques/intimidation.jpeg){fig-align="center"}
 
 
-## Proof technique Y: proof by bluffing
+### Proof technique Y: proof by bluffing
 
 ![](./images/08-proof-techniques/bluffing.png){fig-align="center"}

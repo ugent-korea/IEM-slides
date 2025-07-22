@@ -2,24 +2,11 @@
 title: "Derivatives (2/2): Applications"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
-format:
-  beamer:
-    theme: Pittsburgh
-    colortheme: default
-    fonttheme: default
-    include-in-header:
-      - file: header.tex
-
-classoption: t
-jupyter: python3    
+jupyter: python3
 ---
 
-## Contents
 
-- Implicit differentiation
-- Velocity and acceleration
-
-## Implicit differentiation
+### Implicit differentiation
 
 - We now know how to compute the derivative of a function $y = f(x)$.
 
@@ -32,17 +19,17 @@ Two ways of solving:
 1. The direct way (hard): find $y(x)$ and differentiate
 2. Via **implicit differentiation** (easy): differentiate both sides
 
-## Example
+### Example
 
 Find an equation for the tangent line to the curve defined by $x^2 + xy + 2y^3 = 4$ at the point $P(-2, 1)$.
 
-## 
+### 
 
 ![](./images/04-derivatives/implicit-curve.png){fig-align="center" height="80%"}
 
 Figure made with [Wolfram Alpha](https://www.wolframalpha.com/input?i=plot+x%5E2+%2B+xy+%2B+2y%5E3+%3D+4).
 
-## Velocity and acceleration
+### Velocity and acceleration
 
 We will consider only objects moving along a straight line (one-dimensional motion)
 
@@ -51,7 +38,7 @@ We will consider only objects moving along a straight line (one-dimensional moti
 
 Recall from physics 1: $v(t)$ is the **first derivative** of $x(t)$. Why?
 
-## Average and instantaneous velocity, speed
+### Average and instantaneous velocity, speed
 
 - The *average velocity* $v_\text{avg}(t)$ over an interval $[t, t+h]$ is the change in distance divided by the change in time:
 $$
@@ -64,13 +51,13 @@ $$
 - The *speed* $s(t)$ is the magnitude of the velocity: $s(t) = |v(t)|$.
 
 
-## Characteristics of velocity
+### Characteristics of velocity
 
 - $v(t) > 0$: moving to the **right** ($x(t)$ increases)
 - $v(t) < 0$: moving to the **left** ($x(t)$ decreases)
 - $v(t) = 0$: instantaneously at rest
 
-## Acceleration
+### Acceleration
 
 The **acceleration** $a(t)$ is the rate of change of the velocity:
 $$
@@ -87,7 +74,7 @@ Speeding up and slowing down:
 - $a(t) \cdot v(t) > 0$: speeding up
 - $a(t) \cdot v(t) < 0$: slowing down
 
-## Example
+### Example
 
 A particle $P$ moves along the $x$-axis with position given by $x(t) = 2 t^3 - 15 t^2 + 24t$.
 
@@ -95,12 +82,12 @@ A particle $P$ moves along the $x$-axis with position given by $x(t) = 2 t^3 - 1
 2. In which direction is $P$ moving at $t = 2$? Is $P$ speeding up or slowing down?
 3. When is $P$ instantaneously at rest? When does its velocity instantaneously not change?
 
-## Example (continued)
+### Example (continued)
 
 4. When is $P$ moving to the left/right?
 5. When is $P$ speeding up/slowing down?
 
-## Example (continued)
+### Example (continued)
 
 ```{python}
 #|fig-align: center
@@ -130,7 +117,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-## Historical aside
+### Historical aside
 
 In the fall of 1972, President Nixon announced that "the rate of increase of inflation was decreasing". 
 

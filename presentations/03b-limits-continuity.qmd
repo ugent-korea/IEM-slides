@@ -2,25 +2,11 @@
 title: Limits and Continuity (2/2)
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
-format:
-  beamer:
-    theme: Pittsburgh
-    colortheme: default
-    fonttheme: default
-    include-in-header:
-      - file: header.tex
-
-classoption: t
 ---
 
-## Contents
+# Infinite limits and limits at infinity
 
-1. Infinite limits
-2. Vertical and horizontal asymptotes
-3. Limit laws
-4. Continuity
-
-## Infinite limits
+### Infinite limits
 
 We say that $f(x)$ has an **infinite limit** for $x \to a$ if the values of $f(x)$ become **arbitrarily large** when $x \to a$.
 
@@ -35,7 +21,7 @@ Examples:
 - $\displaystyle \lim_{x\to 0}\frac{1}{x^2}$
 - $\displaystyle \lim_{x\to 0+} \ln x$
 
-## Vertical asymptotes
+### Vertical asymptotes
 
 The line $x = a$ is a **vertical asymptote** of $f(x)$ if *at least one* of the following is true:
 $$
@@ -47,7 +33,7 @@ Example: find the vertical asymptotes of
 - $\displaystyle y = \ln x$
 - $\displaystyle y = \tan x$
 
-## Example
+### Example
 
 Find all vertical asymptotes of the function 
 $$
@@ -56,7 +42,7 @@ $$
 
 Hint: *Look for zeros of the denominator that are not zeros of the numerator.*
 
-## Limits at infinity (intuition)
+### Limits at infinity (intuition)
 
 What happens to $f(x)$ when $x$ becomes very large (positive/negative)?
 
@@ -65,7 +51,7 @@ Examples:
 - $\displaystyle \lim_{x \to \pm \infty} \frac{x^2 - 1}{x^2 + 1}$
 - $\displaystyle \lim_{x \to +\infty}e^{-x}$
 
-## Limits at infinity (definition)
+### Limits at infinity (definition)
 
 We write:
 
@@ -104,7 +90,7 @@ We mean:
 :::
 ::::
 
-## Horizontal asymptotes
+### Horizontal asymptotes
 
 The line $y = L$ is a **horizontal asymptote** of $f(x)$ if *at least one* of the following is true:
 $$
@@ -117,7 +103,7 @@ Examples: Find the horizontal asymptotes of
 - $\displaystyle y = e^{-x}$
 - $\displaystyle y = \frac{e^x - e^{-x}}{e^x + e^{-x}}$
 
-## Limit laws
+### Limit laws
 
 1. $\lim_{x \to \infty} x = \infty$
 2. $\lim_{x \to \infty} c = c$ (for $c$ a constant)
@@ -126,7 +112,7 @@ Examples: Find the horizontal asymptotes of
 5. $\lim_{x \to \infty}(f(x)g(x)) = \lim_{x \to \infty} f(x) \lim_{x \to \infty} g(x)$
 6. $\lim_{x \to \infty} \frac{f(x)}{g(x)} = \frac{\lim_{x \to \infty} f(x)}{\lim_{x \to \infty} g(x)}$, if the denominator is not zero
 
-## Limit laws (continued)
+### Limit laws (continued)
 7. $\lim_{x \to \infty} f(x)^{m/n} = \left(\lim_{x \to \infty} f(x) \right)^{m/n} = L^{m/n}$, if
    - $L \ge 0$ for $n$ even
    - $L \ne 0$ for $m$ negative
@@ -136,35 +122,35 @@ Examples: Find the horizontal asymptotes of
     - $c$ is constant (not equal to $\pm \infty$)
     - $f$ is continuous (see later)
     
-## Examples    
+### Examples    
 
 $\displaystyle \lim_{x \to +\infty} \frac{2x^5 + 1}{x^5 + x^3 + 1}$  
 
-## Examples    
+### Examples    
 
 $\displaystyle \lim_{x\to -\infty} \frac{x^7}{\sqrt{x^{14} + 1}}$
 
-## Examples    
+### Examples    
 
 $\displaystyle \lim_{x \to +\infty}\left( \sqrt{x^2 + 1} - x \right)$
 
-## Examples    
+### Examples    
 
 $\displaystyle \lim_{x\to 0-} e^{1/x}$
 
-## Examples    
+### Examples    
 
 $\displaystyle \lim_{x\to +\infty} \sin x$
 
-## Examples
+### Examples
 
 $\displaystyle \lim_{x \to \pi/2-} e^{\tan x}$
 
-## Infinite limits at infinity
+### Infinite limits at infinity
 
 Examples:
 
-## Summary of limit techniques
+### Summary of limit techniques
 
 1. Try "just substituting" $\pm\infty$
 2. Use common manipulations:
@@ -173,13 +159,15 @@ Examples:
    - Conjugate
    - ...
 
-## Special cases (to memorize):
+### Special cases (to memorize):
 $$
     \lim_{h \to 0}\frac{\sin h}{h}  = 1 \quad \text{and} \quad
     \lim_{h \to 0}\frac{\cos h - 1}{h}  = 0.
 $$
    
-## Continuity
+# Continuity
+
+### Motivation and definition
 
 - Intuitively, continuity $=$ "no jumps"
 - Mathematically, $f(x)$ is **continuous** at an interior point $x = a$ of its domain if
@@ -189,11 +177,11 @@ $$
 
 Example: $\displaystyle f(x) = \frac{x^2 - x - 3}{x - 2}$ is not continuous at $x = 2$.
 
-## Examples
+### Examples
 
 Define $f(x) = \frac{x^2 - x - 2}{x - 2}$ when $x \ne 2$ and $f(x) = 1$ otherwise (i.e. $f(2) = 1$). Is $f(x)$ continuous at $x = 2$?
 
-## Left/right continuity
+### Left/right continuity
 
 At $x = a$, $f(x)$ is ...
 
@@ -202,7 +190,7 @@ At $x = a$, $f(x)$ is ...
 
 Example: the Heaviside function is defined by $H(x) = 0$ when $x < 0$ and $H(x) = 1$ when $x \ge 0$. Is $H(x)$ right or left continuous at $x = 0$?
 
-## Continuity on an interval
+### Continuity on an interval
 
 The function $f(x)$ is continuous on an interval $[a, b]$ if ...
 
@@ -212,7 +200,7 @@ The function $f(x)$ is continuous on an interval $[a, b]$ if ...
 
 Example: Show that $f(x) = 1 - \sqrt{1 - x^2}$ is continuous on $[-1, 1]$.
 
-## Making new continuous functions out of old ones
+### Making new continuous functions out of old ones
 
 If $f(x), g(x)$ are continuous at $x = a$, and $c$ is a constant, then the following are also continuous at $x = a$:
 
@@ -223,7 +211,7 @@ If $f(x), g(x)$ are continuous at $x = a$, and $c$ is a constant, then the follo
 - $f/g$  (if $g(a) \ne 0$)
 
 
-## Which functions are continuous?
+### Which functions are continuous?
 
 Continuous **on their domain**:
 
@@ -238,7 +226,7 @@ In particular:
 - Polynomials are continuous for all $x \in \mathbb{R}$
 - Rational functions $P(x)/Q(x)$ are continuous for all $x$ so that $Q(x) \ne 0$.
 
-## Composition of functions
+### Composition of functions
 
 If $f(x)$ is continuous and $\lim_{x \to a} g(x) = b$, then
 $$
@@ -247,7 +235,7 @@ $$
 
 Example: $\displaystyle \lim_{x \to 2} \sin\left( \frac{2-x}{4-x^2}\pi\right)$
 
-## Corollary
+### Corollary
 
 If $g$ is continuous at $x = a$ and $f$ is continuous at $y = g(a)$, then $f \circ g$ is continuous at $x = a$.
 

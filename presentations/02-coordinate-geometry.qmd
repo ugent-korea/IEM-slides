@@ -2,27 +2,11 @@
 title: Coordinate Geometry
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
-format:
-  beamer:
-    theme: Pittsburgh
-    colortheme: default
-    fonttheme: default
-    include-in-header:
-      - file: header.tex
-
-classoption: t
 ---
 
+# Foundations of coordinate geometry
 
-## Contents
-
-1. Coordinate geometry
-1. Locus of points
-1. Equations of circles
-1. Equations of lines
-1. Exercise
-
-## What is coordinate geometry?
+### What is coordinate geometry?
 
 Studying geometry through coordinate calculations.
 
@@ -43,7 +27,7 @@ Studying geometry through coordinate calculations.
 ::::
 
 
-## Example: distance between two points
+### Example: distance between two points
 
 :::: {.columns align=center}
 
@@ -64,7 +48,7 @@ $$
 ::::
 
 
-## Example: midpoint between two points
+### Example: midpoint between two points
 
 :::: {.columns align=center}
 
@@ -81,7 +65,7 @@ $$
 
 ::::
 
-## Locus of points
+### Locus of points
 
 "Locus" = Set of points satisfying some condition.
 
@@ -98,11 +82,13 @@ $$
 :::
 ::::
 
-## Example
+### Example
 
 Find the locus of points for which the distance to the $x$-axis is equal to the distance to the point $(0, 1)$.
 
-## Circles
+# Circles
+
+### Circles
 
 Locus of points $P(x, y)$ at distance $R$ from center $C(h, k)$.
 
@@ -127,15 +113,17 @@ $$
 
 ::::
 
-## Example
+### Example
 
 Find the equation of the circle that has the points $(1, 1)$ and $(7, 9)$ as end points of a diameter.
 
-## Example
+### Example
 
 Find the center and radius of the circle given by $x^2 + y^2 - 6x + 2y + 8 = 0$.
 
-## Lines
+# Lines
+
+### Lines
 
 :::: {.columns}
 
@@ -159,7 +147,7 @@ with
 :::
 ::::
 
-## Lines
+### Lines
 
 
 :::: {.columns}
@@ -181,7 +169,7 @@ with
 :::
 ::::
 
-## Finding the slope of a line
+### Finding the slope of a line
 
 :::: {.columns}
 
@@ -206,11 +194,11 @@ $$
 :::
 ::::
 
-## Example
+### Example
 
 Find the equation for the line through $(1, 5)$ and $(2, 7)$.
 
-## Properties
+### Properties
 
 Equation for the line through $(x_0, y_0)$ with slope $m$:
 $$
@@ -222,7 +210,7 @@ $$
   y - y_1 = \frac{y_2 - y_1}{x_2 - x_1}(x - x_1).
 $$
 
-## Parallel/perpendicular lines
+### Parallel/perpendicular lines
 
 Two lines are ...
 
@@ -231,7 +219,7 @@ Two lines are ...
 
 ![](./images/02-coordinate-geometry/par-perp.svg){fig-align="center" height="150"}
 
-## Angle between two lines
+### Angle between two lines
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -246,7 +234,7 @@ where $m_1$ and $m_2$ are the slopes of the lines.
 :::
 ::::
 
-## Example
+### Example
 
 Given two lines $L_1: x + 2y - 3 = 0$ and $L_2: kx + y - 5 = 0$, for which value of $k$ are $L_1$ and $L_2$ ...
 
@@ -254,10 +242,10 @@ Given two lines $L_1: x + 2y - 3 = 0$ and $L_2: kx + y - 5 = 0$, for which value
 2. Perpendicular?
 3. At an angle of $45^\circ$?
 
-##
+###
 
 
-## Distance of a point to a line
+### Distance of a point to a line
 
 :::: {.columns align=center}
 
@@ -278,7 +266,7 @@ $$
 
 ::::
 
-## Different representations of lines
+### Different representations of lines
 
 1. Slope/intercept:
    - $y = mx + q$ (not parallel to $y$-axis)
@@ -292,7 +280,9 @@ $$
 $$
 
 
-## Exercise
+# Applications
+
+### Exercise
 
 Find the equation of the common tangent line between two touching circles given by 
 \begin{align*}
@@ -300,7 +290,7 @@ Find the equation of the common tangent line between two touching circles given 
   C_2: & \  x^2 + y^2 - 6y + 7 = 0.
 \end{align*}
 
-##
+###
 
 ![](./images/02-coordinate-geometry/coordinate_plane_closure.png){fig-align='center' height="80%"}
 

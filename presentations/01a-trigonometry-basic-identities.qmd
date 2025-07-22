@@ -2,24 +2,11 @@
 title: "Trigonometry (1/5): Introduction and Overview"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
-format:
-  beamer:
-    theme: Pittsburgh
-    colortheme: default
-    fonttheme: default
-    include-in-header:
-      - file: header.tex
-classoption: t
 ---
-
-## Contents
-
-\tableofcontents
-
 
 # Angles and points on the unit circle
 
-## The unit circle
+### The unit circle
 
 :::: {.columns align=center }
 ::: {.column width="60%"}
@@ -34,11 +21,11 @@ classoption: t
 :::
 ::::
 
-## Example
+### Example
 
 If $P(\sqrt{3}/2, y)$ is a point on the unit circle, find the value of $y$.
 
-## Angles and points on the unit circle
+### Angles and points on the unit circle
 
 :::: {.columns align=center }
 ::: {.column width="60%"}
@@ -58,7 +45,7 @@ If $P(\sqrt{3}/2, y)$ is a point on the unit circle, find the value of $y$.
 ::::
 
 
-## Converting between angles and radians
+### Converting between angles and radians
 
 :::: {.columns}
 ::: {.column width="60%"}
@@ -82,7 +69,7 @@ General formula to convert between degrees and radians:
 ::::
 
 
-## Negative angles
+### Negative angles
 
 :::: {.columns align=center}
 
@@ -97,7 +84,7 @@ Measured from the positive $x$-axis, in clockwise direction.
 ::::
 
 
-## Adding $2\pi$ to an angle
+### Adding $2\pi$ to an angle
 
 
 - Point $P$ is determined by the angle $\theta$.
@@ -113,7 +100,7 @@ $\Rightarrow$ All angles $\theta + 2k \pi$ with $k \in \mathbb{Z}$ give the same
 
 # Trigonometric functions as coordinates
 
-## Finding the coordinates of a point
+### Finding the coordinates of a point
 
 Given an angle $\theta$, find the coordinates of $P(x, y)$.
 
@@ -124,7 +111,7 @@ Given an angle $\theta$, find the coordinates of $P(x, y)$.
 ![](./images/01-trigonometry/unit-circle-point-coordinates.svg){fig-align="center" width="50%"}
 
 
-## Finding the coordinates of a point
+### Finding the coordinates of a point
 
 Slightly more involved case:
 
@@ -133,7 +120,7 @@ Slightly more involved case:
 
 ![](./images/01-trigonometry/unit-circle-point-coordinates-pi4.svg){fig-align="center" width="50%"}
 
-## Important angles
+### Important angles
 
 | Angle   | $x$-coordinate | $y$-coordinate |
 |---------|----:|-----:|
@@ -145,7 +132,7 @@ Slightly more involved case:
 | $\pi$   | $-1$         | $0$          |
 | $2\pi$  | $1$          | $0$          |
 
-## Trigonometric functions as coordinates
+### Trigonometric functions as coordinates
 
 Let $\theta$ be an angle with point $P(x, y)$.
 
@@ -167,7 +154,7 @@ Let $\theta$ be an angle with point $P(x, y)$.
 :::
 ::::
 
-## Example
+### Example
 
 Given that $\displaystyle \theta = \frac{\pi}{6}$, find the values of all 6 trigonometric functions.
 
@@ -175,7 +162,7 @@ Given that $\displaystyle \theta = \frac{\pi}{6}$, find the values of all 6 trig
 # Basic trigonometric identities
 
 
-## Fundamental identity
+### Fundamental identity
 
 - $P(x, y)$ is on the unit circle: $x^2 + y^2 = 1$
 - Put $x = \cos \theta$ and $y = \sin \theta$ to obtain the **fundamental identity**:
@@ -185,7 +172,7 @@ $$
 
 ![](./images/01-trigonometry/unit-circle-trig-sin-cos.svg){fig-align="center" width="50%"}
 
-## Aside: notation
+### Aside: notation
 
 Be very careful when you see $\sin^k \theta$.
 
@@ -199,7 +186,7 @@ $$
 $$
 
 
-## Fundamental identity: consequences
+### Fundamental identity: consequences
 
 :::: {.columns }
 ::: {.column width="50%"}
@@ -215,11 +202,11 @@ $$
 ::::
 
 
-## Example
+### Example
 
 Suppose $\displaystyle \cos \theta = -\frac{4}{5}$ and $\theta$ is in quadrant III. Find $\sin \theta$ and $\tan \theta$.
 
-## Periodicity of sine and cosine
+### Periodicity of sine and cosine
 
 :::: {.columns }
 ::: {.column width="60%"}
@@ -244,7 +231,7 @@ Example: Compute $\displaystyle \tan\left(\frac{8093 \pi}{4}\right)$
 
 # Graphs of trigonometric functions
 
-## Graphs of sine/cosine
+### Graphs of sine/cosine
 
 :::: {.columns }
 ::: {.column width="50%"}
@@ -261,7 +248,7 @@ The sine and cosine:
 - Oscillate between -1 and +1.
 - Repeat themselves every $2 \pi$ radians (**fundamental period**).
 
-## Graph of the tangent function
+### Graph of the tangent function
 
 ![](./images/01-trigonometry/graph-tangent.svg){fig-align=center width="75%"}
 
@@ -271,10 +258,10 @@ The tangent function:
 - Can take on arbitrary values.
 - Repeats itself every $\pi$ radians (fundamental period).
 
-## Example
+### Example
 
 Find the fundamental period of $\sin(2 x)$.
 
-##
+###
 
 ![](./images/01-trigonometry/sine-wave-beach.jpeg){fig-align=center}

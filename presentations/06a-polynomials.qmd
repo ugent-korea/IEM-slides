@@ -2,23 +2,11 @@
 title: "Theory of equations (1/2): Working with polynomials"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
-format:
-  beamer:
-    theme: Pittsburgh
-    colortheme: default
-    fonttheme: default
-    include-in-header:
-      - file: header.tex
-
-classoption: t
 ---
 
-## Overview
+# Polynomial division
 
-- Polynomial long division
-- Synthetic division of polynomials
-
-## Reminder: what is a polynomial?
+### Reminder: what is a polynomial?
 
 Polynomial of degree $n$:
 $$
@@ -29,7 +17,7 @@ with
 - $x$: the unknown
 - $a_0, \ldots, a_n$: the coefficients (in $\mathbb{C}$ or $\mathbb{R}$)
 
-## Reminder: Euclidian division of numbers
+### Reminder: Euclidian division of numbers
 
 For every two integers $p$ and $d$, we can write the fraction $p/d$ as
 $$
@@ -46,7 +34,7 @@ Properties:
 - The remainder $r$ is always smaller than $d$.
 - The quotient $q$ and remainder $r$ are unique.
 
-## Example
+### Example
 
 If we divide 20 by 7, we get
 $$
@@ -59,7 +47,7 @@ Therefore:
 - Quotient: $q = 20$
 - Remainder: $r = 6$.
 
-## Euclidian division of polynomials
+### Euclidian division of polynomials
 
 For every two polynomials $P(x)$ and $D(x)$, we can write the rational function $P(x)/D(x)$ as
 $$
@@ -76,7 +64,7 @@ Properties:
 - The degree of $R(x)$ is always smaller than the degree of $D(x)$. 
 - The quotient $Q(x)$ and remainder $R(x)$ are unique.
 
-## Example
+### Example
 
 If we divide $x^2 + 1$ by $x - 1$, we get:
 
@@ -89,7 +77,15 @@ If we divide $x^2 + 1$ by $x - 1$, we get:
 
 Therefore, the quotient is $Q(x) = x + 1$ and the remainder is $R(x) = 2$.
 
+# Algorithms for polynomial division
+
 ## Polynomial long division
+
+See also video: 
+
+- Polynomial long division: \url{https://youtu.be/RyRqUg5oycE?t=499}
+
+### Polynomial long division
 
 If $P(x) = 3x^4 - x^3 + 2x^2 - 2x - 1$ and $D(x) = x+2$, find the quotient and the remainder after dividing $P(x)$ by $D(x)$.
 
@@ -101,11 +97,17 @@ Algorithm:
 4. Drop next term
 5. Repeat steps 1-4.
 
-## Example
+### Example
 
 Divide $P(x) = 3x^4 - x^3 + 2x^2 - 2x - 1$ by $D(x) = x+2$.
 
 ## Synthetic division
+
+See also video:
+
+- Synthetic division: \url{https://youtu.be/NqQeMfGEzk4}
+
+### Synthetic division
 
 Algorithm:
 
@@ -117,21 +119,12 @@ Algorithm:
 6. Repeat step 4-5 until done
 7. Determine quotient and remainder
 
-## Example
+### Example
 
 If $P(x) = x^3 - 12x^2 - 42$ and $D(x) = x-3$, find the quotient and the remainder after dividing $P(x)$ by $D(x)$.
 
-## Special case
+### Special case
 
 $$
     \frac{x^n - 1}{x - 1} = x^{n-1} + x^{n-2} + \cdots + x + 1.
 $$
-
-## Resources
-
-Step-by-step walkthroughs of both algorithms (from the 2021-22 version of this course):
-
-- Polynomial long division: \url{https://youtu.be/RyRqUg5oycE?t=499}
-- Synthetic division: \url{https://youtu.be/NqQeMfGEzk4}
-
-These videos can be found on Ufora as well.
