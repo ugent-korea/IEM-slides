@@ -18,6 +18,7 @@ format:
 classoption: t
 ---
 
+# What are complex numbers?
 
 ![](images/05-complex-numbers/calvin-and-hobbes.png)
 
@@ -51,6 +52,8 @@ $$
 | $\mathbb{Q}$ | Fractions $n/m$                      | Dividing           |
 | $\mathbb{R}$ | $\mathbb{Q}$ and irrational numbers: $e$, $\pi$, ...     | Limits             |
 | $\mathbb{C}$ | $a + ib$, with $a, b \in \mathbb{R}$ | Solving equations  |
+
+# Cartesian and polar representation
 
 ### Graphical representation of complex numbers
 
@@ -172,6 +175,8 @@ Properties:
 ![](./images/05-complex-numbers/conjugate.svg){fig-align="center"}
 :::
 ::::
+
+# Calculating with complex numbers
 
 ### Adding and subtracting complex numbers
 

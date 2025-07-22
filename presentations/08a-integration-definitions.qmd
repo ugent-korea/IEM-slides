@@ -18,6 +18,7 @@ format:
 classoption: t
 ---
 
+# Indefinite integrals
 
 ### Indefinite integrals as antiderivatives
 
@@ -88,6 +89,8 @@ Special cases:
 - $\displaystyle \int \csc^2 x \, dx = - \cot x + C$
 - $\displaystyle \int \sec x \tan x \, dx = \sec x + C$
 - $\displaystyle \int \csc x \cot x \, dx = - \csc x + C$
+
+# Definite integrals
 
 ### The definite integral
 
@@ -182,6 +185,8 @@ Compute the following integrals:
 Show that $\displaystyle \int_0^{\pi/2} \frac{\sin x}{\sin x + \cos x} dx = \frac{\pi}{4}$.
 
 *Difficult, uses King's rule.*
+
+# Fundamental theorem of calculus
 
 ### Integrals and derivatives are each other's inverse
 

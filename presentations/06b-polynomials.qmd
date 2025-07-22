@@ -28,7 +28,9 @@ classoption: t
 - There is no algorithm for finding all roots of a polynomial
 - If a real polynomial has a complex root $z$, then the complex conjugate $\bar{z}$ is also a root (e.g. $x^3 - x^2 + x - 1$)
 
-### Recall
+# Roots and factors of polynomials
+
+### Reminder
 
 Polynomial of degree $n$:
 $$
@@ -41,6 +43,10 @@ $$
 - A **factor** is a polynomial $F(x)$ such that $P(x) = F(x) Q(x)$ for some other polynomial $Q(x)$.
   - Linear factor: $F(x) = x - \alpha$
   - Quadratic factor: $F(x) = Ax^2 + Bx + C$
+
+# Theorems involving polynomials
+
+## Remainder theorem
 
 ### Remainder theorem (special case)
 
@@ -110,6 +116,8 @@ Then:
 
 Given $P(x) = x^3 + 2x^2 - 3x - 1$ with roots $\alpha$, $\beta$, and $\gamma$, find the value of $\alpha^2 + \beta^2 + \gamma^2$.
 
+## Fundamental theorem
+
 ### The fundamental theorem of algebra
 
 **Theorem:** Each polynomial has *at least one* root (which may be complex).
@@ -130,6 +138,8 @@ In general, proceed via trial and error, or numerically.
 ### Example
 
 Factorize $P(x) = x^4 + 2x^3 + 2x^2 + 2x + 1$.
+
+## Complex conjugates
 
 ### Complex conjugates theorem
 

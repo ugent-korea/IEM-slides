@@ -18,6 +18,7 @@ format:
 classoption: t
 ---
 
+# Right-angled triangles
 
 ### Terminology
 
@@ -59,6 +60,8 @@ Find $\sin \alpha$, $\cos \alpha$, $\tan \alpha$.
 A student sees the top of the Posco tower in central Songdo under an angle of $30^\circ$. Knowing that the Posco tower is approximately 300m tall, how far away is the student from the base of the tower?
 
 ![](./images/01-trigonometry/songdo.png){fig-align="center" height="50%"}
+
+# General triangles
 
 ### Trigonometry in general triangles: law of sines
 
@@ -123,8 +126,6 @@ Find the angle $\alpha$.
 
 Given a triangle with angle $\alpha = 42^\circ$ and sides $a = 70$ and $b = 112$. Find the angle $\beta$.
 
-
-
 ### Trigonometry in general triangles: law of cosines
 
 :::: {.columns }
@@ -176,6 +177,8 @@ Find the angle $\alpha$.
 
 If the ratio of the sides of a triangle is $a : b : c = 4 : 5 : 6$, prove that the greatest angle is twice the smallest angle.
 
+# Advanced triangle formulas
+
 ### Semi-perimeter formulas
 
 - Express sin/cos as a function of the sides + semi-perimeter.
@@ -215,6 +218,8 @@ If the ratio of the sides of a triangle is $a : b : c = 4 : 5 : 6$, prove that t
     \sin \gamma = 2 \frac{\text{Area}}{ab}.
 \end{empheq}
 
+
+# Height and distance problems
 
 ### Problems involving height/distance: terminology
 

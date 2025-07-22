@@ -18,7 +18,7 @@ format:
 classoption: t
 ---
 
-
+# Foundations of coordinate geometry
 
 ### What is coordinate geometry?
 
@@ -100,6 +100,8 @@ $$
 
 Find the locus of points for which the distance to the $x$-axis is equal to the distance to the point $(0, 1)$.
 
+# Circles
+
 ### Circles
 
 Locus of points $P(x, y)$ at distance $R$ from center $C(h, k)$.
@@ -132,6 +134,8 @@ Find the equation of the circle that has the points $(1, 1)$ and $(7, 9)$ as end
 ### Example
 
 Find the center and radius of the circle given by $x^2 + y^2 - 6x + 2y + 8 = 0$.
+
+# Lines
 
 ### Lines
 
@@ -289,6 +293,8 @@ $$
    r = \frac{q}{\sin \theta - m \cos \theta}
 $$
 
+
+# Applications
 
 ### Exercise
 

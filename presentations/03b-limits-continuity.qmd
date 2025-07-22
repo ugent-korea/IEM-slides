@@ -18,6 +18,7 @@ format:
 classoption: t
 ---
 
+# Infinite limits and limits at infinity
 
 ### Infinite limits
 
@@ -178,7 +179,9 @@ $$
     \lim_{h \to 0}\frac{\cos h - 1}{h}  = 0.
 $$
    
-### Continuity
+# Continuity
+
+### Motivation and definition
 
 - Intuitively, continuity $=$ "no jumps"
 - Mathematically, $f(x)$ is **continuous** at an interior point $x = a$ of its domain if

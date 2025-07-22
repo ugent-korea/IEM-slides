@@ -17,6 +17,9 @@ format:
 classoption: t
 ---
 
+# Inverse sine function
+
+### Inverse functions
 
 ### Inverting the sine function
 
@@ -45,6 +48,8 @@ This gives us a meaningful way to define the inverse sine.
 
 
 ![](./images/01-trigonometry/inverse-sine-flipped.svg){fig-align="center"}
+
+# Other inverse trigonometric functions
 
 ### The inverse cosine function
 

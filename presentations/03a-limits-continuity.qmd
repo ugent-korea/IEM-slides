@@ -18,6 +18,7 @@ format:
 classoption: t
 ---
 
+# (Two-sided) limits
 
 ### Motivation
 
@@ -71,6 +72,8 @@ Compute $\displaystyle \lim_{x \to 2} f(x)$, with $f(x)$ given by
 1. $\displaystyle \lim_{x\to -2} \frac{x^2 + x - 2}{x^2 + 5x + 6}$
 2. $\displaystyle \lim_{x \to 0} \frac{x}{\sqrt{3 + x} - \sqrt{3 - x}}$
 
+
+# One-sided limits
 
 ### One-sided limits
 
@@ -140,6 +143,8 @@ $$
 3. $\displaystyle \lim_{x \to 2} \frac{|x-2|}{x^2 + x - 6}$
 4. $\displaystyle \lim_{x\to\pi}f(x)$, where $f(x) = \sin x$ when $x < \pi$ and $f(x) = \sqrt{x - \pi}$ otherwise.
 
+
+# Limit laws and theorems
 
 ### Limit laws
 

@@ -18,8 +18,11 @@ format:
 classoption: t
 ---
 
+# Motivation and definition
 
-### Motivation: tangent lines
+### Why derivatives?
+
+In short: **tangent lines**
 
 In the previous class, we managed to compute the slope of the tangent line to the parabola $y = x^2$ by computing the limit
 $$
@@ -96,6 +99,7 @@ Now that we can take the derivative of a function, we can take the derivative of
 | ...                                    | ...                    |
 | $f^{(n)}(x) = \frac{d}{dx} f^{(n-1)}(x)$ | $n$th-order derivative |
 
+# Derivatives of simple functions
 
 ### Derivative of a polynomial: basic rules
 
@@ -185,6 +189,8 @@ $$
 \end{align*}
 
 These rules can be derived by means of *implicit differentation*, which we will cover later.
+
+# The chain rule
 
 ### The chain rule
 
