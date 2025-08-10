@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: html
+  render:
+    - "*.qmd"
+    - "!CLAUDE.md"
 
 execute:
   freeze: auto
