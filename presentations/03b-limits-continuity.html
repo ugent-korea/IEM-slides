@@ -8,7 +8,7 @@
 
 <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
 
-<title>Introduction to Engineering Mathematics</title>
+<title>Limits and Continuity (2/2)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,22 +24,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -84,7 +113,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction to Engineering Mathematics</h1>
+<h1 class="title">Limits and Continuity (2/2)</h1>
+<p class="subtitle lead">Introduction to Engineering Mathematics</p>
 </div>
 
 
@@ -107,32 +137,249 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="presentations" class="level2">
-<h2 class="anchored" data-anchor-id="presentations">Presentations</h2>
+<section id="infinite-limits-and-limits-at-infinity" class="level1">
+<h1>Infinite limits and limits at infinity</h1>
+<section id="infinite-limits" class="level3">
+<h3 class="anchored" data-anchor-id="infinite-limits">Infinite limits</h3>
+<p>We say that <span class="math inline">\(f(x)\)</span> has an <strong>infinite limit</strong> for <span class="math inline">\(x \to a\)</span> if the values of <span class="math inline">\(f(x)\)</span> become <strong>arbitrarily large</strong> when <span class="math inline">\(x \to a\)</span>.</p>
+<p>We note <span class="math display">\[
+  \lim_{x \to a} f(x) = \infty \quad \text{or} \quad \lim_{x \to a}f(x) = -\infty,
+\]</span> depending on the sign of <span class="math inline">\(f(x)\)</span> near <span class="math inline">\(x = a\)</span>.</p>
+<p>Examples:</p>
 <ul>
-<li><a href="./presentations/01a-trigonometry-basic-identities.html">1 - Trigonometry (1/5): Introduction</a></li>
-<li><a href="./presentations/01b-trigonometry-formulas.html">1 - Trigonometry (2/5): Formulas</a></li>
-<li><a href="./presentations/01c-trigonometry-triangles.html">1 - Trigonometry (3/5): Geometry of triangles</a></li>
-<li><a href="./presentations/01d-trigonometry-trigonometric-eqns.html">1 - Trigonometry (4/5): Trigonometric equations</a></li>
-<li><a href="./presentations/01e-trigonometry-inverse-functions.html">1 - Trigonometry (5/5): Inverse trigonometric functions</a></li>
-<li><a href="./presentations/02-coordinate-geometry.html">2 - Coordinate Geometry</a></li>
-<li><a href="./presentations/03a-limits-continuity.html">3 - Limits and Continuity (1/2)</a></li>
-<li><a href="./presentations/03b-limits-continuity.html">3 - Limits and Continuity (2/2)</a></li>
-<li><a href="./presentations/04a-derivatives.html">4 - Derivatives (1/2)</a></li>
-<li><a href="./presentations/04b-derivatives.html">4 - Derivatives (2/2)</a></li>
-<li><a href="./presentations/05-complex-numbers.html">5 - Complex Numbers</a></li>
-<li><a href="./presentations/06a-polynomials.html">6 - Polynomials (1/2)</a></li>
-<li><a href="./presentations/06b-polynomials.html">6 - Polynomials (2/2)</a></li>
-<li><a href="./presentations/07-binomial-theorem.html">7 - The Binomial Theorem</a></li>
-<li><a href="./presentations/08a-integration-definitions.html">8 - Integration: Definitions</a></li>
-<li><a href="./presentations/08b-integration-techniques.html">8 - Integration: Techniques</a></li>
-<li><a href="./presentations/08c-integration-partial-fractions.html">8 - Integration: Partial Fractions</a></li>
-<li><a href="./presentations/08d-integration-inverse-trig.html">8 - Integration: Inverse Trigonometric Substitutions</a></li>
-<li><a href="./presentations/08e-integration-applications.html">8 - Integration: Applications</a></li>
-<li><a href="./presentations/09-proof-techniques.html">9 - Proof Techniques</a></li>
+<li><span class="math inline">\(\displaystyle \lim_{x\to 0}\frac{1}{x^2}\)</span></li>
+<li><span class="math inline">\(\displaystyle \lim_{x\to 0+} \ln x\)</span></li>
+</ul>
+</section>
+<section id="vertical-asymptotes" class="level3">
+<h3 class="anchored" data-anchor-id="vertical-asymptotes">Vertical asymptotes</h3>
+<p>The line <span class="math inline">\(x = a\)</span> is a <strong>vertical asymptote</strong> of <span class="math inline">\(f(x)\)</span> if <em>at least one</em> of the following is true: <span class="math display">\[
+  \lim_{x \to a+} f(x) = \pm\infty \quad \text{or} \quad \lim_{x \to a-}f(x) = \pm\infty.
+\]</span></p>
+<p>Example: find the vertical asymptotes of</p>
+<ul>
+<li><span class="math inline">\(\displaystyle y = \ln x\)</span></li>
+<li><span class="math inline">\(\displaystyle y = \tan x\)</span></li>
+</ul>
+</section>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<p>Find all vertical asymptotes of the function <span class="math display">\[
+  f(x) = \frac{|x-1|}{x^2-3x+2}.
+\]</span></p>
+<p>Hint: <em>Look for zeros of the denominator that are not zeros of the numerator.</em></p>
+</section>
+<section id="limits-at-infinity-intuition" class="level3">
+<h3 class="anchored" data-anchor-id="limits-at-infinity-intuition">Limits at infinity (intuition)</h3>
+<p>What happens to <span class="math inline">\(f(x)\)</span> when <span class="math inline">\(x\)</span> becomes very large (positive/negative)?</p>
+<p>Examples:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \lim_{x \to \pm \infty} \frac{x^2 - 1}{x^2 + 1}\)</span></li>
+<li><span class="math inline">\(\displaystyle \lim_{x \to +\infty}e^{-x}\)</span></li>
+</ul>
+</section>
+<section id="limits-at-infinity-definition" class="level3">
+<h3 class="anchored" data-anchor-id="limits-at-infinity-definition">Limits at infinity (definition)</h3>
+<p>We write:</p>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><span class="math display">\[
+    \lim_{x \to +\infty} f(x) = L
+\]</span></p>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:48%;">
+<p><span class="math display">\[
+     \lim_{x \to -\infty}f(x) = M
+\]</span></p>
+</div>
+</div>
+<p>We mean:</p>
+<div class="columns">
+<div class="column" style="width:48%;">
+<ul>
+<li><span class="math inline">\(f(x)\)</span> is defined on an interval <span class="math inline">\((a, +\infty)\)</span></li>
+<li><span class="math inline">\(f(x)\)</span> gets as close as we want to <span class="math inline">\(L\)</span> by taking <span class="math inline">\(x\)</span> large enough.</li>
+</ul>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:48%;">
+<ul>
+<li><span class="math inline">\(f(x)\)</span> is defined on an interval <span class="math inline">\((-\infty, b)\)</span></li>
+<li><span class="math inline">\(f(x)\)</span> gets as close as we want to <span class="math inline">\(M\)</span> by taking <span class="math inline">\(x\)</span> large enough (in the negative direction).</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="horizontal-asymptotes" class="level3">
+<h3 class="anchored" data-anchor-id="horizontal-asymptotes">Horizontal asymptotes</h3>
+<p>The line <span class="math inline">\(y = L\)</span> is a <strong>horizontal asymptote</strong> of <span class="math inline">\(f(x)\)</span> if <em>at least one</em> of the following is true: <span class="math display">\[
+    \lim_{x \to +\infty}f(x) = L \quad \text{or} \lim_{x \to -\infty}f(x) = L.
+\]</span></p>
+<p>Examples: Find the horizontal asymptotes of</p>
+<ul>
+<li><span class="math inline">\(\displaystyle y = \frac{x^2 - 1}{x^2 + 1}\)</span></li>
+<li><span class="math inline">\(\displaystyle y = e^{-x}\)</span></li>
+<li><span class="math inline">\(\displaystyle y = \frac{e^x - e^{-x}}{e^x + e^{-x}}\)</span></li>
+</ul>
+</section>
+<section id="limit-laws" class="level3">
+<h3 class="anchored" data-anchor-id="limit-laws">Limit laws</h3>
+<ol type="1">
+<li><span class="math inline">\(\lim_{x \to \infty} x = \infty\)</span></li>
+<li><span class="math inline">\(\lim_{x \to \infty} c = c\)</span> (for <span class="math inline">\(c\)</span> a constant)</li>
+<li><span class="math inline">\(\lim_{x \to \infty}(f(x) + g(x)) = \lim_{x \to \infty} f(x) + \lim_{x \to \infty} g(x)\)</span></li>
+<li><span class="math inline">\(\lim_{x \to \infty} (cf(x)) = c\lim_{x \to \infty} f(x)\)</span></li>
+<li><span class="math inline">\(\lim_{x \to \infty}(f(x)g(x)) = \lim_{x \to \infty} f(x) \lim_{x \to \infty} g(x)\)</span></li>
+<li><span class="math inline">\(\lim_{x \to \infty} \frac{f(x)}{g(x)} = \frac{\lim_{x \to \infty} f(x)}{\lim_{x \to \infty} g(x)}\)</span>, if the denominator is not zero</li>
+</ol>
+</section>
+<section id="limit-laws-continued" class="level3">
+<h3 class="anchored" data-anchor-id="limit-laws-continued">Limit laws (continued)</h3>
+<ol start="7" type="1">
+<li><span class="math inline">\(\lim_{x \to \infty} f(x)^{m/n} = \left(\lim_{x \to \infty} f(x) \right)^{m/n} = L^{m/n}\)</span>, if
+<ul>
+<li><span class="math inline">\(L \ge 0\)</span> for <span class="math inline">\(n\)</span> even</li>
+<li><span class="math inline">\(L \ne 0\)</span> for <span class="math inline">\(m\)</span> negative</li>
+</ul></li>
+<li>If <span class="math inline">\(f(x) \le g(x)\)</span>, then <span class="math inline">\(\lim_{x \to \infty} f(x) \le \lim_{x \to \infty} g(x)\)</span></li>
+<li><span class="math inline">\(\lim_{x \to \infty} 1/x^n = 0\)</span>, if <span class="math inline">\(n &gt; 0\)</span></li>
+<li><span class="math inline">\(\lim_{x \to \infty} g(f(x)) = \lim_{y \to c} g(y)\)</span>, where <span class="math inline">\(c = \lim_{x\to \infty}f(x)\)</span>, if
+<ul>
+<li><span class="math inline">\(c\)</span> is constant (not equal to <span class="math inline">\(\pm \infty\)</span>)</li>
+<li><span class="math inline">\(f\)</span> is continuous (see later)</li>
+</ul></li>
+</ol>
+</section>
+<section id="examples" class="level3">
+<h3 class="anchored" data-anchor-id="examples">Examples</h3>
+<p><span class="math inline">\(\displaystyle \lim_{x \to +\infty} \frac{2x^5 + 1}{x^5 + x^3 + 1}\)</span></p>
+</section>
+<section id="examples-1" class="level3">
+<h3 class="anchored" data-anchor-id="examples-1">Examples</h3>
+<p><span class="math inline">\(\displaystyle \lim_{x\to -\infty} \frac{x^7}{\sqrt{x^{14} + 1}}\)</span></p>
+</section>
+<section id="examples-2" class="level3">
+<h3 class="anchored" data-anchor-id="examples-2">Examples</h3>
+<p><span class="math inline">\(\displaystyle \lim_{x \to +\infty}\left( \sqrt{x^2 + 1} - x \right)\)</span></p>
+</section>
+<section id="examples-3" class="level3">
+<h3 class="anchored" data-anchor-id="examples-3">Examples</h3>
+<p><span class="math inline">\(\displaystyle \lim_{x\to 0-} e^{1/x}\)</span></p>
+</section>
+<section id="examples-4" class="level3">
+<h3 class="anchored" data-anchor-id="examples-4">Examples</h3>
+<p><span class="math inline">\(\displaystyle \lim_{x\to +\infty} \sin x\)</span></p>
+</section>
+<section id="examples-5" class="level3">
+<h3 class="anchored" data-anchor-id="examples-5">Examples</h3>
+<p><span class="math inline">\(\displaystyle \lim_{x \to \pi/2-} e^{\tan x}\)</span></p>
+</section>
+<section id="infinite-limits-at-infinity" class="level3">
+<h3 class="anchored" data-anchor-id="infinite-limits-at-infinity">Infinite limits at infinity</h3>
+<p>Examples:</p>
+</section>
+<section id="summary-of-limit-techniques" class="level3">
+<h3 class="anchored" data-anchor-id="summary-of-limit-techniques">Summary of limit techniques</h3>
+<ol type="1">
+<li>Try “just substituting” <span class="math inline">\(\pm\infty\)</span></li>
+<li>Use common manipulations:
+<ul>
+<li>Simplify</li>
+<li>Highest powers</li>
+<li>Conjugate</li>
+<li>…</li>
+</ul></li>
+</ol>
+</section>
+<section id="special-cases-to-memorize" class="level3">
+<h3 class="anchored" data-anchor-id="special-cases-to-memorize">Special cases (to memorize):</h3>
+<p><span class="math display">\[
+    \lim_{h \to 0}\frac{\sin h}{h}  = 1 \quad \text{and} \quad
+    \lim_{h \to 0}\frac{\cos h - 1}{h}  = 0.
+\]</span></p>
+</section>
+</section>
+<section id="continuity" class="level1">
+<h1>Continuity</h1>
+<section id="motivation-and-definition" class="level3">
+<h3 class="anchored" data-anchor-id="motivation-and-definition">Motivation and definition</h3>
+<ul>
+<li>Intuitively, continuity <span class="math inline">\(=\)</span> “no jumps”</li>
+<li>Mathematically, <span class="math inline">\(f(x)\)</span> is <strong>continuous</strong> at an interior point <span class="math inline">\(x = a\)</span> of its domain if <span class="math display">\[
+\lim_{x \to a} f(x) = f(a).
+\]</span></li>
+</ul>
+<p>Example: <span class="math inline">\(\displaystyle f(x) = \frac{x^2 - x - 3}{x - 2}\)</span> is not continuous at <span class="math inline">\(x = 2\)</span>.</p>
+</section>
+<section id="examples-6" class="level3">
+<h3 class="anchored" data-anchor-id="examples-6">Examples</h3>
+<p>Define <span class="math inline">\(f(x) = \frac{x^2 - x - 2}{x - 2}\)</span> when <span class="math inline">\(x \ne 2\)</span> and <span class="math inline">\(f(x) = 1\)</span> otherwise (i.e.&nbsp;<span class="math inline">\(f(2) = 1\)</span>). Is <span class="math inline">\(f(x)\)</span> continuous at <span class="math inline">\(x = 2\)</span>?</p>
+</section>
+<section id="leftright-continuity" class="level3">
+<h3 class="anchored" data-anchor-id="leftright-continuity">Left/right continuity</h3>
+<p>At <span class="math inline">\(x = a\)</span>, <span class="math inline">\(f(x)\)</span> is …</p>
+<ul>
+<li><strong>Right continuous</strong> if <span class="math inline">\(\displaystyle \lim_{x\to a+} f(x) = f(a)\)</span></li>
+<li><strong>Left continuous</strong> if <span class="math inline">\(\displaystyle \lim_{x\to a-} f(x) = f(a)\)</span>.</li>
+</ul>
+<p>Example: the Heaviside function is defined by <span class="math inline">\(H(x) = 0\)</span> when <span class="math inline">\(x &lt; 0\)</span> and <span class="math inline">\(H(x) = 1\)</span> when <span class="math inline">\(x \ge 0\)</span>. Is <span class="math inline">\(H(x)\)</span> right or left continuous at <span class="math inline">\(x = 0\)</span>?</p>
+</section>
+<section id="continuity-on-an-interval" class="level3">
+<h3 class="anchored" data-anchor-id="continuity-on-an-interval">Continuity on an interval</h3>
+<p>The function <span class="math inline">\(f(x)\)</span> is continuous on an interval <span class="math inline">\([a, b]\)</span> if …</p>
+<ul>
+<li><span class="math inline">\(f(x)\)</span> is continuous at every <span class="math inline">\(x \in (a, b)\)</span></li>
+<li><span class="math inline">\(f(x)\)</span> is right-continuous in <span class="math inline">\(a\)</span></li>
+<li><span class="math inline">\(f(x)\)</span> is left-continuous in <span class="math inline">\(b\)</span>.</li>
+</ul>
+<p>Example: Show that <span class="math inline">\(f(x) = 1 - \sqrt{1 - x^2}\)</span> is continuous on <span class="math inline">\([-1, 1]\)</span>.</p>
+</section>
+<section id="making-new-continuous-functions-out-of-old-ones" class="level3">
+<h3 class="anchored" data-anchor-id="making-new-continuous-functions-out-of-old-ones">Making new continuous functions out of old ones</h3>
+<p>If <span class="math inline">\(f(x), g(x)\)</span> are continuous at <span class="math inline">\(x = a\)</span>, and <span class="math inline">\(c\)</span> is a constant, then the following are also continuous at <span class="math inline">\(x = a\)</span>:</p>
+<ul>
+<li><span class="math inline">\(f + g\)</span></li>
+<li><span class="math inline">\(f - g\)</span></li>
+<li><span class="math inline">\(cf\)</span></li>
+<li><span class="math inline">\(fg\)</span></li>
+<li><span class="math inline">\(f/g\)</span> (if <span class="math inline">\(g(a) \ne 0\)</span>)</li>
+</ul>
+</section>
+<section id="which-functions-are-continuous" class="level3">
+<h3 class="anchored" data-anchor-id="which-functions-are-continuous">Which functions are continuous?</h3>
+<p>Continuous <strong>on their domain</strong>:</p>
+<ul>
+<li>Polynomials</li>
+<li>Rational functions</li>
+<li>Trigonometric functions + inverse trigonometric functions</li>
+<li>Square roots, <span class="math inline">\(n\)</span>th roots</li>
+<li><span class="math inline">\(\log\)</span>, <span class="math inline">\(\exp\)</span></li>
+</ul>
+<p>In particular:</p>
+<ul>
+<li>Polynomials are continuous for all <span class="math inline">\(x \in \mathbb{R}\)</span></li>
+<li>Rational functions <span class="math inline">\(P(x)/Q(x)\)</span> are continuous for all <span class="math inline">\(x\)</span> so that <span class="math inline">\(Q(x) \ne 0\)</span>.</li>
+</ul>
+</section>
+<section id="composition-of-functions" class="level3">
+<h3 class="anchored" data-anchor-id="composition-of-functions">Composition of functions</h3>
+<p>If <span class="math inline">\(f(x)\)</span> is continuous and <span class="math inline">\(\lim_{x \to a} g(x) = b\)</span>, then <span class="math display">\[
+    \lim_{x \to a} f(g(x)) = f(b) = f\left( \lim_{x \to a} g(x) \right).
+\]</span></p>
+<p>Example: <span class="math inline">\(\displaystyle \lim_{x \to 2} \sin\left( \frac{2-x}{4-x^2}\pi\right)\)</span></p>
+</section>
+<section id="corollary" class="level3">
+<h3 class="anchored" data-anchor-id="corollary">Corollary</h3>
+<p>If <span class="math inline">\(g\)</span> is continuous at <span class="math inline">\(x = a\)</span> and <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(y = g(a)\)</span>, then <span class="math inline">\(f \circ g\)</span> is continuous at <span class="math inline">\(x = a\)</span>.</p>
+<p>Examples: Where are the following functions continuous?</p>
+<ul>
+<li><span class="math inline">\(\displaystyle h(x) = \sin x^2\)</span></li>
+<li><span class="math inline">\(\displaystyle h(x) = \ln(1 + \cos x)\)</span></li>
 </ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

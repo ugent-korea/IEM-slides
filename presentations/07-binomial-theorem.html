@@ -8,7 +8,7 @@
 
 <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
 
-<title>Introduction to Engineering Mathematics</title>
+<title>The binomial theorem</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,22 +24,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -84,7 +113,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction to Engineering Mathematics</h1>
+<h1 class="title">The binomial theorem</h1>
+<p class="subtitle lead">Introduction to Engineering Mathematics</p>
 </div>
 
 
@@ -107,32 +137,98 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="presentations" class="level2">
-<h2 class="anchored" data-anchor-id="presentations">Presentations</h2>
+<section id="pascals-triangle" class="level1">
+<h1>Pascal’s triangle</h1>
+<section id="pascals-triangle-1" class="level3">
+<h3 class="anchored" data-anchor-id="pascals-triangle-1">Pascal’s triangle</h3>
+<p>Expand the following expressions and look at the coefficients.</p>
 <ul>
-<li><a href="./presentations/01a-trigonometry-basic-identities.html">1 - Trigonometry (1/5): Introduction</a></li>
-<li><a href="./presentations/01b-trigonometry-formulas.html">1 - Trigonometry (2/5): Formulas</a></li>
-<li><a href="./presentations/01c-trigonometry-triangles.html">1 - Trigonometry (3/5): Geometry of triangles</a></li>
-<li><a href="./presentations/01d-trigonometry-trigonometric-eqns.html">1 - Trigonometry (4/5): Trigonometric equations</a></li>
-<li><a href="./presentations/01e-trigonometry-inverse-functions.html">1 - Trigonometry (5/5): Inverse trigonometric functions</a></li>
-<li><a href="./presentations/02-coordinate-geometry.html">2 - Coordinate Geometry</a></li>
-<li><a href="./presentations/03a-limits-continuity.html">3 - Limits and Continuity (1/2)</a></li>
-<li><a href="./presentations/03b-limits-continuity.html">3 - Limits and Continuity (2/2)</a></li>
-<li><a href="./presentations/04a-derivatives.html">4 - Derivatives (1/2)</a></li>
-<li><a href="./presentations/04b-derivatives.html">4 - Derivatives (2/2)</a></li>
-<li><a href="./presentations/05-complex-numbers.html">5 - Complex Numbers</a></li>
-<li><a href="./presentations/06a-polynomials.html">6 - Polynomials (1/2)</a></li>
-<li><a href="./presentations/06b-polynomials.html">6 - Polynomials (2/2)</a></li>
-<li><a href="./presentations/07-binomial-theorem.html">7 - The Binomial Theorem</a></li>
-<li><a href="./presentations/08a-integration-definitions.html">8 - Integration: Definitions</a></li>
-<li><a href="./presentations/08b-integration-techniques.html">8 - Integration: Techniques</a></li>
-<li><a href="./presentations/08c-integration-partial-fractions.html">8 - Integration: Partial Fractions</a></li>
-<li><a href="./presentations/08d-integration-inverse-trig.html">8 - Integration: Inverse Trigonometric Substitutions</a></li>
-<li><a href="./presentations/08e-integration-applications.html">8 - Integration: Applications</a></li>
-<li><a href="./presentations/09-proof-techniques.html">9 - Proof Techniques</a></li>
+<li><span class="math inline">\((a + b)^0 = 1\)</span></li>
+<li><span class="math inline">\((a + b)^1 = a + b\)</span></li>
+<li><span class="math inline">\((a + b)^2 = a^2 + 2ab + b^2\)</span></li>
+<li><span class="math inline">\((a + b)^3 = a^3 + 3a^2 b + 3ab^2 + b^3\)</span></li>
+<li><span class="math inline">\((a + b)^4 = a^4 + 4a^3 b + 6a^2 b^2 + 4ab^3 + b^4\)</span></li>
+<li><span class="math inline">\((a + b)^5 = a^5 + 5a^4b + 10a^3b^2 + 10a^2 b^3 + 5ab^4 + b^5\)</span></li>
 </ul>
+<p>What do you notice?</p>
+<p>Based on this pattern, what is <span class="math inline">\((a + b)^7\)</span>?</p>
+<p>Would you be able to write down <span class="math inline">\((a + b)^{27}\)</span>?</p>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/07-binomial/Yanghui_triangle.png" class="quarto-figure quarto-figure-center figure-img" height="500"></p>
+</figure>
+</div>
+<p><a href="https://en.wikipedia.org/wiki/Jia_Xian">Jian Xian (贾宪), 11th century CE</a></p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/07-binomial/TrianguloPascal.jpeg" class="quarto-figure quarto-figure-center figure-img" height="500"></p>
+</figure>
+</div>
+<p><a href="https://en.wikipedia.org/wiki/Pascal%27s_triangle">Blaise Pascal, 1665 CE</a></p>
+</div>
+</div>
+<p>Figures: Wikipedia.</p>
+</section>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<p>Use Pascal’s triangle to expand <span class="math inline">\(\displaystyle \left(2x + \frac{1}{x}\right)^5\)</span>.</p>
+</section>
+</section>
+<section id="binomial-coefficients" class="level1">
+<h1>Binomial coefficients</h1>
+<section id="binomial-coefficients-1" class="level3">
+<h3 class="anchored" data-anchor-id="binomial-coefficients-1">Binomial coefficients</h3>
+<ul>
+<li>Factorial: <span class="math inline">\(n! = n(n-1)(n-2) \cdots 2 \cdot 1\)</span>.</li>
+<li>Binomial coefficient (also called “n-choose-k”): <span class="math display">\[
+  {n \choose k} = C^k_n = \frac{n!}{k!(n-k)!}.
+\]</span></li>
+<li>Measures the number of ways of choosing <span class="math inline">\(k\)</span> objects from among <span class="math inline">\(n\)</span> choices.</li>
+</ul>
+</section>
+<section id="properties" class="level3">
+<h3 class="anchored" data-anchor-id="properties">Properties</h3>
+<p>For all <span class="math inline">\(n\)</span> and <span class="math inline">\(k \le n\)</span>:</p>
+<p><span class="math display">\[\begin{align*}
+    {n \choose 0} &amp; = {n \choose n} = 1 \\
+    {n \choose 1} &amp; = {n \choose n - 1} = n \\
+    {n \choose k} &amp; = {n \choose n - k}
+\end{align*}\]</span></p>
+</section>
+<section id="rewriting-pascals-triangle-using-binomial-coefficients" class="level3">
+<h3 class="anchored" data-anchor-id="rewriting-pascals-triangle-using-binomial-coefficients">Rewriting Pascal’s triangle using binomial coefficients</h3>
+</section>
+</section>
+<section id="the-binomial-theorem" class="level1">
+<h1>The binomial theorem</h1>
+<section id="the-binomial-expansion" class="level3">
+<h3 class="anchored" data-anchor-id="the-binomial-expansion">The binomial expansion</h3>
+<p>Putting everything we’ve learned together, we get <span class="math display">\[
+    (a + b)^n = {n \choose 0} a^n b^0 + {n \choose 1} a^{n-1}b^1 + \cdots + {n \choose n-1} a^1 b^{n-1} + {n \choose n} a^0 b^n.
+\]</span> This can be written more compactly as <span class="math display">\[
+    (a + b)^n = \sum_{k = 0}^n {n \choose k} a^{n - k} b^k.
+\]</span></p>
+</section>
+<section id="example-1" class="level3">
+<h3 class="anchored" data-anchor-id="example-1">Example</h3>
+<p>Use the binomial expansion to expand <span class="math inline">\(\displaystyle (\sqrt{x} - 1)^7\)</span>.</p>
+</section>
+<section id="visual-proof-of-the-binomial-expansion-optional" class="level3">
+<h3 class="anchored" data-anchor-id="visual-proof-of-the-binomial-expansion-optional">Visual proof of the binomial expansion (optional)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/07-binomial/binomial-proof.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

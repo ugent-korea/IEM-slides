@@ -8,7 +8,7 @@
 
 <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
 
-<title>Introduction to Engineering Mathematics</title>
+<title>Theory of equations (2/2): Polynomial equations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,22 +24,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -84,7 +113,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction to Engineering Mathematics</h1>
+<h1 class="title">Theory of equations (2/2): Polynomial equations</h1>
+<p class="subtitle lead">Introduction to Engineering Mathematics</p>
 </div>
 
 
@@ -107,32 +137,144 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="presentations" class="level2">
-<h2 class="anchored" data-anchor-id="presentations">Presentations</h2>
+<section id="overview" class="level3">
+<h3 class="anchored" data-anchor-id="overview">Overview</h3>
 <ul>
-<li><a href="./presentations/01a-trigonometry-basic-identities.html">1 - Trigonometry (1/5): Introduction</a></li>
-<li><a href="./presentations/01b-trigonometry-formulas.html">1 - Trigonometry (2/5): Formulas</a></li>
-<li><a href="./presentations/01c-trigonometry-triangles.html">1 - Trigonometry (3/5): Geometry of triangles</a></li>
-<li><a href="./presentations/01d-trigonometry-trigonometric-eqns.html">1 - Trigonometry (4/5): Trigonometric equations</a></li>
-<li><a href="./presentations/01e-trigonometry-inverse-functions.html">1 - Trigonometry (5/5): Inverse trigonometric functions</a></li>
-<li><a href="./presentations/02-coordinate-geometry.html">2 - Coordinate Geometry</a></li>
-<li><a href="./presentations/03a-limits-continuity.html">3 - Limits and Continuity (1/2)</a></li>
-<li><a href="./presentations/03b-limits-continuity.html">3 - Limits and Continuity (2/2)</a></li>
-<li><a href="./presentations/04a-derivatives.html">4 - Derivatives (1/2)</a></li>
-<li><a href="./presentations/04b-derivatives.html">4 - Derivatives (2/2)</a></li>
-<li><a href="./presentations/05-complex-numbers.html">5 - Complex Numbers</a></li>
-<li><a href="./presentations/06a-polynomials.html">6 - Polynomials (1/2)</a></li>
-<li><a href="./presentations/06b-polynomials.html">6 - Polynomials (2/2)</a></li>
-<li><a href="./presentations/07-binomial-theorem.html">7 - The Binomial Theorem</a></li>
-<li><a href="./presentations/08a-integration-definitions.html">8 - Integration: Definitions</a></li>
-<li><a href="./presentations/08b-integration-techniques.html">8 - Integration: Techniques</a></li>
-<li><a href="./presentations/08c-integration-partial-fractions.html">8 - Integration: Partial Fractions</a></li>
-<li><a href="./presentations/08d-integration-inverse-trig.html">8 - Integration: Inverse Trigonometric Substitutions</a></li>
-<li><a href="./presentations/08e-integration-applications.html">8 - Integration: Applications</a></li>
-<li><a href="./presentations/09-proof-techniques.html">9 - Proof Techniques</a></li>
+<li>Every polynomial of degree <span class="math inline">\(N\)</span> has <span class="math inline">\(N\)</span> roots
+<ul>
+<li>Some of these roots may be <em>complex</em> (e.g.&nbsp;<span class="math inline">\(x^2 + 1\)</span>)</li>
+<li>Some of these roots may be <em>the same</em> (e.g.&nbsp;<span class="math inline">\(x^2 + 2x + 1\)</span>)</li>
+</ul></li>
+<li>Roots correspond to factors of the polynomial</li>
+<li>There is no algorithm for finding all roots of a polynomial</li>
+<li>If a real polynomial has a complex root <span class="math inline">\(z\)</span>, then the complex conjugate <span class="math inline">\(\bar{z}\)</span> is also a root (e.g.&nbsp;<span class="math inline">\(x^3 - x^2 + x - 1\)</span>)</li>
 </ul>
+</section>
+<section id="roots-and-factors-of-polynomials" class="level1">
+<h1>Roots and factors of polynomials</h1>
+<section id="reminder" class="level3">
+<h3 class="anchored" data-anchor-id="reminder">Reminder</h3>
+<p>Polynomial of degree <span class="math inline">\(n\)</span>: <span class="math display">\[
+    P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
+\]</span></p>
+<ul>
+<li>The number <span class="math inline">\(n\)</span> is called the <strong>degree</strong> of <span class="math inline">\(P(x)\)</span>.</li>
+<li>A <strong>root</strong> or <strong>zero</strong> is a number <span class="math inline">\(\alpha\)</span> such that <span class="math inline">\(P(\alpha) = 0\)</span>.</li>
+<li>Roots can be real (<span class="math inline">\(\alpha \in \mathbb{R}\)</span>) or complex (<span class="math inline">\(\alpha \in \mathbb{C}\)</span>).</li>
+<li>A <strong>factor</strong> is a polynomial <span class="math inline">\(F(x)\)</span> such that <span class="math inline">\(P(x) = F(x) Q(x)\)</span> for some other polynomial <span class="math inline">\(Q(x)\)</span>.
+<ul>
+<li>Linear factor: <span class="math inline">\(F(x) = x - \alpha\)</span></li>
+<li>Quadratic factor: <span class="math inline">\(F(x) = Ax^2 + Bx + C\)</span></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="theorems-involving-polynomials" class="level1">
+<h1>Theorems involving polynomials</h1>
+<section id="remainder-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="remainder-theorem">Remainder theorem</h2>
+<section id="remainder-theorem-special-case" class="level3">
+<h3 class="anchored" data-anchor-id="remainder-theorem-special-case">Remainder theorem (special case)</h3>
+<p>If <span class="math inline">\(P(x)\)</span> is a polynomial, then <span class="math inline">\(P(h)\)</span> is the remainder of <span class="math inline">\(P(x)\)</span> divided by <span class="math inline">\(x - h\)</span>.</p>
+</section>
+<section id="corollary" class="level3">
+<h3 class="anchored" data-anchor-id="corollary">Corollary</h3>
+<p>Note: “Corollary” means “consequence”.</p>
+<p>If <span class="math inline">\(P(x)\)</span> is a polynomial with zero <span class="math inline">\(\alpha \in \mathbb{C}\)</span> (in other words, <span class="math inline">\(P(\alpha) = 0\)</span>), then <span class="math inline">\(x - \alpha\)</span> is a factor of <span class="math inline">\(P(x)\)</span>: <span class="math display">\[
+    P(x) = (x - \alpha) Q(x).
+\]</span></p>
+</section>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<p>Find all the factors of <span class="math inline">\(P(x) = 2x^3 + 3x^2 - 1\)</span>.</p>
+</section>
+<section id="remainder-theorem-general-version" class="level3">
+<h3 class="anchored" data-anchor-id="remainder-theorem-general-version">Remainder theorem (general version)</h3>
+<p>If <span class="math inline">\(P(x)\)</span> is a polynomial with <em>distinct</em> zeros <span class="math inline">\(\alpha_1, \alpha_2, \ldots, \alpha_k \in \mathbb{C}\)</span>, then <span class="math inline">\((x - \alpha_1)(x - \alpha_2) \cdots (x - \alpha_k)\)</span> is a factor of <span class="math inline">\(P(x)\)</span>: <span class="math display">\[
+    P(x) = (x - \alpha_1)(x - \alpha_2) \cdots (x - \alpha_k) Q(x).
+\]</span></p>
+<p>Notes:</p>
+<ul>
+<li>There are at most <span class="math inline">\(n\)</span> distinct zeros, where <span class="math inline">\(n\)</span> is the degree of <span class="math inline">\(P(x)\)</span> (see later).</li>
+</ul>
+</section>
+<section id="examples" class="level3">
+<h3 class="anchored" data-anchor-id="examples">Examples</h3>
+<p>Find a polynomial of degree <span class="math inline">\(4\)</span> with roots <span class="math inline">\(\pm i\)</span>, <span class="math inline">\(\pm 2\)</span>, and such that <span class="math inline">\(P(3) = 25\)</span>.</p>
+</section>
+<section id="examples-1" class="level3">
+<h3 class="anchored" data-anchor-id="examples-1">Examples</h3>
+<p>Find a polynomial of degree <span class="math inline">\(4\)</span> with roots <span class="math inline">\(0\)</span> and <span class="math inline">\(-2\)</span>, and where the root <span class="math inline">\(-2\)</span> has multiplicity <span class="math inline">\(3\)</span>.</p>
+</section>
+<section id="how-many-roots-can-a-polynomial-have" class="level3">
+<h3 class="anchored" data-anchor-id="how-many-roots-can-a-polynomial-have">How many roots can a polynomial have?</h3>
+<p><strong>Theorem:</strong> A polynomial <span class="math inline">\(P(x) \ne 0\)</span> cannot have more than <span class="math inline">\(n\)</span> distinct roots, where <span class="math inline">\(n = \deg P(x)\)</span>.</p>
+<p><strong>Proof:</strong> Assume that there are <span class="math inline">\(m\)</span> distinct roots <span class="math inline">\(\alpha_1, \ldots, \alpha_m\)</span> , with <span class="math inline">\(m &gt; \deg P(x)\)</span>. Then by the remainder theorem, <span class="math display">\[
+    P(x) = (x - \alpha_1) \cdots (x - \alpha_m) Q(x).
+\]</span></p>
+<p>The left-hand side has degree <span class="math inline">\(n\)</span>, whereas the right-hand side has degree at least <span class="math inline">\(m &gt; n\)</span>. This is a contradiction.</p>
+</section>
+<section id="relation-between-roots-and-coefficients" class="level3">
+<h3 class="anchored" data-anchor-id="relation-between-roots-and-coefficients">Relation between roots and coefficients</h3>
+<p>Define the <strong>symmetric polynomials</strong>:</p>
+<ul>
+<li><span class="math inline">\(S_1 = a_1 + \cdots + a_n\)</span></li>
+<li><span class="math inline">\(S_2 = a_1 a_2 + a_1 a_3 + \cdots + a_1 a_n + a_2 a_3 + \cdots + a_{n-1}a_n\)</span></li>
+<li><span class="math inline">\(S_3 = a_1 a_2 a_3 + \cdots + a_{n-2}a_{n-1}a_n\)</span></li>
+<li>…</li>
+<li><span class="math inline">\(S_n = a_1 a_2 \cdots a_n\)</span></li>
+</ul>
+<p>Then: <span class="math display">\[\begin{multline}
+    (x - a_1)(x - a_2) \cdots (x - a_n) = \\
+    x^n - S_1 x^{n-1} + S_2 x^{n-2} - S_3 x^{n-3} + \cdots + (-1)^n S_n.
+\end{multline}\]</span></p>
+</section>
+<section id="example-1" class="level3">
+<h3 class="anchored" data-anchor-id="example-1">Example</h3>
+<p>Given <span class="math inline">\(P(x) = x^3 + 2x^2 - 3x - 1\)</span> with roots <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, and <span class="math inline">\(\gamma\)</span>, find the value of <span class="math inline">\(\alpha^2 + \beta^2 + \gamma^2\)</span>.</p>
+</section>
+</section>
+<section id="fundamental-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="fundamental-theorem">Fundamental theorem</h2>
+<section id="the-fundamental-theorem-of-algebra" class="level3">
+<h3 class="anchored" data-anchor-id="the-fundamental-theorem-of-algebra">The fundamental theorem of algebra</h3>
+<p><strong>Theorem:</strong> Each polynomial has <em>at least one</em> root (which may be complex).</p>
+<p><strong>Proof:</strong> Difficult.</p>
+<p><strong>Consequence:</strong> Each polynomial of degree <span class="math inline">\(n\)</span> has exactly <span class="math inline">\(n\)</span> roots (which may be same).</p>
+</section>
+<section id="how-to-find-roots" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-find-roots">How to find roots?</h3>
+<ul>
+<li>Degree 2: formula for quadratic equation</li>
+<li>Degree 3, 4: formulas exist, but they are very complicated</li>
+<li>Degree 5 and up: <strong>no general formula exists</strong></li>
+</ul>
+<p>In general, proceed via trial and error, or numerically.</p>
+</section>
+<section id="example-2" class="level3">
+<h3 class="anchored" data-anchor-id="example-2">Example</h3>
+<p>Factorize <span class="math inline">\(P(x) = x^4 + 2x^3 + 2x^2 + 2x + 1\)</span>.</p>
+</section>
+</section>
+<section id="complex-conjugates" class="level2">
+<h2 class="anchored" data-anchor-id="complex-conjugates">Complex conjugates</h2>
+<section id="complex-conjugates-theorem" class="level3">
+<h3 class="anchored" data-anchor-id="complex-conjugates-theorem">Complex conjugates theorem</h3>
+<p><strong>Theorem:</strong> If <span class="math inline">\(P(x)\)</span> is a polynomial with real coefficients, then complex roots appear in <em>conjugates</em>.</p>
+<p>In other words, if <span class="math inline">\(z = \alpha +i \beta\)</span> is a root with multiplicity <span class="math inline">\(p\)</span>, then <span class="math inline">\(\bar{z} = \alpha - i \beta\)</span> is also a root with multiplicity <span class="math inline">\(p\)</span>.</p>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/06-polynomials/roots.png" class="quarto-figure quarto-figure-center figure-img" style="height:85.0%"></p>
+</figure>
+</div>
+<p>Source: <em>The beauty of roots</em>, https://arxiv.org/pdf/2310.00326.</p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->

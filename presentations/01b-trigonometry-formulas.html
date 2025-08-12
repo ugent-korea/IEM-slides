@@ -8,7 +8,7 @@
 
 <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
 
-<title>Introduction to Engineering Mathematics</title>
+<title>Trigonometry (2/5): Formulas</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,22 +24,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -84,7 +113,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction to Engineering Mathematics</h1>
+<h1 class="title">Trigonometry (2/5): Formulas</h1>
+<p class="subtitle lead">Introduction to Engineering Mathematics</p>
 </div>
 
 
@@ -107,32 +137,124 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="presentations" class="level2">
-<h2 class="anchored" data-anchor-id="presentations">Presentations</h2>
+<section id="notes-for-this-chapter" class="level3">
+<h3 class="anchored" data-anchor-id="notes-for-this-chapter">Notes for this chapter</h3>
 <ul>
-<li><a href="./presentations/01a-trigonometry-basic-identities.html">1 - Trigonometry (1/5): Introduction</a></li>
-<li><a href="./presentations/01b-trigonometry-formulas.html">1 - Trigonometry (2/5): Formulas</a></li>
-<li><a href="./presentations/01c-trigonometry-triangles.html">1 - Trigonometry (3/5): Geometry of triangles</a></li>
-<li><a href="./presentations/01d-trigonometry-trigonometric-eqns.html">1 - Trigonometry (4/5): Trigonometric equations</a></li>
-<li><a href="./presentations/01e-trigonometry-inverse-functions.html">1 - Trigonometry (5/5): Inverse trigonometric functions</a></li>
-<li><a href="./presentations/02-coordinate-geometry.html">2 - Coordinate Geometry</a></li>
-<li><a href="./presentations/03a-limits-continuity.html">3 - Limits and Continuity (1/2)</a></li>
-<li><a href="./presentations/03b-limits-continuity.html">3 - Limits and Continuity (2/2)</a></li>
-<li><a href="./presentations/04a-derivatives.html">4 - Derivatives (1/2)</a></li>
-<li><a href="./presentations/04b-derivatives.html">4 - Derivatives (2/2)</a></li>
-<li><a href="./presentations/05-complex-numbers.html">5 - Complex Numbers</a></li>
-<li><a href="./presentations/06a-polynomials.html">6 - Polynomials (1/2)</a></li>
-<li><a href="./presentations/06b-polynomials.html">6 - Polynomials (2/2)</a></li>
-<li><a href="./presentations/07-binomial-theorem.html">7 - The Binomial Theorem</a></li>
-<li><a href="./presentations/08a-integration-definitions.html">8 - Integration: Definitions</a></li>
-<li><a href="./presentations/08b-integration-techniques.html">8 - Integration: Techniques</a></li>
-<li><a href="./presentations/08c-integration-partial-fractions.html">8 - Integration: Partial Fractions</a></li>
-<li><a href="./presentations/08d-integration-inverse-trig.html">8 - Integration: Inverse Trigonometric Substitutions</a></li>
-<li><a href="./presentations/08e-integration-applications.html">8 - Integration: Applications</a></li>
-<li><a href="./presentations/09-proof-techniques.html">9 - Proof Techniques</a></li>
+<li>You should learn all of these formulas by heart.</li>
+<li>The best way to learn these formulas is by doing lots of practice problems.</li>
+<li>Often, knowing the derivation of a formula will also help you remember it.</li>
+<li>Follow along with the lectures to fill in missing steps.</li>
 </ul>
+</section>
+<section id="reflection-identities" class="level1">
+<h1>Reflection identities</h1>
+<section id="reflection-across-the-x-axis-evenodd-identities" class="level3">
+<h3 class="anchored" data-anchor-id="reflection-across-the-x-axis-evenodd-identities">Reflection across the <span class="math inline">\(x\)</span>-axis (even/odd identities)</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>Formulas:</p>
+<p>Example: Compute <span class="math inline">\(\sin(-\pi/4)\)</span></p>
+</div><div class="column" style="width:40%;">
+<p><img src="./images/01-trigonometry/even-odd.svg" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="reflection-across-the-y-axis-complementary-angles" class="level3">
+<h3 class="anchored" data-anchor-id="reflection-across-the-y-axis-complementary-angles">Reflection across the <span class="math inline">\(y\)</span>-axis (complementary angles)</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>Formulas:</p>
+</div><div class="column" style="width:40%;">
+<p><img src="./images/01-trigonometry/reflection-y.svg" class="img-fluid"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="shift-formulas" class="level1">
+<h1>Shift formulas</h1>
+<section id="shift-formulas-by-pi" class="level3">
+<h3 class="anchored" data-anchor-id="shift-formulas-by-pi">Shift formulas (by <span class="math inline">\(\pi\)</span>)</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>Formulas:</p>
+</div><div class="column" style="width:40%;">
+<p><img src="./images/01-trigonometry/shift-formulas.svg" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="shift-formulas-by-pi2" class="level3">
+<h3 class="anchored" data-anchor-id="shift-formulas-by-pi2">Shift formulas (by <span class="math inline">\(\pi/2\)</span>)</h3>
+<p>Formulas:</p>
+<ul>
+<li>Proof skipped.</li>
+<li><strong>Very important formulas</strong> to turn <span class="math inline">\(\sin\)</span> into <span class="math inline">\(\cos\)</span> and vice versa.</li>
+</ul>
+</section>
+</section>
+<section id="additionsubtraction-formulas" class="level1">
+<h1>Addition/subtraction formulas</h1>
+<section id="additionsubtraction-formulas-for-sin-and-cos" class="level3">
+<h3 class="anchored" data-anchor-id="additionsubtraction-formulas-for-sin-and-cos">Addition/subtraction formulas (for <span class="math inline">\(\sin\)</span> and <span class="math inline">\(\cos\)</span>)</h3>
+<p>Formulas:</p>
+<ul>
+<li>Proof skipped.</li>
+<li>Note the signs for <span class="math inline">\(\cos\)</span>!</li>
+<li>Every formula on the previous slides can be derived from these formulas.</li>
+</ul>
+</section>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<p>Compute <span class="math inline">\(\displaystyle \sin\left( \frac{7 \pi}{12} \right)\)</span>.</p>
+</section>
+<section id="additionsubtraction-formulas-for-tan" class="level3">
+<h3 class="anchored" data-anchor-id="additionsubtraction-formulas-for-tan">Addition/subtraction formulas (for <span class="math inline">\(\tan\)</span>)</h3>
+<p>Formulas:</p>
+</section>
+</section>
+<section id="doublehalf-angle-formulas" class="level1">
+<h1>Double/half angle formulas</h1>
+<section id="double-angle-formulas-2theta-to-theta" class="level3">
+<h3 class="anchored" data-anchor-id="double-angle-formulas-2theta-to-theta">Double-angle formulas (<span class="math inline">\(2\theta \to \theta\)</span>)</h3>
+<p>Formulas:</p>
+<ul>
+<li>Follows from the addition/subtraction formulas.</li>
+<li>The double-angle formula for <span class="math inline">\(\cos\)</span> can also be written as</li>
+</ul>
+</section>
+<section id="example-1" class="level3">
+<h3 class="anchored" data-anchor-id="example-1">Example</h3>
+<p>Prove that <span class="math inline">\(\displaystyle \tan\left(\frac{\pi}{4} + x\right) = \frac{1 + \tan x}{1 - \tan x}\)</span>.</p>
+</section>
+<section id="half-angle-formulas-theta-to-2theta" class="level3">
+<h3 class="anchored" data-anchor-id="half-angle-formulas-theta-to-2theta">Half-angle formulas (<span class="math inline">\(\theta \to 2\theta\)</span>)</h3>
+<p>Formulas:</p>
+<p>These formulas are useful to compute integrals of powers of <span class="math inline">\(\sin\)</span> and <span class="math inline">\(\cos\)</span>.</p>
+</section>
+<section id="example-2" class="level3">
+<h3 class="anchored" data-anchor-id="example-2">Example</h3>
+<p>Express <span class="math inline">\(\cos^2 x \sin^2 x\)</span> as a combination of sines and cosines, without any powers.</p>
+</section>
+</section>
+<section id="formulas-for-product-to-sum-and-sum-to-product" class="level1">
+<h1>Formulas for product to sum and sum to product</h1>
+<section id="product-to-sum-formulas" class="level3">
+<h3 class="anchored" data-anchor-id="product-to-sum-formulas">Product-to-sum formulas</h3>
+<p>Formulas:</p>
+</section>
+<section id="sum-to-product-formulas" class="level3">
+<h3 class="anchored" data-anchor-id="sum-to-product-formulas">Sum-to-product formulas</h3>
+<p>Formulas:</p>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/01-trigonometry/hoodie-formulas.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

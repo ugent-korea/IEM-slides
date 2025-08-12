@@ -8,7 +8,7 @@
 
 <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
 
-<title>Introduction to Engineering Mathematics</title>
+<title>Integration: Partial Fractions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,22 +24,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -84,7 +113,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction to Engineering Mathematics</h1>
+<h1 class="title">Integration: Partial Fractions</h1>
+<p class="subtitle lead">Introduction to Engineering Mathematics</p>
 </div>
 
 
@@ -107,32 +137,140 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="presentations" class="level2">
-<h2 class="anchored" data-anchor-id="presentations">Presentations</h2>
+<section id="what-are-partial-fractions" class="level3">
+<h3 class="anchored" data-anchor-id="what-are-partial-fractions">What are partial fractions?</h3>
+<p>Every rational function can be written as a sum of “simple” partial fractions. For example <span class="math display">\[
+    \frac{x+2}{x^3-x} = \frac{-2}{x} + \frac{3}{2(x-1)} + \frac{1}{2(x + 1)}.
+\]</span> In this lecture, we will find a recipe for the coefficients and terms in the partial fraction expansion.</p>
+</section>
+<section id="why-are-partial-fractions-useful" class="level3">
+<h3 class="anchored" data-anchor-id="why-are-partial-fractions-useful">Why are partial fractions useful?</h3>
+<p>The advantage is that the partial fractions are <em>much</em> easier to integrate: <span class="math display">\[\begin{align*}
+    \int \frac{x+2}{x^3-x} dx &amp; = - 2\int \frac{dx}{x} + \frac{3}{2} \int \frac{dx}{x-1} + \frac{1}{2} \int \frac{dx}{x + 1} \\
+        &amp; = -2 \ln |x| + \frac{3}{2} \ln |x-1| + \frac{1}{2} \ln |x+1| + C.
+\end{align*}\]</span></p>
+</section>
+<section id="how-to-find-the-partial-fraction-expansion" class="level1">
+<h1>How to find the partial fraction expansion</h1>
+<section id="goal" class="level3">
+<h3 class="anchored" data-anchor-id="goal">Goal</h3>
+<p>To integrate <strong>any rational function</strong>: determine <span class="math display">\[
+    \int \frac{P(x)}{Q(x)} dx = ???
+\]</span> where <span class="math inline">\(P(x)\)</span> and <span class="math inline">\(Q(x)\)</span> are polynomials.</p>
+</section>
+<section id="step-1-divide-if-necessary" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-divide-if-necessary">Step 1: Divide if necessary</h3>
+<p>If the degree of <span class="math inline">\(P(x)\)</span> is greater than or equal to the degree of <span class="math inline">\(Q(x)\)</span>, do a polynomial division: <span class="math display">\[
+    \int \frac{P(x)}{Q(x)} dx = \int S(x) dx + \int \frac{R(x)}{Q(x)} dx,
+\]</span> with <span class="math inline">\(S(x)\)</span> the quotient and <span class="math inline">\(R(x)\)</span> the remainder.</p>
 <ul>
-<li><a href="./presentations/01a-trigonometry-basic-identities.html">1 - Trigonometry (1/5): Introduction</a></li>
-<li><a href="./presentations/01b-trigonometry-formulas.html">1 - Trigonometry (2/5): Formulas</a></li>
-<li><a href="./presentations/01c-trigonometry-triangles.html">1 - Trigonometry (3/5): Geometry of triangles</a></li>
-<li><a href="./presentations/01d-trigonometry-trigonometric-eqns.html">1 - Trigonometry (4/5): Trigonometric equations</a></li>
-<li><a href="./presentations/01e-trigonometry-inverse-functions.html">1 - Trigonometry (5/5): Inverse trigonometric functions</a></li>
-<li><a href="./presentations/02-coordinate-geometry.html">2 - Coordinate Geometry</a></li>
-<li><a href="./presentations/03a-limits-continuity.html">3 - Limits and Continuity (1/2)</a></li>
-<li><a href="./presentations/03b-limits-continuity.html">3 - Limits and Continuity (2/2)</a></li>
-<li><a href="./presentations/04a-derivatives.html">4 - Derivatives (1/2)</a></li>
-<li><a href="./presentations/04b-derivatives.html">4 - Derivatives (2/2)</a></li>
-<li><a href="./presentations/05-complex-numbers.html">5 - Complex Numbers</a></li>
-<li><a href="./presentations/06a-polynomials.html">6 - Polynomials (1/2)</a></li>
-<li><a href="./presentations/06b-polynomials.html">6 - Polynomials (2/2)</a></li>
-<li><a href="./presentations/07-binomial-theorem.html">7 - The Binomial Theorem</a></li>
-<li><a href="./presentations/08a-integration-definitions.html">8 - Integration: Definitions</a></li>
-<li><a href="./presentations/08b-integration-techniques.html">8 - Integration: Techniques</a></li>
-<li><a href="./presentations/08c-integration-partial-fractions.html">8 - Integration: Partial Fractions</a></li>
-<li><a href="./presentations/08d-integration-inverse-trig.html">8 - Integration: Inverse Trigonometric Substitutions</a></li>
-<li><a href="./presentations/08e-integration-applications.html">8 - Integration: Applications</a></li>
-<li><a href="./presentations/09-proof-techniques.html">9 - Proof Techniques</a></li>
+<li>Recall: <span class="math inline">\(\deg R(x) &lt; \deg Q(x)\)</span>.</li>
+<li>From now on, we will suppose that this division has already been done, so that <span class="math inline">\(\deg P(x) &lt; \deg Q(x)\)</span>.</li>
 </ul>
+</section>
+<section id="special-case-1-linear-denominator" class="level3">
+<h3 class="anchored" data-anchor-id="special-case-1-linear-denominator">Special case 1: Linear denominator</h3>
+<p>If <span class="math inline">\(Q(x)\)</span> is a linear polynomial, i.e.&nbsp;<span class="math inline">\(Q(x) = Ax + B\)</span>, then our integral takes the form <span class="math display">\[\begin{align*}
+    \int \frac{P(x)}{Q(x)} dx &amp; = \int \frac{K}{Ax + B} dx \\
+        &amp; = \cdots
+\end{align*}\]</span></p>
+</section>
+<section id="special-case-2-quadratic-denominator" class="level3">
+<h3 class="anchored" data-anchor-id="special-case-2-quadratic-denominator">Special case 2: Quadratic denominator</h3>
+<p>If <span class="math inline">\(Q(x)\)</span> is a quadratic polynomial, then several cases are possible. After completing the square, we can have one of the following forms:</p>
+<p>If <span class="math inline">\(\deg P(x) = 0\)</span>:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \int \frac{dx}{x^2 - a^2}\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{dx}{x^2 + a^2}\)</span></li>
+</ul>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+<p>If <span class="math inline">\(\deg P(x) = 1\)</span>:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \int \frac{x \, dx}{x^2 - a^2}\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{x \, dx}{x^2 + a^2}\)</span></li>
+</ul>
+</section>
+<section id="step-2-find-the-roots-of-the-denominator" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-find-the-roots-of-the-denominator">Step 2: Find the roots of the denominator</h3>
+<p>Do a factorization of the denominator <span class="math inline">\(Q(x)\)</span> into factors with <strong>real</strong> coefficients.</p>
+<p>You will find:</p>
+<ul>
+<li>Some linear factors <span class="math inline">\((x - \alpha)\)</span>, with <span class="math inline">\(\alpha\)</span> roots of <span class="math inline">\(Q(x)\)</span></li>
+<li>Some quadratic factors <span class="math inline">\((Ax^2 + Bx + C)\)</span> that cannot be further reduced.</li>
+</ul>
+<p>. . .</p>
+<p><strong>Important:</strong> Do not split into complex factors. For example: <span class="math display">\[
+    x^3 + x = x(x^2 + 1).
+\]</span> Stop here, don’t factor into <span class="math inline">\(x(x+i)(x-i)\)</span>.</p>
+</section>
+<section id="case-2.1-distinct-roots" class="level3">
+<h3 class="anchored" data-anchor-id="case-2.1-distinct-roots">Case 2.1: Distinct roots</h3>
+<p>Assume that <span class="math inline">\(Q(x) = (x - \alpha_1) \cdots (x - \alpha_k)\)</span>, with all <span class="math inline">\(\alpha_i\)</span> <strong>distinct</strong> and <strong>real</strong>.</p>
+<p>Then the partial fraction expansion becomes <span class="math display">\[
+    \frac{P(x)}{Q(x)} = \frac{A_1}{x - \alpha_1} + \frac{A_2}{x - \alpha_2} + \cdots + \frac{A_k}{x - \alpha_k},
+\]</span> where the coefficients <span class="math inline">\(A_1, \ldots, A_k\)</span> can be determined by adding the terms together and comparing with the left-hand side.</p>
+</section>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<p>Find <span class="math inline">\(\displaystyle \int \frac{x+2}{x^3-x} dx\)</span></p>
+</section>
+<section id="case-2.2-irreducible-quadratic-factors" class="level3">
+<h3 class="anchored" data-anchor-id="case-2.2-irreducible-quadratic-factors">Case 2.2: Irreducible quadratic factors</h3>
+<ul>
+<li>For each quadratic factor, put a <em>linear term</em> in the numerator of the partial fraction.</li>
+<li>Deal with the linear factors as before.</li>
+</ul>
+</section>
+<section id="example-1" class="level3">
+<h3 class="anchored" data-anchor-id="example-1">Example</h3>
+<p><span class="math display">\[\begin{align*}
+    \frac{x+2}{x^3+x} &amp; = \frac{x + 2}{x(x^2 + 1)} \\
+        &amp; = \frac{A}{x} + \frac{Bx + C}{x^2 + 1} \\
+        &amp; = \cdots
+\end{align*}\]</span></p>
+<p>Therefore <span class="math inline">\(\displaystyle \int \frac{x+2}{x^3+x} dx = \cdots\)</span></p>
+</section>
+<section id="case-2.3-repeated-linear-factors" class="level3">
+<h3 class="anchored" data-anchor-id="case-2.3-repeated-linear-factors">Case 2.3: Repeated linear factors</h3>
+<ul>
+<li>If <span class="math inline">\(Q(x)\)</span> has a repeated factor <span class="math inline">\((x - \alpha)^p\)</span>, then add <span class="math inline">\(p\)</span> terms to the partial fraction expansion: <span class="math display">\[
+  \frac{P(x)}{Q(x)} = \frac{A_1}{x - \alpha} + \frac{A_2}{(x-\alpha)^2} + \cdots + \frac{A_p}{(x - \alpha)^p} + \text{[other PFE]}
+\]</span></li>
+<li>Deal with other linear and quadratic factors as before.</li>
+</ul>
+</section>
+<section id="example-2" class="level3">
+<h3 class="anchored" data-anchor-id="example-2">Example</h3>
+<p>Determine the partial fraction expansion of <span class="math inline">\(\displaystyle \frac{1}{x^2(x-1)^3}\)</span>.</p>
+</section>
+<section id="example-3" class="level3">
+<h3 class="anchored" data-anchor-id="example-3">Example</h3>
+<p>Find <span class="math inline">\(\displaystyle \int \frac{dx}{x^3 - 5x^2 + 8x - 4}\)</span>.</p>
+</section>
+<section id="summary" class="level3 smaller">
+<h3 class="smaller anchored" data-anchor-id="summary">Summary</h3>
+<ol type="1">
+<li>If <span class="math inline">\(\deg P(x) \ge \deg Q(x)\)</span>, do polynomial division.</li>
+<li>Factor the denominator <span class="math inline">\(Q(x)\)</span> and write partial fractions for each root:
+<ul>
+<li>Distinct roots (roots with multiplicity 1): <span class="math display">\[
+   \text{PF} = \frac{A}{x - \alpha}.
+\]</span></li>
+<li>Irreducible quadratic factors: <span class="math display">\[
+   \text{PF} = \frac{Ax+B}{x^2 + \cdots}
+\]</span></li>
+<li>Root with multiplicity <span class="math inline">\(p\)</span>: <span class="math display">\[
+   \frac{A_1}{x - \alpha} + \cdots + \frac{A_p}{(x - \alpha)^p}.
+\]</span></li>
+</ul></li>
+<li>Find the coefficients in the partial fraction expansion by solving a system of equations.</li>
+<li>Integrate the partial fraction expansion.</li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

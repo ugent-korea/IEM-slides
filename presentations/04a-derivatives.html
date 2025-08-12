@@ -8,7 +8,7 @@
 
 <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
 
-<title>Introduction to Engineering Mathematics</title>
+<title>Derivatives (1/2)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,22 +24,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -84,7 +113,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction to Engineering Mathematics</h1>
+<h1 class="title">Derivatives (1/2)</h1>
+<p class="subtitle lead">Introduction to Engineering Mathematics</p>
 </div>
 
 
@@ -107,32 +137,206 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="presentations" class="level2">
-<h2 class="anchored" data-anchor-id="presentations">Presentations</h2>
+<section id="motivation-and-definition" class="level1">
+<h1>Motivation and definition</h1>
+<section id="why-derivatives" class="level3">
+<h3 class="anchored" data-anchor-id="why-derivatives">Why derivatives?</h3>
+<p>In short: <strong>tangent lines</strong></p>
+<p>In the previous class, we managed to compute the slope of the tangent line to the parabola <span class="math inline">\(y = x^2\)</span> by computing the limit <span class="math display">\[
+    m = \lim_{x \to 1} \frac{x^2 - 1}{x - 1} = 2.
+\]</span></p>
+<p>How would we do this for an <strong>arbitrary curve</strong> <span class="math inline">\(y = f(x)\)</span>?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/04-derivatives/tangents.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="derivative-of-a-function" class="level3">
+<h3 class="anchored" data-anchor-id="derivative-of-a-function">Derivative of a function</h3>
+<p>We define the <strong>derivative of <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x = a\)</span></strong> (“f prime”) as <span class="math display">\[
+    f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a} \quad \text{(if the limit exists)}.
+\]</span></p>
+<p>If we put <span class="math inline">\(h = x - a\)</span>, we can rewrite this as <span class="math display">\[
+    f'(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}.
+\]</span> This is sometimes easier to compute.</p>
+<p>If <span class="math inline">\(f'(a)\)</span> exists, we say that <span class="math inline">\(f(x)\)</span> is <strong>differentiable</strong> at <span class="math inline">\(x = a\)</span>.</p>
+</section>
+<section id="examples" class="level3">
+<h3 class="anchored" data-anchor-id="examples">Examples</h3>
+<p>Compute the derivative of <span class="math inline">\(f(x) = 3x^2 + 7x - 5\)</span> at <span class="math inline">\(x = 1\)</span>.</p>
+</section>
+<section id="examples-1" class="level3">
+<h3 class="anchored" data-anchor-id="examples-1">Examples</h3>
+<p>Compute the derivative of <span class="math inline">\(f(x) = |x|\)</span> at <span class="math inline">\(x = a\)</span>.</p>
+</section>
+<section id="the-derivative-as-a-function" class="level3">
+<h3 class="anchored" data-anchor-id="the-derivative-as-a-function">The derivative as a function</h3>
+<p>By letting <span class="math inline">\(a\)</span> vary in <span class="math inline">\(f'(a)\)</span>, we obtain a function given by <span class="math display">\[
+    f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \quad \text{(if the limit exists)}.
+\]</span></p>
+<p>There are many notations for the derivative function: for <span class="math inline">\(y = f(x)\)</span>, <span class="math display">\[
+    f'(x) = y' = \frac{d f}{d x} = \frac{d y}{d x} = \frac{d}{dx} f(x).
+\]</span> all mean the same thing.</p>
+</section>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<p>Show that <span class="math inline">\(\displaystyle \frac{d}{dx} \sqrt{x} = \frac{1}{2\sqrt{x}}\)</span>.</p>
+</section>
+<section id="properties-of-differentiable-functions" class="level3">
+<h3 class="anchored" data-anchor-id="properties-of-differentiable-functions">Properties of differentiable functions</h3>
+<p>We say that <span class="math inline">\(y = f(x)\)</span> is <strong>differentiable on an interval <span class="math inline">\([a, b]\)</span></strong> if</p>
 <ul>
-<li><a href="./presentations/01a-trigonometry-basic-identities.html">1 - Trigonometry (1/5): Introduction</a></li>
-<li><a href="./presentations/01b-trigonometry-formulas.html">1 - Trigonometry (2/5): Formulas</a></li>
-<li><a href="./presentations/01c-trigonometry-triangles.html">1 - Trigonometry (3/5): Geometry of triangles</a></li>
-<li><a href="./presentations/01d-trigonometry-trigonometric-eqns.html">1 - Trigonometry (4/5): Trigonometric equations</a></li>
-<li><a href="./presentations/01e-trigonometry-inverse-functions.html">1 - Trigonometry (5/5): Inverse trigonometric functions</a></li>
-<li><a href="./presentations/02-coordinate-geometry.html">2 - Coordinate Geometry</a></li>
-<li><a href="./presentations/03a-limits-continuity.html">3 - Limits and Continuity (1/2)</a></li>
-<li><a href="./presentations/03b-limits-continuity.html">3 - Limits and Continuity (2/2)</a></li>
-<li><a href="./presentations/04a-derivatives.html">4 - Derivatives (1/2)</a></li>
-<li><a href="./presentations/04b-derivatives.html">4 - Derivatives (2/2)</a></li>
-<li><a href="./presentations/05-complex-numbers.html">5 - Complex Numbers</a></li>
-<li><a href="./presentations/06a-polynomials.html">6 - Polynomials (1/2)</a></li>
-<li><a href="./presentations/06b-polynomials.html">6 - Polynomials (2/2)</a></li>
-<li><a href="./presentations/07-binomial-theorem.html">7 - The Binomial Theorem</a></li>
-<li><a href="./presentations/08a-integration-definitions.html">8 - Integration: Definitions</a></li>
-<li><a href="./presentations/08b-integration-techniques.html">8 - Integration: Techniques</a></li>
-<li><a href="./presentations/08c-integration-partial-fractions.html">8 - Integration: Partial Fractions</a></li>
-<li><a href="./presentations/08d-integration-inverse-trig.html">8 - Integration: Inverse Trigonometric Substitutions</a></li>
-<li><a href="./presentations/08e-integration-applications.html">8 - Integration: Applications</a></li>
-<li><a href="./presentations/09-proof-techniques.html">9 - Proof Techniques</a></li>
+<li><span class="math inline">\(f'(x)\)</span> exists for each <span class="math inline">\(x \in (a, b)\)</span></li>
+<li>At <span class="math inline">\(x = a\)</span>, the <em>right derivative</em> exists: <span class="math display">\[f'(a) = \lim_{h \to 0+}\frac{f(a + h) - f(a)}{h}.\]</span></li>
+<li>At <span class="math inline">\(x = b\)</span>, the <em>left derivative</em> exists: <span class="math display">\[f'(b) = \lim_{h \to 0-}\frac{f(b + h) - f(b)}{h}.\]</span></li>
 </ul>
+</section>
+<section id="link-between-differentiability-and-continuity" class="level3">
+<h3 class="anchored" data-anchor-id="link-between-differentiability-and-continuity">Link between differentiability and continuity</h3>
+<ul>
+<li>If <span class="math inline">\(f(x)\)</span> is differentiable at <span class="math inline">\(x = a\)</span>, then <span class="math inline">\(f(x)\)</span> is also continuous at <span class="math inline">\(x = a\)</span>.</li>
+<li>The converse is not necessarily true!</li>
+</ul>
+<p>Example: Show that <span class="math inline">\(y = |x|\)</span> is differentiable for all <span class="math inline">\(x \ne 0\)</span>.</p>
+</section>
+<section id="higher-order-derivatives" class="level3">
+<h3 class="anchored" data-anchor-id="higher-order-derivatives">Higher-order derivatives</h3>
+<p>Now that we can take the derivative of a function, we can take the derivative of the derivative, and so on…</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Notation</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(f'(x)\)</span></td>
+<td>1st-order derivative</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(f''(x) = \frac{d}{dx} f'(x)\)</span></td>
+<td>2nd-order derivative</td>
+</tr>
+<tr class="odd">
+<td>…</td>
+<td>…</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(f^{(n)}(x) = \frac{d}{dx} f^{(n-1)}(x)\)</span></td>
+<td><span class="math inline">\(n\)</span>th-order derivative</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="derivatives-of-simple-functions" class="level1">
+<h1>Derivatives of simple functions</h1>
+<section id="derivative-of-a-polynomial-basic-rules" class="level3">
+<h3 class="anchored" data-anchor-id="derivative-of-a-polynomial-basic-rules">Derivative of a polynomial: basic rules</h3>
+<ol type="1">
+<li><span class="math display">\[
+\frac{d}{dx} c = 0
+\]</span></li>
+<li><span class="math display">\[
+\frac{d x^n}{dx} = nx^{n-1} \quad \text{for $n \ne 0$}
+\]</span></li>
+</ol>
+</section>
+<section id="derivative-of-a-polynomial-basic-rules-1" class="level3">
+<h3 class="anchored" data-anchor-id="derivative-of-a-polynomial-basic-rules-1">Derivative of a polynomial: basic rules</h3>
+<ol start="3" type="1">
+<li><span class="math display">\[
+\frac{d}{dx}(cf(x)) = c\frac{d f}{dx}
+\]</span></li>
+<li><span class="math display">\[
+\frac{d}{dx}(f(x) + g(x)) = \frac{d f}{dx} + \frac{dg}{dx}
+\]</span></li>
+</ol>
+</section>
+<section id="examples-2" class="level3">
+<h3 class="anchored" data-anchor-id="examples-2">Examples</h3>
+<p>Compute the derivative of <span class="math inline">\(f(x) = 3x^2 + 7x - 5\)</span>.</p>
+</section>
+<section id="derivative-of-the-exponentiallogarithm" class="level3">
+<h3 class="anchored" data-anchor-id="derivative-of-the-exponentiallogarithm">Derivative of the exponential/logarithm</h3>
+<p><span class="math display">\[\begin{align*}
+    \frac{d}{dx} e^x &amp; = e^x \\
+    \frac{d}{dx} \ln x &amp; = \frac{1}{x}.
+\end{align*}\]</span></p>
+<p>For a different base: <span class="math display">\[\begin{align*}
+    \frac{d}{dx} a^x &amp; = a^x \ln a \\
+    \frac{d}{dx} \log_a x &amp; = \frac{1}{x \ln a}
+\end{align*}\]</span></p>
+<ul>
+<li>The last two rules will follow from the chain rule</li>
+<li><strong>Do not confuse the rules for <span class="math inline">\(a^x\)</span> and <span class="math inline">\(x^n\)</span>!</strong></li>
+</ul>
+</section>
+<section id="product-and-quotient-rules" class="level3">
+<h3 class="anchored" data-anchor-id="product-and-quotient-rules">Product and quotient rules</h3>
+<p><span class="math display">\[\begin{align*}
+  \frac{d}{dx}(f(x)g(x)) &amp; = f'(x) g(x) + f(x) g'(x) \\
+  \frac{d}{dx} \frac{f(x)}{g(x)} &amp; = \frac{f'(x) g(x) - f(x) g'(x)}{g(x)^2}
+\end{align*}\]</span></p>
+<p>Examples: Compute</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \frac{d}{dx}(x^2 e^x)\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{d}{dx} \frac{x + 1}{x + 3}\)</span></li>
+</ul>
+</section>
+<section id="derivatives-of-trigonometric-functions" class="level3">
+<h3 class="anchored" data-anchor-id="derivatives-of-trigonometric-functions">Derivatives of trigonometric functions</h3>
+<p><span class="math display">\[\begin{align*}
+    \frac{d}{dx} \sin x &amp; = \cos x \\
+    \frac{d}{dx} \cos x &amp; = - \sin x \\
+    \frac{d}{dx} \tan x &amp; = \frac{1}{\cos^2 x}
+\end{align*}\]</span></p>
+</section>
+<section id="examples-3" class="level3">
+<h3 class="anchored" data-anchor-id="examples-3">Examples</h3>
+<p>Using the rules from the previous slide, show that</p>
+<p><span class="math display">\[\begin{align*}
+    \frac{d}{dx} \csc x &amp; = - \cot x \csc x \\
+    \frac{d}{dx} \sec x &amp; = \tan x \sec x \\
+    \frac{d}{dx} \cot x &amp; = - \csc^2 x
+\end{align*}\]</span></p>
+<p>Example solution: <span class="math display">\[
+    \frac{d}{dx} \csc x = \frac{d}{dx} \frac{1}{\sin x} = \frac{1'\cdot \sin x - \sin'(x) \cdot 1}{\sin^2 x} = - \frac{\cos x}{\sin^2 x}.
+\]</span> (This will be easier once we cover the <strong>chain rule</strong>)</p>
+</section>
+<section id="derivatives-of-inverse-trigonometric-functions" class="level3">
+<h3 class="anchored" data-anchor-id="derivatives-of-inverse-trigonometric-functions">Derivatives of inverse trigonometric functions</h3>
+<p><span class="math display">\[\begin{align*}
+    \frac{d}{dx} \arcsin x &amp; = \frac{1}{\sqrt{1 - x^2}} \\
+    \frac{d}{dx} \arccos x &amp; = \frac{-1}{\sqrt{1 - x^2}} \\    
+    \frac{d}{dx} \arctan x &amp; = \frac{1}{1 + x^2} \\
+\end{align*}\]</span></p>
+<p>These rules can be derived by means of <em>implicit differentation</em>, which we will cover later.</p>
+</section>
+</section>
+<section id="the-chain-rule" class="level1">
+<h1>The chain rule</h1>
+<section id="the-chain-rule-1" class="level3">
+<h3 class="anchored" data-anchor-id="the-chain-rule-1">The chain rule</h3>
+<ul>
+<li>Useful for composite functions <span class="math inline">\(F = \red{f} \circ \blue{g}\)</span> (“<span class="math inline">\(\red{f}\)</span> after <span class="math inline">\(\blue{g}\)</span>”)</li>
+<li>If <span class="math inline">\(\red{f}(x)\)</span> and <span class="math inline">\(\blue{g}(x)\)</span> are differentiable, then the composite function <span class="math inline">\(F(x)\)</span> is also differentiable and <span class="math display">\[
+  F'(x) = \red{f'}(\blue{g}(x)) \cdot \blue{g'}(x).
+\]</span></li>
+</ul>
+</section>
+<section id="example-1" class="level3">
+<h3 class="anchored" data-anchor-id="example-1">Example</h3>
+<p>Compute <span class="math inline">\(\displaystyle \frac{d}{dx} e^{\sqrt{\cos x}}\)</span>.</p>
+</section>
+<section id="example-2" class="level3">
+<h3 class="anchored" data-anchor-id="example-2">Example</h3>
+<p>Compute <span class="math inline">\(\displaystyle \frac{d}{dx} x^{\sin(x)}\)</span>.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

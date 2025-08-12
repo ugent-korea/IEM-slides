@@ -8,7 +8,7 @@
 
 <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
 
-<title>Introduction to Engineering Mathematics</title>
+<title>Integration: Inverse trigonometric substitution</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,22 +24,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -84,7 +113,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction to Engineering Mathematics</h1>
+<h1 class="title">Integration: Inverse trigonometric substitution</h1>
+<p class="subtitle lead">Introduction to Engineering Mathematics</p>
 </div>
 
 
@@ -107,32 +137,108 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="presentations" class="level2">
-<h2 class="anchored" data-anchor-id="presentations">Presentations</h2>
+<section id="inverse-trigonometric-substitution" class="level1">
+<h1>Inverse trigonometric substitution</h1>
+<section id="what-is-inverse-trigonometric-substitution" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-inverse-trigonometric-substitution">What is inverse trigonometric substitution?</h3>
 <ul>
-<li><a href="./presentations/01a-trigonometry-basic-identities.html">1 - Trigonometry (1/5): Introduction</a></li>
-<li><a href="./presentations/01b-trigonometry-formulas.html">1 - Trigonometry (2/5): Formulas</a></li>
-<li><a href="./presentations/01c-trigonometry-triangles.html">1 - Trigonometry (3/5): Geometry of triangles</a></li>
-<li><a href="./presentations/01d-trigonometry-trigonometric-eqns.html">1 - Trigonometry (4/5): Trigonometric equations</a></li>
-<li><a href="./presentations/01e-trigonometry-inverse-functions.html">1 - Trigonometry (5/5): Inverse trigonometric functions</a></li>
-<li><a href="./presentations/02-coordinate-geometry.html">2 - Coordinate Geometry</a></li>
-<li><a href="./presentations/03a-limits-continuity.html">3 - Limits and Continuity (1/2)</a></li>
-<li><a href="./presentations/03b-limits-continuity.html">3 - Limits and Continuity (2/2)</a></li>
-<li><a href="./presentations/04a-derivatives.html">4 - Derivatives (1/2)</a></li>
-<li><a href="./presentations/04b-derivatives.html">4 - Derivatives (2/2)</a></li>
-<li><a href="./presentations/05-complex-numbers.html">5 - Complex Numbers</a></li>
-<li><a href="./presentations/06a-polynomials.html">6 - Polynomials (1/2)</a></li>
-<li><a href="./presentations/06b-polynomials.html">6 - Polynomials (2/2)</a></li>
-<li><a href="./presentations/07-binomial-theorem.html">7 - The Binomial Theorem</a></li>
-<li><a href="./presentations/08a-integration-definitions.html">8 - Integration: Definitions</a></li>
-<li><a href="./presentations/08b-integration-techniques.html">8 - Integration: Techniques</a></li>
-<li><a href="./presentations/08c-integration-partial-fractions.html">8 - Integration: Partial Fractions</a></li>
-<li><a href="./presentations/08d-integration-inverse-trig.html">8 - Integration: Inverse Trigonometric Substitutions</a></li>
-<li><a href="./presentations/08e-integration-applications.html">8 - Integration: Applications</a></li>
-<li><a href="./presentations/09-proof-techniques.html">9 - Proof Techniques</a></li>
+<li>Direct substitution: replace part of the integrand by a new variable</li>
+<li>Inverse substitution: <strong>replace variable by new function</strong>.</li>
 </ul>
+<p>Example: <span class="math inline">\(\displaystyle \int \sqrt{1 - x^2} dx\)</span> with the substitution <span class="math inline">\(x = \cos \theta\)</span></p>
+</section>
+<section id="why-is-this-useful" class="level3">
+<h3 class="anchored" data-anchor-id="why-is-this-useful">Why is this useful?</h3>
+<p>Inverse trigonometric substitution can solve integrals that have a power of <span class="math inline">\(x^2 \pm a^2\)</span> somewhere in the integrand.</p>
+<p>Example:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \int \frac{dx}{(x^2 - 25)^3}\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \sqrt{1 + x^2} dx\)</span></li>
+</ul>
+</section>
+<section id="types-of-substitutions" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-substitutions">Types of substitutions</h3>
+<p>The exact substitution depends on the integrand. We will distinguish the following three cases, depending on factors that occur in the integrand.</p>
+<ol type="1">
+<li>Factor <span class="math inline">\(\sqrt{a^2 - x^2}\)</span>: use <span class="math inline">\(x = a \sin \theta\)</span></li>
+<li>Factor <span class="math inline">\(\sqrt{a^2 + x^2}\)</span>: use <span class="math inline">\(x = a \tan \theta\)</span></li>
+<li>Factor <span class="math inline">\(\sqrt{x^2 - a^2}\)</span>: use <span class="math inline">\(x = a \sec \theta\)</span></li>
+</ol>
+<p>Don’t memorize these substitutions: use your insight into trigonometry to think what substitution would simplify the integrand.</p>
+</section>
+<section id="remark-completing-the-square" class="level3">
+<h3 class="anchored" data-anchor-id="remark-completing-the-square">Remark: completing the square</h3>
+<p>Often the integrand will not exactly be in one of the three previous forms. In that case, <strong>completing the square</strong> may help: <span class="math display">\[
+    \int \frac{dx}{x^2 + 4x + 5} = \int \frac{dx}{(x + 2)^2 + 1} = \int \frac{dt}{t^2 + 1} = \ldots
+\]</span></p>
+</section>
+<section id="case-1-sqrta2---x2" class="level3">
+<h3 class="anchored" data-anchor-id="case-1-sqrta2---x2">Case 1: <span class="math inline">\(\sqrt{a^2 - x^2}\)</span></h3>
+<ul>
+<li>Substitution: <span class="math inline">\(x = a \sin \theta\)</span>, with <span class="math inline">\(\theta \in [-\pi/2, \pi/2]\)</span></li>
+<li>Differential: <span class="math inline">\(dx = a \cos \theta \, d \theta\)</span></li>
+</ul>
+<p>Example: <span class="math inline">\(\displaystyle \int \frac{dx}{(5 - x^2)^{3/2}}\)</span></p>
+</section>
+<section id="case-2-sqrta2-x2" class="level3">
+<h3 class="anchored" data-anchor-id="case-2-sqrta2-x2">Case 2: <span class="math inline">\(\sqrt{a^2 + x^2}\)</span></h3>
+<ul>
+<li>Substitution: <span class="math inline">\(x = a \tan \theta\)</span>, with <span class="math inline">\(\theta \in (-\pi/2, \pi/2)\)</span></li>
+<li>Differential: <span class="math inline">\(dx = a \sec^2 \theta \, d \theta\)</span></li>
+</ul>
+<p>Example: <span class="math inline">\(\displaystyle \int \frac{dx}{\sqrt{1 + 4x^2}}\)</span></p>
+</section>
+<section id="case-3-sqrtx2---a2" class="level3">
+<h3 class="anchored" data-anchor-id="case-3-sqrtx2---a2">Case 3: <span class="math inline">\(\sqrt{x^2 - a^2}\)</span></h3>
+<ul>
+<li>Substitution: <span class="math inline">\(x = a \sec \theta\)</span>, with <span class="math inline">\(\theta \in (0, \pi)\)</span> (<strong>two cases</strong>)</li>
+<li>Differential: <span class="math inline">\(dx = a \tan \theta \sec \theta \, d \theta\)</span></li>
+</ul>
+<p>Example: <span class="math inline">\(\displaystyle \int \frac{dx}{\sqrt{x^2 - a^2}}\)</span></p>
+</section>
+</section>
+<section id="other-substitutions" class="level1">
+<h1>Other substitutions</h1>
+<section id="higher-root-substitutions" class="level2">
+<h2 class="anchored" data-anchor-id="higher-root-substitutions">Higher root substitutions</h2>
+<section id="higher-roots" class="level3">
+<h3 class="anchored" data-anchor-id="higher-roots">Higher roots</h3>
+<p>Useful when the integrand has a factor <span class="math inline">\(\sqrt[n]{ax + b}\)</span>.</p>
+<ul>
+<li>Substitution: <span class="math inline">\(ax + b = u^n\)</span></li>
+<li>Differential: <span class="math inline">\(a \, dx = n u^{n-1} \, du\)</span></li>
+</ul>
+<p>Example: <span class="math inline">\(\displaystyle \int_{-1/3}^2 \frac{x\, dx}{\sqrt[3]{3x+2}}\)</span></p>
+</section>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<p>Sometimes this rule can be applied to integrands that are somewhat more general than what’s shown on the previous slide.</p>
+<p>Example: <span class="math inline">\(\displaystyle \int \frac{dx}{x^{1/2}(1 + x^{1/3})} = \ldots\)</span></p>
+<p>(Substitute <span class="math inline">\(x^{1/6} = u\)</span>)</p>
+</section>
+</section>
+<section id="t-formulas" class="level2">
+<h2 class="anchored" data-anchor-id="t-formulas">T-formulas</h2>
+<section id="tan-fractheta2-substitution" class="level3">
+<h3 class="anchored" data-anchor-id="tan-fractheta2-substitution"><span class="math inline">\(\tan \frac{\theta}{2}\)</span>-substitution</h3>
+<p>Useful when the integrand is a rational function of <span class="math inline">\(\sin \theta\)</span> and <span class="math inline">\(\cos \theta\)</span>.</p>
+<ul>
+<li>Substitution: <span class="math inline">\(t = \tan \frac{\theta}{2}\)</span>, so that <span class="math inline">\(\theta = 2\tan^{-1}(t)\)</span></li>
+<li>Differential: <span class="math display">\[
+d \theta = \frac{2 dt}{1 + t^2}
+\]</span></li>
+<li><span class="math inline">\(t\)</span>-formulas: <span class="math display">\[
+  \sin \theta = \frac{2t}{1+t^2} \quad \text{and} \quad \cos \theta = \frac{1 - t^2}{1 + t^2}.
+\]</span></li>
+</ul>
+</section>
+<section id="example-1" class="level3">
+<h3 class="anchored" data-anchor-id="example-1">Example</h3>
+<p><span class="math inline">\(\displaystyle \int \frac{d \theta}{2 + \cos \theta} = \ldots\)</span></p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->

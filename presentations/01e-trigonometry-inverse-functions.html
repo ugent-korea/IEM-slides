@@ -8,7 +8,7 @@
 
 <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
 
-<title>Introduction to Engineering Mathematics</title>
+<title>Trigonometry (5/5): Inverse Trigonometric Functions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,22 +24,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -84,7 +113,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction to Engineering Mathematics</h1>
+<h1 class="title">Trigonometry (5/5): Inverse Trigonometric Functions</h1>
+<p class="subtitle lead">Introduction to Engineering Mathematics</p>
 </div>
 
 
@@ -107,32 +137,100 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="presentations" class="level2">
-<h2 class="anchored" data-anchor-id="presentations">Presentations</h2>
+<section id="inverse-sine-function" class="level1">
+<h1>Inverse sine function</h1>
+<section id="inverse-functions" class="level3">
+<h3 class="anchored" data-anchor-id="inverse-functions">Inverse functions</h3>
+</section>
+<section id="inverting-the-sine-function" class="level3">
+<h3 class="anchored" data-anchor-id="inverting-the-sine-function">Inverting the sine function</h3>
 <ul>
-<li><a href="./presentations/01a-trigonometry-basic-identities.html">1 - Trigonometry (1/5): Introduction</a></li>
-<li><a href="./presentations/01b-trigonometry-formulas.html">1 - Trigonometry (2/5): Formulas</a></li>
-<li><a href="./presentations/01c-trigonometry-triangles.html">1 - Trigonometry (3/5): Geometry of triangles</a></li>
-<li><a href="./presentations/01d-trigonometry-trigonometric-eqns.html">1 - Trigonometry (4/5): Trigonometric equations</a></li>
-<li><a href="./presentations/01e-trigonometry-inverse-functions.html">1 - Trigonometry (5/5): Inverse trigonometric functions</a></li>
-<li><a href="./presentations/02-coordinate-geometry.html">2 - Coordinate Geometry</a></li>
-<li><a href="./presentations/03a-limits-continuity.html">3 - Limits and Continuity (1/2)</a></li>
-<li><a href="./presentations/03b-limits-continuity.html">3 - Limits and Continuity (2/2)</a></li>
-<li><a href="./presentations/04a-derivatives.html">4 - Derivatives (1/2)</a></li>
-<li><a href="./presentations/04b-derivatives.html">4 - Derivatives (2/2)</a></li>
-<li><a href="./presentations/05-complex-numbers.html">5 - Complex Numbers</a></li>
-<li><a href="./presentations/06a-polynomials.html">6 - Polynomials (1/2)</a></li>
-<li><a href="./presentations/06b-polynomials.html">6 - Polynomials (2/2)</a></li>
-<li><a href="./presentations/07-binomial-theorem.html">7 - The Binomial Theorem</a></li>
-<li><a href="./presentations/08a-integration-definitions.html">8 - Integration: Definitions</a></li>
-<li><a href="./presentations/08b-integration-techniques.html">8 - Integration: Techniques</a></li>
-<li><a href="./presentations/08c-integration-partial-fractions.html">8 - Integration: Partial Fractions</a></li>
-<li><a href="./presentations/08d-integration-inverse-trig.html">8 - Integration: Inverse Trigonometric Substitutions</a></li>
-<li><a href="./presentations/08e-integration-applications.html">8 - Integration: Applications</a></li>
-<li><a href="./presentations/09-proof-techniques.html">9 - Proof Techniques</a></li>
+<li>The sine function turns angles into sine values.</li>
+<li>The <strong>inverse sine</strong> turns sine values back into angles.</li>
+<li>Notation: <span class="math inline">\(\sin^{-1}(x)\)</span>, <span class="math inline">\(\arcsin x\)</span></li>
 </ul>
+<p><strong>Problem:</strong> Many values in the range correspond to the same angle!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/01-trigonometry/inverse-sine-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="restricting-the-domain" class="level3">
+<h3 class="anchored" data-anchor-id="restricting-the-domain">Restricting the domain</h3>
+<p>Solution: restrict the domain of the sine function so that there is exactly one angle corresponding to each value.</p>
+<p><img src="./images/01-trigonometry/inverse-sine-limited.svg" class="img-fluid"></p>
+<p>This gives us a meaningful way to define the inverse sine.</p>
+</section>
+<section id="the-inverse-sine-function" class="level3">
+<h3 class="anchored" data-anchor-id="the-inverse-sine-function">The inverse sine function</h3>
+<ul>
+<li>Domain: <span class="math inline">\([-1, 1]\)</span>, range: <span class="math inline">\([-\pi/2, \pi/2]\)</span></li>
+<li>Cancellation properties:
+<ul>
+<li><span class="math inline">\(\sin(\arcsin(y)) = y\)</span> for all <span class="math inline">\(y \in [-1, 1]\)</span></li>
+<li><span class="math inline">\(\arcsin(\sin(\theta)) = \theta\)</span> for all <span class="math inline">\(\theta \in [-\pi/2, \pi/2]\)</span>.</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/01-trigonometry/inverse-sine-flipped.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="other-inverse-trigonometric-functions" class="level1">
+<h1>Other inverse trigonometric functions</h1>
+<section id="the-inverse-cosine-function" class="level3">
+<h3 class="anchored" data-anchor-id="the-inverse-cosine-function">The inverse cosine function</h3>
+<ul>
+<li>Domain: <span class="math inline">\([-1, 1]\)</span>, range: <span class="math inline">\([0, \pi]\)</span></li>
+<li>Cancellation properties:
+<ul>
+<li><span class="math inline">\(\cos(\arccos(y)) = y\)</span> for all <span class="math inline">\(y \in [-1, 1]\)</span></li>
+<li><span class="math inline">\(\arccos(\cos(\theta)) = \theta\)</span> for all <span class="math inline">\(\theta \in [0, \pi]\)</span></li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/01-trigonometry/inverse-cosine-flipped.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="the-inverse-tangent-function" class="level3">
+<h3 class="anchored" data-anchor-id="the-inverse-tangent-function">The inverse tangent function</h3>
+<ul>
+<li>Domain: all of <span class="math inline">\(\mathbb{R}\)</span>, range: <span class="math inline">\([-\pi/2, \pi/2]\)</span></li>
+<li>Cancellation properties:
+<ul>
+<li><span class="math inline">\(\tan(\arctan (y)) = y\)</span> for all <span class="math inline">\(y \in \mathbb{R}\)</span></li>
+<li><span class="math inline">\(\arctan(\tan \theta) = \theta\)</span> for all <span class="math inline">\(\theta \in [-\pi/2, \pi/2]\)</span></li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/01-trigonometry/inverse-tangent-flipped.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="notation-warning" class="level3">
+<h3 class="anchored" data-anchor-id="notation-warning">Notation (warning)</h3>
+<p>Don’t confuse <span class="math display">\[
+    \sin^k \theta = (\sin \theta)^k, \quad \text{for $k \ge 0$}
+\]</span> with <span class="math display">\[
+    \sin^{-1} x = \arcsin x.
+\]</span></p>
+</section>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<p>Simplify the following expression: <span class="math inline">\(\displaystyle \tan\left(\sin^{-1} \frac{2}{3} \right)\)</span>.</p>
+</section>
+<section id="example-1" class="level3">
+<h3 class="anchored" data-anchor-id="example-1">Example</h3>
+<p>Show that <span class="math inline">\(\displaystyle \arccos x = \frac{\pi}{2} - \arcsin x\)</span>.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

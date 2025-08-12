@@ -8,7 +8,7 @@
 
 <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
 
-<title>Introduction to Engineering Mathematics</title>
+<title>Integration: Definitions and basic concepts</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,22 +24,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -84,7 +113,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction to Engineering Mathematics</h1>
+<h1 class="title">Integration: Definitions and basic concepts</h1>
+<p class="subtitle lead">Introduction to Engineering Mathematics</p>
 </div>
 
 
@@ -107,32 +137,194 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="presentations" class="level2">
-<h2 class="anchored" data-anchor-id="presentations">Presentations</h2>
+<section id="indefinite-integrals" class="level1">
+<h1>Indefinite integrals</h1>
+<section id="indefinite-integrals-as-antiderivatives" class="level3">
+<h3 class="anchored" data-anchor-id="indefinite-integrals-as-antiderivatives">Indefinite integrals as antiderivatives</h3>
 <ul>
-<li><a href="./presentations/01a-trigonometry-basic-identities.html">1 - Trigonometry (1/5): Introduction</a></li>
-<li><a href="./presentations/01b-trigonometry-formulas.html">1 - Trigonometry (2/5): Formulas</a></li>
-<li><a href="./presentations/01c-trigonometry-triangles.html">1 - Trigonometry (3/5): Geometry of triangles</a></li>
-<li><a href="./presentations/01d-trigonometry-trigonometric-eqns.html">1 - Trigonometry (4/5): Trigonometric equations</a></li>
-<li><a href="./presentations/01e-trigonometry-inverse-functions.html">1 - Trigonometry (5/5): Inverse trigonometric functions</a></li>
-<li><a href="./presentations/02-coordinate-geometry.html">2 - Coordinate Geometry</a></li>
-<li><a href="./presentations/03a-limits-continuity.html">3 - Limits and Continuity (1/2)</a></li>
-<li><a href="./presentations/03b-limits-continuity.html">3 - Limits and Continuity (2/2)</a></li>
-<li><a href="./presentations/04a-derivatives.html">4 - Derivatives (1/2)</a></li>
-<li><a href="./presentations/04b-derivatives.html">4 - Derivatives (2/2)</a></li>
-<li><a href="./presentations/05-complex-numbers.html">5 - Complex Numbers</a></li>
-<li><a href="./presentations/06a-polynomials.html">6 - Polynomials (1/2)</a></li>
-<li><a href="./presentations/06b-polynomials.html">6 - Polynomials (2/2)</a></li>
-<li><a href="./presentations/07-binomial-theorem.html">7 - The Binomial Theorem</a></li>
-<li><a href="./presentations/08a-integration-definitions.html">8 - Integration: Definitions</a></li>
-<li><a href="./presentations/08b-integration-techniques.html">8 - Integration: Techniques</a></li>
-<li><a href="./presentations/08c-integration-partial-fractions.html">8 - Integration: Partial Fractions</a></li>
-<li><a href="./presentations/08d-integration-inverse-trig.html">8 - Integration: Inverse Trigonometric Substitutions</a></li>
-<li><a href="./presentations/08e-integration-applications.html">8 - Integration: Applications</a></li>
-<li><a href="./presentations/09-proof-techniques.html">9 - Proof Techniques</a></li>
+<li><strong>Antiderivative</strong>: the opposite (inverse operation) of a derivative.</li>
+<li>The <strong>indefinite integral</strong> is an antiderivative.</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \frac{d}{dx} \frac{x^3}{3} = x^2\)</span>, so <span class="math inline">\(\displaystyle \int x^2 dx = \frac{x^3}{3} + C\)</span></li>
+</ul>
+<p>. . .</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \frac{d}{dx} \arcsin(x) = \frac{1}{\sqrt{1 - x^2}}\)</span>, so <span class="math inline">\(\displaystyle \int \frac{dx}{\sqrt{1-x^2}} = \arcsin(x) + C\)</span>.</li>
+</ul>
+<p>. . .</p>
+<p>In these examples, <span class="math inline">\(C\)</span> is an <strong>arbitrary constant</strong>.</p>
+</section>
+<section id="anatomy-of-an-indefinite-integral" class="level3">
+<h3 class="anchored" data-anchor-id="anatomy-of-an-indefinite-integral">Anatomy of an indefinite integral</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/09-integration/integral.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="examples" class="level3">
+<h3 class="anchored" data-anchor-id="examples">Examples</h3>
+<p>Polynomials:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \int x^n \, dx = \frac{x^{n+1}}{n+1} + C\)</span> for <span class="math inline">\(n \ne -1\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{dx}{x} = \ln |x| + C\)</span></li>
+</ul>
+<p>Trigonometric functions:</p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<ul>
+<li><span class="math inline">\(\displaystyle \int \sin x \, dx = - \cos x + C\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \cos x \, dx = \sin x + C\)</span></li>
+</ul>
+</div><div class="column" style="width:55%;">
+<div class="fragment fade-in">
+<p><span class="math inline">\(\displaystyle \int \tan x \, dx = - \ln |\cos x| + C\)</span> &nbsp; &nbsp; 😱</p>
+<p><em>Not an obvious antiderivative; we will see how to derive this integral later.</em></p>
+</div>
+</div>
+</div>
+</section>
+<section id="examples-1" class="level3">
+<h3 class="anchored" data-anchor-id="examples-1">Examples</h3>
+<p>Exponential/logarithmic functions:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \int e^x dx = e^x + C\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{dx}{x} = \ln |x| + C\)</span></li>
+</ul>
+<p>Inverse trigonometric functions:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \int \frac{dx}{\sqrt{1 - x^2}} = \arcsin(x) + C\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{dx}{1 + x^2} = \arctan(x) + C\)</span></li>
+</ul>
+</section>
+<section id="examples-2" class="level3">
+<h3 class="anchored" data-anchor-id="examples-2">Examples</h3>
+<p>Special cases:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \int \sec^2 x \, dx = \tan x + C\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \csc^2 x \, dx = - \cot x + C\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \sec x \tan x \, dx = \sec x + C\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \csc x \cot x \, dx = - \csc x + C\)</span></li>
+</ul>
+</section>
+</section>
+<section id="definite-integrals" class="level1">
+<h1>Definite integrals</h1>
+<section id="the-definite-integral" class="level3">
+<h3 class="anchored" data-anchor-id="the-definite-integral">The definite integral</h3>
+<p>Definite integral: integral with “bounds”</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/09-integration/definite-integral.svg" class="quarto-figure quarto-figure-center figure-img" height="200"></p>
+</figure>
+</div>
+<p>How to compute:</p>
+<ol type="1">
+<li>Find primitive function <span class="math inline">\(F(x)\)</span>: <span class="math inline">\(\displaystyle \int f(x) \, dx = F(x) + C\)</span></li>
+<li>Substitute bounds into <span class="math inline">\(F(x)\)</span>: <span class="math inline">\(\displaystyle \int_a^b f(x) dx = F(b) - F(a) = F(x) \Big|_a^b\)</span>.</li>
+</ol>
+</section>
+<section id="examples-3" class="level3">
+<h3 class="anchored" data-anchor-id="examples-3">Examples</h3>
+<p>Compute:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \int_0^{\pi/2} \sin x \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int_{-1}^2 (x^2 + 2x -1) \, dx\)</span></li>
+</ul>
+</section>
+<section id="properties-of-the-definite-integral" class="level3">
+<h3 class="anchored" data-anchor-id="properties-of-the-definite-integral">Properties of the definite integral</h3>
+<div class="incremental">
+<ul class="incremental">
+<li><span class="math inline">\(\displaystyle \int_a^a f(x) dx  = F(a) - F(a) = 0\)</span></li>
+<li><span class="math inline">\(\displaystyle \int_a^b f(x) dx = - \displaystyle \int_b^a f(x) dx\)</span></li>
+<li>Linearity: <span class="math inline">\(\displaystyle \int_a^b  (Af(x) + Bg(x) ) dx = A\int_a^b f(x)dx + B\int_a^b g(x)dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int_a^b f(x) dx + \int_b^c f(x)dx = \int_a^c f(x)dx\)</span></li>
+</ul>
+</div>
+</section>
+<section id="definite-integrals-correspond-to-signed-areas" class="level3">
+<h3 class="anchored" data-anchor-id="definite-integrals-correspond-to-signed-areas">Definite integrals correspond to signed areas</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>If <span class="math inline">\(f(x) \ge 0\)</span>: <span class="math inline">\(A = \int_a^b f(x) \, dx\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/09-integration/area-pos.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<p>If <span class="math inline">\(f(x) \le 0\)</span>: <span class="math inline">\(A = - \int_a^b f(x) \, dx\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/09-integration/area-neg.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>If <span class="math inline">\(f(x)\)</span> changes sign: break up into parts above/below <span class="math inline">\(x\)</span>-axis.</p>
+</section>
+<section id="examples-4" class="level3">
+<h3 class="anchored" data-anchor-id="examples-4">Examples</h3>
+<p>Find the area…</p>
+<ul>
+<li>Between the graph of <span class="math inline">\(y = \sin x\)</span> and the <span class="math inline">\(x\)</span>-axis, from <span class="math inline">\(0\)</span> to <span class="math inline">\(2\pi\)</span>.</li>
+<li>Below the graph of <span class="math inline">\(y = 3x - x^2\)</span> and above the <span class="math inline">\(x\)</span>-axis.</li>
+</ul>
+</section>
+<section id="properties-continued" class="level3">
+<h3 class="anchored" data-anchor-id="properties-continued">Properties (continued)</h3>
+<div class="incremental">
+<ul class="incremental">
+<li>For an even function, <span class="math inline">\(\displaystyle \int_{-a}^a f(x) dx = 2 \int_0^a f(x) dx\)</span></li>
+<li>For an odd function, <span class="math inline">\(\displaystyle \int_{-a}^a f(x) = 0\)</span>.</li>
+<li>“King’s rule”: <span class="math inline">\(\displaystyle \int_0^a f(x) dx =  \int_0^a f(a - x)dx\)</span>.</li>
+</ul>
+</div>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/09-integration/free-wifi.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="continuity-and-integration" class="level3">
+<h3 class="anchored" data-anchor-id="continuity-and-integration">Continuity and integration</h3>
+<ul>
+<li><p>So far, we have silently assumed <span class="math inline">\(f(x)\)</span> is continuous on <span class="math inline">\([a, b]\)</span> to define the integral <span class="math inline">\(\int_a^b f(x) dx\)</span>.</p></li>
+<li><p>The integral can also be defined if <span class="math inline">\(f(x)\)</span> is <strong>piecewise continuous</strong>.</p></li>
+</ul>
+</section>
+<section id="examples-5" class="level3">
+<h3 class="anchored" data-anchor-id="examples-5">Examples</h3>
+<p>Compute the following integrals:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \int \left( 10x^4 - \frac{2}{\sqrt{1 - x^2}} \right) \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int_0^1 x^{5/2}(1 - x) \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{x^2}{1 + x^2} \, dx\)</span></li>
+</ul>
+</section>
+<section id="examples-6" class="level3">
+<h3 class="anchored" data-anchor-id="examples-6">Examples</h3>
+<p>Show that <span class="math inline">\(\displaystyle \int_0^{\pi/2} \frac{\sin x}{\sin x + \cos x} dx = \frac{\pi}{4}\)</span>.</p>
+<p><em>Difficult, uses King’s rule.</em></p>
+</section>
+</section>
+<section id="fundamental-theorem-of-calculus" class="level1">
+<h1>Fundamental theorem of calculus</h1>
+<section id="integrals-and-derivatives-are-each-others-inverse" class="level3">
+<h3 class="anchored" data-anchor-id="integrals-and-derivatives-are-each-others-inverse">Integrals and derivatives are each other’s inverse</h3>
+<ul>
+<li>If <span class="math inline">\(\displaystyle G(x) = \int_1^x \ln y \, dy\)</span>, find <span class="math inline">\(G'(x)\)</span>.</li>
+<li>If <span class="math inline">\(\displaystyle H(x) = \int_1^{x^2} \ln y \, dy\)</span>, find <span class="math inline">\(H'(x)\)</span>.</li>
 </ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

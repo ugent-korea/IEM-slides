@@ -8,7 +8,7 @@
 
 <meta name="author" content="Prof.&nbsp;Joris Vankerschaver">
 
-<title>Introduction to Engineering Mathematics</title>
+<title>Derivatives (2/2): Applications</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,25 +21,60 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6ef52b30d4130b5a8a6bc02bcd7e7872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,6 +103,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -84,7 +148,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction to Engineering Mathematics</h1>
+<h1 class="title">Derivatives (2/2): Applications</h1>
+<p class="subtitle lead">Introduction to Engineering Mathematics</p>
 </div>
 
 
@@ -107,30 +172,141 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="presentations" class="level2">
-<h2 class="anchored" data-anchor-id="presentations">Presentations</h2>
+<section id="implicit-differentiation" class="level3">
+<h3 class="anchored" data-anchor-id="implicit-differentiation">Implicit differentiation</h3>
 <ul>
-<li><a href="./presentations/01a-trigonometry-basic-identities.html">1 - Trigonometry (1/5): Introduction</a></li>
-<li><a href="./presentations/01b-trigonometry-formulas.html">1 - Trigonometry (2/5): Formulas</a></li>
-<li><a href="./presentations/01c-trigonometry-triangles.html">1 - Trigonometry (3/5): Geometry of triangles</a></li>
-<li><a href="./presentations/01d-trigonometry-trigonometric-eqns.html">1 - Trigonometry (4/5): Trigonometric equations</a></li>
-<li><a href="./presentations/01e-trigonometry-inverse-functions.html">1 - Trigonometry (5/5): Inverse trigonometric functions</a></li>
-<li><a href="./presentations/02-coordinate-geometry.html">2 - Coordinate Geometry</a></li>
-<li><a href="./presentations/03a-limits-continuity.html">3 - Limits and Continuity (1/2)</a></li>
-<li><a href="./presentations/03b-limits-continuity.html">3 - Limits and Continuity (2/2)</a></li>
-<li><a href="./presentations/04a-derivatives.html">4 - Derivatives (1/2)</a></li>
-<li><a href="./presentations/04b-derivatives.html">4 - Derivatives (2/2)</a></li>
-<li><a href="./presentations/05-complex-numbers.html">5 - Complex Numbers</a></li>
-<li><a href="./presentations/06a-polynomials.html">6 - Polynomials (1/2)</a></li>
-<li><a href="./presentations/06b-polynomials.html">6 - Polynomials (2/2)</a></li>
-<li><a href="./presentations/07-binomial-theorem.html">7 - The Binomial Theorem</a></li>
-<li><a href="./presentations/08a-integration-definitions.html">8 - Integration: Definitions</a></li>
-<li><a href="./presentations/08b-integration-techniques.html">8 - Integration: Techniques</a></li>
-<li><a href="./presentations/08c-integration-partial-fractions.html">8 - Integration: Partial Fractions</a></li>
-<li><a href="./presentations/08d-integration-inverse-trig.html">8 - Integration: Inverse Trigonometric Substitutions</a></li>
-<li><a href="./presentations/08e-integration-applications.html">8 - Integration: Applications</a></li>
-<li><a href="./presentations/09-proof-techniques.html">9 - Proof Techniques</a></li>
+<li><p>We now know how to compute the derivative of a function <span class="math inline">\(y = f(x)\)</span>.</p></li>
+<li><p>But what if we can’t write <span class="math inline">\(y\)</span> as a function of <span class="math inline">\(x\)</span>?</p></li>
 </ul>
+<p>Example: Find <span class="math inline">\(y'(x)\)</span> if <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are related by <span class="math inline">\(x^2 + y^2 = 1\)</span>.</p>
+<p>Two ways of solving:</p>
+<ol type="1">
+<li>The direct way (hard): find <span class="math inline">\(y(x)\)</span> and differentiate</li>
+<li>Via <strong>implicit differentiation</strong> (easy): differentiate both sides</li>
+</ol>
+</section>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<p>Find an equation for the tangent line to the curve defined by <span class="math inline">\(x^2 + xy + 2y^3 = 4\)</span> at the point <span class="math inline">\(P(-2, 1)\)</span>.</p>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/04-derivatives/implicit-curve.png" class="quarto-figure quarto-figure-center figure-img" style="height:80.0%"></p>
+</figure>
+</div>
+<p>Figure made with <a href="https://www.wolframalpha.com/input?i=plot+x%5E2+%2B+xy+%2B+2y%5E3+%3D+4">Wolfram Alpha</a>.</p>
+</section>
+<section id="velocity-and-acceleration" class="level3">
+<h3 class="anchored" data-anchor-id="velocity-and-acceleration">Velocity and acceleration</h3>
+<p>We will consider only objects moving along a straight line (one-dimensional motion)</p>
+<ul>
+<li>Position <span class="math inline">\(x(t)\)</span></li>
+<li>Velocity <span class="math inline">\(v(t)\)</span></li>
+</ul>
+<p>Recall from physics 1: <span class="math inline">\(v(t)\)</span> is the <strong>first derivative</strong> of <span class="math inline">\(x(t)\)</span>. Why?</p>
+</section>
+<section id="average-and-instantaneous-velocity-speed" class="level3">
+<h3 class="anchored" data-anchor-id="average-and-instantaneous-velocity-speed">Average and instantaneous velocity, speed</h3>
+<ul>
+<li>The <em>average velocity</em> <span class="math inline">\(v_\text{avg}(t)\)</span> over an interval <span class="math inline">\([t, t+h]\)</span> is the change in distance divided by the change in time: <span class="math display">\[
+  v_{\text{avg}}(t) = \frac{\Delta x}{\Delta t} = \frac{x(t+h) - x(t)}{h}.
+\]</span></li>
+<li>The <em>instantaneous velocity</em> <span class="math inline">\(v(t)\)</span> is the limit as <span class="math inline">\(h \to 0\)</span>: <span class="math display">\[
+  v(t) = \lim_{h \to 0} \frac{x(t+h) - x(t)}{h} = \frac{dx}{dt} = \dot{x}(t).
+\]</span></li>
+<li>The <em>speed</em> <span class="math inline">\(s(t)\)</span> is the magnitude of the velocity: <span class="math inline">\(s(t) = |v(t)|\)</span>.</li>
+</ul>
+</section>
+<section id="characteristics-of-velocity" class="level3">
+<h3 class="anchored" data-anchor-id="characteristics-of-velocity">Characteristics of velocity</h3>
+<ul>
+<li><span class="math inline">\(v(t) &gt; 0\)</span>: moving to the <strong>right</strong> (<span class="math inline">\(x(t)\)</span> increases)</li>
+<li><span class="math inline">\(v(t) &lt; 0\)</span>: moving to the <strong>left</strong> (<span class="math inline">\(x(t)\)</span> decreases)</li>
+<li><span class="math inline">\(v(t) = 0\)</span>: instantaneously at rest</li>
+</ul>
+</section>
+<section id="acceleration" class="level3">
+<h3 class="anchored" data-anchor-id="acceleration">Acceleration</h3>
+<p>The <strong>acceleration</strong> <span class="math inline">\(a(t)\)</span> is the rate of change of the velocity: <span class="math display">\[
+    a(t) = \dot{v}(t) = \ddot{x}(t).
+\]</span></p>
+<p>Characteristics:</p>
+<ul>
+<li><span class="math inline">\(a(t) &gt; 0\)</span>: <span class="math inline">\(v(t)\)</span> increases</li>
+<li><span class="math inline">\(a(t) &lt; 0\)</span>: <span class="math inline">\(v(t)\)</span> decreases</li>
+</ul>
+<p>Speeding up and slowing down:</p>
+<ul>
+<li><span class="math inline">\(a(t) \cdot v(t) &gt; 0\)</span>: speeding up</li>
+<li><span class="math inline">\(a(t) \cdot v(t) &lt; 0\)</span>: slowing down</li>
+</ul>
+</section>
+<section id="example-1" class="level3">
+<h3 class="anchored" data-anchor-id="example-1">Example</h3>
+<p>A particle <span class="math inline">\(P\)</span> moves along the <span class="math inline">\(x\)</span>-axis with position given by <span class="math inline">\(x(t) = 2 t^3 - 15 t^2 + 24t\)</span>.</p>
+<ol type="1">
+<li>Find <span class="math inline">\(v(t)\)</span> and <span class="math inline">\(a(t)\)</span>.</li>
+<li>In which direction is <span class="math inline">\(P\)</span> moving at <span class="math inline">\(t = 2\)</span>? Is <span class="math inline">\(P\)</span> speeding up or slowing down?</li>
+<li>When is <span class="math inline">\(P\)</span> instantaneously at rest? When does its velocity instantaneously not change?</li>
+</ol>
+</section>
+<section id="example-continued" class="level3">
+<h3 class="anchored" data-anchor-id="example-continued">Example (continued)</h3>
+<ol start="4" type="1">
+<li>When is <span class="math inline">\(P\)</span> moving to the left/right?</li>
+<li>When is <span class="math inline">\(P\)</span> speeding up/slowing down?</li>
+</ol>
+</section>
+<section id="example-continued-1" class="level3">
+<h3 class="anchored" data-anchor-id="example-continued-1">Example (continued)</h3>
+<div id="7c382fba" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>fig, (ax0, ax1, ax2) <span class="op">=</span> plt.subplots(nrows<span class="op">=</span><span class="dv">3</span>, figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">4</span>))</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">5</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>t<span class="op">**</span><span class="dv">3</span> <span class="op">-</span> <span class="dv">15</span><span class="op">*</span>t<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">24</span><span class="op">*</span>t</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> <span class="dv">6</span><span class="op">*</span>t<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">30</span><span class="op">*</span>t <span class="op">+</span> <span class="dv">24</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">12</span><span class="op">*</span>t <span class="op">-</span> <span class="dv">30</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>ax0.set_title(<span class="vs">r"Position </span><span class="dv">$</span><span class="vs">x</span><span class="kw">(</span><span class="vs">t</span><span class="kw">)</span><span class="vs"> = 2t</span><span class="dv">^</span><span class="vs">3 - 15t</span><span class="dv">^</span><span class="vs">2 </span><span class="op">+</span><span class="vs"> 24 t</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>ax0.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"lightgray"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>ax0.plot(t, x)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="vs">r"Velocity </span><span class="dv">$</span><span class="vs">v</span><span class="kw">(</span><span class="vs">t</span><span class="kw">)</span><span class="vs"> = 6t</span><span class="dv">^</span><span class="vs">2 - 30t </span><span class="op">+</span><span class="vs"> 24</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>ax1.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"lightgray"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>ax1.plot(t, v)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="vs">r"Acceleration </span><span class="dv">$</span><span class="vs">a</span><span class="kw">(</span><span class="vs">t</span><span class="kw">)</span><span class="vs"> = 12t - 30</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>ax2.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"lightgray"</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>ax2.plot(t, a)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="04b-derivatives_files/figure-html/cell-2-output-1.png" class="quarto-figure quarto-figure-center figure-img" width="470" height="373"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="historical-aside" class="level3">
+<h3 class="anchored" data-anchor-id="historical-aside">Historical aside</h3>
+<p>In the fall of 1972, President Nixon announced that “the rate of increase of inflation was decreasing”.</p>
+<ul>
+<li>Probably the first time a sitting president used the 3rd derivative.</li>
+<li>The 3rd derivative is also know as “jerk”.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/04-derivatives/nixon.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>Source: <a href="https://twitter.com/fermatslibrary/status/1644385429498494999">Fermat’s library</a></p>
 
 
 </section>
