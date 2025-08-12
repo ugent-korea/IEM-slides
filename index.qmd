@@ -1,6 +1,7 @@
 ---
 title: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
+format: html
 ---
 
 ## Presentations
