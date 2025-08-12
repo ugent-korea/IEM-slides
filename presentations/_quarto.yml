@@ -1,0 +1,14 @@
+# Beamer format configuration for presentations
+format:
+  beamer:
+    theme: Pittsburgh
+    colortheme: default
+    fonttheme: default
+    toc: true
+    toc-depth: 2
+    slide-level: 3
+    include-in-header:
+      - file: header.tex
+    template-partials:
+      - toc.tex
+    classoption: t

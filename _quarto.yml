@@ -7,18 +7,3 @@ project:
 
 execute:
   freeze: auto
-
-# Default format for presentations directory
-format:
-  beamer:
-    theme: Pittsburgh
-    colortheme: default
-    fonttheme: default
-    toc: true
-    toc-depth: 2
-    slide-level: 3
-    include-in-header:
-      - file: presentations/header.tex
-    template-partials:
-      - presentations/toc.tex
-    classoption: t
