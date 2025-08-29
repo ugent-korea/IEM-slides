@@ -42,6 +42,13 @@ $$
 
 Hint: *Look for zeros of the denominator that are not zeros of the numerator.*
 
+### Example
+
+Find all vertical asymptotes of the function
+$$
+  f(x) = \ln \left( \frac{x^2 - x}{x^2 - 4}\right).
+$$
+
 ### Limits at infinity (intuition)
 
 What happens to $f(x)$ when $x$ becomes very large (positive/negative)?
@@ -102,6 +109,13 @@ Examples: Find the horizontal asymptotes of
 - $\displaystyle y = \frac{x^2 - 1}{x^2 + 1}$
 - $\displaystyle y = e^{-x}$
 - $\displaystyle y = \frac{e^x - e^{-x}}{e^x + e^{-x}}$
+
+### Example
+
+Find all horizontal asymptotes of the function
+$$
+  f(x) = \ln \left( \frac{x^2 - x}{x^2 - 4}\right).
+$$
 
 ### Limit laws
 
