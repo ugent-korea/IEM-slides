@@ -75,3 +75,7 @@ Simplify the following expression: $\displaystyle \tan\left(\sin^{-1} \frac{2}{3
 ### Example
 
 Show that $\displaystyle \arccos x = \frac{\pi}{2} - \arcsin x$.
+
+### Example
+
+Show that $\displaystyle 2 \arcsin \sqrt{y} = \arccos(1 - 2y)$.
