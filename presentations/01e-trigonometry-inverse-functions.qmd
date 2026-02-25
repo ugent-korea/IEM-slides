@@ -78,6 +78,10 @@ Show that $\displaystyle \arccos x = \frac{\pi}{2} - \arcsin x$.
 
 ### Example
 
+Show that $\displaystyle 2 \arcsin \sqrt{y} = \arccos(1 - 2y)$.
+
+### Example
+
 Show that $\displaystyle \cos^{-1}\left(\frac{1}{\sqrt{5}} \right) + \cos^{-1}\left(\frac{2}{\sqrt{5}} \right) = \frac{\pi}{2}.$
 
 ### Example
@@ -86,3 +90,4 @@ Solve for $x$:
 $$
   2 \tan^{-1}\left(\frac{1}{2}\right) = \cos^{-1}(x).
 $$
+
