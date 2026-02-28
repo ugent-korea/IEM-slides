@@ -123,6 +123,15 @@ $\displaystyle \int e^{ax} \cos(bx) \, dx$
 
 Let $\displaystyle I_n = \int_0^{\pi/2} \cos^n x \, dx$. Find a reduction formula for $I_n$.
 
+### Example
+
+Let $\displaystyle I_n = \int_0^1 \frac{x^n}{\sqrt{1+x^2}} \,\mathrm{d}x$. Show that 
+$\displaystyle n I_n = \sqrt{2} - (n - 1) I_{n-2}$.
+
+### Example
+
+Find the value of $\displaystyle \int_0^1 \frac{x^3}{\sqrt{1 + x^2}} \,\mathrm{d}x$.
+
 # Solutions
 
 ###
