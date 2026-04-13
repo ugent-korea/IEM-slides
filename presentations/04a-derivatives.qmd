@@ -181,9 +181,9 @@ These rules can be derived by means of *implicit differentation*, which we will 
 ### The chain rule
 
 - Useful for composite functions $F = \red{f} \circ \blue{g}$ ("$\red{f}$ after $\blue{g}$")
-- If $\red{f}(x)$ and $\blue{g}(x)$ are differentiable, then the composite function $F(x)$ is also differentiable and
+- If $\red{f(x)}$ and $\blue{g(x)}$ are differentiable, then the composite function $F(x)$ is also differentiable and
 $$
-    F'(x) = \red{f'}(\blue{g}(x)) \cdot \blue{g'}(x).
+    F'(x) = \red{f'(}\blue{g(x)} \red{)} \cdot \blue{g'(x)}.
 $$
 
 ### Example
