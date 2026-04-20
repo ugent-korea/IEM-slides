@@ -178,3 +178,7 @@ Show that $\displaystyle \int_0^{\pi/2} \frac{\sin x}{\sin x + \cos x} dx = \fra
 
 - If $\displaystyle G(x) = \int_1^x \ln y \, dy$, find $G'(x)$.
 - If $\displaystyle H(x) = \int_1^{x^2} \ln y \, dy$, find $H'(x)$.
+
+### Extra problem (2025 suneung)
+
+![](./images/09-integration/suneung.png){height="80%"}
