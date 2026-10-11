@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polynomial Long Division</title>
+<style>
+  :root {
+    --bg: #fdfcf9;
+    --fg: #1f2328;
+    --muted: #6b7280;
+    --line: #1f2328;
+    --panel: #ffffff;
+    --border: #d9d6cf;
+    --hl: #fde68a;
+    --new: #bfdbfe;
+    --accent: #2563eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17181b;
+      --fg: #e7e7e9;
+      --muted: #9ca3af;
+      --line: #e7e7e9;
+      --panel: #202226;
+      --border: #3a3d43;
+      --hl: #6b5310;
+      --new: #1e3a6b;
+      --accent: #60a5fa;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 900px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 1.5rem; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+
+  form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px 12px;
+    align-items: center;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+  }
+  label { font-weight: 600; }
+  input {
+    font: inherit;
+    padding: 6px 8px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--fg);
+    width: 100%;
+  }
+  .preview { grid-column: 2; color: var(--muted); margin-top: -4px; min-height: 1.5em; }
+  .preview.err { color: #dc2626; }
+  .form-actions { grid-column: 1 / -1; display: flex; gap: 12px; align-items: center; }
+  .hint { color: var(--muted); font-size: 0.9rem; }
+
+  button {
+    font: inherit;
+    padding: 6px 16px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    color: var(--fg);
+    cursor: pointer;
+  }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  button:disabled { opacity: 0.4; cursor: default; }
+
+  #work { margin-top: 24px; }
+  .board {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    overflow-x: auto;
+  }
+  #grid {
+    display: inline-grid;
+    row-gap: 4px;
+    font-family: "Cambria Math", "STIX Two Text", "Times New Roman", serif;
+    font-size: 1.5rem;
+    margin-left: 1.5em;
+    margin-right: 1em;
+  }
+  .cell {
+    position: relative;
+    padding: 2px 10px;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 4px;
+  }
+  .right { border-left: 2px solid var(--line); margin-left: 16px; padding-left: 6px; }
+  .divisor { border-bottom: 2px solid var(--line); border-radius: 0; text-align: left; }
+  .quotient { text-align: left; }
+  .right span { border-radius: 4px; padding: 0 2px; }
+  .under { border-bottom: 1px solid var(--line); border-radius: 0; }
+  .open::before { content: "−("; position: absolute; right: 100%; }
+  .close::after { content: ")"; position: absolute; left: 100%; }
+  /* Keep superscripts from making the line taller, so all terms share a baseline */
+  sup { font-size: 0.7em; line-height: 0; vertical-align: baseline; position: relative; top: -0.5em; }
+  .hl { background: var(--hl); }
+  .new { background: var(--new); animation: appear 0.35s ease-out; }
+  @keyframes appear { from { opacity: 0; transform: translateY(-4px); } }
+  .frac {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    font-size: 0.65em;
+    line-height: 1.1;
+    text-align: center;
+  }
+  .frac > span:first-child { border-bottom: 1px solid currentColor; }
+
+  .controls { display: flex; gap: 8px; align-items: center; margin-top: 16px; flex-wrap: wrap; }
+  #counter { color: var(--muted); margin-left: auto; }
+  #explain {
+    margin-top: 12px;
+    padding: 12px 16px;
+    border-left: 4px solid var(--accent);
+    background: var(--panel);
+    border-radius: 4px;
+    font-size: 1.05rem;
+  }
+  #explain .result { margin-top: 8px; }
+  .legend { margin-top: 10px; color: var(--muted); font-size: 0.9rem; }
+  .swatch { display: inline-block; width: 0.9em; height: 0.9em; border-radius: 2px; vertical-align: -0.1em; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Polynomial Long Division</h1>
+  <p class="sub">Enter the coefficients, highest power first, then step through the algorithm.</p>
+
+  <form id="form">
+    <label for="dividend">Dividend</label>
+    <input id="dividend" value="2, -3, 0, 5" autocomplete="off">
+    <div class="preview" id="dividend-preview"></div>
+
+    <label for="divisor">Divisor</label>
+    <input id="divisor" value="1, -2" autocomplete="off">
+    <div class="preview" id="divisor-preview"></div>
+
+    <div class="form-actions">
+      <button class="primary" type="submit">Start</button>
+      <span class="hint">Separate coefficients with commas or spaces. Use 0 for missing powers. Fractions like 3/2 are allowed.</span>
+    </div>
+  </form>
+
+  <section id="work" hidden>
+    <div class="board"><div id="grid"></div></div>
+    <div class="controls">
+      <button id="back">◀ Back</button>
+      <button id="next" class="primary">Next ▶</button>
+      <button id="reset">Reset</button>
+      <span id="counter"></span>
+    </div>
+    <div id="explain"></div>
+    <div class="legend">
+      <span class="swatch" style="background: var(--hl)"></span> used in this step &nbsp;
+      <span class="swatch" style="background: var(--new)"></span> result of this step
+    </div>
+  </section>
+</main>
+
+<script>
+// ---------- Exact fractions ----------
+function gcd(a, b) { while (b) [a, b] = [b, a % b]; return a; }
+
+class Frac {
+  constructor(n, d = 1) {
+    if (d === 0) throw new Error("Division by zero");
+    if (d < 0) { n = -n; d = -d; }
+    const g = gcd(Math.abs(n), d) || 1;
+    this.n = n / g;
+    this.d = d / g;
+  }
+  sub(o) { return new Frac(this.n * o.d - o.n * this.d, this.d * o.d); }
+  mul(o) { return new Frac(this.n * o.n, this.d * o.d); }
+  div(o) { return new Frac(this.n * o.d, this.d * o.n); }
+  abs() { return new Frac(Math.abs(this.n), this.d); }
+  isZero() { return this.n === 0; }
+}
+
+function parseNumber(s) {
+  const m = s.match(/^([+-]?\d+)(?:\.(\d+))?$/);
+  if (!m) throw new Error(`"${s}" is not a number`);
+  const dec = m[2] || "";
+  return new Frac(parseInt(m[1] + dec, 10), 10 ** dec.length);
+}
+
+function parseCoef(s) {
+  const parts = s.split("/");
+  if (parts.length === 1) return parseNumber(s);
+  if (parts.length === 2) {
+    const den = parseNumber(parts[1]);
+    if (den.isZero()) throw new Error(`"${s}" divides by zero`);
+    return parseNumber(parts[0]).div(den);
+  }
+  throw new Error(`"${s}" is not a number`);
+}
+
+// Returns coefficients indexed by power (arr[p] is the coefficient of x^p),
+// with leading zeros removed. The zero polynomial is [].
+function parsePoly(str) {
+  const tokens = str.split(/[\s,;]+/).filter(Boolean);
+  if (tokens.length === 0) throw new Error("Enter at least one coefficient");
+  const coefs = tokens.map(parseCoef);
+  while (coefs.length && coefs[0].isZero()) coefs.shift();
+  return coefs.reverse();
+}
+
+// ---------- Formatting ----------
+function num(f) {
+  return f.d === 1 ? `${f.n}` : `<span class="frac"><span>${f.n}</span><span>${f.d}</span></span>`;
+}
+
+function formatTerm(c, p, first) {
+  const sign = c.n < 0 ? "−" : (first ? "" : "+");
+  const a = c.abs();
+  let body;
+  if (p === 0) body = num(a);
+  else body = (a.n === 1 && a.d === 1 ? "" : num(a)) + "<i>x</i>" + (p > 1 ? `<sup>${p}</sup>` : "");
+  return first ? sign + body : `${sign} ${body}`;
+}
+
+function formatPoly(arr) {
+  const terms = [];
+  for (let p = arr.length - 1; p >= 0; p--) {
+    if (arr[p] && !arr[p].isZero()) terms.push(formatTerm(arr[p], p, terms.length === 0));
+  }
+  return terms.length ? terms.join(" ") : "0";
+}
+
+function degree(arr) {
+  for (let p = arr.length - 1; p >= 0; p--) if (!arr[p].isZero()) return p;
+  return -1;
+}
+
+// ---------- Algorithm ----------
+let dividend, divisor, cycles, steps, cur;
+
+function computeCycles() {
+  const m = divisor.length - 1;
+  const result = [];
+  let rem = dividend.slice();
+  let lead = degree(rem);
+  while (lead >= m) {
+    const k = lead - m;
+    const q = rem[lead].div(divisor[m]);
+    const prod = [];
+    for (let p = k; p <= lead; p++) prod[p] = divisor[p - k].mul(q);
+    const after = rem.slice(0, lead);
+    for (let p = k; p < lead; p++) after[p] = rem[p].sub(prod[p]);
+    result.push({ lead, k, q, prod, before: rem, after });
+    rem = after;
+    lead = degree(rem);
+  }
+  return result;
+}
+
+// Powers shown in the remainder row after a cycle: everything below the
+// cancelled leading term, or a single 0 if nothing is left.
+function remPowers(c) {
+  const ps = [];
+  for (let p = Math.max(c.lead - 1, 0); p >= 0; p--) ps.push(p);
+  return ps;
+}
+
+function quotientPoly() {
+  const q = [];
+  if (cycles.length) for (let p = 0; p <= cycles[0].k; p++) q[p] = new Frac(0);
+  cycles.forEach(c => { q[c.k] = c.q; });
+  return q;
+}
+
+function finalRemainder() {
+  return cycles.length ? cycles[cycles.length - 1].after : dividend;
+}
+
+// ---------- Rendering ----------
+const $ = id => document.getElementById(id);
+const grid = $("grid");
+
+function render() {
+  const n = dividend.length - 1;
+  const m = divisor.length - 1;
+  const s = steps[cur];
+  const C = cycles.length;
+  const col = p => 1 + n - p;
+  const key = (row, p) => `${row}:${p}`;
+
+  // How much of cycle i is visible: 0 nothing, 1 quotient term, 2 product, 3 remainder.
+  const stage = i => {
+    if (s.type === "setup") return 0;
+    if (s.type === "done" || i < s.i) return 3;
+    if (i > s.i) return 0;
+    return { divide: 1, multiply: 2, subtract: 3 }[s.type];
+  };
+
+  // Left side rows: 1 = dividend, then for cycle i: 2+2i = product, 3+2i = remainder.
+  // Right side: divisor on top, quotient below the horizontal line.
+  const mark = {};
+  const qMark = {};
+  let divisorMark = null;
+  const c = cycles[s.i];
+  if (s.type === "divide") {
+    mark[key(1 + 2 * s.i, c.lead)] = "hl";
+    qMark[s.i] = "new";
+    divisorMark = "lead";
+  } else if (s.type === "multiply") {
+    qMark[s.i] = "hl";
+    divisorMark = "all";
+    for (let p = c.k; p <= c.lead; p++) mark[key(2 + 2 * s.i, p)] = "new";
+  } else if (s.type === "subtract") {
+    for (let p = c.k; p <= c.lead; p++) {
+      mark[key(1 + 2 * s.i, p)] = "hl";
+      mark[key(2 + 2 * s.i, p)] = "hl";
+    }
+    remPowers(c).forEach(p => { mark[key(3 + 2 * s.i, p)] = "new"; });
+  } else if (s.type === "done") {
+    cycles.forEach((_, i) => { qMark[i] = "hl"; });
+    const ps = C ? remPowers(cycles[C - 1]) : dividend.map((_, p) => p);
+    ps.forEach(p => { mark[key(1 + 2 * C, p)] = "hl"; });
+  }
+
+  grid.innerHTML = "";
+  grid.style.gridTemplateColumns = `repeat(${n + 1}, auto) auto`;
+
+  const add = (row, p, html, cls = "") => {
+    const el = document.createElement("div");
+    el.className = `cell ${cls} ${mark[key(row, p)] || ""}`;
+    el.style.gridRow = row;
+    el.style.gridColumn = col(p);
+    el.innerHTML = html;
+    grid.append(el);
+  };
+
+  // Right side: vertical line spanning all rows, divisor above the
+  // horizontal line, quotient built up below it.
+  const right = document.createElement("div");
+  right.className = "right";
+  right.style.gridRow = `1 / span ${1 + 2 * C}`;
+  right.style.gridColumn = n + 2;
+  const dParts = [];
+  for (let p = m; p >= 0; p--) {
+    if (divisor[p].isZero()) continue;
+    const hl = divisorMark === "all" || (divisorMark === "lead" && p === m) ? "hl" : "";
+    dParts.push(`<span class="${hl}">${formatTerm(divisor[p], p, dParts.length === 0)}</span>`);
+  }
+  const qParts = [];
+  cycles.forEach((cy, i) => {
+    if (stage(i) >= 1) qParts.push(`<span class="${qMark[i] || ""}">${formatTerm(cy.q, cy.k, i === 0)}</span>`);
+  });
+  right.innerHTML = `<div class="cell divisor">${dParts.join(" ")}</div>
+    <div class="cell quotient">${qParts.join(" ") || "&nbsp;"}</div>`;
+  grid.append(right);
+
+  // Dividend
+  for (let p = n; p >= 0; p--) add(1, p, formatTerm(dividend[p], p, p === n));
+
+  // Products and remainders
+  cycles.forEach((cy, i) => {
+    if (stage(i) >= 2) {
+      for (let p = cy.lead; p >= 0; p--) {
+        if (p >= cy.k) {
+          const cls = "under" + (p === cy.lead ? " open" : "") + (p === cy.k ? " close" : "");
+          add(2 + 2 * i, p, formatTerm(cy.prod[p], p, p === cy.lead), cls);
+        } else {
+          add(2 + 2 * i, p, "", "under");
+        }
+      }
+    }
+    if (stage(i) >= 3) {
+      const ps = remPowers(cy);
+      ps.forEach(p => add(3 + 2 * i, p, formatTerm(cy.after[p], p, p === ps[0])));
+    }
+  });
+
+  $("explain").innerHTML = explain(s);
+  $("counter").textContent = `Step ${cur} of ${steps.length - 1}`;
+  $("back").disabled = cur === 0;
+  $("next").disabled = cur === steps.length - 1;
+}
+
+function explain(s) {
+  const m = divisor.length - 1;
+  const D = formatPoly(divisor);
+  const P = formatPoly(dividend);
+
+  if (s.type === "setup") {
+    let text = `We divide <b>${P}</b> by <b>${D}</b>. The dividend goes on the left, the divisor on the right, and the quotient is built up under the divisor.`;
+    if (dividend.some(c => c.isZero())) {
+      text += " Missing powers are written with coefficient 0 so that the columns line up.";
+    }
+    return text + " Press <b>Next</b> to begin.";
+  }
+
+  if (s.type === "done") {
+    const R = finalRemainder();
+    const Q = quotientPoly();
+    let text;
+    if (cycles.length === 0) {
+      text = `The degree of the dividend (${dividend.length - 1}) is already lower than the degree of the divisor (${m}), so the quotient is 0 and the remainder is the dividend itself.`;
+    } else if (degree(R) < 0) {
+      text = "The remainder is 0, so we stop. The division is exact: the divisor divides the dividend.";
+    } else {
+      text = `The remainder ${formatPoly(R)} has degree ${degree(R)}, which is lower than the degree of the divisor (${m}), so we stop.`;
+    }
+    const Qs = cycles.length ? formatPoly(Q) : "0";
+    return `${text}
+      <div class="result"><b>Quotient:</b> ${Qs} &nbsp;&nbsp; <b>Remainder:</b> ${formatPoly(R)}</div>
+      <div class="result">${P} = (${D})(${Qs}) + ${formatPoly(R)}</div>`;
+  }
+
+  const c = cycles[s.i];
+  const qTerm = formatTerm(c.q, c.k, true);
+
+  if (s.type === "divide") {
+    const leadTerm = formatTerm(c.before[c.lead], c.lead, true);
+    const dLead = formatTerm(divisor[m], m, true);
+    return `<b>Divide.</b> Divide the leading term ${leadTerm} by the leading term of the divisor ${dLead}:
+      ${leadTerm} ÷ ${dLead} = ${qTerm}. Write ${qTerm} in the quotient, under the divisor.`;
+  }
+
+  if (s.type === "multiply") {
+    const prod = [];
+    for (let p = c.k; p <= c.lead; p++) prod[p] = c.prod[p];
+    for (let p = 0; p < c.k; p++) prod[p] = new Frac(0);
+    return `<b>Multiply.</b> Multiply the whole divisor by ${qTerm}:
+      (${D}) · ${qTerm} = ${formatPoly(prod)}. Write the result underneath, lining up equal powers.`;
+  }
+
+  // subtract
+  return `<b>Subtract.</b> Subtract the product, term by term. The leading terms cancel
+    (that is why we chose ${qTerm}). What is left is ${formatPoly(c.after)}.`;
+}
+
+// ---------- Input handling ----------
+function updatePreview(inputId) {
+  const out = $(`${inputId}-preview`);
+  try {
+    out.innerHTML = "= " + formatPoly(parsePoly($(inputId).value));
+    out.classList.remove("err");
+  } catch (e) {
+    out.textContent = e.message;
+    out.classList.add("err");
+  }
+}
+
+function start() {
+  try {
+    dividend = parsePoly($("dividend").value);
+    divisor = parsePoly($("divisor").value);
+  } catch (e) {
+    return;  // the preview already shows the error
+  }
+  if (divisor.length === 0) {
+    $("divisor-preview").textContent = "The divisor can't be zero";
+    $("divisor-preview").classList.add("err");
+    return;
+  }
+  if (dividend.length === 0) {
+    $("dividend-preview").textContent = "The dividend can't be zero";
+    $("dividend-preview").classList.add("err");
+    return;
+  }
+  cycles = computeCycles();
+  steps = [{ type: "setup" }];
+  cycles.forEach((_, i) => {
+    steps.push({ type: "divide", i }, { type: "multiply", i }, { type: "subtract", i });
+  });
+  steps.push({ type: "done" });
+  cur = 0;
+  $("work").hidden = false;
+  render();
+}
+
+["dividend", "divisor"].forEach(id => {
+  $(id).addEventListener("input", () => updatePreview(id));
+  updatePreview(id);
+});
+$("form").addEventListener("submit", e => { e.preventDefault(); start(); });
+$("next").addEventListener("click", () => { cur++; render(); });
+$("back").addEventListener("click", () => { cur--; render(); });
+$("reset").addEventListener("click", () => { cur = 0; render(); });
+
+start();
+</script>
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Synthetic Division</title>
+<style>
+  :root {
+    --bg: #fdfcf9;
+    --fg: #1f2328;
+    --muted: #6b7280;
+    --line: #1f2328;
+    --panel: #ffffff;
+    --border: #d9d6cf;
+    --hl: #fde68a;
+    --new: #bfdbfe;
+    --accent: #2563eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17181b;
+      --fg: #e7e7e9;
+      --muted: #9ca3af;
+      --line: #e7e7e9;
+      --panel: #202226;
+      --border: #3a3d43;
+      --hl: #6b5310;
+      --new: #1e3a6b;
+      --accent: #60a5fa;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 900px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 1.5rem; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+
+  form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px 12px;
+    align-items: center;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+  }
+  label { font-weight: 600; }
+  input {
+    font: inherit;
+    padding: 6px 8px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--fg);
+    width: 100%;
+  }
+  .preview { grid-column: 2; color: var(--muted); margin-top: -4px; min-height: 1.5em; }
+  .preview.err { color: #dc2626; }
+  .form-actions { grid-column: 1 / -1; display: flex; gap: 12px; align-items: center; }
+  .hint { color: var(--muted); font-size: 0.9rem; }
+
+  button {
+    font: inherit;
+    padding: 6px 16px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    color: var(--fg);
+    cursor: pointer;
+  }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  button:disabled { opacity: 0.4; cursor: default; }
+
+  #work { margin-top: 24px; }
+  .board {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    overflow-x: auto;
+  }
+  #grid {
+    display: inline-grid;
+    row-gap: 4px;
+    font-family: "Cambria Math", "STIX Two Text", "Times New Roman", serif;
+    font-size: 1.5rem;
+  }
+  .cell {
+    padding: 2px 14px;
+    min-width: 2.5em;
+    min-height: 1.8em;
+    text-align: right;
+    white-space: nowrap;
+    border-radius: 4px;
+  }
+  .c { border-right: 2px solid var(--line); border-radius: 0; }
+  .under { border-bottom: 2px solid var(--line); border-radius: 0; }
+  .rem { outline: 2px solid var(--line); outline-offset: -2px; }
+  sup { font-size: 0.7em; line-height: 0; vertical-align: baseline; position: relative; top: -0.5em; }
+  .hl { background: var(--hl); }
+  .new { background: var(--new); animation: appear 0.35s ease-out; }
+  @keyframes appear { from { opacity: 0; transform: translateY(-4px); } }
+  .frac {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    font-size: 0.65em;
+    line-height: 1.1;
+    text-align: center;
+  }
+  .frac > span:first-child { border-bottom: 1px solid currentColor; }
+
+  .controls { display: flex; gap: 8px; align-items: center; margin-top: 16px; flex-wrap: wrap; }
+  #counter { color: var(--muted); margin-left: auto; }
+  #explain {
+    margin-top: 12px;
+    padding: 12px 16px;
+    border-left: 4px solid var(--accent);
+    background: var(--panel);
+    border-radius: 4px;
+    font-size: 1.05rem;
+  }
+  #explain .result { margin-top: 8px; }
+  .legend { margin-top: 10px; color: var(--muted); font-size: 0.9rem; }
+  .swatch { display: inline-block; width: 0.9em; height: 0.9em; border-radius: 2px; vertical-align: -0.1em; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Synthetic Division</h1>
+  <p class="sub">Divide a polynomial by <i>x</i> − <i>c</i>, one step at a time.</p>
+
+  <form id="form">
+    <label for="dividend">Dividend</label>
+    <input id="dividend" value="2, -3, 0, 5" autocomplete="off">
+    <div class="preview" id="dividend-preview"></div>
+
+    <label for="c">c</label>
+    <input id="c" value="2" autocomplete="off">
+    <div class="preview" id="c-preview"></div>
+
+    <div class="form-actions">
+      <button class="primary" type="submit">Start</button>
+      <span class="hint">Enter the dividend's coefficients, highest power first, separated by commas or spaces. Use 0 for missing powers. Fractions like 3/2 are allowed.</span>
+    </div>
+  </form>
+
+  <section id="work" hidden>
+    <div class="board"><div id="grid"></div></div>
+    <div class="controls">
+      <button id="back">◀ Back</button>
+      <button id="next" class="primary">Next ▶</button>
+      <button id="reset">Reset</button>
+      <span id="counter"></span>
+    </div>
+    <div id="explain"></div>
+    <div class="legend">
+      <span class="swatch" style="background: var(--hl)"></span> used in this step &nbsp;
+      <span class="swatch" style="background: var(--new)"></span> result of this step
+    </div>
+  </section>
+</main>
+
+<script>
+// ---------- Exact fractions ----------
+function gcd(a, b) { while (b) [a, b] = [b, a % b]; return a; }
+
+class Frac {
+  constructor(n, d = 1) {
+    if (d === 0) throw new Error("Division by zero");
+    if (d < 0) { n = -n; d = -d; }
+    const g = gcd(Math.abs(n), d) || 1;
+    this.n = n / g;
+    this.d = d / g;
+  }
+  add(o) { return new Frac(this.n * o.d + o.n * this.d, this.d * o.d); }
+  mul(o) { return new Frac(this.n * o.n, this.d * o.d); }
+  div(o) { return new Frac(this.n * o.d, this.d * o.n); }
+  neg() { return new Frac(-this.n, this.d); }
+  abs() { return new Frac(Math.abs(this.n), this.d); }
+  isZero() { return this.n === 0; }
+}
+
+function parseNumber(s) {
+  const m = s.match(/^([+-]?\d+)(?:\.(\d+))?$/);
+  if (!m) throw new Error(`"${s}" is not a number`);
+  const dec = m[2] || "";
+  return new Frac(parseInt(m[1] + dec, 10), 10 ** dec.length);
+}
+
+function parseCoef(s) {
+  const parts = s.split("/");
+  if (parts.length === 1) return parseNumber(s);
+  if (parts.length === 2) {
+    const den = parseNumber(parts[1]);
+    if (den.isZero()) throw new Error(`"${s}" divides by zero`);
+    return parseNumber(parts[0]).div(den);
+  }
+  throw new Error(`"${s}" is not a number`);
+}
+
+// Coefficients, highest power first, with leading zeros removed.
+function parseCoefs(str) {
+  const tokens = str.split(/[\s,;]+/).filter(Boolean);
+  if (tokens.length === 0) throw new Error("Enter at least one coefficient");
+  const coefs = tokens.map(parseCoef);
+  while (coefs.length && coefs[0].isZero()) coefs.shift();
+  if (coefs.length === 0) throw new Error("The dividend can't be zero");
+  return coefs;
+}
+
+// ---------- Formatting ----------
+function num(f) {
+  return f.d === 1 ? `${f.n}` : `<span class="frac"><span>${f.n}</span><span>${f.d}</span></span>`;
+}
+
+// A signed number, e.g. "−3".
+function sNum(f) { return (f.n < 0 ? "−" : "") + num(f.abs()); }
+
+// A signed number in parentheses when negative, for use inside expressions.
+function pNum(f) { return f.n < 0 ? `(${sNum(f)})` : sNum(f); }
+
+function formatTerm(c, p, first) {
+  const sign = c.n < 0 ? "−" : (first ? "" : "+");
+  const a = c.abs();
+  let body;
+  if (p === 0) body = num(a);
+  else body = (a.n === 1 && a.d === 1 ? "" : num(a)) + "<i>x</i>" + (p > 1 ? `<sup>${p}</sup>` : "");
+  return first ? sign + body : `${sign} ${body}`;
+}
+
+// Format coefficients given highest power first.
+function formatPoly(coefs) {
+  const deg = coefs.length - 1;
+  const terms = [];
+  coefs.forEach((c, j) => {
+    if (!c.isZero()) terms.push(formatTerm(c, deg - j, terms.length === 0));
+  });
+  return terms.length ? terms.join(" ") : "0";
+}
+
+function formatDivisor(c) { return formatPoly([new Frac(1), c.neg()]); }
+
+// ---------- Algorithm ----------
+// dividend: dividend coefficients, mid: c times the previous result, bot: column sums.
+let dividend, c, mid, bot, steps, cur;
+
+function compute() {
+  mid = [null];
+  bot = [dividend[0]];
+  for (let j = 1; j < dividend.length; j++) {
+    mid[j] = c.mul(bot[j - 1]);
+    bot[j] = dividend[j].add(mid[j]);
+  }
+}
+
+// ---------- Rendering ----------
+const $ = id => document.getElementById(id);
+const grid = $("grid");
+
+function render() {
+  const n = dividend.length - 1;
+  const s = steps[cur];
+
+  // How far each column j has progressed: 0 nothing, 1 middle row, 2 bottom row.
+  const stage = j => {
+    if (s.type === "setup") return 0;
+    if (s.type === "done") return 2;
+    if (s.type === "bringdown") return j === 0 ? 2 : 0;
+    if (j < s.j) return 2;
+    if (j > s.j) return 0;
+    return s.type === "multiply" ? 1 : 2;
+  };
+
+  const mark = {};
+  if (s.type === "bringdown") {
+    mark["dividend0"] = "hl";
+    mark["bot0"] = "new";
+  } else if (s.type === "multiply") {
+    mark["c"] = "hl";
+    mark[`bot${s.j - 1}`] = "hl";
+    mark[`mid${s.j}`] = "new";
+  } else if (s.type === "add") {
+    mark[`dividend${s.j}`] = "hl";
+    mark[`mid${s.j}`] = "hl";
+    mark[`bot${s.j}`] = "new";
+  } else if (s.type === "done") {
+    for (let j = 0; j <= n; j++) mark[`bot${j}`] = "hl";
+  }
+
+  grid.innerHTML = "";
+  grid.style.gridTemplateColumns = `auto repeat(${n + 1}, auto)`;
+
+  const add = (row, col, html, name, cls = "") => {
+    const el = document.createElement("div");
+    el.className = `cell ${cls} ${mark[name] || ""}`;
+    el.style.gridRow = row;
+    el.style.gridColumn = col;
+    el.innerHTML = html;
+    grid.append(el);
+  };
+
+  // c sits on the left of the middle row, with the vertical line running down all rows.
+  add(1, 1, "", "", "c");
+  add(2, 1, sNum(c), "c", "c under");
+  add(3, 1, "", "", "c");
+
+  for (let j = 0; j <= n; j++) {
+    add(1, j + 2, sNum(dividend[j]), `dividend${j}`);
+    add(2, j + 2, stage(j) >= 1 && j > 0 ? sNum(mid[j]) : "", `mid${j}`, "under");
+    add(3, j + 2, stage(j) >= 2 ? sNum(bot[j]) : "", `bot${j}`, j === n && n > 0 ? "rem" : "");
+  }
+
+  $("explain").innerHTML = explain(s);
+  $("counter").textContent = `Step ${cur} of ${steps.length - 1}`;
+  $("back").disabled = cur === 0;
+  $("next").disabled = cur === steps.length - 1;
+}
+
+function explain(s) {
+  const n = dividend.length - 1;
+  const P = formatPoly(dividend);
+  const D = formatDivisor(c);
+
+  if (s.type === "setup") {
+    let text = `We divide <b>${P}</b> by <b>${D}</b>. Write the coefficients of the dividend in the top row and c = ${sNum(c)} on the left.`;
+    if (dividend.some(a => a.isZero())) text += " Missing powers get coefficient 0.";
+    return text + " Press <b>Next</b> to begin.";
+  }
+
+  if (s.type === "bringdown") {
+    return `<b>Bring down.</b> Copy the first coefficient ${sNum(dividend[0])} to the bottom row.`;
+  }
+
+  const j = s.j;
+  if (s.type === "multiply") {
+    return `<b>Multiply.</b> Multiply c by the last number in the bottom row:
+      ${pNum(c)} · ${pNum(bot[j - 1])} = ${sNum(mid[j])}. Write it in the next column, in the middle row.`;
+  }
+
+  if (s.type === "add") {
+    return `<b>Add.</b> Add the column: ${sNum(dividend[j])} + ${pNum(mid[j])} = ${sNum(bot[j])}. Write it in the bottom row.`;
+  }
+
+  // done
+  const R = bot[n];
+  const Q = n > 0 ? formatPoly(bot.slice(0, n)) : "0";
+  let text;
+  if (n === 0) {
+    text = `The dividend is a constant, so the quotient is 0 and the remainder is ${sNum(R)}.`;
+  } else {
+    text = `The last number in the bottom row, ${sNum(R)}, is the remainder.
+      The other numbers are the coefficients of the quotient, which has degree ${n - 1}, one less than the dividend.`;
+  }
+  return `${text}
+    <div class="result"><b>Quotient:</b> ${Q} &nbsp;&nbsp; <b>Remainder:</b> ${sNum(R)}</div>
+    <div class="result">${P} = (${D})(${Q}) ${R.n < 0 ? "−" : "+"} ${num(R.abs())}</div>`;
+}
+
+// ---------- Input handling ----------
+function updatePreviews() {
+  const dp = $("dividend-preview");
+  try {
+    dp.innerHTML = "= " + formatPoly(parseCoefs($("dividend").value));
+    dp.classList.remove("err");
+  } catch (e) {
+    dp.textContent = e.message;
+    dp.classList.add("err");
+  }
+  const cp = $("c-preview");
+  try {
+    cp.innerHTML = "Divide by " + formatDivisor(parseCoef($("c").value.trim()));
+    cp.classList.remove("err");
+  } catch (e) {
+    cp.textContent = e.message;
+    cp.classList.add("err");
+  }
+}
+
+function start() {
+  try {
+    dividend = parseCoefs($("dividend").value);
+    c = parseCoef($("c").value.trim());
+  } catch (e) {
+    return;  // the preview already shows the error
+  }
+  compute();
+  steps = [{ type: "setup" }, { type: "bringdown" }];
+  for (let j = 1; j < dividend.length; j++) steps.push({ type: "multiply", j }, { type: "add", j });
+  steps.push({ type: "done" });
+  cur = 0;
+  $("work").hidden = false;
+  render();
+}
+
+["dividend", "c"].forEach(id => $(id).addEventListener("input", updatePreviews));
+updatePreviews();
+$("form").addEventListener("submit", e => { e.preventDefault(); start(); });
+$("next").addEventListener("click", () => { cur++; render(); });
+$("back").addEventListener("click", () => { cur--; render(); });
+$("reset").addEventListener("click", () => { cur = 0; render(); });
+
+start();
+</script>
+</body>
+</html>
