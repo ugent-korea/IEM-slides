@@ -1,0 +1,72 @@
+\documentclass{article}
+
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{parskip}
+
+\newtheorem*{claim}{Claim}
+
+\title{Proof by Induction: Derivatives of $x e^x$}
+\author{Introduction to Engineering Mathematics}
+\date{November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{claim}
+  Let $f(x) = x e^x$. For every integer $n \ge 1$,
+  \[
+    f^{(n)}(x) = n e^x + x e^x = (n + x) e^x.
+  \]
+\end{claim}
+
+\section*{Proof outline}
+
+Let $P(n)$ denote the statement ``$f^{(n)}(x) = n e^x + x e^x$''.
+We show that $P(n)$ holds for all $n \ge 1$ by induction on $n$.
+
+\subsection*{Step 1: Base case ($n = 1$)}
+
+Compute the first derivative using the product rule:
+\[
+  f'(x) = \frac{d}{dx}(x) \cdot e^x + x \cdot \frac{d}{dx}(e^x)
+        = e^x + x e^x.
+\]
+This is $1 \cdot e^x + x e^x$, so $P(1)$ holds.
+
+\subsection*{Step 2: Induction hypothesis}
+
+Assume that $P(k)$ holds for some integer $k \ge 1$, that is,
+\[
+  f^{(k)}(x) = k e^x + x e^x.
+\]
+
+\subsection*{Step 3: Induction step}
+
+We must show that $P(k + 1)$ holds, i.e.\ that
+$f^{(k+1)}(x) = (k + 1) e^x + x e^x$.
+
+The $(k+1)$-th derivative is the derivative of the $k$-th derivative, so by
+the induction hypothesis
+\[
+  f^{(k+1)}(x) = \frac{d}{dx} f^{(k)}(x)
+               = \frac{d}{dx} \left( k e^x + x e^x \right).
+\]
+Differentiate each term:
+\begin{itemize}
+\item $\dfrac{d}{dx}(k e^x) = k e^x$, since $k$ is a constant;
+\item $\dfrac{d}{dx}(x e^x) = e^x + x e^x$, by the product rule (as in the
+  base case).
+\end{itemize}
+Adding these together gives
+\[
+  f^{(k+1)}(x) = k e^x + e^x + x e^x = (k + 1) e^x + x e^x,
+\]
+which is exactly $P(k + 1)$.
+
+\subsection*{Step 4: Conclusion}
+
+Since $P(1)$ is true, and $P(k)$ implies $P(k + 1)$ for every $k \ge 1$, the
+principle of mathematical induction tells us that $P(n)$ is true for all
+$n \ge 1$. \qed
+
+\end{document}

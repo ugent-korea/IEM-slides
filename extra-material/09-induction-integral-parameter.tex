@@ -1,0 +1,96 @@
+\documentclass{article}
+
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{parskip}
+
+\newtheorem*{claim}{Claim}
+
+\title{Proof by Induction: An Integral with a Parameter}
+\author{Introduction to Engineering Mathematics}
+\date{November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{claim}
+  For every integer $n \ge 0$,
+  \[
+    I_n = \int_0^1 (1 - x^2)^n \, dx = \frac{2^{2n} (n!)^2}{(2n + 1)!}.
+  \]
+\end{claim}
+
+\section*{Preliminary: a reduction formula}
+
+For $n \ge 1$, integrate by parts with
+\[
+  u = (1 - x^2)^n, \quad dv = dx,
+  \qquad
+  du = -2nx (1 - x^2)^{n-1} \, dx, \quad v = x.
+\]
+This gives
+\[
+  I_n = \Big[ x (1 - x^2)^n \Big]_0^1 + 2n \int_0^1 x^2 (1 - x^2)^{n-1} \, dx.
+\]
+The boundary term is zero, since $x (1 - x^2)^n$ vanishes at both $x = 0$ and
+$x = 1$. In the remaining integral, write $x^2 = 1 - (1 - x^2)$:
+\[
+  I_n = 2n \int_0^1 \left[ (1 - x^2)^{n-1} - (1 - x^2)^n \right] dx
+      = 2n \left( I_{n-1} - I_n \right).
+\]
+Solving for $I_n$ gives the reduction formula
+\[
+  I_n = \frac{2n}{2n + 1} \, I_{n-1}, \qquad n \ge 1.
+\]
+
+\section*{Proof outline}
+
+Let $P(n)$ denote the statement ``$I_n = \dfrac{2^{2n} (n!)^2}{(2n + 1)!}$''.
+We show that $P(n)$ holds for all $n \ge 0$ by induction on $n$.
+
+\subsection*{Step 1: Base case ($n = 0$)}
+
+For $n = 0$ the integrand is $1$, so
+\[
+  I_0 = \int_0^1 1 \, dx = 1.
+\]
+On the other hand,
+\[
+  \frac{2^0 (0!)^2}{1!} = 1.
+\]
+Both sides agree, so $P(0)$ holds.
+
+\subsection*{Step 2: Induction hypothesis}
+
+Assume that $P(k)$ holds for some integer $k \ge 0$, that is,
+\[
+  I_k = \frac{2^{2k} (k!)^2}{(2k + 1)!}.
+\]
+
+\subsection*{Step 3: Induction step}
+
+We must show that $P(k + 1)$ holds, i.e.\ that
+\[
+  I_{k+1} = \frac{2^{2k+2} ((k + 1)!)^2}{(2k + 3)!}.
+\]
+By the reduction formula with $n = k + 1$, and then the induction hypothesis,
+\[
+  I_{k+1} = \frac{2k + 2}{2k + 3} \, I_k
+          = \frac{2k + 2}{2k + 3} \cdot \frac{2^{2k} (k!)^2}{(2k + 1)!}.
+\]
+To bring this into the required form, multiply numerator and denominator by
+$2k + 2$:
+\[
+  I_{k+1} = \frac{(2k + 2)^2 \, 2^{2k} (k!)^2}{(2k + 3)(2k + 2)(2k + 1)!}
+          = \frac{2^2 (k + 1)^2 \, 2^{2k} (k!)^2}{(2k + 3)!}
+          = \frac{2^{2k+2} ((k + 1)!)^2}{(2k + 3)!},
+\]
+using $(2k + 3)(2k + 2)(2k + 1)! = (2k + 3)!$ and $(k + 1) \, k! = (k + 1)!$.
+This is exactly $P(k + 1)$.
+
+\subsection*{Step 4: Conclusion}
+
+Since $P(0)$ is true, and $P(k)$ implies $P(k + 1)$ for every $k \ge 0$, the
+principle of mathematical induction tells us that $P(n)$ is true for all
+$n \ge 0$. \qed
+
+\end{document}
