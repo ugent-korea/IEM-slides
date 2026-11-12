@@ -6,6 +6,7 @@ format: html
 
 ## Presentations
 
+- [0 - Course Overview](presentations/00-introduction.qmd)
 - [1 - Trigonometry (1/5): Introduction](presentations/01a-trigonometry-basic-identities.qmd)
 - [1 - Trigonometry (2/5): Formulas](presentations/01b-trigonometry-formulas.qmd)
 - [1 - Trigonometry (3/5): Geometry of triangles](presentations/01c-trigonometry-triangles.qmd)
