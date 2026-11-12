@@ -1,0 +1,85 @@
+---
+title: "Exam Information"
+subtitle: Introduction to Engineering Mathematics
+author: Prof. Joris Vankerschaver
+format:
+  beamer:
+    toc: false
+    slide-level: 2
+---
+
+## Practical info
+
+- Exam date: Monday 30 November, 8:30--12:30
+- The exam will take place in AB 403
+
+What should you bring:
+
+- Student ID
+- Pens, pencils, eraser, ...
+- A snack (optional)
+
+## Explicitly NOT ALLOWED
+
+Not allowed:
+
+- Cheat sheets and notes
+- Calculators
+- Electronic devices (phone, smart watch, ...)
+
+*Even having these on you in the exam room will be considered as academic fraud.*
+
+## Grade calculation
+
+| Grade item           | Max score |
+|----------------------|:---------:|
+| Exam                 |    16     |
+| Quizzes              |     3     |
+| Practical attendance |     1     |
+
+## How to prepare your answers
+
+- Use your scratch paper to do calculations, figure something out, etc.
+- Present your final argument on the answer sheet.
+
+Be very mindful:
+
+- **Show your work!**
+- **Leave enough time to finish writing!**
+
+## Special instructions
+
+- Do not write across the margins
+- Don't write solutions next to each other on the same page
+- Write clearly and cleanly
+
+## What to study
+
+- Re-do problems from theory and practicals
+- Do some extra problems
+- Use sample exams wisely
+  - Time yourself
+  - Focus on hard problems
+
+## Asking for help
+
+- Contact your TAs or myself
+  - Show your work
+  - Early is better than late
+
+## On the day of the exam
+
+At the start:
+
+- Go to the correct room
+- Wait outside until called in
+- Leave backpacks and coats at the front of the room (switch off your phone)
+- Take a seat at the desk with your name on it
+
+At the end (when you are done):
+
+- Hand in all your papers
+
+##
+
+![Source: [https://xkcd.com/2748/](https://xkcd.com/2748/)](./images/10-exam-information/xkcd-2748.png){fig-align="center" height="80%"}

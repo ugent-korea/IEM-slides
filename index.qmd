@@ -28,4 +28,4 @@ format: html
 - [9 - Proof Techniques](presentations/09-proof-techniques.qmd)
 
 
-
+- [10 - Exam Information](presentations/10-exam-information.qmd)
