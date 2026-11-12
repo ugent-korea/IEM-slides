@@ -2,6 +2,9 @@
 title: "Course Overview"
 subtitle: Introduction to Engineering Mathematics
 author: Prof. Joris Vankerschaver
+format:
+  beamer:
+    classoption: c
 header-includes: |
   \usepackage{tikz}
   \usetikzlibrary{arrows.meta,positioning}
@@ -80,7 +83,6 @@ Set up Ufora notifications!
 ### Examination and grading
 
 ```{=latex}
-\vspace{1em}
 \begin{center}
 \begin{tikzpicture}[x=5.2mm]
   \fill[ibmA]  (0,0)  rectangle (16,0.8);
@@ -185,7 +187,6 @@ You must still take part in the quizzes!
 ### Math courses at GUGC
 
 ```{=latex}
-\vspace{1em}
 \begin{center}
 \begin{tikzpicture}[
     course/.style={rounded corners=3pt, minimum width=22mm, minimum height=13mm,
@@ -366,7 +367,6 @@ Pick a harder problem! Don't waste your energy on simple problems!
 ### What problem sets do we offer?
 
 ```{=latex}
-\vspace{1em}
 \begin{center}
 \begin{tikzpicture}[
     card/.style={rounded corners=4pt, minimum width=33mm, minimum height=26mm,
