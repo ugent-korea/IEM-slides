@@ -6,52 +6,212 @@ format:
   beamer:
     toc: false
     slide-level: 2
+header-includes: |
+  \usepackage{tikz}
+  \usetikzlibrary{arrows.meta,positioning}
+  \usepackage{pifont}
+  \definecolor{ibmA}{RGB}{100,143,255}
+  \definecolor{ibmB}{RGB}{120,94,240}
+  \definecolor{ibmC}{RGB}{220,38,127}
+  \definecolor{ibmD}{RGB}{254,97,0}
+  \definecolor{ibmE}{RGB}{255,176,0}
+  \setbeamertemplate{blocks}[rounded][shadow=false]
+  \setbeamercolor{block title}{bg=ibmA!30, fg=black}
+  \setbeamercolor{block body}{bg=ibmA!8}
+  \setbeamercolor{block title example}{bg=ibmB!30, fg=black}
+  \setbeamercolor{block body example}{bg=ibmB!8}
+  \setbeamercolor{block title alerted}{bg=ibmC!30, fg=black}
+  \setbeamercolor{block body alerted}{bg=ibmC!8}
+  \newcommand{\yes}{{\color{ibmA}\ding{51}}}
+  \newcommand{\no}{{\color{ibmC}\ding{55}}}
 ---
 
-## Practical info
+## You made it!
 
-- Exam date: Monday 30 November, 8:30--12:30
-- The exam will take place in AB 403
+Over the past weeks, we covered a lot of ground:
 
-What should you bring:
+```{=latex}
+\vspace{0.5em}
+\begin{center}
+\begin{tikzpicture}[
+    topic/.style={rounded corners=3pt, minimum width=18mm, inner sep=2pt, minimum height=10mm,
+                  align=center, font=\scriptsize, text=black},
+    path/.style={-{Stealth[length=2mm]}, thick, gray!60}]
+  \node[topic, fill=ibmA!30] (t1) at (0,0)    {1. Trigonometry};
+  \node[topic, fill=ibmA!30] (t2) at (2.2,0)  {2. Coordinate\\geometry};
+  \node[topic, fill=ibmB!30] (t3) at (4.4,0)  {3. Limits \&\\continuity};
+  \node[topic, fill=ibmB!30] (t4) at (6.6,0)  {4. Derivatives};
+  \node[topic, fill=ibmC!25] (t5) at (8.8,0)  {5. Complex\\numbers};
+  \node[topic, fill=ibmC!25] (t6) at (8.8,-1.6) {6. Polynomials};
+  \node[topic, fill=ibmD!25] (t7) at (6.6,-1.6) {7. Binomial\\theorem};
+  \node[topic, fill=ibmD!25] (t8) at (4.4,-1.6) {8. Integration};
+  \node[topic, fill=ibmE!35] (t9) at (2.2,-1.6) {9. Proof\\techniques};
+  \node[topic, fill=black, text=white, font=\scriptsize\bfseries] (ex) at (0,-1.6) {Exam!};
+  \foreach \a/\b in {t1/t2,t2/t3,t3/t4,t4/t5,t5/t6,t6/t7,t7/t8,t8/t9,t9/ex}
+    \draw[path] (\a) -- (\b);
+\end{tikzpicture}
+\end{center}
+```
 
-- Student ID
-- Pens, pencils, eraser, ...
-- A snack (optional)
+\vspace{1em}
+
+The exam is your chance to **show that you have mastered and understood the material**.
+
+## The exam at a glance
+
+```{=latex}
+\vspace{1em}
+\begin{center}
+\begin{tikzpicture}[
+    card/.style={rounded corners=4pt, minimum width=33mm, minimum height=22mm,
+                 align=center, text=black}]
+  \node[card, fill=ibmA!20] at (0,0)
+    {\scriptsize DATE\\[3pt]\large\textbf{Monday}\\\large\textbf{30 November}};
+  \node[card, fill=ibmB!20] at (3.8,0)
+    {\scriptsize TIME\\[3pt]\large\textbf{8:30 -- 12:30}\\\scriptsize (4 hours)};
+  \node[card, fill=ibmD!20] at (7.6,0)
+    {\scriptsize ROOM\\[3pt]\large\textbf{AB 403}};
+\end{tikzpicture}
+\end{center}
+```
+
+\vspace{1.5em}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Bring**
+
+\yes\ Student ID
+
+\yes\ Pens, pencils, eraser, ...
+
+\yes\ A snack (optional)
+:::
+::: {.column width="50%"}
+**Do not bring**
+
+\no\ Cheat sheets and notes
+
+\no\ Calculators
+
+\no\ Electronic devices (phone, smart watch, ...)
+:::
+::::
 
 ## Explicitly NOT ALLOWED
 
-Not allowed:
+```{=latex}
+\vspace{1em}
+\begin{center}
+\begin{tikzpicture}[
+    item/.style={align=center, font=\small, text=black}]
+  \foreach \x/\t in {0/{Cheat sheets\\and notes}, 3.6/{Calculators}, 7.2/{Phones,\\smart watches}} {
+    \fill[ibmC!12] (\x,0) circle (1.3);
+    \draw[ibmC!60, line width=3pt] ({\x-0.92},0.92) -- ({\x+0.92},-0.92);
+    \draw[ibmC, line width=2pt] (\x,0) circle (1.3);
+    \node[item, fill=ibmC!12, inner sep=1pt, rounded corners=2pt] at (\x,0) {\t};
+  }
+\end{tikzpicture}
+\end{center}
+```
 
-- Cheat sheets and notes
-- Calculators
-- Electronic devices (phone, smart watch, ...)
+\vspace{2em}
 
-*Even having these on you in the exam room will be considered as academic fraud.*
+\begin{alertblock}{Academic fraud}
+Even \emph{having} these on you in the exam room will be considered as
+academic fraud. When in doubt, leave it at the front of the room.
+\end{alertblock}
 
 ## Grade calculation
 
-| Grade item           | Max score |
-|----------------------|:---------:|
-| Exam                 |    16     |
-| Quizzes              |     3     |
-| Practical attendance |     1     |
+Your final grade is out of 20:
 
-## How to prepare your answers
+```{=latex}
+\vspace{1em}
+\begin{center}
+\begin{tikzpicture}[x=5.2mm]
+  \fill[ibmA]  (0,0)  rectangle (16,0.8);
+  \fill[ibmB]  (16,0) rectangle (19,0.8);
+  \fill[ibmE]  (19,0) rectangle (20,0.8);
+  \foreach \x in {16,19} \draw[white, thick] (\x,0) -- (\x,0.8);
+  \node[white, font=\bfseries] at (8,0.4) {Exam: 16};
+  \node[white, font=\bfseries\small] at (17.5,0.4) {3};
+  \node[font=\bfseries\small] at (19.5,0.4) {1};
+  \draw[ibmB, thick] (16,-0.1) -- (16,-0.4) -- (19,-0.4) -- (19,-0.1);
+  \node[ibmB, font=\scriptsize, below] at (17.5,-0.4) {Quizzes};
+  \draw[ibmE!80!black, thick] (19.5,0.9) -- (19.5,1.3);
+  \node[ibmE!80!black, font=\scriptsize, above left] at (20,1.3) {Practical attendance};
+  \foreach \x in {0,5,10,15,20}
+    \node[gray, font=\tiny, below] at (\x,-0.8) {\x};
+\end{tikzpicture}
+\end{center}
+```
 
-- Use your scratch paper to do calculations, figure something out, etc.
-- Present your final argument on the answer sheet.
+## How to write your answers
+
+:::: {.columns}
+::: {.column width="48%"}
+\begin{block}{Scratch paper}
+\begin{itemize}
+\item Do calculations
+\item Try out ideas
+\item Make mistakes!
+\end{itemize}
+Not graded.
+\end{block}
+:::
+::: {.column width="48%"}
+\begin{exampleblock}{Answer sheet}
+\begin{itemize}
+\item Your final, clean argument
+\item Every step justified
+\item Final answer clearly marked
+\end{itemize}
+This is what we grade.
+\end{exampleblock}
+:::
+::::
+
+\vspace{1em}
 
 Be very mindful:
 
-- **Show your work!**
-- **Leave enough time to finish writing!**
+- **Show your work!** A correct answer without justification earns few points;
+  a clear argument with a small slip earns many.
+- **Leave enough time to finish writing!** Keep the last 15 minutes for copying
+  out and checking.
 
-## Special instructions
+## Layout of your answer sheet
 
+:::: {.columns}
+::: {.column width="55%"}
 - Do not write across the margins
 - Don't write solutions next to each other on the same page
 - Write clearly and cleanly
+- Number your answers so that they match the questions
+:::
+::: {.column width="45%"}
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+  % page
+  \draw[fill=white, rounded corners=1pt] (0,0) rectangle (3.5,4.6);
+  \draw[ibmC, dashed] (0.4,0) -- (0.4,4.6);
+  \draw[ibmC, dashed] (3.1,0) -- (3.1,4.6);
+  % question 1
+  \node[font=\tiny\bfseries, anchor=west] at (0.5,4.3) {Q1};
+  \foreach \y in {4.0,3.75,3.5,3.25,3.0}
+    \draw[ibmA, line width=1.5pt] (0.6,\y) -- ({0.6+2.2*(1-0.15*mod(\y*4,3))},\y);
+  % question 2
+  \node[font=\tiny\bfseries, anchor=west] at (0.5,2.5) {Q2};
+  \foreach \y in {2.2,1.95,1.7,1.45,1.2,0.95}
+    \draw[ibmB, line width=1.5pt] (0.6,\y) -- ({0.6+2.2*(1-0.15*mod(\y*4,3))},\y);
+  \node[ibmC, font=\tiny, below] at (1.75,0) {stay inside the margins};
+\end{tikzpicture}
+\end{center}
+```
+:::
+::::
 
 ## What to study
 
@@ -61,25 +221,82 @@ Be very mindful:
   - Time yourself
   - Focus on hard problems
 
+\vspace{1em}
+
+\begin{block}{A good test}
+Pick a random exercise from any chapter. Can you solve it \emph{without} looking
+at your notes or the solution? If not, that chapter needs more practice.
+\end{block}
+
 ## Asking for help
 
-- Contact your TAs or myself
-  - Show your work
-  - Early is better than late
+```{=latex}
+\vspace{1em}
+\begin{center}
+\begin{tikzpicture}[
+    box/.style={rounded corners=4pt, minimum width=45mm, minimum height=14mm,
+                align=center, text=black}]
+  \node[box, fill=ibmA!20] (you) at (0,0) {\textbf{You}\\\scriptsize stuck on a problem};
+  \node[box, fill=ibmB!20] (ta) at (6,0) {\textbf{TAs or myself}\\\scriptsize happy to help};
+  \draw[-{Stealth[length=3mm]}, thick, gray] (you) -- (ta);
+\end{tikzpicture}
+\end{center}
+```
+
+\vspace{1.5em}
+
+- **Show your work.** Tell us where you got stuck, not just which problem.
+- **Early is better than late.** The day before the exam is too late to
+  untangle a whole chapter.
 
 ## On the day of the exam
 
-At the start:
+```{=latex}
+\vspace{0.5em}
+\begin{center}
+\begin{tikzpicture}[
+    dot/.style={circle, minimum size=4mm, inner sep=0pt},
+    lbl/.style={align=center, font=\scriptsize, text width=22mm}]
+  \draw[thick, gray!50] (0,0) -- (9.6,0);
+  \foreach \x/\c/\t/\pos in {
+      0/ibmA/{Go to the\\correct room}/above,
+      2.4/ibmA/{Wait outside\\until called in}/below,
+      4.8/ibmB/{Leave bags \& coats\\at the front,\\phone \emph{off}}/above,
+      7.2/ibmB/{Sit at the desk\\with your name}/below,
+      9.6/ibmD/{\textbf{8:30}\\Exam starts}/above} {
+    \node[dot, fill=\c] at (\x,0) {};
+    \node[lbl, \pos=3mm] at (\x,0) {\t};
+  }
+\end{tikzpicture}
+\end{center}
+```
 
-- Go to the correct room
-- Wait outside until called in
-- Leave backpacks and coats at the front of the room (switch off your phone)
-- Take a seat at the desk with your name on it
+\vspace{1.5em}
 
 At the end (when you are done):
 
-- Hand in all your papers
+- Hand in **all** your papers: answer sheets *and* scratch paper
+- Leave the room quietly; others are still working
 
 ##
 
 ![Source: [https://xkcd.com/2748/](https://xkcd.com/2748/)](./images/10-exam-information/xkcd-2748.png){fig-align="center" height="80%"}
+
+##
+
+```{=latex}
+\vspace{2em}
+\centering
+{\Large Thank you for your hard work this semester.}
+
+\vspace{2em}
+
+\begin{tikzpicture}
+  \foreach \c [count=\i] in {ibmA,ibmB,ibmC,ibmD,ibmE}
+    \fill[\c] ({(\i-3)*0.9},0) circle (2.5mm);
+\end{tikzpicture}
+
+\vspace{2em}
+
+{\huge\bfseries Good luck on the exam!}
+```
